@@ -41,7 +41,8 @@
 			
 			
 		}
-		  header("Location: ../index.php?error=correct");
+		 // header("Location: ../index.php?error=correct");
 		 //}
+		 header("Location: ../home.php");
 	}
 ?>

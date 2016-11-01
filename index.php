@@ -1,7 +1,9 @@
 <?php
     include 'header.php';
 ?>
-
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <div class="header"> 
 	<h1>Register, login and logout user php mysql</h1>
 </div>
@@ -35,7 +37,7 @@
 		 <button type="button" id="eye">
     <img src="https://cdn0.iconfinder.com/data/icons/feather/96/eye-16.png" alt="eye" />
 </button>
-		 <button type="submit"  name="register_btn"> SIGN UP </button>
+		 <button type="submit" class="btn btn-primary btn-xs" name="register_btn"> SIGN UP </button>
 		 </form>
 		 
 		 
