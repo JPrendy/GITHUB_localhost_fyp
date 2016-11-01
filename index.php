@@ -31,7 +31,10 @@
 	     <input type="text" name="first" placeholder="Firstname">
 		 <input type="text" name="last" placeholder="Lastname">
 		 <input type="text" name="uid" placeholder="Username">
-		 <input type="password" name="pwd" placeholder="Password">
+		 <input type="password" name="pwd" id="pwd" placeholder="Password">
+		 <button type="button" id="eye">
+    <img src="https://cdn0.iconfinder.com/data/icons/feather/96/eye-16.png" alt="eye" />
+</button>
 		 <button type="submit"  name="register_btn"> SIGN UP </button>
 		 </form>
 		 
@@ -42,6 +45,7 @@
 		 </form>
 		 
 		 
-		 
+		   <!--this is used to make the calculator to work-->
+    <script src="password.js"></script> <!--this is an example of place where you can put the javascript file-->
 </body>
 </html>
