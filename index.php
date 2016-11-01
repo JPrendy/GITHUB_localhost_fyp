@@ -34,6 +34,7 @@
 		 <input type="text" name="last" placeholder="Lastname">
 		 <input type="text" name="uid" placeholder="Username">
 		 <input type="password" name="pwd" id="pwd" placeholder="Password">
+		 	 <input type="password" name="pwd2" id="pwd2" placeholder="Reconfirm Password">
 		 <button type="button" id="eye">
     <img src="https://cdn0.iconfinder.com/data/icons/feather/96/eye-16.png" alt="eye" />
 </button>
