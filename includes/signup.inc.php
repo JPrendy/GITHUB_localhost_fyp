@@ -32,7 +32,7 @@
 		$email = mysql_real_escape_string($_POST['last']);
 		$uid = mysql_real_escape_string($_POST['uid']);
 		$password = mysql_real_escape_string($_POST['pwd']);
-			$password2 = mysql_real_escape_string($_POST['pwd2']);
+	    $password2 = mysql_real_escape_string($_POST['pwd2']);
 		
 	if (empty($username)){ //this is checking $username
 		header("Location: ../signup.php?error=empty");

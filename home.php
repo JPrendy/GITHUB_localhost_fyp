@@ -68,26 +68,46 @@
 </nav>
   
 <div class="container-fluid text-center">
-  <div class="row content">
-    <div class="col-sm-2 sidenav">
+  <!--<div class="row content">
+
+    <div class="col-sm-2 sidenav" >
       <p><a href="#">Link</a></p>
       <p><a href="#">Link</a></p>
+	  <div class="well">
+        <p>ADS</p>
+		</div>
       <p><a href="#">Link</a></p>
-    </div>
-    <div class="col-sm-8 text-left">
+    </div>-->
+	
+	
+	  <div class="row content">
+    <nav class="col-sm-3">
+      <ul class="nav nav-pills nav-stacked" data-spy="affix" data-offset-top="200" >
+        <li class="active"><a href="#section1">Section 1</a></li>
+        <li><a href="#section2">Section 2</a></li>
+        <li><a href="http://localhost/github_localhost_fyp/piechart_test.php">Charts</a></li>
+      </ul>
+    </nav>
+	
+    <div class="col-sm-9 text-left">
       <h1>Welcome</h1>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
       <hr>
       <h3>Test</h3>
       <p>Lorem ipsum...</p>
+	    <h1>Some text to enable scrolling</h1>
+      <h1>Some text to enable scrolling</h1>
+      <h1>Some text to enable scrolling</h1>
+      <h1>Some text to enable scrolling</h1>
+      <h1>Some text to enable scrolling</h1>
+      <h1>Some text to enable scrolling</h1>
+	   <h1>Some text to enable scrolling</h1>
+      <h1>Some text to enable scrolling</h1>
+      <h1>Some text to enable scrolling</h1>
+      <h1>Some text to enable scrolling</h1>
+      <h1>Some text to enable scrolling</h1>
     </div>
-    <div class="col-sm-2 sidenav">
-      <div class="well">
-        <p>ADS</p>
-      </div>
-      <div class="well">
-        <p>ADS</p>
-      </div>
+    
     </div>
   </div>
 </div>

@@ -30,6 +30,15 @@
 </br>
 
        <form action="includes/signup.inc.php" method="POST">
+	      <div class="form-group">
+      <label class="control-label col-sm-2" for="email">Email:</label>
+      <div class="col-sm-4">
+        <input type="email" class="form-control" id="email" placeholder="Enter email">
+      </div>
+    </div>
+	<br>
+	<br>
+
 	     <input type="text" name="first" placeholder="Firstname">
 		 <input type="text" name="last" placeholder="Lastname">
 		 <input type="text" name="uid" placeholder="Username">
