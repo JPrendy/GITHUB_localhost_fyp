@@ -29,17 +29,65 @@
 <br>
 </br>
 
-       <form action="includes/signup.inc.php" method="POST">
-	      <div class="form-group">
-      <label class="control-label col-sm-2" for="email">Email:</label>
-      <div class="col-sm-4">
-        <input type="email" class="form-control" id="email" placeholder="Enter email">
+       <form class="form-horizontal" action="includes/signup.inc.php" method="POST">
+	      
+		  <div class="form-group">
+      <label class="control-label col-sm-2" for="email">Name:</label>
+      <div class="col-sm-3">
+        <input type="text" class="form-control" name="first" id="first" placeholder="Name">
       </div>
     </div>
 	<br>
+	
+	      <div class="form-group">
+      <label class="control-label col-sm-2" for="email">Username:</label>
+      <div class="col-sm-3">
+        <input type="text" class="form-control" name="uid" id="uid" placeholder="Username">
+      </div>
+    </div>
+    <br>
+     
+	
+	     <div class="form-group">
+      <label class="control-label col-sm-2" for="email">Email:</label>
+      <div class="col-sm-3">
+        <input type="email" class="form-control" name="last" id="last" placeholder="Email">
+      </div>
+    </div>
 	<br>
-
-	     <input type="text" name="first" placeholder="Firstname">
+	
+	
+	 <div class="form-inline">
+      <label class="control-label col-sm-2" for="email">Password:</label>
+      <div class="col-sm-3">
+        <input type="password" class="form-control" name="pwd" id="pwd" placeholder="Password">
+		  
+		 <button type="button" id="eye">
+           <img src="https://cdn0.iconfinder.com/data/icons/feather/96/eye-16.png" alt="eye" />
+         </button>
+      
+	  </div>
+    </div>
+	<br>
+	
+	 <div class="form-inline">
+      <label class="control-label col-sm-2" for="email">Reconfirm Password:</label>
+      <div class="col-sm-3">
+        <input type="password" class="form-control" name="pwd2" id="pwd2" placeholder="Reconfirm Password">
+      </div>
+    </div>
+		 <button type="button" id="eye">
+    <img src="https://cdn0.iconfinder.com/data/icons/feather/96/eye-16.png" alt="eye" />
+</button>
+		 <button type="submit" class="btn btn-primary btn-xs" name="register_btn"> SIGN UP </button>
+	</form>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	
+	   <!--  <input type="text" name="first" placeholder="Firstname">
 		 <input type="text" name="last" placeholder="Lastname">
 		 <input type="text" name="uid" placeholder="Username">
 		 <input type="password" name="pwd" id="pwd" placeholder="Password">
@@ -48,7 +96,7 @@
     <img src="https://cdn0.iconfinder.com/data/icons/feather/96/eye-16.png" alt="eye" />
 </button>
 		 <button type="submit" class="btn btn-primary btn-xs" name="register_btn"> SIGN UP </button>
-		 </form>
+		 </form>-->
 		 
 		 
 		 <br></br>
