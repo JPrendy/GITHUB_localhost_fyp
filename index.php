@@ -8,14 +8,14 @@
 	<h1>Register, login and logout user php mysql</h1>
 </div>
 
-
+<!--
 <form action="includes/login.inc.php" method="POST">
 <input type="text" name="uid" placeholder="Username">
 <input type="password" name="pwd" placeholder="Password">
 <button type="submit" name="login_button"> Login </button>
 
 </form>
-
+-->
 <?php 
     if (isset($_SESSION['id'])){
 		echo $_SESSION['id'];

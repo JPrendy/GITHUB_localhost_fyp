@@ -83,9 +83,10 @@
 	  <div class="row content">
     <nav class="col-sm-3">
       <ul class="nav nav-pills nav-stacked" data-spy="affix" data-offset-top="200" >
-        <li class="active"><a href="#section1">Section 1</a></li>
-        <li><a href="#section2">Section 2</a></li>
+        <li class="active"><a href="#section1">Lessons</a></li>
+        <li><a href="#section2">Exercises</a></li>
         <li><a href="http://localhost/github_localhost_fyp/piechart_test.php">Charts</a></li>
+		<li><a href="#section4">Change Icon</a></li>
       </ul>
     </nav>
 	
