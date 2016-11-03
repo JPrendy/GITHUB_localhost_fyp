@@ -49,23 +49,26 @@ elseif
 		
 ?>
    
-   	<form class="form-horizontal" action="includes/signup.inc.php" method="POST">
+   	<form class="form-horizontal" action="includes/login.inc.php" method="POST">
 	      
 		  <div class="form-group">
-      <label class="control-label col-sm-2" for="email">Name:</label>
+      <label class="control-label col-sm-2" for="username">Username:</label>
       <div class="col-sm-3">
-        <input type="text" class="form-control" name="first" id="first" placeholder="Name">
+        <input type="text" class="form-control" name="uid" id="uid" placeholder="Username">
       </div>
     </div>
 	<br>
 	
 	      <div class="form-group">
-      <label class="control-label col-sm-2" for="email">Username:</label>
+      <label class="control-label col-sm-2" for="password">Password:</label>
       <div class="col-sm-3">
-        <input type="text" class="form-control" name="uid" id="uid" placeholder="Username">
+        <input type="password" class="form-control" name="pwd" id="pwd" placeholder="Password">
       </div>
     </div>
     <br>
+	
+	    <button type="reset" class="btn btn-danger btn-s" name="register_btn"> RESET </button>
+		  <button type="submit" class="btn btn-primary btn-s" name="login_button"> Login </button>
 	</form>
 		 
 		 
