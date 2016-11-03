@@ -1,0 +1,77 @@
+<?php
+    include 'header.php';
+?>
+
+<div class="header"> 
+	<h1>Register, login and logout user php mysql</h1>
+</div>
+
+
+
+
+
+<?php 
+
+$url = "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
+if (strpos($url, 'error=empty') !== false){
+	echo "Fill out all the fields!";
+}
+elseif
+(strpos($url, 'error=username') !== false){
+	echo "Username already exists";
+}
+
+
+
+    if (isset($_SESSION['id'])){
+		echo $_SESSION['id'];
+		
+	}
+	else {
+		echo "You are not logged in!";
+	}
+
+?>
+<br>
+</br>
+<?php
+    if (isset($_SESSION['id'])){
+		echo "you are already logged in";
+		
+	}
+	else {
+		
+		echo "ok";
+
+	}
+	
+	
+		
+?>
+   
+   	<form class="form-horizontal" action="includes/signup.inc.php" method="POST">
+	      
+		  <div class="form-group">
+      <label class="control-label col-sm-2" for="email">Name:</label>
+      <div class="col-sm-3">
+        <input type="text" class="form-control" name="first" id="first" placeholder="Name">
+      </div>
+    </div>
+	<br>
+	
+	      <div class="form-group">
+      <label class="control-label col-sm-2" for="email">Username:</label>
+      <div class="col-sm-3">
+        <input type="text" class="form-control" name="uid" id="uid" placeholder="Username">
+      </div>
+    </div>
+    <br>
+	</form>
+		 
+		 
+		 
+		 
+		 
+		 
+</body>
+</html>
