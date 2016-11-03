@@ -8,14 +8,7 @@
 	<h1>Register, login and logout user php mysql</h1>
 </div>
 
-<!--
-<form action="includes/login.inc.php" method="POST">
-<input type="text" name="uid" placeholder="Username">
-<input type="password" name="pwd" placeholder="Password">
-<button type="submit" name="login_button"> Login </button>
 
-</form>
--->
 <?php 
     if (isset($_SESSION['id'])){
 		echo $_SESSION['id'];
@@ -98,17 +91,7 @@
 	<br>
 	<br>
 	
-	   <!--  <input type="text" name="first" placeholder="Firstname">
-		 <input type="text" name="last" placeholder="Lastname">
-		 <input type="text" name="uid" placeholder="Username">
-		 <input type="password" name="pwd" id="pwd" placeholder="Password">
-		 	 <input type="password" name="pwd2" id="pwd2" placeholder="Reconfirm Password">
-		 <button type="button" id="eye">
-    <img src="https://cdn0.iconfinder.com/data/icons/feather/96/eye-16.png" alt="eye" />
-</button>
-		 <button type="submit" class="btn btn-primary btn-xs" name="register_btn"> SIGN UP </button>
-		 </form>-->
-		 
+	  
 		
 <!-- get rid of this and put it in the header
 
@@ -122,11 +105,11 @@
 		 -->
 		 
 		 <footer class="container-fluid text-center" id="foot01"></footer>
- <!-- <p>Footer Text</p> -->
+  
 </footer>
 		 
 		   <!--this is used to make the calculator to work-->
     <script src="password.js"></script> 
-	<script src="year.js"></script><!--this is an example of place where you can put the javascript file-->
+	<script src="year.js"></script> <!--this is an example of place where you can put the javascript file-->
 </body>
 </html>
