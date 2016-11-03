@@ -57,29 +57,40 @@
 	<br>
 	
 	
-	 <div class="form-inline">
+	 <div class="form-group">
       <label class="control-label col-sm-2" for="email">Password:</label>
       <div class="col-sm-3">
         <input type="password" class="form-control" name="pwd" id="pwd" placeholder="Password">
-		  
-		 <button type="button" id="eye">
+		</div>
+	
+		<!-- <button class="control-label"  type="button" id="eye"> -->
+		   <button type="button" id="eye">
            <img src="https://cdn0.iconfinder.com/data/icons/feather/96/eye-16.png" alt="eye" />
          </button>
       
-	  </div>
+	  
     </div>
 	<br>
 	
-	 <div class="form-inline">
+	 <div class="form-group">
       <label class="control-label col-sm-2" for="email">Reconfirm Password:</label>
       <div class="col-sm-3">
         <input type="password" class="form-control" name="pwd2" id="pwd2" placeholder="Reconfirm Password">
       </div>
-    </div>
+	  
+  
 		 <button type="button" id="eye">
     <img src="https://cdn0.iconfinder.com/data/icons/feather/96/eye-16.png" alt="eye" />
 </button>
-		 <button type="submit" class="btn btn-primary btn-xs" name="register_btn"> SIGN UP </button>
+		<!-- <button type="submit" class="btn btn-primary btn-xs" name="register_btn"> SIGN UP </button>-->
+		 
+		 
+		 </div>
+		 
+		 
+		    <button type="reset" class="btn btn-danger btn-s" name="register_btn"> RESET </button>
+		  <button type="submit" class="btn btn-primary btn-s" name="register_btn"> SIGN UP </button>
+		
 	</form>
 	<br>
 	<br>
@@ -98,12 +109,21 @@
 		 <button type="submit" class="btn btn-primary btn-xs" name="register_btn"> SIGN UP </button>
 		 </form>-->
 		 
-		 
+		
+<!-- get rid of this and put it in the header
+
+		
 		 <br></br>
 		 <form action="includes/logout.inc.php">
 		 <button>LOG OUT</button>
 		 </form>
 		 
+		 
+		 -->
+		 
+		 <footer class="container-fluid text-center">
+  <p>Footer Text</p>
+</footer>
 		 
 		   <!--this is used to make the calculator to work-->
     <script src="password.js"></script> <!--this is an example of place where you can put the javascript file-->
