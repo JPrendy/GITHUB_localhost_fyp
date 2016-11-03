@@ -23,7 +23,11 @@
 			
 		//}
          //else{
-		
+			 
+			if (empty($uid && $password)){ //this is checking $username
+		header("Location: ../index.php?error=empty");
+		exit();
+	    }
 			
 			
 			
@@ -34,15 +38,22 @@
 		
 		if (!$row = mysqli_fetch_assoc($result)){
 			
-		  echo "Your username or password is incorrect!";	
+		  echo "Your username or password is incorrect!";
+          header("Location: ../index.php?error=real test");		 
+
+      		  
 		}
+		//if (empty($uid && $hash_pwd)){ //this is checking $username
+		//header("Location: ../index.php?error=empty");
+		//exit();
+	//}
 		else{
 			$_SESSION['id'] = $row['id'];
-			
+			header("Location: ../home.php");
 			
 		}
 		 // header("Location: ../index.php?error=correct");
 		 //}
-		 header("Location: ../home.php");
+		// header("Location: ../home.php");
 	}
 ?>

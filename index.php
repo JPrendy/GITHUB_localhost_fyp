@@ -121,11 +121,12 @@
 		 
 		 -->
 		 
-		 <footer class="container-fluid text-center">
-  <p>Footer Text</p>
+		 <footer class="container-fluid text-center" id="foot01"></footer>
+ <!-- <p>Footer Text</p> -->
 </footer>
 		 
 		   <!--this is used to make the calculator to work-->
-    <script src="password.js"></script> <!--this is an example of place where you can put the javascript file-->
+    <script src="password.js"></script> 
+	<script src="year.js"></script><!--this is an example of place where you can put the javascript file-->
 </body>
 </html>
