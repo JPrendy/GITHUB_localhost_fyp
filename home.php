@@ -87,6 +87,7 @@
         <li><a href="#section2">Exercises</a></li>
         <li><a href="http://localhost/github_localhost_fyp/piechart_test.php">Charts</a></li>
 		<li><a href="#section4">Change Icon</a></li>
+			<li><a href="settings.php">Change settings</a></li>
       </ul>
     </nav>
 	

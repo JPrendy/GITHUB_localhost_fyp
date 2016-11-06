@@ -70,9 +70,9 @@
 			header("Location: ../signup.php?error=username");
 			exit();
 		}else {
-			$encrypted_password = password_hash($password, PASSWORD_DEFAULT);
+			//$encrypted_password = password_hash($password, PASSWORD_DEFAULT);
 			//$password = md5($password); //hash password before storing for security purposes
-			$sql = "insert into users(first, last, uid, pwd) VALUES ('$username', '$email', '$uid', '$encrypted_password')";
+			$sql = "insert into users(first, last, uid, pwd) VALUES ('$username', '$email', '$uid', '$password')";
 			mysqli_query($db, $sql);
 		    $_SESSION['message'] = "You are now logged in";
 			$_SESSION['username'] = $username;

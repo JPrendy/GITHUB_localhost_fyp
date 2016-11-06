@@ -7,33 +7,41 @@
 	
 	if (isset($_POST['login_button'])){
 	
-		$uid = mysql_real_escape_string($_POST['uid']);
-		$password = mysql_real_escape_string($_POST['pwd']);
+		$uid = $_POST['uid'];
+		$password = $_POST['pwd'];
 		
 	
-		$sql = "Select * from users WHERE uid='$uid'";
-		$result = mysqli_query($db, $sql);
-		$row = mysqli_fetch_assoc($result);
-		$hash_pwd = $row['pwd'];
-		$hash = password_verify($password, $hash_pwd);
+		//$sql = "Select * from users WHERE uid='$uid'";
+		//$result = mysqli_query($db, $sql);
+		//$row = mysqli_fetch_assoc($result);
+		//$hash_pwd = $row['pwd'];
+		//$hash = password_verify($password, $hash_pwd);
         
+		
+		if ($db->query($sql2) === TRUE) {
+            echo "Record deleted successfully";
+} else {
+    echo "Error deleting record: " . $db->error;
+}
+
 		//if ($hash == 0) {
 		 //	header("Location: ../index.php?error=emptyhash");
 		//exit();
 			
-		//}
+	//	}
          //else{
 			 
 			if (empty($uid && $password)){ //this is checking $username
-		header("Location: ../index.php?error=empty");
-		exit();
+		//header("Location: ../index.php?error=empty");
+		echo "$hash";
+		//exit();
 	    }
 			
 			
 			
 			
 			//$password2 = md5($password); //hash password before storing for security purposes
-			$sql = "Select * from users WHERE uid='$uid' AND pwd='$hash_pwd'";
+			$sql = "Select * from users WHERE uid='$uid' AND pwd='$password'";
 			$result = mysqli_query($db, $sql);
 		
 		if (!$row = mysqli_fetch_assoc($result)){
@@ -49,6 +57,7 @@
 	//}
 		else{
 			$_SESSION['id'] = $row['id'];
+			
 			header("Location: ../home.php");
 			
 		}
