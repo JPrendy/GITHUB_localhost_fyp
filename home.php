@@ -55,7 +55,7 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home</a></li>
+        <li class="active"><a href="home.php">Home</a></li>
         <li><a href="#">About</a></li>
         <li><a href="#">Projects</a></li>
         <li><a href="#">Contact</a></li>
@@ -84,7 +84,7 @@
     <nav class="col-sm-3">
       <ul class="nav nav-pills nav-stacked" data-spy="affix" data-offset-top="200" >
         <li class="active"><a href="#section1">Lessons</a></li>
-        <li><a href="#section2">Exercises</a></li>
+        <li><a href="quiz.html">Exercises</a></li>
         <li><a href="http://localhost/github_localhost_fyp/piechart_test.php">Charts</a></li>
 		<li><a href="#section4">Change Icon</a></li>
 			<li><a href="settings.php">Change settings</a></li>

@@ -18,11 +18,11 @@
 		//$hash = password_verify($password, $hash_pwd);
         
 		
-		if ($db->query($sql2) === TRUE) {
-            echo "Record deleted successfully";
-} else {
-    echo "Error deleting record: " . $db->error;
-}
+	//	if ($db->query($sql2) === TRUE) {
+      //      echo "Record deleted successfully";
+//} else {
+  //  echo "Error deleting record: " . $db->error;/
+//}
 
 		//if ($hash == 0) {
 		 //	header("Location: ../index.php?error=emptyhash");
