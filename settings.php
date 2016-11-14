@@ -15,14 +15,14 @@ echo $_SESSION['id'];
   <div class="form-group">
       <label class="control-label col-sm-2" for="password">Old Password:</label>
       <div class="col-sm-3">
-        <input type="password" class="form-control" name="pwd" id="pwd" placeholder="old Password">
+        <input type="password" class="form-control" name="pwd" id="pwd" placeholder="Old Password">
       </div>
     </div>
     <br>
 	
 	
 	      <div class="form-group">
-      <label class="control-label col-sm-2" for="password">Password:</label>
+      <label class="control-label col-sm-2" for="password">New Password:</label>
       <div class="col-sm-3">
         <input type="password" class="form-control" name="pwd2" id="pwd2" placeholder="New Password">
       </div>
@@ -30,9 +30,9 @@ echo $_SESSION['id'];
     <br>
 	
 	   <div class="form-group">
-      <label class="control-label col-sm-2" for="password">Password:</label>
+      <label class="control-label col-sm-2" for="password">Reconfirm New Password:</label>
       <div class="col-sm-3">
-        <input type="password" class="form-control" name="pwd3" id="pwd3" placeholder="New Password">
+        <input type="password" class="form-control" name="pwd3" id="pwd3" placeholder="Reconfirm New Password">
       </div>
     </div>
     <br>
@@ -89,6 +89,13 @@ echo $_SESSION['id'];
 		//header("Location: ../index.php?error=empty");
 		//exit();
 	//}
+	    
+	if ($pwd2 !== $pwd3){
+		
+		header("Location: settings.php?error=The new password is not the same");
+		exit();
+		
+	}
 		else{
 		
 		    $sql2 = "update users set pwd='$pwd2' where id='{$_SESSION['id']}'"; 

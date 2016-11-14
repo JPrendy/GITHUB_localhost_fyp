@@ -22,10 +22,13 @@
 <br>
 </br>
 
-       <form class="form-horizontal" action="includes/signup.inc.php" method="POST">
+
+
+       <form class="form-horizontal" action="includes/signup.inc.php" method="POST" >
 	      
 		  <div class="form-group">
-      <label class="control-label col-sm-2" for="email">Name:</label>
+      <label class="control-label col-sm-2" for="text">Name:</label>
+	 
       <div class="col-sm-3">
         <input type="text" class="form-control" name="first" id="first" placeholder="Name">
       </div>
@@ -72,8 +75,8 @@
       </div>
 	  
   
-		 <button type="button" id="eye">
-    <img src="https://cdn0.iconfinder.com/data/icons/feather/96/eye-16.png" alt="eye" />
+		 <button type="button" id="eye2">
+    <img src="https://cdn0.iconfinder.com/data/icons/feather/96/eye-16.png" alt="eye2" />
 </button>
 		<!-- <button type="submit" class="btn btn-primary btn-xs" name="register_btn"> SIGN UP </button>-->
 		 
