@@ -58,7 +58,7 @@
 	
 	if ($password !== $password2){
 		
-		header("Location: ../signup.php?error=wrong password");
+		header("Location: ../index.php?error=wrong password");
 		exit();
 		
 	}
