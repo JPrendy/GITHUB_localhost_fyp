@@ -35,7 +35,7 @@
 	    $password2 = mysql_real_escape_string($_POST['pwd2']);
 		
 	if (empty($username)){ //this is checking $username
-		header("Location: ../signup.php?error=empty");
+		header("Location: ../index.php?error=empty");
 		exit();
 	}
 	if (empty($email)){
@@ -58,7 +58,7 @@
 	
 	if ($password !== $password2){
 		
-		header("Location: ../index.php?error=wrong password");
+		header("Location: ../index.php?error=wrong_password");
 		exit();
 		
 	}

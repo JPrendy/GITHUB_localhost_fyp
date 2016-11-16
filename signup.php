@@ -16,7 +16,8 @@ $url = "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
 if (strpos($url, 'error=empty') !== false){
 	echo "Fill out all the fields!";
 }
-elseif
+else
+	if
 (strpos($url, 'error=username') !== false){
 	echo "Username already exists";
 }
