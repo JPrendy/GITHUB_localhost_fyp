@@ -59,6 +59,8 @@
 	//}
 		else{
 			$_SESSION['id'] = $row['id'];
+      	$_SESSION['userid'] = $row['uid'];
+        $_SESSION['welcome'] = $row['session'];
 		//	$login = 1;
     //  $login2 += $login;
 

@@ -25,6 +25,7 @@
 if (strpos($url, 'error=empty') !== false){
 	$ok= "Fill out all the fields!";
 	echo $ok;
+  
 }
 if
 (strpos($url, 'error=wrong_password') !== false){
