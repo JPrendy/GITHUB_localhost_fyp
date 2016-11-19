@@ -86,7 +86,9 @@
       <ul class="nav nav-pills nav-stacked" data-spy="affix" data-offset-top="200" >
         <li class="active"><a href="#section1">Lessons</a></li>
         <li><a href="quiz.html">Exercises</a></li>
-        <li><a href="http://localhost/github_localhost_fyp/piechart_test.php">Charts</a></li>
+        <!--added a javascript function to the hyperlink-->
+        <!-- the older version  <li><a href="#" onclick="myFunction()" >Charts</a></li> -->
+        <li><a href="#"  id="myFunction" >Charts</a></li>
 		<li><a href="#section4">Change Icon</a></li>
 			<li><a href="settings.php">Change settings</a></li>
       </ul>
@@ -113,11 +115,17 @@
 <?php } ?>
 
 
+
+<div id="myAlert" class="alert alert-warning collapse alert-dismissable">
+<a href="#" id="linkClose" class="close"  aria-label="close">×</a> <!--important to remove the data-dismiss alert-->
+<strong>Warning!</strong> You are only allowed to go to the lessons headings.
+</div>
+
       <?php
 
       //session_start();
-
       if($_SESSION['welcome'] != 2){
+
         echo "Welcome first user";
 
       }
@@ -147,6 +155,25 @@
     </div>
   </div>
 </div>
+
+<script>
+//function myFunction() {
+  //  alert("Hello! I am an alert box!");
+
+//set an id so when this pressed changed a value id then implement a switch for that
+//}
+
+$(document).ready(function(){
+  $('#myFunction').click(function(){
+     $('#myAlert').show('fade');
+  });
+
+
+$('#linkClose').click(function (){
+  $('#myAlert').hide('fade');
+});
+});
+</script>
 
 <footer class="container-fluid text-center">
   <p>Footer Text</p>

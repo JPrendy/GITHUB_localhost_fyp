@@ -25,7 +25,7 @@
 if (strpos($url, 'error=empty') !== false){
 	$ok= "Fill out all the fields!";
 	echo $ok;
-  
+
 }
 if
 (strpos($url, 'error=wrong_password') !== false){
@@ -37,7 +37,7 @@ if
 </br>
 
 
-
+<div class="container">
        <form class="form-horizontal" action="includes/signup.inc.php" method="POST" >
 
 		  <div class="form-group">
@@ -98,17 +98,19 @@ if
 
 
 		 </div>
-
-
+          <div class="form-group">
+           <div class="col-sm-offset-2 col-sm-10">
 		    <button type="reset" class="btn btn-danger btn-s" name="register_btn"> RESET </button>
 		  <button type="submit" class="btn btn-primary btn-s" name="register_btn"> SIGN UP </button>
-
+    </div>
+</div>
 	</form>
+
+  </div>
 	<br>
 	<br>
 	<br>
-	<br>
-	<br>
+
 
 
 

@@ -11,6 +11,7 @@ echo $_SESSION['id'];
 
 
 ?>
+<div class="container">
      <form class="form-horizontal" method="POST">
   <div class="form-group">
       <label class="control-label col-sm-2" for="password">Old Password:</label>
@@ -35,11 +36,23 @@ echo $_SESSION['id'];
         <input type="password" class="form-control" name="pwd3" id="pwd3" placeholder="Reconfirm New Password">
       </div>
     </div>
-    <br>
 
+
+    <div class="form-group">
+  <div class="col-sm-offset-2 col-sm-10">
 	    <button type="reset" class="btn btn-danger btn-s" name="register_btn"> RESET </button>
-		  <button type="submit" class="btn btn-primary btn-s" name="setting_button"> CHANGE PASSWORD </button>
+		  <button type="submit" class="btn btn-primary btn-s" name="setting_button" id="btnupdate"> CHANGE PASSWORD </button>
+    </div>
+</div>
 	</form>
+</div>
+
+
+
+
+
+
+
 
 
 	 <?php
@@ -102,7 +115,8 @@ echo $_SESSION['id'];
 			echo "$sql2";
 
 			if ($db->query($sql2) === TRUE) {
-            echo "Record deleted successfully";
+            echo "<br></br>";
+            echo "Record Updated successfully";
 } else {
     echo "Error deleting record: " . $db->error;
 }

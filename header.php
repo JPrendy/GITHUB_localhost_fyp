@@ -1,6 +1,6 @@
 <?php
     session_start();
-	
+
 	?>
 
 <!DOCTYPE html>
@@ -22,16 +22,20 @@
 <nav>
   <ul>
 
-       <button class="btn btn-success btn-s"> <a href="login_page.php"> LOGIN </a></button>
+      <!-- <button class="btn btn-success btn-s"> <a href="login_page.php"> LOGIN </a></button>-->
+
       <!--<li><a href="login_page.php"> Login page </a></li>-->
      <!--<li><a href="index.php"> HOME </a></li>--> <!--this is not needed as we are making a neater desing-->
 	 <?php
 	   if (isset($_SESSION['id'])){
 		echo "<form action='includes/logout.inc.php'>
-		 <button>LOG OUT</button>
+		 <button class='btn btn-success btn-s'>LOG OUT</button>
 		 </form>";
-		
+
 	}
+ else{
+      echo "<button class='btn btn-success btn-s'> <a href='login_page.php'> LOGIN </a></button>";
+    }
 	/*else {
 		echo "<form action='includes/login.inc.php' method='POST'>
 	      <input type='text' name='uid' placeholder='Username'>
@@ -40,19 +44,17 @@
 		  </form>";
 	}
 	 */
-	 
-	 
-	   
-	 
+
+
+
+
 	 ?>
 	 <button class="btn btn-danger btn-s"> <a href="index.php"> SIGNUP </a> </button>
 	 <!--<li><a href="index.php"> signup </a><li>-->
 	 <!--OLD VERSION <li><a href="signup.php"> signup </a><li> -->
 	 </ul>
-	 
-	 
-	 
+
+
+
 </nav>
 </header>
-
-
