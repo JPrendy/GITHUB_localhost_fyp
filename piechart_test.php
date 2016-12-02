@@ -1,4 +1,7 @@
 <?php
+
+		include 'home_header.php';
+
 	$connection = mysqli_connect("localhost", "root", "" , "logintest");
 
 //fetch table rows from mysql db

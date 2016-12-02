@@ -1,5 +1,5 @@
 <?php
-    include 'header.php';
+    include 'home_header.php';
 ?>
 
 <div class="header">
@@ -41,9 +41,36 @@ echo $_SESSION['id'];
     <div class="form-group">
   <div class="col-sm-offset-2 col-sm-10">
 	    <button type="reset" class="btn btn-danger btn-s" name="register_btn"> RESET </button>
-		  <button type="submit" class="btn btn-primary btn-s" name="setting_button" id="btnupdate"> CHANGE PASSWORD </button>
+  <button type="button" class="btn btn-rimary btn-s" data-toggle="modal" data-target="#myModal">CHANGE PASSWORD</button>
+<!-- the data attribut "data-target points to #myModal"     -->
+
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+
+      <!--This brings the  Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button> <!-- thiis will bring up a x button-->
+
+        </div>
+        <div class="modal-body">
+          <p>Are you sure you want to change your password.</p>
+        </div>
+        <div class="modal-footer">
+           <button type="submit" class="btn btn-primary btn-s" name="setting_button" id="btnupdate"> CHANGE PASSWORD </button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">ClOSE</button>
+        </div>
+      </div>
+
     </div>
+  </div>
 </div>
+	<!--	  <button type="submit" class="btn btn-primary btn-s" name="setting_button" id="btnupdate"> CHANGE PASSWORD </button> -->
+    </div>
+
 	</form>
 </div>
 

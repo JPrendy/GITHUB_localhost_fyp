@@ -62,8 +62,21 @@
         <li><a href="#">Contact</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-      </ul>
+
+     <li class="dropdown">
+       <a class="dropdown-toggle" data-toggle="dropdown" href="#">  <?php   session_start(); echo $_SESSION['userid'],"'s account"; ?>
+       <span class="caret"></span></a>
+       <ul class="dropdown-menu">
+         <li><a href="settings.php" class="btn btn-info btn-md">
+          <span class="glyphicon glyphicon-cog"></span> Settings
+        </a></li>
+
+          <li class="divider"></li>
+         <li><a href="#"><form action='includes/logout.inc.php'>
+     		 <button class='btn btn-success btn-md'>LOG OUT</button>
+     		 </form></a></li>
+       </ul>
+
     </div>
   </div>
 </nav>

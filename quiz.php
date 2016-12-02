@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 <html>
 <head>
 	<title>Register, login and logout user php mysql</title>
@@ -8,6 +8,10 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
+
+	<?php
+	    include 'home_header.php';
+	?>
 <style>
 .col-sm-6{
   border: solid 1px #D8D8D8;
@@ -266,4 +270,3 @@ function capitalise(str) {
     return str.substr(0, 1).toUpperCase() + str.substr(1);
 }
 </script>
->>>>>>> 534bbb31101e1ac645cdcade39fc95cf71b795b1
