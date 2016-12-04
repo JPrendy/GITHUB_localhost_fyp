@@ -121,7 +121,9 @@ echo $_SESSION['id'];
 		if (!$row = mysqli_fetch_assoc($result)){
 
 		  echo "Your username or password is incorrect!";
-          header("Location: ../index.php?error=real test");
+//this COULD BE SOMETHING TO LOOK BACK
+//      IT BRINGS THE LOCATION TO INDEX
+        //  header("Location: ../index.php?error=real test");
 
 
 		}

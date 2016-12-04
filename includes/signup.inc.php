@@ -74,8 +74,10 @@
 			//$password = md5($password); //hash password before storing for security purposes
 			$sql = "insert into users(first, last, uid, pwd) VALUES ('$username', '$email', '$uid', '$password')";
       $sql2 = "insert into lessons(uid) VALUES ('$uid')";
+      $sql3 = "insert into lessons_visited(uid, topic_visited) VALUES ('$uid', 0)";
 			mysqli_query($db, $sql);
       		mysqli_query($db, $sql2);
+          	mysqli_query($db, $sql3);
 		    $_SESSION['message'] = "You are now logged in";
 			$_SESSION['username'] = $username;
 

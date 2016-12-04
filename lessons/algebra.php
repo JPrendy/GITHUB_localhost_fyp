@@ -12,7 +12,13 @@
 	$db = mysqli_connect("localhost", "root", "" , "logintest");
 $lesson  = "algebra";
 
-echo $lesson;
+echo "$lesson</br>";
+
+
+  $sql3 = "Select topic from lessons_visited WHERE uid='{$_SESSION['userid']}'";
+echo "$sql3<br/>";
+//$result2 = mysqli_query($db, $sql3);
+
 
 
 $sql2 = "update lessons set lesson_type='$lesson' where uid='{$_SESSION['userid']}'";
