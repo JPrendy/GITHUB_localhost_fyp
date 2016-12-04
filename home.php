@@ -114,7 +114,7 @@
 
 
         <li class="active"><a href="lessons.php">Lessons</a></li>
-        <li><a href="quiz.php">Exercises</a></li>
+        <li><a href="exercises.php">Exercises</a></li>
         <!--added a javascript function to the hyperlink-->
         <!-- the older version  <li><a href="#" onclick="myFunction()" >Charts</a></li> -->
         <li><a href="#"  id="myFunction" >Charts</a></li>

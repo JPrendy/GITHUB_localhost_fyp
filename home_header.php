@@ -59,7 +59,7 @@
         <!--by doing this, it will make I wont need to make a separare php page with pretty much the identical code-->
         <?php
         $url = "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
-        if (strpos($url, 'lessons') !== false){
+        if (strpos($url, 'lessons/') !==false || strpos($url, 'exercises/') !== false){
         echo  '<li class="active"><a href="../home.php">Home</a></li>';
         }
         else{
@@ -76,14 +76,36 @@
        <a class="dropdown-toggle" data-toggle="dropdown" href="#">  <?php   session_start(); echo $_SESSION['userid'],"'s account"; ?>
        <span class="caret"></span></a>
        <ul class="dropdown-menu">
-         <li><a href="settings.php" class="btn btn-info btn-md">
-          <span class="glyphicon glyphicon-cog"></span> Settings
-        </a></li>
+         <?php
+         $url = "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
+         if (strpos($url, 'lessons/') !==false || strpos($url, 'exercises/') !== false){
+         echo  '<li><a href="../settings.php" class="btn btn-info btn-md">
+           <span class="glyphicon glyphicon-cog"></span> Settings
+         </a></li>';
+         }
+         else{
+         echo  '<li><a href="settings.php" class="btn btn-info btn-md">
+           <span class="glyphicon glyphicon-cog"></span> Settings
+         </a></li>';
+       }
+         ?>
+
 
           <li class="divider"></li>
-         <li><a href="#"><form action='includes/logout.inc.php'>
-     		 <button class='btn btn-success btn-md'>LOG OUT</button>
-     		 </form></a></li>
+          <?php
+          $url = "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
+          if (strpos($url, 'lessons/') !==false || strpos($url, 'exercises/') !== false){
+          echo  '<li><a href="#"><form action="../includes/logout.inc.php">
+         		 <button class="btn btn-success btn-md">LOG OUT</button>
+         		 </form></a></li>';
+          }
+          else{
+          echo   '<li><a href="#"><form action="includes/logout.inc.php">
+         		 <button class="btn btn-success btn-md">LOG OUT</button>
+         		 </form></a></li>';
+        }
+          ?>
+
        </ul>
 
     </div>

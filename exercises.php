@@ -48,7 +48,7 @@
         <div class="panel-group">
           <div class="panel panel-default">
             <div class="panel-heading">Panel Header</div>
-            <div class="panel-body"><a href="lessons/trig.php">Trignometry </a></div>
+            <div class="panel-body"><a href="exercises/quiz.php"> QUIZ </a></div>
 
           </div>
           </div>

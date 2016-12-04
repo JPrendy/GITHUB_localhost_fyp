@@ -45,6 +45,9 @@
 			//$password2 = md5($password); //hash password before storing for security purposes
 			$sql = "Select * from users WHERE uid='$uid' AND pwd='$password'";
 			$result = mysqli_query($db, $sql);
+      $sql2 = "Select * from lessons WHERE uid='$uid'";
+      $result = mysqli_query($db, $sql2);
+
 
 		if (!$row = mysqli_fetch_assoc($result)){
 
@@ -61,6 +64,7 @@
 			$_SESSION['id'] = $row['id'];
       	$_SESSION['userid'] = $row['uid'];
         $_SESSION['welcome'] = $row['session'];
+       $_SESSION['lesson'] = $row['lesson_type'];
 		//	$login = 1;
     //  $login2 += $login;
 
