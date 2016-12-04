@@ -95,10 +95,26 @@
 
 
 	  <div class="row content">
+
+
     <nav class="col-sm-3">
       <ul class="nav nav-pills nav-stacked" data-spy="affix" data-offset-top="200" >
-        <li class="active"><a href="#section1">Lessons</a></li>
-        <li><a href="quiz.html">Exercises</a></li>
+        <?php
+           $ok = $_SESSION['lesson'];
+           echo $ok;
+           $one = "lessons/$ok.php";
+           echo $one;
+         ?>
+           <li class="active"><?php echo "<a href=$one>Last topic visited $ok</a>"; ?></li>
+           <p>
+             <p>
+
+
+
+
+
+        <li class="active"><a href="lessons.php">Lessons</a></li>
+        <li><a href="quiz.php">Exercises</a></li>
         <!--added a javascript function to the hyperlink-->
         <!-- the older version  <li><a href="#" onclick="myFunction()" >Charts</a></li> -->
         <li><a href="#"  id="myFunction" >Charts</a></li>
@@ -111,7 +127,7 @@
       <h1>Welcome</h1>
 
       <?php
-      session_start();
+
 
       if($_SESSION['welcome'] != 2){?>
       <div class="alert alert-danger alert-dismissable">

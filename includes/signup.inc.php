@@ -23,44 +23,44 @@
 <?php
 
   session_start();
-	
+
 	//connect to databases
 	$db = mysqli_connect("localhost", "root", "" , "logintest");
-	
+
 	if (isset($_POST['register_btn'])){
 		$username = mysql_real_escape_string($_POST['first']);
 		$email = mysql_real_escape_string($_POST['last']);
 		$uid = mysql_real_escape_string($_POST['uid']);
 		$password = mysql_real_escape_string($_POST['pwd']);
 	    $password2 = mysql_real_escape_string($_POST['pwd2']);
-		
+
 	if (empty($username)){ //this is checking $username
 		header("Location: ../index.php?error=empty");
 		exit();
 	}
 	if (empty($email)){
-		
+
 		header("Location: ../signup.php?error=empty");
 		exit();
-		
+
 	}if (empty($uid)){
-		
+
 		header("Location: ../signup.php?error=empty");
 		exit();
-		
+
 	}
 	 if (empty($password)){
-		
+
 		header("Location: ../signup.php?error=empty");
 		exit();
-		
+
 	}
-	
+
 	if ($password !== $password2){
-		
+
 		header("Location: ../index.php?error=wrong_password");
 		exit();
-		
+
 	}
 	else{
 		$sql = "SELECT uid from users where uid='$uid'";
@@ -73,13 +73,16 @@
 			//$encrypted_password = password_hash($password, PASSWORD_DEFAULT);
 			//$password = md5($password); //hash password before storing for security purposes
 			$sql = "insert into users(first, last, uid, pwd) VALUES ('$username', '$email', '$uid', '$password')";
+      $sql2 = "insert into lessons(uid) VALUES ('$uid')";
 			mysqli_query($db, $sql);
+      		mysqli_query($db, $sql2);
 		    $_SESSION['message'] = "You are now logged in";
 			$_SESSION['username'] = $username;
+
 			header("location:../index.php");
-		
-		
-		
+
+
+
 		}
 	}
 	//else{
@@ -89,7 +92,7 @@
 		    //$_SESSION['message'] = "You are now logged in";
 			//$_SESSION['username'] = $username;
 			//header("location:../index.php");
-			
-	//}	
+
+	//}
 	}
 ?>

@@ -55,7 +55,17 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="home.php">Home</a></li>
+        <!-- create a conditon where if you are calling if from the lessons subfolder it will give you a different link to the home directory-->
+        <!--by doing this, it will make I wont need to make a separare php page with pretty much the identical code-->
+        <?php
+        $url = "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
+        if (strpos($url, 'lessons') !== false){
+        echo  '<li class="active"><a href="../home.php">Home</a></li>';
+        }
+        else{
+        echo '<li class="active"><a href="home.php">Home</a></li>';
+      }
+        ?>
         <li><a href="#">About</a></li>
         <li><a href="#">Projects</a></li>
         <li><a href="#">Contact</a></li>
