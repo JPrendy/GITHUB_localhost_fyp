@@ -5,8 +5,34 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <div class="header">
-	<h1>Register, login and logout user php mysql</h1>
+	<h1>E-Learning Application</h1>
 </div>
+
+
+<!--<script>window.twttr = (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0],
+    t = window.twttr || {};
+  if (d.getElementById(id)) return t;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "https://platform.twitter.com/widgets.js";
+  fjs.parentNode.insertBefore(js, fjs);
+
+  t._e = [];
+  t.ready = function(f) {
+    t._e.push(f);
+  };
+
+  return t;
+}(document, "script", "twitter-wjs"));</script>-->
+
+<br>
+<br>
+<br>
+<a class="twitter-share-button"
+href=https://twitter.com/intent/tweet?url=https%3A%2F%2FFinal-Year-Project.com%2F&text=Final+Year+Project+e-learning.&hashtags=e-learning
+  data-size="large">
+Tweet</a>
 
 
 <?php

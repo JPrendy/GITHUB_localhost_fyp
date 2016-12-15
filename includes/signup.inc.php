@@ -34,24 +34,25 @@
 		$password = mysql_real_escape_string($_POST['pwd']);
 	    $password2 = mysql_real_escape_string($_POST['pwd2']);
 
+#change all these back to index
 	if (empty($username)){ //this is checking $username
 		header("Location: ../index.php?error=empty");
 		exit();
 	}
 	if (empty($email)){
 
-		header("Location: ../signup.php?error=empty");
+		header("Location: ../index.php?error=empty");
 		exit();
 
 	}if (empty($uid)){
 
-		header("Location: ../signup.php?error=empty");
+		header("Location: ../index.php?error=empty");
 		exit();
 
 	}
 	 if (empty($password)){
 
-		header("Location: ../signup.php?error=empty");
+		header("Location: ../index.php?error=empty");
 		exit();
 
 	}

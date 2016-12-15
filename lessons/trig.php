@@ -30,7 +30,19 @@ $_SESSION['lesson'] = $lesson;
 
 
  ?>
+ <div class="col-sm-9 text-left">
 
+  <button type="button" name="button">video</button>
+   <button type="button" name="button">text</button>
+ <br>
+ <br>
+
+ Here we will go through the content of our topic
+Trignometry
+
+
+ <a href="..\exercises\quiz.php"> here to test trignometry </a>
+ </div>
 
  </body>
  </html>

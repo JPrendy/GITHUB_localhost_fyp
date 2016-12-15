@@ -105,7 +105,17 @@
            $one = "lessons/$ok.php";
            echo $one;
          ?>
-           <li class="active"><?php echo "<a href=$one>Last topic visited $ok</a>"; ?></li>
+         <?php
+        // if( $ok == null){
+          // <li class="active"> echo "<a href=$one>Last topic visited $ok</a>"; </li>
+        // }
+        // else
+        // {
+           //<h1> ok</h1>
+         //}
+        // ?>
+
+              <li class="active"><?php echo "<a href=$one>Last topic visited $ok</a>"; ?></li>
            <p>
              <p>
 
@@ -134,14 +144,8 @@
    <a href="#" id='ok' class="close" data-dismiss="alert" aria-label="close">×</a>
    <strong>Danger!</strong> This alert box could indicate a dangerous or potentially negative action.
  </div>
- <?php } else { ?>
-   <div class="alert alert-danger alert-dismissable">
-<a href="#" id='ok' class="close" data-dismiss="alert" aria-label="close">×</a>
-<strong>Der!</strong> This alert box could indicate a dangerous or potentially negative action.
-</div>
+ <?php } ?>
 
-
-<?php } ?>
 
 
 
@@ -164,21 +168,10 @@
     }
 
       ?>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <p>Welcom to my e-learning application. The concept behind my application is to help how you acquire and learn new knowledge. I hope that by using this Web Application you will notice will improvement on your knowledge on the topics I touch on im my application  </p>
       <hr>
       <h3>Test</h3>
-      <p>Lorem ipsum...</p>
-	    <h1>Some text to enable scrolling</h1>
-      <h1>Some text to enable scrolling</h1>
-      <h1>Some text to enable scrolling</h1>
-      <h1>Some text to enable scrolling</h1>
-      <h1>Some text to enable scrolling</h1>
-      <h1>Some text to enable scrolling</h1>
-	   <h1>Some text to enable scrolling</h1>
-      <h1>Some text to enable scrolling</h1>
-      <h1>Some text to enable scrolling</h1>
-      <h1>Some text to enable scrolling</h1>
-      <h1>Some text to enable scrolling</h1>
+
     </div>
 
     </div>

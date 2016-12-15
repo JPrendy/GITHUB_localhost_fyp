@@ -3,7 +3,7 @@
 ?>
 
 <div class="header">
-	<h1>Register, login and logout user php mysql</h1>
+	<h1>E-Learning Application</h1>
 </div>
 
 

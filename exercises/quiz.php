@@ -24,8 +24,13 @@
 <div class="col-sm-12">
 <h2>Question <span></span></h2>
 <p> Question ....</p>
+
 </div>
+<p>Feedback<p>
+
+<p>choose the following options</p>
 </div>
+
 
 
 <div class="row">
@@ -214,6 +219,11 @@ function endQuiz() {
         }
         output = output + '<p>You scored ' + correct + ' out of ' + myQuiz.length + '</p></div> ';
         document.getElementById("quizContent").innerHTML = output;
+
+
+
+
+
     } else {
         //console.log('not answered');
     }

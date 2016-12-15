@@ -34,7 +34,7 @@
     </nav>
 
     <div class="col-sm-9 text-left">
-      <h1>Welcome</h1>
+      <h1>Lessons</h1>
 
 
 
