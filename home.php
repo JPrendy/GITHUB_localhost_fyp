@@ -97,39 +97,62 @@
 	  <div class="row content">
 
 
+
+
+
     <nav class="col-sm-3">
       <ul class="nav nav-pills nav-stacked" data-spy="affix" data-offset-top="200" >
+
         <?php
            $ok = $_SESSION['lesson'];
-           echo $ok;
+          // echo $ok;
            $one = "lessons/$ok.php";
-           echo $one;
+           //echo $one;
          ?>
-         <?php
-        // if( $ok == null){
-          // <li class="active"> echo "<a href=$one>Last topic visited $ok</a>"; </li>
-        // }
-        // else
-        // {
-           //<h1> ok</h1>
-         //}
-        // ?>
+         <?php  if($_SESSION['lesson'] != ''){?>
 
-              <li class="active"><?php echo "<a href=$one>Last topic visited $ok</a>"; ?></li>
+
+              <li class="active"><?php echo "<a href=$one>Last topic visited: $ok</a>"; ?></li>
            <p>
              <p>
-
+ <?php } ?>
 
 
 
 
         <li class="active"><a href="lessons.php">Lessons</a></li>
+        <?php     if($_SESSION['welcome'] != 2){?>
+          <li><a href="#"  id="myFunction">Exercises</a></li>
+
+         <?php } else { ?>
         <li><a href="exercises.php">Exercises</a></li>
+
+           <?php } ?>
         <!--added a javascript function to the hyperlink-->
         <!-- the older version  <li><a href="#" onclick="myFunction()" >Charts</a></li> -->
-        <li><a href="#"  id="myFunction" >Charts</a></li>
-		<li><a href="#section4">Change Icon</a></li>
-			<li><a href="settings.php">Change settings</a></li>
+      <?php     if($_SESSION['welcome'] != 2){?>
+        <li><a href="#"  id="myFunction2">Charts</a></li>
+
+       <?php } else { ?>
+            <li><a href="piechart_test.php">Charts</a></li>
+
+         <?php } ?>
+
+         <?php     if($_SESSION['welcome'] != 2){?>
+           <li><a href="#"  id="myFunction3">Change Icon</a></li>
+
+          <?php } else { ?>
+            		<li><a href="change_icon.php">Change Icon</a></li>
+
+            <?php } ?>
+            <?php     if($_SESSION['welcome'] != 2){?>
+
+			<li><a href="#" id="myFunction4">Change settings</a></li>
+      <?php } else { ?>
+
+      <li><a href="settings.php">Change settings</a></li>
+
+    <?php } ?>
       </ul>
     </nav>
 
@@ -142,7 +165,7 @@
       if($_SESSION['welcome'] != 2){?>
       <div class="alert alert-danger alert-dismissable">
    <a href="#" id='ok' class="close" data-dismiss="alert" aria-label="close">×</a>
-   <strong>Danger!</strong> This alert box could indicate a dangerous or potentially negative action.
+   <strong>Welcome!</strong> This is the first time you are using the e-learning application, please click on the lessons heading.
  </div>
  <?php } ?>
 
@@ -195,6 +218,52 @@ $('#linkClose').click(function (){
   $('#myAlert').hide('fade');
 });
 });
+
+
+
+
+$(document).ready(function(){
+  $('#myFunction2').click(function(){
+     $('#myAlert').show('fade');
+  });
+
+
+$('#linkClose').click(function (){
+});
+$('#myAlert').hide('fade');
+});
+
+
+$(document).ready(function(){
+  $('#myFunction3').click(function(){
+     $('#myAlert').show('fade');
+  });
+
+
+$('#linkClose').click(function (){
+});
+$('#myAlert').hide('fade');
+});
+
+
+
+
+
+
+
+
+$(document).ready(function(){
+
+  $('#myFunction4').click(function(){
+     $('#myAlert').show('fade');
+   });
+
+
+$('#linkClose').click(function (){
+});
+$('#myAlert').hide('fade');
+});
+
 </script>
 
 <footer class="container-fluid text-center">

@@ -34,6 +34,8 @@
 		$password = mysql_real_escape_string($_POST['pwd']);
 	    $password2 = mysql_real_escape_string($_POST['pwd2']);
 
+      $theme = "light";
+
 #change all these back to index
 	if (empty($username)){ //this is checking $username
 		header("Location: ../index.php?error=empty");
@@ -76,11 +78,16 @@
 			$sql = "insert into users(first, last, uid, pwd) VALUES ('$username', '$email', '$uid', '$password')";
       $sql2 = "insert into lessons(uid) VALUES ('$uid')";
       $sql3 = "insert into lessons_visited(uid, topic_visited) VALUES ('$uid', 0)";
+      $sql4 = "insert into theme (uid, theme_col) VALUES ('$uid', '$theme')";
 			mysqli_query($db, $sql);
       		mysqli_query($db, $sql2);
           	mysqli_query($db, $sql3);
+            	mysqli_query($db, $sql4);
 		    $_SESSION['message'] = "You are now logged in";
 			$_SESSION['username'] = $username;
+
+
+
 
 			header("location:../index.php");
 

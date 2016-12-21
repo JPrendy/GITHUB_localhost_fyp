@@ -47,7 +47,8 @@
 			$result = mysqli_query($db, $sql);
       $sql2 = "Select * from lessons WHERE uid='$uid'";
       $result2 = mysqli_query($db, $sql2);
-
+      $sql3 = "Select * from theme WHERE uid='$uid'";
+      $result3 = mysqli_query($db, $sql3);
 
 		if (!$row = mysqli_fetch_assoc($result)){
 
@@ -68,6 +69,12 @@
       $row2 = mysqli_fetch_assoc($result2);
 
        $_SESSION['lesson'] = $row2['lesson_type'];
+
+
+           $row3 = mysqli_fetch_assoc($result3);
+
+
+      $_SESSION['theme'] = $row3['theme_col'];
 		//	$login = 1;
     //  $login2 += $login;
 

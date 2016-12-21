@@ -34,15 +34,10 @@
     </nav>
 
     <div class="col-sm-9 text-left">
-      <h1>Lessons</h1>
+      <h1>Change Icons</h1>
 
 
-    <?php   if($_SESSION['welcome'] != 2){?>
-      <div class="alert alert-danger alert-dismissable">
-   <a href="#" id='ok' class="close" data-dismiss="alert" aria-label="close">×</a>
-   <strong>Welcome!</strong> Please click a maths lessons you would like to study
- </div>
- <?php } ?>
+
 
 
     <!-- <div class="container"> -->
@@ -53,7 +48,8 @@
         <div class="panel-group">
           <div class="panel panel-default">
             <div class="panel-heading">Panel Header</div>
-            <div class="panel-body"><a href="lessons/Trignometry.php">Trignometry </a></div>
+            <!--make a test scenario where the user has to done the lesson before they are able to do this topic-->
+            <div class="panel-body"><a href="#">First Icon </a></div>
 
           </div>
           </div>
@@ -64,7 +60,7 @@
              <div class="panel-group">
                <div class="panel panel-default">
            <div class="panel-heading">Panel Header</div>
-            <div class="panel-body"><a href="lessons/algebra.php">Algebra</a></div>
+            <div class="panel-body"><a href="lessons/algebra.php">Second Icon</a></div>
            </div>
 
 

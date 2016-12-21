@@ -10,7 +10,7 @@
 
 
 	$db = mysqli_connect("localhost", "root", "" , "logintest");
-$lesson  = "trig";
+$lesson  = "Trignometry";
 
 echo $lesson;
 
