@@ -204,6 +204,7 @@ function moveNext() {
 }
 
 function endQuiz() {
+
     if (myAnswers[2]) {
         var output = "<div class='output'>Quiz Results<BR>";
         var questionResult = "NA";
@@ -228,6 +229,9 @@ function endQuiz() {
         //console.log('not answered');
     }
 }
+
+
+
 
 function checkPage(i) {
     /// add remove disabled buttons if there are no more questions in que

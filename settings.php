@@ -2,13 +2,14 @@
     include 'home_header.php';
 ?>
 
+
 <div class="header">
 	<h1>Change Password:</h1>
 </div>
 
 <?php
 
-
+ob_start();
 
 
 echo $_SESSION['userid'];
@@ -86,10 +87,10 @@ Change Theme
 
 Gender:
 
-     <form class="form-horizontal"  method="POST" >
+     <form class="form-horizontal"    action="settings.php" method="POST" >
        <div class="container">
-<input type="radio" id="theme" name="theme" value="Light" <?php if ($_SESSION['theme'] == 'Light') echo "checked='checked'"; ?>>Light
-<input type="radio" id="theme" name="theme"  value="Dark"  <?php if ($_SESSION['theme'] == 'Dark') echo "checked='checked'"; ?>>Dark
+<input type="radio" id="theme" name="theme" value="Light" <?php if ($_SESSION['theme'] == 'Light') echo "checked='checked'"; ?> >Light
+<input type="radio" id="theme" name="theme"  value="Dark"  <?php if ($_SESSION['theme'] == 'Dark') echo "checked='checked'"; ?> >Dark
 
   <button type="reset" class="btn btn-danger btn-s" name="register_btn"> RESET </button>
 <button type="submit" class="btn btn-rimary btn-s" name="theme_button" id="theme_button"> SAVE THEME</button>
@@ -298,16 +299,23 @@ Gender:
           $sql3 = "update theme set theme_col='$theme' where uid='{$_SESSION['userid']}'";
         echo "$sql3";
 
+
+
         if ($db->query($sql3) === TRUE) {
               echo "<br></br>";
               echo "Record Updated successfully";
               $_SESSION['theme'] = $theme;
+            //  header("Refresh:0");
+           	header("Location: http://localhost/github_localhost_fyp/settings.php");
+
+
+
     } else {
       echo "Error deleting record: " . $db->error;
     }
       }
 
-
+ob_end_flush();
    ?>
 
 </body>
