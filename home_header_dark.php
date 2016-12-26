@@ -15,7 +15,7 @@
     }
 
     body{
-        background-color: #;
+        background-color: #D3D3D3;
     }
 
     /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
@@ -77,7 +77,7 @@
       <ul class="nav navbar-nav navbar-right">
 
      <li class="dropdown">
-       <a class="dropdown-toggle" data-toggle="dropdown" href="#">  <?php  echo $_SESSION['userid'],"'s account"; ?>
+       <a class="dropdown-toggle" data-toggle="dropdown" href="#">  <?php    echo $_SESSION['userid'],"'s account"; ?>
        <span class="caret"></span></a>
        <ul class="dropdown-menu">
          <?php

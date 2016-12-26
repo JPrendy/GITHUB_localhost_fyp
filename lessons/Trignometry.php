@@ -1,9 +1,13 @@
 <?php
+session_start();
+if
+ ($_SESSION['theme'] == 'Light') {
     include '../home_header.php';
+  }
+  else {
+      include '../home_header_dark.php';
+  }
 ?>
-
-
-
 
 <?php
 
