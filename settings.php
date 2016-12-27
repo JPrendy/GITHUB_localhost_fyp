@@ -19,8 +19,8 @@ if
 ob_start();
 
 
-echo $_SESSION['userid'];
-echo $_SESSION['theme'];
+//echo $_SESSION['userid'];
+//echo $_SESSION['theme'];
 
 
 ?>
@@ -89,23 +89,27 @@ echo $_SESSION['theme'];
 
 <br>
 <br>
+  <hr>
 
-Change Theme
 
-Gender:
+<div class="form-group">
+<label class="control-label col-sm-2" for="password">Change Theme:</label>
+<div class="col-sm-3">
+       <form class="form-horizontal"    action="settings.php" method="POST" >
+  <input type="radio" id="theme" name="theme" value="Light" <?php if ($_SESSION['theme'] == 'Light') echo "checked='checked'"; ?> >Light
+  <input type="radio" id="theme" name="theme"  value="Dark"  <?php if ($_SESSION['theme'] == 'Dark') echo "checked='checked'"; ?> >Dark
+</div>
+</div>
 
-     <form class="form-horizontal"    action="settings.php" method="POST" >
-       <div class="container">
-<input type="radio" id="theme" name="theme" value="Light" <?php if ($_SESSION['theme'] == 'Light') echo "checked='checked'"; ?> >Light
-<input type="radio" id="theme" name="theme"  value="Dark"  <?php if ($_SESSION['theme'] == 'Dark') echo "checked='checked'"; ?> >Dark
 
+<div class="form-group">
+<div class="col-sm-offset-2 col-sm-10">
   <button type="reset" class="btn btn-danger btn-s" name="register_btn"> RESET </button>
 <button type="submit" class="btn btn-rimary btn-s" name="theme_button" id="theme_button"> SAVE THEME</button>
-
-
+</div>
 </div>
 </form>
-
+</div>
 
 
 
