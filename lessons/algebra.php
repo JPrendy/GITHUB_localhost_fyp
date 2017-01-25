@@ -70,6 +70,8 @@ $_SESSION['lesson'] = $lesson;
 <div class="col-sm-9 text-left">
 
 
+<!--http://www.w3schools.com/bootstrap/bootstrap_tabs_pills.asp-->
+
   <div class="container">
     <h2>Dynamic Pills</h2>
     <p>To make the tabs toggleable, add the data-toggle="pill" attribute to each link. Then add a .tab-pane class with a unique ID for every tab and wrap them inside a div element with class .tab-content.</p>
