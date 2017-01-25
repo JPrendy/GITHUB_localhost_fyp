@@ -57,7 +57,7 @@ if
           <div class="panel panel-default">
             <div class="panel-heading">Panel Header</div>
             <!--make a test scenario where the user has to done the lesson before they are able to do this topic-->
-            <div class="panel-body"><a href="exercises/quiz.php">Trignometry Quiz </a></div>
+            <div class="panel-body"><a href="exercises/question.php?n=1&m=Trignometry">Trignometry Quiz </a></div>
 
           </div>
           </div>
@@ -68,7 +68,7 @@ if
              <div class="panel-group">
                <div class="panel panel-default">
            <div class="panel-heading">Panel Header</div>
-            <div class="panel-body"><a href="lessons/algebra.php">Algebra Quiz</a></div>
+            <div class="panel-body"><a href="exercises/question.php?n=1&m=questions">Algebra Quiz</a></div>
            </div>
 
 

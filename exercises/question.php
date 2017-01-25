@@ -2,11 +2,18 @@
 <?php
    //Set question Number
  $number = (int) $_GET['n'];  //gets the number at the top of the url we
+  $number2 = (string) $_GET['m'];  //gets the number at the top of the url we
+
+
+  echo $number2;
  //currently set it as n=1
 
 //Get the question
 //might have to do separate files and tables for each subjects
-$query = "SELECT * from questions
+//$query = "SELECT * from questions
+//WHERE question_number =$number";
+
+$query = "SELECT * from $number2
 WHERE question_number =$number";
 
 
