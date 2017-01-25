@@ -1,4 +1,5 @@
 <?php include 'database.php'; ?>
+<?php session_start(); ?>
 <?php
    //Set question Number
  $number = (int) $_GET['n'];  //gets the number at the top of the url we
@@ -12,6 +13,12 @@
 //might have to do separate files and tables for each subjects
 //$query = "SELECT * from questions
 //WHERE question_number =$number";
+$query= "SELECT * FROM $number2";
+$results = $mysqli->query($query) or die($mysqli->error.__LINE__);
+
+$total= $results->num_rows;
+
+
 
 $query = "SELECT * from $number2
 WHERE question_number =$number";
@@ -57,7 +64,7 @@ $choices = $mysqli->query($query) or die($mysqli->error.__LINE__);
 </header>
 <main>
 <div class="container">
- <div class="current">Question 1 of 5</div>
+ <div class="current">Question <?php echo  $question['question_number']; ?> of <?php echo $total ?></div>
 
 <p class="question">
 <?php  echo $question['text'];?>
@@ -70,6 +77,8 @@ $choices = $mysqli->query($query) or die($mysqli->error.__LINE__);
    <?php endwhile; ?>
   </ul>
  <input type="submit" value="Submit"/>
+ <input type="hidden" name="number" value="<?php echo $number; ?>"/>
+ <input type="hidden" name="number2" value="<?php echo $number2; ?>"/>
 
 </form>
 </div>
