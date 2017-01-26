@@ -34,7 +34,7 @@
 		$password = mysql_real_escape_string($_POST['pwd']);
 	    $password2 = mysql_real_escape_string($_POST['pwd2']);
 
-      $theme = "light";
+      $theme = "Light";
 
 #change all these back to index
 	if (empty($username)){ //this is checking $username
@@ -69,13 +69,14 @@
 		$sql = "SELECT uid from users where uid='$uid'";
 		$result = mysqli_query($db, $sql);
 		$uidcheck = mysqli_num_rows($result);
+    $difficulty_level = 1;
 		if($uidcheck > 0){
 			header("Location: ../signup.php?error=username");
 			exit();
 		}else {
 			//$encrypted_password = password_hash($password, PASSWORD_DEFAULT);
 			//$password = md5($password); //hash password before storing for security purposes
-			$sql = "insert into users(first, last, uid, pwd) VALUES ('$username', '$email', '$uid', '$password')";
+			$sql = "insert into users(first, last, uid, pwd, difficulty_level) VALUES ('$username', '$email', '$uid', '$password', '$difficulty_level')";
       $sql2 = "insert into lessons(uid) VALUES ('$uid')";
       $sql3 = "insert into lessons_visited(uid, topic_visited) VALUES ('$uid', 0)";
       $sql4 = "insert into theme (uid, theme_col) VALUES ('$uid', '$theme')";
@@ -85,7 +86,6 @@
             	mysqli_query($db, $sql4);
 		    $_SESSION['message'] = "You are now logged in";
 			$_SESSION['username'] = $username;
-
 
 
 

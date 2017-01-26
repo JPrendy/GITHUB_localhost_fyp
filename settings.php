@@ -116,6 +116,54 @@ ob_start();
 
 
 
+<br>
+<br>
+  <hr>
+
+
+<div class="form-group">
+
+  <label class="control-label col-sm-2" for="password">Delete last exercise record</label>
+  <div class="col-sm-3">
+<form class="form-horizontal"    action="settings.php" method="POST">
+<button type="button" class="btn btn-rimary btn-s" data-toggle="modal" data-target="#myModal_delete_record">Delete last Record</button>
+</div>
+</div>
+
+
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="myModal_delete_record" role="dialog">
+  <div class="modal-dialog">
+
+    <!--This brings the  Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button> <!-- thiis will bring up a x button-->
+
+      </div>
+      <div class="modal-body">
+        <p>Are you sure you want to delete your last exercise record? This will change how the application works </p>
+      </div>
+      <div class="modal-footer">
+         <button type="submit" class="btn btn-primary btn-s" name="btndelete_record" id="btndelete_record"> Delete Last Exercise Record </button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+</form>
+
+
+
+
+
+
 
 	 <?php
 
@@ -326,8 +374,43 @@ ob_start();
     }
       }
 
-ob_end_flush();
+
    ?>
+
+
+
+<!--//////////////////////////////////////////////////////////-->
+<!--THIS PART HANDLES THE DELETING OF THE LAST SCORE RECORD OF THE CURRENT USER
+USING MYSQL -->
+
+<?php
+$db = mysqli_connect("localhost", "root", "" , "logintest");
+
+//NOW HERE IS WHERE WE IMPLEMENTED THE BUTTON FOR THEME
+if (isset($_POST['btndelete_record'])){
+
+
+//IF NEED HELP LOOK AT THIS LINK http://www.w3schools.com/php/php_mysql_delete.asp
+$sql4 = "DELETE FROM quiz_scores WHERE uid='{$_SESSION['userid']}' ORDER BY sc_time DESC LIMIT 1";
+
+
+
+if (mysqli_query($db, $sql4)) {
+    echo "Record deleted successfully";
+} else {
+    echo "Error deleting record: " . mysqli_error($d);
+}
+
+mysqli_close($db);
+      }
+
+ob_end_flush();
+?>
+
+
+
+
+
 
 </body>
 </html>

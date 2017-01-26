@@ -73,6 +73,7 @@
 
            $row3 = mysqli_fetch_assoc($result3);
 
+           $_SESSION['difficulty_level'] = $row['difficulty_level'];
 
       $_SESSION['theme'] = $row3['theme_col'];
 		//	$login = 1;
