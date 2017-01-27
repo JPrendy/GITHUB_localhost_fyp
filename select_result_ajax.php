@@ -1,3 +1,13 @@
+<?php
+session_start();
+if
+ ($_SESSION['theme'] == 'Light') {
+    include 'home_header.php';
+  }
+  else {
+      include 'home_header_dark.php';
+  }
+?>
 
 <!DOCTYPE html>
 <html>
@@ -30,7 +40,7 @@ function showUser(str) {
 <select name="users" onchange="showUser(this.value)">
 <option value="">Select a person:</option>
 <option value="Trignometry">Trignometry</option>
-<option value="2">Algebra</option>
+<option value="Algebra">Algebra</option>
 
 </select>
 </form>

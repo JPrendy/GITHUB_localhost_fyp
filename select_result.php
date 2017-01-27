@@ -26,8 +26,9 @@ echo "$sql";
 	$result = mysqli_query($db, $sql);
 
 echo "<table>";
-while ( $row = mysql_fetch_row($result) ) {
 
+//to do this we need fetch array not just a row because we are calling multipe rows
+while($row = mysqli_fetch_array($result)){
 //this displays all the information in the rows
 echo "<tr><td>";
 echo($row[0]);
@@ -42,8 +43,7 @@ echo($row[4]);
 echo "</td><td>";
 echo($row[5]);
 echo "</td><td>";
-echo($row[6]);
-echo("</td><td>\n");
+
 
 //this will link to you another page
 

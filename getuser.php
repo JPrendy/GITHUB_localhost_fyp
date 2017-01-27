@@ -1,12 +1,6 @@
 <?php
 session_start();
-if
- ($_SESSION['theme'] == 'Light') {
-    include 'home_header.php';
-  }
-  else {
-      include 'home_header_dark.php';
-  }
+
 ?>
 
 <!DOCTYPE html>
@@ -37,23 +31,26 @@ if (!$con) {
 }
 
 mysqli_select_db($con,"quiz_scores");
-$sql="SELECT * FROM quiz_scores WHERE math_lesson = '".$q."'";
+$sql="SELECT * FROM quiz_scores WHERE uid = '{$_SESSION['userid']}' and math_lesson = '".$q."'";
 $result = mysqli_query($con,$sql);
 
 echo "$sql";
 echo "<table>
 <tr>
-<th>Firstname</th>
-<th>Lastname</th>
-<th>Age</th>
-<th>Hometown</th>
-<th>Job</th>
+
+<th>Math Lesson</th>
+<th>Score</th>
+<th>Difficulty Level</th>
+<th>Date</th>
 </tr>";
 while($row = mysqli_fetch_array($result)) {
     echo "<tr>";
-    echo "<td>" . $row['id'] . "</td>";
-    echo "<td>" . $row['uid'] . "</td>";
 
+  //  echo "<td>" . $row['uid'] . "</td>";
+    echo "<td>" . $row['math_lesson'] . "</td>";
+      echo "<td>" . $row['score'] . "</td>";
+          echo "<td>" . $row['difficulty_level'] . "</td>";
+              echo "<td>" . $row['sc_time'] . "</td>";
 }
 echo "</table>";
 mysqli_close($con);
