@@ -43,7 +43,7 @@
 
 
 			//$password2 = md5($password); //hash password before storing for security purposes
-			$sql = "Select * from users WHERE uid='$uid' AND pwd='$password'";
+			$sql = "SELECT * from users WHERE uid='$uid' AND pwd='$password'";
 			$result = mysqli_query($db, $sql);
       $sql2 = "Select * from lessons WHERE uid='$uid'";
       $result2 = mysqli_query($db, $sql2);

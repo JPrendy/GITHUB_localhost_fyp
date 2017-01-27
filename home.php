@@ -134,7 +134,9 @@
         <li><a href="#"  id="myFunction2">Charts</a></li>
 
        <?php } else { ?>
-            <li><a href="piechart_test.php">Charts</a></li>
+            <!--<li><a href="piechart_test.php">Charts</a></li>-->
+            <li><a href="select_result.php">Charts</a></li>
+
 
          <?php } ?>
 
