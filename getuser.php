@@ -24,6 +24,8 @@ th {text-align: left;}
 
 <?php
 $q = strval($_GET['q']);  //this is important as normally is it carried over as an int
+//$l = strval($_GET['l']);  //this is important as normally is it carried over as an int
+
 
 $con = mysqli_connect('localhost','root','','logintest');
 if (!$con) {

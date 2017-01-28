@@ -25,6 +25,9 @@
       height: 100%;
     }
 
+    li.panel {
+      padding-top: 3px;
+    }
     /* Set black background color, white text and some padding */
     footer {
       background-color: #555;
@@ -141,18 +144,18 @@
          <?php } ?>
 
          <?php     if($_SESSION['welcome'] != 2){?>
-           <li><a href="#"  id="myFunction3">Change Icon</a></li>
+           <li class=panel><a href="#"  id="myFunction3">Change Icon</a></li>
 
           <?php } else { ?>
-            		<li><a href="change_icon.php">Change Icon</a></li>
+            		<li class=panel><a href="change_icon.php">Change Icon</a></li>
 
             <?php } ?>
             <?php     if($_SESSION['welcome'] != 2){?>
 
-			<li><a href="#" id="myFunction4">Change settings</a></li>
+			<li class=panel><a href="#" id="myFunction4">Change settings</a></li>
       <?php } else { ?>
 
-      <li><a href="settings.php">Change settings</a></li>
+      <li class=panel><a href="settings.php">Change settings</a></li>
 
     <?php } ?>
       </ul>

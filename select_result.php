@@ -19,9 +19,14 @@ if
 if ( isset($_POST['Score_btn']) ) {
 
 $maths_lesson = mysql_real_escape_string($_POST['maths_lessons']);
+$order = mysql_real_escape_string($_POST['order']);
 echo "$maths_lesson";
 
-$sql = "SELECT * FROM  quiz_scores Where uid = '{$_SESSION['userid']}' and math_lesson = '$maths_lesson'";
+if ($order=="") {
+  $order="desc";
+}
+
+$sql = "SELECT * FROM  quiz_scores Where uid = '{$_SESSION['userid']}' and math_lesson = '$maths_lesson' ORDER BY id $order";
 echo "$sql";
 	$result = mysqli_query($db, $sql);
 
@@ -42,7 +47,7 @@ echo "</td><td>";
 echo($row[4]);
 echo "</td><td>";
 echo($row[5]);
-echo "</td><td>";
+
 
 
 //this will link to you another page
@@ -58,7 +63,19 @@ echo "</table>\n";
 <!DOCTYPE html>
 <html>
 <body>
+<style>
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
 
+table, td, th {
+    border: 1px solid black;
+    padding: 5px;
+}
+
+th {text-align: left;}
+</style>
 <p>Select your maths category.</p>
 
 <form method="POST" action="select_result.php">
@@ -68,8 +85,42 @@ echo "</table>\n";
   </select>
   <br><br>
 
+
+  <select name="difficulty_level">
+    <option value="0">0</option>
+    <option value="1">1</option>
+  </select>
+  <br><br>
+
+
+  <select name="order">
+    <option value="ASC">Newest</option>
+    <option value="DESC">Oldest</option>
+  </select>
+  <br><br>
+
+  <select name="Limit">
+    <option value="25">25</option>
+    <option value="50">50</option>
+    <option value="100">100</option>
+  </select>
+  <br><br>
+
+
     <button type="submit" class="btn btn-primary btn-s" name="Score_btn"> submit </button>
 </form>
+
+
+
+
+
+<div class="panel-body"><a href="ColumnChart_test.php">Column </a></div>
+
+<div class="panel-body"><a href="select_result_ajax.php">Ajax results </a></div>
+
+
+<div class="panel-body"><a href="piechart_test.php">PieChart </a></div>
+
 
 </body>
 </html>

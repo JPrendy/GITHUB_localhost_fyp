@@ -68,7 +68,7 @@ if
              <div class="panel-group">
                <div class="panel panel-default">
            <div class="panel-heading">Panel Header</div>
-            <div class="panel-body"><a href="exercises/question.php?n=1&m=questions">Algebra Quiz</a></div>
+            <div class="panel-body"><a href="exercises/question.php?n=1&m=Algebra">Algebra Quiz</a></div>
            </div>
 
 

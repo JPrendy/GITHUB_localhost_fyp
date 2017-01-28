@@ -43,8 +43,10 @@ $question = $result->fetch_assoc();
 //Get the choices
 //might have to do separate files and tables for each subjects
 $query = "SELECT * from choices
-WHERE question_number =$number";
+WHERE question_number =$number order by RAND()";
 
+
+/////////////////////////////ORDER BY RAND() BRINGS THE ROWS RANDOMLY
 
 //Get the resutlt from the query
 $choices = $mysqli->query($query) or die($mysqli->error.__LINE__);

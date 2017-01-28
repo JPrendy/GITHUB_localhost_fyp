@@ -33,6 +33,7 @@ $table['cols'] = array(
 
 
   array ('label' => 'Startup', 'type' => 'string'),
+//  array('label' => 'Ok', 'type' => 'string'),
   array('label' => 'Users', 'type' => 'number')
 
 );
@@ -44,7 +45,7 @@ $table['cols'] = array(
     $temp = array();
     // the following line will be used to slice the Pie chart
     $temp[] = array('v' => (string) $r['math_lesson']);
-
+//   $temp[] = array('x' => (string) $r['uid']);
     // Values of each slice
     $temp[] = array('v' => (int) $r['score']);
     $rows[] = array('c' => $temp);
@@ -82,8 +83,8 @@ $table['cols'] = array(
         };
       // Instantiate and draw our chart, passing in some options.
       // Do not forget to check your div ID
-      var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
-//    var chart = new google.visualization.ColumnChart(document.getElementById('columnchart_material'));
+//      var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+    var chart = new google.visualization.ColumnChart(document.getElementById('columnchart_material'));
 
       chart.draw(data, options);
     }
@@ -93,7 +94,7 @@ $table['cols'] = array(
   <body>
     <!--this is the div that will hold the pie chart-->
 
-<div id="chart_div"></div>
+<div id="columnchart_material"></div>
 
   </body>
 </html>

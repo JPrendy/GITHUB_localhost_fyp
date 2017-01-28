@@ -32,6 +32,12 @@ function showUser(str) {
   xmlhttp.open("GET","getuser.php?q="+str,true);
   xmlhttp.send();
 }
+
+
+
+
+
+
 </script>
 </head>
 <body>
@@ -44,6 +50,7 @@ function showUser(str) {
 
 </select>
 </form>
+
 <br>
 <div id="txtHint"><b>Person info will be listed here.</b></div>
 
