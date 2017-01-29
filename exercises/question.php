@@ -83,8 +83,13 @@ $choices = $mysqli->query($query) or die($mysqli->error.__LINE__);
 <form method="post" action="process.php">
   <ul class="choices">
     <?php while($row =$choices->fetch_assoc()): ?>  <!--while there is still choice records-->
-      <li><input name="choice" type="radio" value="<?php echo $row['id'];?>"/> <?php echo $row['text']?> </li>
+  <!-- <li><input name="choice" type="radio" value="<?php echo $row['id'];?>"/> <?php echo $row['text']  ?>  </li> -->
 
+      <div class="btn-group" data-toggle="buttons">
+        <label class="btn btn-primary btn-lg">
+          <input type="radio" name="options" id="option1" autocomplete="off" value="<?php echo $row['id'];?>"/>  <?php echo $row['text']?>
+        </label>
+      </div>
    <?php endwhile; ?>
   </ul>
  <input type="submit" value="Submit"/>

@@ -29,7 +29,9 @@ function showUser(str) {
       document.getElementById("txtHint").innerHTML=this.responseText;
     }
   }
+
   xmlhttp.open("GET","getuser.php?q="+str,true);
+
   xmlhttp.send();
 }
 
