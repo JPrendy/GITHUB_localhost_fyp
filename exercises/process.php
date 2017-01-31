@@ -49,11 +49,12 @@ $total= $results->num_rows;
 
 //get correct choice
 
+//THIS GETS THE SESSION 'CHOICES' WHICH STORES WHAT MATH SUBJECT WE ARE LOOKING FOR
+$choices =  $_SESSION['choices'];
+//FOR EXAMPLE CHOICES COULD HOLD EITHER 'ALGEBRA_CHOICES' OR 'TRIGNOMETRY CHOICES' IT DEPENDS ON WHAT EXERCISE YOU PICKED
 
-
-
-$query = "SELECT * FROM choices where question_number = $number and is_correct=1";
-$query2 = "SELECT * FROM choices where question_number = $number and id=$selected_choice";
+$query = "SELECT * FROM   $choices where question_number = $number and is_correct=1";
+$query2 = "SELECT * FROM  $choices where question_number = $number and id=$selected_choice";
 
 //GET Result
 

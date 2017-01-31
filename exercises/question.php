@@ -15,6 +15,10 @@ if
   $number2 = (string) $_GET['m'];  //gets the number at the top of the url we
 
 
+  $before_choice = "_choices";
+  $choices =  $number2 . $before_choice;
+  $_SESSION['choices'] = $choices;
+
  echo $number;
   echo $number2;
  //currently set it as n=1
@@ -43,7 +47,7 @@ $question = $result->fetch_assoc();
 ///////////////////////////////////////
 //Get the choices
 //might have to do separate files and tables for each subjects
-$query = "SELECT * from choices
+$query = "SELECT * from $choices
 WHERE question_number =$number order by RAND()";
 
 
