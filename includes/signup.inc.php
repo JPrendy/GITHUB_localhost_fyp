@@ -80,10 +80,13 @@
       $sql2 = "insert into lessons(uid) VALUES ('$uid')";
       $sql3 = "insert into lessons_visited(uid, topic_visited) VALUES ('$uid', 0)";
       $sql4 = "insert into theme (uid, theme_col) VALUES ('$uid', '$theme')";
+      //THIS IS USED TO SET THE DEFAULT INSERT INSERT SETTING FOR THE DYNAMIC_SETTINGS TABLE
+        $sql5 = "insert into dynamic_settings (uid, text_hint, timer) VALUES ('$uid', 'N', 'N')";
 			mysqli_query($db, $sql);
       		mysqli_query($db, $sql2);
           	mysqli_query($db, $sql3);
             	mysqli_query($db, $sql4);
+                  	mysqli_query($db, $sql5);
 		    $_SESSION['message'] = "You are now logged in";
 			$_SESSION['username'] = $username;
 

@@ -19,14 +19,16 @@ if
 if ( isset($_POST['Score_btn']) ) {
 
 $maths_lesson = mysql_real_escape_string($_POST['maths_lessons']);
+$difficulty_level = mysql_real_escape_string($_POST['difficulty_level']);
 $order = mysql_real_escape_string($_POST['order']);
+$limit = mysql_real_escape_string($_POST['limit']);
 echo "$maths_lesson";
 
 if ($order=="") {
   $order="desc";
 }
 
-$sql = "SELECT * FROM  quiz_scores Where uid = '{$_SESSION['userid']}' and math_lesson = '$maths_lesson' ORDER BY id $order";
+$sql = "SELECT * FROM  quiz_scores Where uid = '{$_SESSION['userid']}' AND difficulty_level = '$difficulty_level' and math_lesson = '$maths_lesson' ORDER BY id $order LIMIT $limit";
 echo "$sql";
 	$result = mysqli_query($db, $sql);
 
@@ -78,11 +80,19 @@ th {text-align: left;}
 </style>
 <p>Select your maths category.</p>
 
-<form method="POST" action="select_result.php">
-  <select name="maths_lessons">
+<form  method="POST" action="select_result.php">
+
+
+
+  <div class="form-group">
+    <div class="col-xs-2">
+  <label for="sel1">Select list (select one):</label>
+  <select class="form-control"  name="maths_lessons" id="sel1">
     <option value="Algebra">Algebra</option>
     <option value="Trignometry">Trignometry</option>
   </select>
+</div>
+</div>
   <br><br>
 
 
@@ -99,7 +109,7 @@ th {text-align: left;}
   </select>
   <br><br>
 
-  <select name="Limit">
+  <select name="limit">
     <option value="25">25</option>
     <option value="50">50</option>
     <option value="100">100</option>

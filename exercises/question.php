@@ -67,7 +67,6 @@ $choices = $mysqli->query($query) or die($mysqli->error.__LINE__);
 <head>
   <meta charset="utf-8">
   <title> Maths Quiz </title>
-<link rel="stylesheet" href="css/style_quiz.css" type="text/css" />
 
 </head>
 <body>

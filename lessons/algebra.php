@@ -18,7 +18,7 @@ if
 
 
 	$db = mysqli_connect("localhost", "root", "" , "logintest");
-$lesson  = "algebra";
+$lesson  = "Algebra";
 
 //echo "$lesson</br>";
 
