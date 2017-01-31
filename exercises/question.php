@@ -15,6 +15,7 @@ if
   $number2 = (string) $_GET['m'];  //gets the number at the top of the url we
 
 
+ echo $number;
   echo $number2;
  //currently set it as n=1
 
@@ -87,7 +88,7 @@ $choices = $mysqli->query($query) or die($mysqli->error.__LINE__);
 
       <div class="btn-group" data-toggle="buttons">
         <label class="btn btn-primary btn-lg">
-          <input type="radio" name="options" id="option1" autocomplete="off" value="<?php echo $row['id'];?>"/>  <?php echo $row['text']?>
+          <input type="radio" name="choice" id="option1" autocomplete="off" value="<?php echo $row['id'];?>"/>  <?php echo $row['text']?>
         </label>
       </div>
    <?php endwhile; ?>

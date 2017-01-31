@@ -18,7 +18,17 @@ $_SESSION['math_lesson'] = $number2;
 
 
   $selected_choice = $_POST['choice'];
+
+
+#if(  $number ==1){
+  #$_SESSION['lesson'.$number] =   $selected_choice;
+#  $_SESSION['lesson2'] =   $selected_choice;
+#}
+  $_SESSION['lesson'.$number] =   $selected_choice;
+
+
   $next = $number+1;
+
 
 $test = "&m=";
 $number2_2 = $test . $number2;
@@ -43,17 +53,29 @@ $total= $results->num_rows;
 
 
 $query = "SELECT * FROM choices where question_number = $number and is_correct=1";
-
+$query2 = "SELECT * FROM choices where question_number = $number and id=$selected_choice";
 
 //GET Result
 
 $result = $mysqli->query($query) or die($mysqli-> error.__LINE__);
-
+$result2 = $mysqli->query($query2) or die($mysqli-> error.__LINE__);
 //GET row
 $row = $result->fetch_assoc();
+$row2 = $result2->fetch_assoc();
 
 //Set Correct choice
 $correct_choice = $row['id'];
+
+//////THIS WILL GET THE CORRECT ANSWER AND DISPLAY IT
+$correct_choice_text = $row['text'];
+
+
+
+$selected_choice_text = $row2['text'];
+
+$_SESSION['correct'.$number] =   $correct_choice_text;
+$_SESSION['your'.$number] =   $selected_choice_text;
+
 
 //Compare
 if($correct_choice == $selected_choice){
