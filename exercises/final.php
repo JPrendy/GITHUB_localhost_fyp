@@ -97,6 +97,8 @@ echo "<br>";
 <?php
 ///$query = "SELECT * from dynamic_settings
 ///WHERE uid ='{$_SESSION['userid']}' order by RAND()";
+//ob_start();
+
 $query = "SELECT * from dynamic_settings
 WHERE uid ='{$_SESSION['userid']}' ";
 echo $query;
@@ -113,11 +115,11 @@ $result = mysqli_query($db, $query);
 
   <?php    while($row = mysqli_fetch_array($result)) {?>
   <form action="final.php" method="post">
-  <input type="checkbox" name="check_list[]" value="<?php $row[2]?>" <?php if ($row[2] == 'text_hint_Y') echo "checked='checked'";?> > Text Hints
+  <input type="checkbox" name="check_list[]" value="<?php echo $row[1]?>" <?php if ($row[1] == 'text_hint_Y') echo "checked='checked'";?> > Text Hints
   <input type="checkbox" name="check_list[]" value="value 2">
   <input type="checkbox" name="check_list[]" value="value 3">
   <input type="checkbox" name="check_list[]" value="value 4">
-  <input type="submit" />
+  <input type="submit"  name="feedback_button" />
   </form>
      <?php }  ?>
 
@@ -129,11 +131,19 @@ $result = mysqli_query($db, $query);
                            //in your case, it would echo whatever $row['Report ID'] is equivalent to.
     //  }
   //}
-
+//	if (isset($_POST['feedback_button'])){
     $aDoor = $_POST['check_list'];
     if(empty($aDoor))
     {
       echo("You didn't select any buildings.");
+          $test_text_hint = 0;
+          $sql2 = "update dynamic_settings set text_hint='text_hint_N' where uid='{$_SESSION['userid']}'";
+        echo "$sql2";
+        if ($db->query($sql2) === TRUE) {
+              echo "<br></br>";
+  } else {
+      echo "Error deleting record: " . $db->error;
+  }
     }
     else
     {
@@ -143,7 +153,7 @@ $result = mysqli_query($db, $query);
       for($i=0; $i < $N; $i++)
       {
         echo($aDoor[$i] . " ");
-        if($aDoor[$i] ==  'text_hint_N'){
+        if(($aDoor[$i] == 'text_hint_N') || ($aDoor[$i] =='text_hint_Y')){
           //update
 
             $test_text_hint =1;
@@ -177,6 +187,8 @@ $row_session = mysqli_fetch_assoc($result_session);
 $_SESSION['text_hint'] =  $row_session['text_hint'];
     }
 
+//}
+    //ob_end_flush();
   ?>
 
 
