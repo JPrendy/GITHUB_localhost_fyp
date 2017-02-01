@@ -21,6 +21,9 @@ if
 
  echo $number;
   echo $number2;
+  $current_test_hint = $_SESSION['text_hint'];
+  echo   $current_test_hint;
+
  //currently set it as n=1
 
 //Get the question
@@ -82,12 +85,20 @@ $choices = $mysqli->query($query) or die($mysqli->error.__LINE__);
  <div class="current">Question <?php echo  $question['question_number']; ?> of <?php echo $total ?></div>
 
 <p class="question">
-<?php  echo $question['text'];?>
+<?php    if ($current_test_hint == 'text_hint_Y'){
+ echo $question['text_hint'];
+ }
+else{
+ echo $question['text'];
+}
+ ?>
 </p>
 <form method="post" action="process.php">
   <ul class="choices">
     <?php while($row =$choices->fetch_assoc()): ?>  <!--while there is still choice records-->
-  <!-- <li><input name="choice" type="radio" value="<?php echo $row['id'];?>"/> <?php echo $row['text']  ?>  </li> -->
+  <!--  if ($current_test_hint == 'Y'){}-->
+  <!--------THIS LINE MAY NOT BE NECESSARY
+  <!-- <li><input name="choice" type="radio" value="<?php echo $row['id'];?>"/> <?php  echo $row['text']  ?>  </li> -->
 
       <div class="btn-group" data-toggle="buttons">
         <label class="btn btn-primary btn-lg">

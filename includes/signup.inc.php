@@ -81,7 +81,7 @@
       $sql3 = "insert into lessons_visited(uid, topic_visited) VALUES ('$uid', 0)";
       $sql4 = "insert into theme (uid, theme_col) VALUES ('$uid', '$theme')";
       //THIS IS USED TO SET THE DEFAULT INSERT INSERT SETTING FOR THE DYNAMIC_SETTINGS TABLE
-        $sql5 = "insert into dynamic_settings (uid, text_hint, timer) VALUES ('$uid', 'N', 'N')";
+        $sql5 = "insert into dynamic_settings (uid, text_hint, timer) VALUES ('$uid', 'text_hint_N', 'N')";
 			mysqli_query($db, $sql);
       		mysqli_query($db, $sql2);
           	mysqli_query($db, $sql3);

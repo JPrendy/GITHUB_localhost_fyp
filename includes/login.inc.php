@@ -49,6 +49,9 @@
       $result2 = mysqli_query($db, $sql2);
       $sql3 = "Select * from theme WHERE uid='$uid'";
       $result3 = mysqli_query($db, $sql3);
+      //THIS IS TO SELECT FROM THE TABLE DYNAMIC_SETTINGS
+      $sql4 = "Select * from dynamic_settings WHERE uid='$uid'";
+      $result4 = mysqli_query($db, $sql4);
 
 		if (!$row = mysqli_fetch_assoc($result)){
 
@@ -76,6 +79,11 @@
            $_SESSION['difficulty_level'] = $row['difficulty_level'];
 
       $_SESSION['theme'] = $row3['theme_col'];
+
+      $row4 = mysqli_fetch_assoc($result4);
+
+      $_SESSION['text_hint'] = $row4['text_hint'];
+
 		//	$login = 1;
     //  $login2 += $login;
 

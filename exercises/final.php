@@ -1,4 +1,5 @@
 <?php
+ include 'database.php';
 session_start();
 if
  ($_SESSION['theme'] == 'Light') {
@@ -93,19 +94,33 @@ echo "<br>";
   <div class="panel-body"><a href="back_to_exercises.php">back to exercises </a></div>
 
 
+<?php
+///$query = "SELECT * from dynamic_settings
+///WHERE uid ='{$_SESSION['userid']}' order by RAND()";
+$query = "SELECT * from dynamic_settings
+WHERE uid ='{$_SESSION['userid']}' ";
+echo $query;
+$result = mysqli_query($db, $query);
+
+
+
+?>
+
 
 
 
 <h2>  Feedback  </h2>
 
+  <?php    while($row = mysqli_fetch_array($result)) {?>
   <form action="final.php" method="post">
-  <input type="checkbox" name="check_list[]" value="text_hint"> allows tips over the questions
+  <input type="checkbox" name="check_list[]" value="<?php $row[2]?>" <?php if ($row[2] == 'text_hint_Y') echo "checked='checked'";?> > Text Hints
   <input type="checkbox" name="check_list[]" value="value 2">
   <input type="checkbox" name="check_list[]" value="value 3">
   <input type="checkbox" name="check_list[]" value="value 4">
-  <input type="checkbox" name="check_list[]" value="value 5">
   <input type="submit" />
   </form>
+     <?php }  ?>
+
   <?php
 //  if(!empty($_POST['check_list'])) {
   //    foreach($_POST['check_list'] as $check) {
@@ -123,16 +138,43 @@ echo "<br>";
     else
     {
       $N = count($aDoor);
-
+      $test_text_hint = 0;
       echo("You selected $N door(s): ");
       for($i=0; $i < $N; $i++)
       {
         echo($aDoor[$i] . " ");
-        if($aDoor[$i] == 'text_hint'){
+        if($aDoor[$i] ==  'text_hint_N'){
           //update
-            echo("hello.");
+
+            $test_text_hint =1;
+            $sql2 = "update dynamic_settings set text_hint='text_hint_Y' where uid='{$_SESSION['userid']}'";
+          echo "$sql2";
+
+          if ($db->query($sql2) === TRUE) {
+                echo "<br></br>";
+                echo "Record Updated successfully";
+
+    } else {
+        echo "Error deleting record: " . $db->error;
+    }
+        }
+        //THIS WILL SOLVE THE FOR LOOP METHOD WHERE MORE THAN ONE VALUE IS SELECTED
+        if($test_text_hint != 1){
+          $sql2 = "update dynamic_settings set text_hint='text_hint_N' where uid='{$_SESSION['userid']}'";
+        echo "$sql2";
+        if ($db->query($sql2) === TRUE) {
+              echo "<br></br>";
+  } else {
+      echo "Error deleting record: " . $db->error;
+  }
         }
       }
+//THIS WILL UPDATE THE SESSION FOR TEXT_HINT SO THAT IT WILL CHANGE IF THE CHECKBOX IS NOT SELECTED OR NOT
+///////////THIS REQUIRED USE OF A SELECT STATEMENT WITHOUT IT A BOOLEAN AREA OCCURS
+$sql_session = "SELECT * FROM dynamic_settings  where uid='{$_SESSION['userid']}'";
+$result_session = mysqli_query($db, $sql_session);
+$row_session = mysqli_fetch_assoc($result_session);
+$_SESSION['text_hint'] =  $row_session['text_hint'];
     }
 
   ?>
