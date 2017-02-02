@@ -181,11 +181,12 @@ $result = mysqli_query($db, $query);
       }
 //THIS WILL UPDATE THE SESSION FOR TEXT_HINT SO THAT IT WILL CHANGE IF THE CHECKBOX IS NOT SELECTED OR NOT
 ///////////THIS REQUIRED USE OF A SELECT STATEMENT WITHOUT IT A BOOLEAN AREA OCCURS
+}
 $sql_session = "SELECT * FROM dynamic_settings  where uid='{$_SESSION['userid']}'";
 $result_session = mysqli_query($db, $sql_session);
 $row_session = mysqli_fetch_assoc($result_session);
 $_SESSION['text_hint'] =  $row_session['text_hint'];
-    }
+
 
 //}
     //ob_end_flush();
