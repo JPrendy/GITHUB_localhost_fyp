@@ -42,15 +42,15 @@ echo "<pre>";
 echo "The final score was $score";
 
 $difficulty_level = $_SESSION['difficulty_level'];
-echo  "the difficulty_level is $difficulty_level";
+//echo  "the difficulty_level is $difficulty_level";
 date_default_timezone_set('UTC');
-echo "The time is " . date("h:i:sa");
+//echo "The time is " . date("h:i:sa");
 //$time = date("h:i:sa");
 //echo "$time";
-echo "Today is " .  date("Y-m-d H:i:s") . "<br>";
+//echo "Today is " .  date("Y-m-d H:i:s") . "<br>";
 $time = date("Y-m-d H:i:s");
-echo "$time";
-echo "<br>";
+//echo "$time";
+//echo "<br>";
 
 
 
@@ -63,13 +63,13 @@ mysqli_query($db, $sql);
 
 #  $ok = $_SESSION["lesson2"];
 
-for ($x = 1; $x <= 2; $x++) {
-echo $_SESSION['lesson'.$x]," is the answer you picked";
-echo "<br>";
-}
+//for ($x = 1; $x <= 2; $x++) {
+//echo $_SESSION['lesson'.$x]," is the answer you picked";
+//echo "<br>";
+//}
 
 echo "<br>";
-
+echo "<br>";
 for ($x = 1; $x <= 2; $x++) {
 echo  "<strong>";
 echo $_SESSION['your'.$x], "</strong> is the answer you picked";
@@ -93,23 +93,14 @@ echo "<br>";
 
   <div class="panel-body"><a href="back_to_exercises.php">back to exercises </a></div>
 
-
 <?php
 ///$query = "SELECT * from dynamic_settings
 ///WHERE uid ='{$_SESSION['userid']}' order by RAND()";
 //ob_start();
-
 $query = "SELECT * from dynamic_settings
 WHERE uid ='{$_SESSION['userid']}' ";
-echo $query;
 $result = mysqli_query($db, $query);
-
-
-
 ?>
-
-
-
 
 <h2>  Feedback  </h2>
 
