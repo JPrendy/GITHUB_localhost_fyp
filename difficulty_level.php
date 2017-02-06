@@ -45,4 +45,19 @@ if (!$db) {
   echo "The user's average score is $average" ;
   //this retrieves the users average score with this knowledge, the difficulty_levels will either go down or up
   //depending on this average.
+
+//will need to get the current dynamic_level in order to uodate it
+
+if($average >= 0.7){
+  $dynamic_level +=1;
+  //  $sql = "Update  WHERE uid='{$_SESSION['userid']}'";
+}
+if ($average >= 0.5 && $average <= 0.7){
+  echo "Nothing changes";
+}
+if($average <= 0.4){
+  $dynamic_level -=1;
+    //$sql = "SELECT SUM(score) as TEST, COUNT(math_lesson) as MATH FROM quiz_scores WHERE uid='{$_SESSION['userid']}'";
+}
+
 ?>

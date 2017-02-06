@@ -116,9 +116,9 @@ $result = mysqli_query($db, $query);
   <?php    while($row = mysqli_fetch_array($result)) {?>
   <form action="final.php" method="post">
   <input type="checkbox" name="check_list[]" value="<?php echo $row[1]?>" <?php if ($row[1] == 'text_hint_Y') echo "checked='checked'";?> > Text Hints
-  <input type="checkbox" name="check_list[]" value="value 2">
-  <input type="checkbox" name="check_list[]" value="value 3">
-  <input type="checkbox" name="check_list[]" value="value 4">
+  <input type="checkbox" name="check_list[]" value="<?php echo $row[2]?>" <?php if ($row[2] == 'timer_Y') echo "checked='checked'";?>> Timer
+  <input type="checkbox" name="check_list[]" value="<?php echo $row[3]?>" <?php if ($row[3] == 'add_questions_Y') echo "checked='checked'";?>> More Questions
+  <input type="checkbox" name="check_list[]" value="<?php echo $row[4]?>" <?php if ($row[4] == 'add_answers_Y') echo "checked='checked'";?>> More Possible Answer choices
   <input type="submit"  name="feedback_button" />
   </form>
      <?php }  ?>
@@ -182,11 +182,66 @@ $result = mysqli_query($db, $query);
 //THIS WILL UPDATE THE SESSION FOR TEXT_HINT SO THAT IT WILL CHANGE IF THE CHECKBOX IS NOT SELECTED OR NOT
 ///////////THIS REQUIRED USE OF A SELECT STATEMENT WITHOUT IT A BOOLEAN AREA OCCURS
 }
+
+
+$aDoor = $_POST['check_list'];
+if(empty($aDoor))
+{
+  echo("You didn't select any buildings.");
+      $test_text_hint = 0;
+      $sql2 = "update dynamic_settings set timer='timer_N' where uid='{$_SESSION['userid']}'";
+    echo "$sql2";
+    if ($db->query($sql2) === TRUE) {
+          echo "<br></br>";
+} else {
+  echo "Error deleting record: " . $db->error;
+}
+}
+else
+{
+  $N = count($aDoor);
+  $test_text_hint = 0;
+  echo("You selected $N door(s): ");
+  for($i=0; $i < $N; $i++)
+  {
+    echo($aDoor[$i] . " ");
+if(($aDoor[$i] == 'timer_N') || ($aDoor[$i] =='timer_Y')){
+  //update
+
+    $test_text_hint =1;
+    $sql2 = "update dynamic_settings set timer='timer_Y' where uid='{$_SESSION['userid']}'";
+  echo "$sql2";
+
+  if ($db->query($sql2) === TRUE) {
+        echo "<br></br>";
+        echo "Record Updated successfully";
+
+} else {
+echo "Error deleting record: " . $db->error;
+}
+}
+//THIS WILL SOLVE THE FOR LOOP METHOD WHERE MORE THAN ONE VALUE IS SELECTED
+if($test_text_hint != 1){
+  $sql2 = "update dynamic_settings set timer='timer_N' where uid='{$_SESSION['userid']}'";
+echo "$sql2";
+if ($db->query($sql2) === TRUE) {
+      echo "<br></br>";
+} else {
+echo "Error deleting record: " . $db->error;
+}
+}
+
+//THIS WILL UPDATE THE SESSION FOR TEXT_HINT SO THAT IT WILL CHANGE IF THE CHECKBOX IS NOT SELECTED OR NOT
+///////////THIS REQUIRED USE OF A SELECT STATEMENT WITHOUT IT A BOOLEAN AREA OCCURS
+}}
+
+
+
 $sql_session = "SELECT * FROM dynamic_settings  where uid='{$_SESSION['userid']}'";
 $result_session = mysqli_query($db, $sql_session);
 $row_session = mysqli_fetch_assoc($result_session);
 $_SESSION['text_hint'] =  $row_session['text_hint'];
-
+$_SESSION['timer'] =  $row_session['timer'];
 
 //}
     //ob_end_flush();
