@@ -100,8 +100,8 @@ else{
   <!--------THIS LINE MAY NOT BE NECESSARY
   <!-- <li><input name="choice" type="radio" value="<?php echo $row['id'];?>"/> <?php  echo $row['text']  ?>  </li> -->
 
-      <div class="btn-group" data-toggle="buttons">
-        <label class="btn btn-primary btn-lg">
+      <div class="btn-group" data-toggle="buttons" class="row">
+        <label class="btn btn-primary btn-lg custom">
           <input type="radio" name="choice" id="option1" autocomplete="off" value="<?php echo $row['id'];?>"/>  <?php echo $row['text']?>
         </label>
       </div>

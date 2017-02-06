@@ -56,6 +56,9 @@
         display: block;
     }
 
+    .custom {
+        width: 200px !important;
+    }
 
   </style>
 </head>

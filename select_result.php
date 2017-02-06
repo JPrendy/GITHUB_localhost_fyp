@@ -131,6 +131,9 @@ th {text-align: left;}
 
 <div class="panel-body"><a href="piechart_test.php">PieChart </a></div>
 
+<div class="panel-body"><a href="difficulty_level.php">difficulty_level </a></div>
+
+
 
 </body>
 </html>
