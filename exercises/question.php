@@ -100,7 +100,7 @@ $choices = $mysqli->query($query) or die($mysqli->error.__LINE__);
 
       <div class="row">
 <div  class="col-sm-8">
-  <h1> Maths Quiz</h1>
+  <h1>   <?php echo $number2?> Quiz</h1>
 
 
 
@@ -115,7 +115,7 @@ else{
 }
  ?>
 </p>
-<form method="post" action="process.php" class="row">
+<form method="post" action="process.php" >
   <ul class="choices">
     <?php while($row =$choices->fetch_assoc()): ?>  <!--while there is still choice records-->
   <!--  if ($current_test_hint == 'Y'){}-->

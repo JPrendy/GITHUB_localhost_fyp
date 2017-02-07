@@ -11,6 +11,8 @@ $_SESSION['score'] = 0;
 }
 
 if ($_POST){
+
+
   $number = $_POST['number'];
   $number2 = $_POST['number2'];
 
@@ -19,6 +21,9 @@ $_SESSION['math_lesson'] = $number2;
 
   $selected_choice = $_POST['choice'];
 
+  if (empty("$selected_choice")){ //this is checking $username
+      $selected_choice = 1;
+  }
 
 #if(  $number ==1){
   #$_SESSION['lesson'.$number] =   $selected_choice;
