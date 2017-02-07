@@ -19,10 +19,10 @@ if
   $choices =  $number2 . $before_choice;
   $_SESSION['choices'] = $choices;
 
- echo $number;
-  echo $number2;
+ //echo $number;
+  //echo $number2;
   $current_test_hint = $_SESSION['text_hint'];
-  echo   $current_test_hint;
+  //echo   $current_test_hint;
 
  //currently set it as n=1
 
@@ -104,7 +104,7 @@ $choices = $mysqli->query($query) or die($mysqli->error.__LINE__);
 
 
 
- <div class="current">Question <?php echo  $question['question_number']; ?> of <?php echo $total ?></div>
+ <div class="current">Question <?php echo  $question['question_number']; ?> / <?php echo $total ?></div>
 
 <p class="question">
 <?php    if ($current_test_hint == 'text_hint_Y'){

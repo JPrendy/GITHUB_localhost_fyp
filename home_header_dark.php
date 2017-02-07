@@ -65,6 +65,11 @@
        h1{
          text-align:center;
        }
+
+       .question{
+         text-align: center;
+         font-size: 115%;
+       }
   </style>
 </head>
 <body>
