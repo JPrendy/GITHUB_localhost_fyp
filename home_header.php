@@ -61,7 +61,7 @@
     }
 
     .btn-group{
-      margin:10px;
+      margin:5px;
     }
 
     h1{
