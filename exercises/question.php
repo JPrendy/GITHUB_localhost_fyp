@@ -134,9 +134,21 @@ else{
  <input type="hidden" name="number2" value="<?php echo $number2; ?>"/>
 
 </form>
+
+<!--MESSING AROUND WITH PROGRESS BARS-->
+<div class="progress">
+   <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:40%">
+     40%
+   </div>
+ </div>
+
+
+
 </div>
 </div>
 </div>
+
+
 
 <footer>
   <div class="container">
