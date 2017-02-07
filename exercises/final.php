@@ -67,28 +67,49 @@ mysqli_query($db, $sql);
 //echo $_SESSION['lesson'.$x]," is the answer you picked";
 //echo "<br>";
 //}
+?>
+<table class="table table-condensed table-bordered table-hover">
+   <thead>
+     <tr>
+       <th>Your Answers</th>
+       <th>Correct Answers</th>
 
+     </tr>
+   </thead>
+
+<?php
 echo "<br>";
 echo "<br>";
 for ($x = 1; $x <= 2; $x++) {
 echo  "<strong>";
-echo $_SESSION['your'.$x], "</strong> is the answer you picked";
+?>
+<tbody>
+    <?php if($_SESSION['your'.$x] == $_SESSION['correct'.$x]){
+  ?>  <tr  class="success"><?php
+}?>
+<?php if($_SESSION['your'.$x] != $_SESSION['correct'.$x]){
+?>  <tr  class="danger"><?php
+}?>
+     <td> <?php echo "<strong>".$_SESSION['your'.$x], "</strong> is the answer you picked"; ?>   </td>
+     <td> <?php echo  "<strong>".$_SESSION['correct'.$x],"</strong> is the correct answer"; ?> </td>
+     </tr>
 
-echo "<br>";
-}
 
-echo "<br>";
 
-for ($x = 1; $x <= 2; $x++) {
-echo  "<strong>";
-echo $_SESSION['correct'.$x],"</strong> is the correct answer";
+
+<?php
 echo "<br>";
 }
 
 
 #  echo "$ok";
-
 ?>
+
+<tbody>
+
+
+</tbody>
+</table>
 
 
   <div class="panel-body"><a href="back_to_exercises.php">back to exercises </a></div>
