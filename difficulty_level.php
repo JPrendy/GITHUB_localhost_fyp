@@ -48,15 +48,40 @@ if (!$db) {
 
 //will need to get the current dynamic_level in order to uodate it
 
+  $sql_user = "SELECT * FROM users WHERE uid='{$_SESSION['userid']}'";
+	$result_users = mysqli_query($db, $sql_user);
+
+
+
+  		if (!$row = mysqli_fetch_assoc($result_users)){
+
+  		  echo "Your username or password is incorrect!";
+            header("Location: ../index.php?error=real test");
+
+
+  		}
+
+  $dynamic_level = $row['difficulty_level'];
+
+echo "<br>";
+echo "<br>";
+echo $dynamic_level;
+
+
+
 if($average >= 0.7){
   $dynamic_level +=1;
   //  $sql = "Update  WHERE uid='{$_SESSION['userid']}'";
+    $update_sql_user = "UPDATE  users  SET difficulty_level=   $dynamic_level WHERE uid='{$_SESSION['userid']}'";
+    	$result_update_users = mysqli_query($db, $update_sql_user);
 }
 if ($average >= 0.5 && $average <= 0.7){
   echo "Nothing changes";
 }
 if($average <= 0.4){
   $dynamic_level -=1;
+    $update_sql_user = "UPDATE  users  SET difficulty_level=   $dynamic_level WHERE uid='{$_SESSION['userid']}'";
+        	$result_update_users = mysqli_query($db, $update_sql_user);
     //$sql = "SELECT SUM(score) as TEST, COUNT(math_lesson) as MATH FROM quiz_scores WHERE uid='{$_SESSION['userid']}'";
 }
 
