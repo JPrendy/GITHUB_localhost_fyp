@@ -57,7 +57,15 @@
     }
 
     .custom {
-        width: 200px !important;
+        width: 180px !important;
+    }
+
+    .btn-group{
+      margin:10px;
+    }
+
+    h1{
+      text-align:center;
     }
 
   </style>

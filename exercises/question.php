@@ -76,12 +76,34 @@ $choices = $mysqli->query($query) or die($mysqli->error.__LINE__);
 
 <header>
 
-<div class="container">
+  	  <div class="row content">
+
+
+      <nav class="col-sm-3">
+        <ul class="nav nav-pills nav-stacked" data-spy="affix" data-offset-top="200" >
+             <li class="active"><a href="#section0">Last topic done</a></li>
+             <p>
+               <p>
+          <li class="active"><a href="lessons.php">Lessons</a></li>
+          <li><a href="exercises.php">Exercises</a></li>
+          <!--added a javascript function to the hyperlink-->
+          <!-- the older version  <li><a href="#" onclick="myFunction()" >Charts</a></li> -->
+          <li><a href="#"  id="myFunction" >Charts</a></li>
+  		<li><a href="#section4">Change Icon</a></li>
+  			<li><a href="settings.php">Change settings</a></li>
+        </ul>
+      </nav>
+
+
+
+
+
+      <div class="row">
+<div  class="col-sm-8">
   <h1> Maths Quiz</h1>
-</div>
-</header>
-<main>
-<div class="container">
+
+
+
  <div class="current">Question <?php echo  $question['question_number']; ?> of <?php echo $total ?></div>
 
 <p class="question">
@@ -93,7 +115,7 @@ else{
 }
  ?>
 </p>
-<form method="post" action="process.php">
+<form method="post" action="process.php" class="row">
   <ul class="choices">
     <?php while($row =$choices->fetch_assoc()): ?>  <!--while there is still choice records-->
   <!--  if ($current_test_hint == 'Y'){}-->
@@ -113,9 +135,8 @@ else{
 
 </form>
 </div>
-
-
-</main>
+</div>
+</div>
 
 <footer>
   <div class="container">

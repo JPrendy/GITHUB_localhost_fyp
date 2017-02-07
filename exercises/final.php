@@ -20,11 +20,11 @@ if
 <body>
 
 <header>
-
-<div class="container">
-  <h1> Maths Quiz</h1>
-</div>
 </header>
+<div class="container">
+  <h1 > Maths Quiz</h1>
+</div>
+
 <main>
 <div class="container">
 <h2> You're Done!</h2>
