@@ -76,7 +76,7 @@ $choices = $mysqli->query($query) or die($mysqli->error.__LINE__);
 
 <header>
 
-     <!--<div class="container-fluid text-center">-->
+     <div class="container-fluid text-center">
   	  <div class="row content">
 
 
@@ -138,7 +138,7 @@ else{
 
 <!--MESSING AROUND WITH PROGRESS BARS-->
 <div class="progress">
-   <div class="progress-bar progress-bar-success progress-bar-striped"" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:<?php echo $number?>0%">
+   <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:<?php echo $number?>0%">
      <?php echo $number?>0%
    </div>
  </div>
@@ -148,14 +148,15 @@ else{
 </div>
 </div>
 </div>
+</div>
+</div>
 
 
 
-<footer>
-  <div class="container">
-   Copyrght & copy whatever
- </div>
-  </footer>
+<footer class="container-fluid text-center">
+  <p>Footer Text</p>
+</footer>
+
 
 </body>
 </html>
