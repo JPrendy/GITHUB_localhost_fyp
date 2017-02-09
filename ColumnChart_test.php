@@ -14,7 +14,7 @@ if
 
 //fetch table rows from mysql db
 //$sql = "select * from users";  //in my case it would be users
-$sql = "SELECT * FROM  quiz_scores Where uid = '{$_SESSION['userid']}' ";
+$sql = "SELECT * FROM  quiz_scores Where uid = '{$_SESSION['userid']}' LIMIT 10 ";
 $result = mysqli_query($connection, $sql) or die("Error in Selecting" . mysqli_error($connection));
 
 
@@ -33,9 +33,11 @@ $table['cols'] = array(
 
 
   array ('label' => 'Startup', 'type' => 'string'),
-//  array('label' => 'Ok', 'type' => 'string'),
-  array('label' => 'Users', 'type' => 'number')
 
+//  array('label' => 'Ok', 'type' => 'string'),
+  array('label' => 'Quiz Scores', 'type' => 'number'),
+
+  array('label' => 'Difficulty Level', 'type' => 'number')
 );
 
 
@@ -48,6 +50,7 @@ $table['cols'] = array(
 //   $temp[] = array('x' => (string) $r['uid']);
     // Values of each slice
     $temp[] = array('v' => (int) $r['score']);
+    $temp[] = array('v' => (string) $r['difficulty_level']);
     $rows[] = array('c' => $temp);
     }
 

@@ -133,6 +133,7 @@ th {text-align: left;}
 
 <div class="panel-body"><a href="difficulty_level.php">difficulty_level </a></div>
 
+<div class="panel-body"><a href="barchart.php">barchart </a></div>
 
 
 </body>
