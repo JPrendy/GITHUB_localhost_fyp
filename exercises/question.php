@@ -70,11 +70,10 @@ $choices = $mysqli->query($query) or die($mysqli->error.__LINE__);
 <head>
   <meta charset="utf-8">
   <title> Maths Quiz </title>
-
 </head>
 <body>
 
-<header>
+
 
      <div class="container-fluid text-center">
   	  <div class="row content">
@@ -99,7 +98,7 @@ $choices = $mysqli->query($query) or die($mysqli->error.__LINE__);
 
 
 
-      <div class="row">
+    <!--  <div class="row ">-->
 <div  class="col-sm-8">
   <h1>   <?php echo $number2?> Quiz</h1>
 
@@ -148,9 +147,7 @@ else{
 </div>
 </div>
 </div>
-</div>
-</div>
-
+<!--</div>-->
 
 
 <footer class="container-fluid text-center">

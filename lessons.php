@@ -41,7 +41,7 @@ if
       </ul>
     </nav>
 
-    <div class="col-sm-9 text-left">
+    <div class="col-sm-9   text-centre">
       <h1>Lessons</h1>
 
 
@@ -55,9 +55,11 @@ if
 
     <!-- <div class="container"> -->
       <div class="row">
+        <div class="col-sm-1">
+        </div>
           <div class="col-sm-4">
-        <h2>Panel Group</h2>
-        <p>The panel-group class clears the bottom-margin. Try to remove the class and see what happens.</p>
+        <h2>Trignomety Lesson</h2>
+        <!--<p>The panel-group class clears the bottom-margin. Try to remove the class and see what happens.</p>-->
         <div class="panel-group">
           <div class="panel panel-default">
             <div class="panel-heading">Panel Header</div>
@@ -66,9 +68,11 @@ if
           </div>
           </div>
           </div>
+          <div class="col-sm-2">
+          </div>
            <div class="col-sm-4">
-             <h2>Panel Group</h2>
-             <p>The panel-group class clears the bottom-margin. Try to remove the class and see what happens.</p>
+             <h2>Algebra Lesson</h2>
+             <!--<p>The panel-group class clears the bottom-margin. Try to remove the class and see what happens.</p>-->
              <div class="panel-group">
                <div class="panel panel-default">
            <div class="panel-heading">Panel Header</div>
@@ -79,6 +83,7 @@ if
         </div>
       </div>
       </div>
+</div>
 </div>
 </div>
 

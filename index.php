@@ -63,7 +63,7 @@ if
 </br>
 
 
-
+<div class="container">
        <form class="form-horizontal" action="includes/signup.inc.php" method="POST" >
 
 		  <div class="form-group">
@@ -132,7 +132,7 @@ if
 </div>
 	</form>
 
-  </div>
+
 	<br>
 	<br>
 	<br>
