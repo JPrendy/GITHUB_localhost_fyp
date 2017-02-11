@@ -90,37 +90,35 @@
 </head>
 <body>
 
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">Logo</a>
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav">
-        <!-- create a conditon where if you are calling if from the lessons subfolder it will give you a different link to the home directory-->
-        <!--by doing this, it will make I wont need to make a separare php page with pretty much the identical code-->
-        <?php
-        $url = "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
-        if (strpos($url, 'lessons/') !==false || strpos($url, 'exercises/') !== false){
-        echo  '<li class="active"><a href="../home.php">Home</a></li>';
-        }
-        else{
-        echo '<li class="active"><a href="home.php">Home</a></li>';
-      }
-        ?>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Projects</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Logo</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="home.php">Home</a></li>
+              <li> <a  href="#"  class=" hidden-lg hidden-sm hidden-md">Lessons</a></li>
+              <li> <a  href="#"  class=" hidden-lg hidden-sm hidden-md">Exercises</a></li>
+                  <li> <a  href="#"  class=" hidden-lg hidden-sm hidden-md">Lessons</a></li>
+                      <li> <a  href="#"  class=" hidden-lg hidden-sm hidden-md">Lessons</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
 
-     <li class="dropdown">
-       <a class="dropdown-toggle" data-toggle="dropdown" href="#">  <?php  echo $_SESSION['userid'],"'s account"; ?>
+       <li class="dropdown">
+         <a class="dropdown-toggle" data-toggle="dropdown" href="#">  <?php    echo $_SESSION['userid'],"'s account"; ?>
+
+
+
+
+
+
+
        <span class="caret"></span></a>
        <ul class="dropdown-menu">
          <?php
