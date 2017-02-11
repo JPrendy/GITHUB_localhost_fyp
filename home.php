@@ -60,9 +60,10 @@
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
         <li class="active"><a href="home.php">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Projects</a></li>
-        <li><a href="#">Contact</a></li>
+            <li> <a  href="#"  class=" hidden-lg hidden-sm hidden-md">Lessons</a></li>
+            <li> <a  href="#"  class=" hidden-lg hidden-sm hidden-md">Exercises</a></li>
+                <li> <a  href="#"  class=" hidden-lg hidden-sm hidden-md">Lessons</a></li>
+                    <li> <a  href="#"  class=" hidden-lg hidden-sm hidden-md">Lessons</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
 
@@ -104,7 +105,7 @@
 
 
     <nav class="col-sm-3">
-      <ul class="nav nav-pills nav-stacked" data-spy="affix" data-offset-top="200" >
+      <ul class="nav nav-pills nav-stacked" data-spy="affix" data-offset-top="300" >
 
         <?php
            $ok = $_SESSION['lesson'];

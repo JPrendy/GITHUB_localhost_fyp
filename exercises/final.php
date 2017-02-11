@@ -80,7 +80,7 @@ mysqli_query($db, $sql);
 <?php
 echo "<br>";
 echo "<br>";
-for ($x = 1; $x <= 2; $x++) {
+for ($x = 1; $x <= 5; $x++) {
 echo  "<strong>";
 ?>
 <tbody>

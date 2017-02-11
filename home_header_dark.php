@@ -46,10 +46,16 @@
       .row.content {height:auto;}
     }
 
+
     #first{
-           background-color: yellow;
-           padding: 10px;
-           display: none;
+      color: #000000;
+       background-color: lightgrey;
+      padding: 10px;
+      display: none;
+      border: 2px solid red;
+      border-radius: 10px;
+      margin-left:180px;
+      margin-right:180px;
        }
 
        span:hover + #first {
@@ -61,7 +67,7 @@
        }
 
        .btn-group{
-         margin:10px;
+         margin:5px;
        }
 
        h1{
@@ -72,6 +78,12 @@
          text-align: center;
          font-size: 115%;
        }
+
+
+           .panel-group{
+             text-align: center;
+           }
+
   </style>
 </head>
 <body>
