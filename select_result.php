@@ -80,12 +80,31 @@ th {text-align: left;}
 </style>
 <p>Select your maths category.</p>
 
-<form  method="POST" action="select_result.php">
+<div class="container-fluid text-center">
+    <div class="row content">
+  <!--<div class="row content">
+
+    <div class="col-sm-2 sidenav" >
+      <p><a href="#">Link</a></p>
+      <p><a href="#">Link</a></p>
+	  <div class="well">
+        <p>ADS</p>
+		</div>
+      <p><a href="#">Link</a></p>
+    </div>-->
 
 
 
-  <div class="form-group">
-    <div class="col-xs-2">
+
+
+    <div class="col-sm-9 text-centre">
+
+<form  class="form-horizontal" method="POST" action="select_result.php">
+
+
+
+  <div class="form-group col-xs-8">
+    <div class="col-xs-offset-4">
   <label for="sel1">Select list (select one):</label>
   <select class="form-control"  name="maths_lessons" id="sel1">
     <option value="Algebra">Algebra</option>
@@ -95,11 +114,18 @@ th {text-align: left;}
 </div>
   <br><br>
 
-
-  <select name="difficulty_level">
+  <div class="form-group col-xs-8">
+    <div class="col-xs-offset-4">
+  <label for="sel1">Select list (select one):</label>
+  <select class="form-control"  name=difficulty_level id="sel2">
     <option value="0">0</option>
     <option value="1">1</option>
   </select>
+</div>
+</div>
+
+
+
   <br><br>
 
 
@@ -134,6 +160,9 @@ th {text-align: left;}
 <div class="panel-body"><a href="difficulty_level.php">difficulty_level </a></div>
 
 <div class="panel-body"><a href="barchart.php">barchart </a></div>
+
+</div>
+</div>
 
 
 </body>
