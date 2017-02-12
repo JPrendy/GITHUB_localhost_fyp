@@ -79,21 +79,7 @@ $choices = $mysqli->query($query) or die($mysqli->error.__LINE__);
   	  <div class="row content">
 
 
-      <nav class="col-sm-3">
-        <ul class="nav nav-pills nav-stacked" data-spy="affix" data-offset-top="200" >
-             <li class="active"><a href="#section0">Last topic done</a></li>
-             <p>
-               <p>
-          <li class="active"><a href="lessons.php">Lessons</a></li>
-          <li><a href="exercises.php">Exercises</a></li>
-          <!--added a javascript function to the hyperlink-->
-          <!-- the older version  <li><a href="#" onclick="myFunction()" >Charts</a></li> -->
-          <li><a href="#"  id="myFunction" >Charts</a></li>
-  		<li><a href="#section4">Change Icon</a></li>
-  			<li><a href="settings.php">Change settings</a></li>
-        </ul>
-      </nav>
-
+  
 
 
 
@@ -136,6 +122,7 @@ else{
 </form>
 
 <!--MESSING AROUND WITH PROGRESS BARS-->
+<br/>
 <div class="progress">
    <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:<?php echo $number?>0%">
      <?php echo $number?>0%

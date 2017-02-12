@@ -1,22 +1,22 @@
 <?php
 session_start();
-if
- ($_SESSION['theme'] == 'Light') {
+
     include 'home_header.php';
-  }
-  else {
-      include 'home_header_dark.php';
-  }
+
 ?>
 
-
+<html>
+    <head>
+    <meta http-equiv="refresh" content="<?php echo "$sec:"?>;URL='<?php echo $page?>'">
+    </head>
+    <body>
 <div class="header">
-	<h1>Change Password:</h1>
+	<h1>Settings</h1>
 </div>
 
 <?php
 
-ob_start();
+
 
 
 //echo $_SESSION['userid'];
@@ -24,8 +24,29 @@ ob_start();
 
 
 ?>
-<div class="container">
+
+<div class="container-fluid text-center">
+    <div class="row content">
+  <!--<div class="row content">
+
+    <div class="col-sm-2 sidenav" >
+      <p><a href="#">Link</a></p>
+      <p><a href="#">Link</a></p>
+	  <div class="well">
+        <p>ADS</p>
+		</div>
+      <p><a href="#">Link</a></p>
+    </div>-->
+
+
+
+
+
+    <div class="col-sm-9 text-centre">
+
      <form class="form-horizontal" method="POST">
+           <div class="panel-heading"><h3><u>Change Password</u></h3></div>
+           <br/>
   <div class="form-group">
       <label class="control-label col-sm-2" for="password">Old Password:</label>
       <div class="col-sm-3">
@@ -93,6 +114,8 @@ ob_start();
 
 
 <div class="form-group">
+    <div class="panel-heading"><h3><u>Change Theme</u></h3></div>
+    <br/>
 <label class="control-label col-sm-2" for="password">Change Theme:</label>
 <div class="col-sm-3">
        <form class="form-horizontal"    action="settings.php" method="POST" >
@@ -109,7 +132,7 @@ ob_start();
 </div>
 </div>
 </form>
-</div>
+
 
 
 
@@ -122,7 +145,8 @@ ob_start();
 
 
 <div class="form-group">
-
+  <div class="panel-heading"><h3><u>Delete Last Record</u></h3></div>
+  <br/>
   <label class="control-label col-sm-2" for="password">Delete last exercise record</label>
   <div class="col-sm-3">
 <form class="form-horizontal"    action="settings.php" method="POST">
@@ -131,7 +155,8 @@ ob_start();
 </div>
 
 
-
+</div>
+</div>
 
 
 
@@ -365,7 +390,11 @@ ob_start();
               echo "Record Updated successfully";
               $_SESSION['theme'] = $theme;
             //  header("Refresh:0");
-           	header("Location: http://localhost/github_localhost_fyp/settings.php");
+
+
+            $page = $_SERVER['PHP_SELF'];
+  $sec = "5";
+
 
 
 
@@ -404,7 +433,7 @@ if (mysqli_query($db, $sql4)) {
 mysqli_close($db);
       }
 
-ob_end_flush();
+
 ?>
 
 

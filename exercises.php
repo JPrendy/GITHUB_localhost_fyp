@@ -11,6 +11,7 @@ if
 
 
 <div class="container-fluid text-center">
+    <div class="row content">
   <!--<div class="row content">
 
     <div class="col-sm-2 sidenav" >
@@ -23,23 +24,8 @@ if
     </div>-->
 
 
-	  <div class="row content">
 
 
-    <nav class="col-sm-3">
-      <ul class="nav nav-pills nav-stacked" data-spy="affix" data-offset-top="200" >
-           <li class="active"><a href="#section0">Last topic done</a></li>
-           <p>
-             <p>
-        <li class="active"><a href="lessons.php">Lessons</a></li>
-        <li><a href="exercises.php">Exercises</a></li>
-        <!--added a javascript function to the hyperlink-->
-        <!-- the older version  <li><a href="#" onclick="myFunction()" >Charts</a></li> -->
-        <li><a href="#"  id="myFunction" >Charts</a></li>
-		<li><a href="#section4">Change Icon</a></li>
-			<li><a href="settings.php">Change settings</a></li>
-      </ul>
-    </nav>
 
     <div class="col-sm-9 text-centre">
       <h1>Exercises</h1>
@@ -72,7 +58,7 @@ if
             <!-- <p>The panel-group class clears the bottom-margin. Try to remove the class and see what happens.</p>-->
              <div class="panel-group">
                <div class="panel panel-default">
-           <div class="panel-heading">Algebra</div>
+           <div class="panel-heading">Text Hints: On</div>
             <div class="panel-heading">Difficulty Level: 1</div>
                 <div class="panel-heading">10 Questions</div>
             <div class="panel-body"><a href="exercises/question.php?n=1&m=Algebra">Algebra Quiz</a></div>
@@ -86,7 +72,8 @@ if
     </div>
         </div>
             </div>
-
+</div>
+</div>
 
 
 

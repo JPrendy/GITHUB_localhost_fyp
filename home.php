@@ -44,6 +44,23 @@
       .row.content {height:auto;}
     }
   </style>
+
+  <?php
+   session_start();
+ if(  $_SESSION['theme'] == 'Light'){
+   ?><style>
+
+   body{
+       background-color: #;
+   }
+  </style><?php
+}
+else{
+?> <style>  body{
+      background-color: #D3D3D3;
+  }</style><?php
+}
+   ?>
 </head>
 <body>
 
@@ -68,7 +85,7 @@
       <ul class="nav navbar-nav navbar-right">
 
      <li class="dropdown">
-       <a class="dropdown-toggle" data-toggle="dropdown" href="#">  <?php   session_start(); echo $_SESSION['userid'],"'s account"; ?>
+       <a class="dropdown-toggle" data-toggle="dropdown" href="#">  <?php  echo $_SESSION['userid'],"'s account"; ?>
        <span class="caret"></span></a>
        <ul class="dropdown-menu">
          <li><a href="settings.php" class="btn btn-info btn-md">
