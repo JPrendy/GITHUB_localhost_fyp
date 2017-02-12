@@ -102,7 +102,17 @@
       </div>
       <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav">
-          <li class="active"><a href="home.php">Home</a></li>
+
+
+          <?php
+        $url = "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
+        if (strpos($url, 'lessons/') !==false || strpos($url, 'exercises/') !== false){
+        echo  '<li class="active"><a href="../home.php">Home</a></li>';
+        }
+        else{
+        echo '<li class="active"><a href="home.php">Home</a></li>';
+      }
+        ?>
               <li> <a  href="#"  class=" hidden-lg hidden-sm hidden-md">Lessons</a></li>
               <li> <a  href="#"  class=" hidden-lg hidden-sm hidden-md">Exercises</a></li>
                   <li> <a  href="#"  class=" hidden-lg hidden-sm hidden-md">Lessons</a></li>

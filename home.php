@@ -124,39 +124,39 @@
 
 
 
-        <li class="active"><a href="lessons.php">Lessons</a></li>
+        <li class="active hidden-xs"><a href="lessons.php">Lessons</a></li>
         <?php     if($_SESSION['welcome'] != 2){?>
           <li><a href="#"  id="myFunction">Exercises</a></li>
 
          <?php } else { ?>
-        <li><a href="exercises.php">Exercises</a></li>
+        <li class="hidden-xs"><a href="exercises.php">Exercises</a></li>
 
            <?php } ?>
         <!--added a javascript function to the hyperlink-->
         <!-- the older version  <li><a href="#" onclick="myFunction()" >Charts</a></li> -->
       <?php     if($_SESSION['welcome'] != 2){?>
-        <li><a href="#"  id="myFunction2">Charts</a></li>
+        <li  class="hidden-xs"><a href="#"  id="myFunction2">Charts</a></li>
 
        <?php } else { ?>
             <!--<li><a href="piechart_test.php">Charts</a></li>-->
-            <li><a href="select_result.php">Charts</a></li>
+            <li  class="hidden-xs"><a href="select_result.php">Charts</a></li>
 
 
          <?php } ?>
 
          <?php     if($_SESSION['welcome'] != 2){?>
-           <li class=panel><a href="#"  id="myFunction3">Change Icon</a></li>
+           <li class="panel hidden-xs"><a href="#"  id="myFunction3">Change Icon</a></li>
 
           <?php } else { ?>
-            		<li class=panel><a href="change_icon.php">Change Icon</a></li>
+            		<li class="panel hidden-xs"><a href="change_icon.php">Change Icon</a></li>
 
             <?php } ?>
             <?php     if($_SESSION['welcome'] != 2){?>
 
-			<li class=panel><a href="#" id="myFunction4">Change settings</a></li>
+			<li class="panel hidden-xs"><a href="#" id="myFunction4">Change settings</a></li>
       <?php } else { ?>
 
-      <li class=panel><a href="settings.php">Change settings</a></li>
+      <li class="panel hidden-xs"><a href="settings.php">Change settings</a></li>
 
     <?php } ?>
       </ul>
