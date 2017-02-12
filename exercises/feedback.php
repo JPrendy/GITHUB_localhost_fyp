@@ -1,4 +1,6 @@
 <?php
+session_start();
+$db = mysqli_connect("localhost", "root", "" , "logintest");
 if (empty($_POST["feedback_button"])) {
     echo "Yes, mail is set";
 }else{
@@ -226,5 +228,6 @@ $_SESSION['text_hint'] =  $row_session['text_hint'];
 $_SESSION['timer'] =  $row_session['timer'];
 $_SESSION['question'] =  $row_session['more_questions'];
 $_SESSION['answers'] =  $row_session['more_answers'];
+  header("Location: ../exercises/final.php")
 //}
 ?>

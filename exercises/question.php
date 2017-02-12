@@ -79,7 +79,7 @@ $choices = $mysqli->query($query) or die($mysqli->error.__LINE__);
   	  <div class="row content">
 
 
-  
+
 
 
 
@@ -115,10 +115,11 @@ else{
       </div>
    <?php endwhile; ?>
   </ul>
- <input type="submit" value="Submit"/>
+<div class="col-sm-offset-9 ">
+ <button type="submit" class="btn btn-primary btn-s" > Next</button>
  <input type="hidden" name="number" value="<?php echo $number; ?>"/>
  <input type="hidden" name="number2" value="<?php echo $number2; ?>"/>
-
+</div>
 </form>
 
 <!--MESSING AROUND WITH PROGRESS BARS-->

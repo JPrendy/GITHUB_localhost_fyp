@@ -391,6 +391,7 @@ ob_start();
               $_SESSION['theme'] = $theme;
             //  header("Refresh:0");
 
+            
            	header("Location: http://localhost/github_localhost_fyp/settings.php");
 
 

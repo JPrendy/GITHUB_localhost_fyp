@@ -14,32 +14,36 @@ if
 <head>
   <meta charset="utf-8">
   <title> Maths Quiz </title>
-<link rel="stylesheet" href="css/style_quiz.css" type="text/css" />
+
 
 </head>
 <body>
 
 <header>
 </header>
-<div class="container">
-  <h1 > Maths Quiz</h1>
-</div>
 
-<main>
-<div class="container">
-<h2> You're Done!</h2>
-<p> Congrats! You have completed the test </p>
+
+<div class="container-fluid text-center">
+  <div class="row content">
+
+
+
+
+  <div class="col-sm-9 text-centre">
+
+
+<h2> Congrats! You have completed the test </h2>
 <p> Final Score:  <?php echo $_SESSION['score']; ?></p>
 
 <?php
 $uid =  $_SESSION['userid'];
-echo "user id is $uid";
-echo "<pre>";
+//echo "user id is $uid";
+
 $math_lesson =  $_SESSION['math_lesson'];
-echo "the math lesson is $math_lesson";
+//echo "the math lesson is $math_lesson";
 $score = $_SESSION['score'];
-echo "<pre>";
-echo "The final score was $score";
+
+echo "You scored $score/10 in  $math_lesson";
 
 $difficulty_level = $_SESSION['difficulty_level'];
 //echo  "the difficulty_level is $difficulty_level";
@@ -61,12 +65,7 @@ mysqli_query($db, $sql);
 
 
 
-#  $ok = $_SESSION["lesson2"];
 
-//for ($x = 1; $x <= 2; $x++) {
-//echo $_SESSION['lesson'.$x]," is the answer you picked";
-//echo "<br>";
-//}
 ?>
 <table class="table table-condensed table-bordered table-hover">
    <thead>
@@ -78,9 +77,8 @@ mysqli_query($db, $sql);
    </thead>
 
 <?php
-echo "<br>";
-echo "<br>";
-for ($x = 1; $x <= 5; $x++) {
+
+for ($x = 1; $x <= 6; $x++) {
 echo  "<strong>";
 ?>
 <tbody>
@@ -126,7 +124,7 @@ $result = mysqli_query($db, $query);
 <h2>  Feedback  </h2>
 
   <?php    while($row = mysqli_fetch_array($result)) {?>
-  <form action="final.php" method="post">
+  <form action="feedback.php" method="post">
   <input type="checkbox" name="check_list[]" value="<?php echo $row[1]?>" <?php if ($row[1] == 'text_hint_Y') echo "checked='checked'";?> > Text Hints
   <input type="checkbox" name="check_list[]" value="<?php echo $row[2]?>" <?php if ($row[2] == 'timer_Y') echo "checked='checked'";?>> Timer
   <input type="checkbox" name="check_list[]" value="<?php echo $row[3]?>" <?php if ($row[3] == 'add_questions_Y') echo "checked='checked'";?>> More Questions
@@ -145,20 +143,26 @@ $result = mysqli_query($db, $query);
   //}
 //	if (isset($_POST['feedback_button'])){
 
-    include 'feedback.php';
+    //include 'feedback.php';
 
     //ob_end_flush();
   ?>
 
 
-
 </div>
-</main>
+</div>
+</div>
+<br/>
+<br/>
+<br/>
+
+
 <footer>
-  <div class="container">
+  <div class="container-fluid text-center">
    Copyrght & copy whatever
  </div>
   </footer>
+</div>
 
 </body>
 </html>
