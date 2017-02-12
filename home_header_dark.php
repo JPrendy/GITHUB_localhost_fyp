@@ -155,3 +155,78 @@
     </div>
   </div>
 </nav>
+
+
+<div class="container-fluid text-center">
+  <!--<div class="row content">
+
+    <div class="col-sm-2 sidenav" >
+      <p><a href="#">Link</a></p>
+      <p><a href="#">Link</a></p>
+	  <div class="well">
+        <p>ADS</p>
+		</div>
+      <p><a href="#">Link</a></p>
+    </div>-->
+
+
+	  <div class="row content">
+
+<nav class="col-sm-3">
+  <ul class="nav nav-pills nav-stacked"  data-offset-top="300" >
+
+    <?php
+       $ok = $_SESSION['lesson'];
+      // echo $ok;
+       $one = "lessons/$ok.php";
+       //echo $one;
+     ?>
+     <?php  if($_SESSION['lesson'] != ''){?>
+
+
+          <li class="active"><?php echo "<a href=$one>Last topic visited: $ok</a>"; ?></li>
+       <p>
+         <p>
+<?php } ?>
+
+
+
+
+
+    <li class="active hidden-xs"><a href="lessons.php">Lessons</a></li>
+    <?php     if($_SESSION['welcome'] != 2){?>
+      <li><a href="#"  id="myFunction">Exercises</a></li>
+
+     <?php } else { ?>
+    <li class="hidden-xs"><a href="exercises.php">Exercises</a></li>
+
+       <?php } ?>
+    <!--added a javascript function to the hyperlink-->
+    <!-- the older version  <li><a href="#" onclick="myFunction()" >Charts</a></li> -->
+  <?php     if($_SESSION['welcome'] != 2){?>
+    <li  class="hidden-xs"><a href="#"  id="myFunction2">Charts</a></li>
+
+   <?php } else { ?>
+        <!--<li><a href="piechart_test.php">Charts</a></li>-->
+        <li  class="hidden-xs"><a href="select_result.php">Charts</a></li>
+
+
+     <?php } ?>
+
+     <?php     if($_SESSION['welcome'] != 2){?>
+       <li class="panel hidden-xs"><a href="#"  id="myFunction3">Change Icon</a></li>
+
+      <?php } else { ?>
+            <li class="panel hidden-xs"><a href="change_icon.php">Change Icon</a></li>
+
+        <?php } ?>
+        <?php     if($_SESSION['welcome'] != 2){?>
+
+  <li class="panel hidden-xs"><a href="#" id="myFunction4">Change settings</a></li>
+  <?php } else { ?>
+
+  <li class="panel hidden-xs"><a href="settings.php">Change settings</a></li>
+
+<?php } ?>
+  </ul>
+</nav>

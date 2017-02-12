@@ -1,22 +1,22 @@
 <?php
 session_start();
-
+if
+ ($_SESSION['theme'] == 'Light') {
     include 'home_header.php';
-
+  }
+  else {
+      include 'home_header_dark.php';
+  }
 ?>
 
-<html>
-    <head>
-    <meta http-equiv="refresh" content="<?php echo "$sec:"?>;URL='<?php echo $page?>'">
-    </head>
-    <body>
+
 <div class="header">
 	<h1>Settings</h1>
 </div>
 
 <?php
 
-
+ob_start();
 
 
 //echo $_SESSION['userid'];
@@ -44,7 +44,7 @@ session_start();
 
     <div class="col-sm-9 text-centre">
 
-     <form class="form-horizontal" method="POST">
+     <form class="form-horizontal" method="POST"  >
            <div class="panel-heading"><h3><u>Change Password</u></h3></div>
            <br/>
   <div class="form-group">
@@ -391,10 +391,7 @@ session_start();
               $_SESSION['theme'] = $theme;
             //  header("Refresh:0");
 
-
-            $page = $_SERVER['PHP_SELF'];
-  $sec = "5";
-
+           	header("Location: http://localhost/github_localhost_fyp/settings.php");
 
 
 
@@ -433,7 +430,7 @@ if (mysqli_query($db, $sql4)) {
 mysqli_close($db);
       }
 
-
+ob_end_flush();
 ?>
 
 
