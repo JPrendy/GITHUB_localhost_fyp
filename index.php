@@ -26,13 +26,6 @@
   return t;
 }(document, "script", "twitter-wjs"));</script>-->
 
-<br>
-<br>
-<br>
-<a class="twitter-share-button"
-href=https://twitter.com/intent/tweet?url=https%3A%2F%2FFinal-Year-Project.com%2F&text=Final+Year+Project+e-learning.&hashtags=e-learning
-  data-size="large">
-Tweet</a>
 
 
 <?php

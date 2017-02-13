@@ -220,32 +220,84 @@
 
 
     <li class="active hidden-xs"><a href="lessons.php">Lessons</a></li>
-    <?php     if($_SESSION['welcome'] != 2){?>
+
+
+
+
+  <?php
+        $url2 = "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
+
+      if (strpos($url2, 'lessons/') !==false || strpos($url2, 'exercises/') !== false)
+      {?>
+  <?php  if($_SESSION['welcome'] != 2){?>
       <li><a href="#"  id="myFunction">Exercises</a></li>
 
      <?php } else { ?>
-    <li class="hidden-xs"><a href="exercises.php">Exercises</a></li>
-
-       <?php } ?>
-    <!--added a javascript function to the hyperlink-->
-    <!-- the older version  <li><a href="#" onclick="myFunction()" >Charts</a></li> -->
-  <?php     if($_SESSION['welcome'] != 2){?>
-    <li  class="hidden-xs"><a href="#"  id="myFunction2">Charts</a></li>
-
-   <?php } else { ?>
-        <!--<li><a href="piechart_test.php">Charts</a></li>-->
-        <li  class="hidden-xs"><a href="select_result.php">Charts</a></li>
-
-
-     <?php } ?>
-
-     <?php     if($_SESSION['welcome'] != 2){?>
-       <li class="panel hidden-xs"><a href="#"  id="myFunction3">Change Icon</a></li>
+    <li class="hidden-xs"><a href="../exercises.php">Exercises</a></li>
+       <?php }
+     }
+    else
+   {?>
+    <?php if($_SESSION['welcome'] != 2){?>
+       <li><a href="#"  id="myFunction">Exercises</a></li>
 
       <?php } else { ?>
-            <li class="panel hidden-xs"><a href="change_icon.php">Change Icon</a></li>
-
+     <li class="hidden-xs"><a href="exercises.php">Exercises</a></li>
         <?php } ?>
+  <?php } ?>
+
+
+  <?php
+        $url2 = "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
+
+      if (strpos($url2, 'lessons/') !==false || strpos($url2, 'exercises/') !== false)
+      {?>
+  <?php  if($_SESSION['welcome'] != 2){?>
+      <li><a href="#"  id="myFunction2">Charts</a></li>
+
+     <?php } else { ?>
+    <li class="hidden-xs"><a href="../select_result.php">Charts</a></li>
+       <?php }
+     }
+    else
+   {?>
+    <?php if($_SESSION['welcome'] != 2){?>
+       <li><a href="#"  id="myFunction2">Charts</a></li>
+
+      <?php } else { ?>
+     <li class="hidden-xs"><a href="select_result.php">Charts</a></li>
+        <?php } ?>
+  <?php } ?>
+
+
+
+  <?php
+        $url2 = "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
+
+      if (strpos($url2, 'lessons/') !==false || strpos($url2, 'exercises/') !== false)
+      {?>
+  <?php  if($_SESSION['welcome'] != 2){?>
+      <li><a href="#"  id="myFunction3">Change Icons</a></li>
+
+     <?php } else { ?>
+    <li class="hidden-xs"><a href="../change_icon.php">Change Icons</a></li>
+       <?php }
+     }
+    else
+   {?>
+    <?php if($_SESSION['welcome'] != 2){?>
+       <li><a href="#"  id="myFunction3">Change Icons</a></li>
+
+      <?php } else { ?>
+     <li class="hidden-xs"><a href="change_icon.php">Change Icons</a></li>
+        <?php } ?>
+  <?php } ?>
+
+
+
+
+
+
         <?php     if($_SESSION['welcome'] != 2){?>
 
   <li class="panel hidden-xs"><a href="#" id="myFunction4">Change settings</a></li>

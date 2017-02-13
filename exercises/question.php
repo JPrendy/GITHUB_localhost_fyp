@@ -71,6 +71,11 @@ $choices = $mysqli->query($query) or die($mysqli->error.__LINE__);
   <meta charset="utf-8">
   <title> Maths Quiz </title>
 </head>
+<script>
+function goBack() {
+    window.history.back()
+}
+</script>
 <body>
 
 
@@ -115,6 +120,11 @@ else{
       </div>
    <?php endwhile; ?>
   </ul>
+  <?php
+  if( $number != 1){
+?><input type="button" value="Back" onclick="goBack()"><?php
+}
+?>
 <div class="col-sm-offset-9 ">
  <button type="submit" class="btn btn-primary btn-s" > Next</button>
  <input type="hidden" name="number" value="<?php echo $number; ?>"/>

@@ -391,9 +391,10 @@ ob_start();
               $_SESSION['theme'] = $theme;
             //  header("Refresh:0");
 
-            
-           	header("Location: http://localhost/github_localhost_fyp/settings.php");
 
+           	header("Location: http://localhost/github_localhost_fyp/settings.php");
+            
+            ob_end_flush();
 
 
     } else {
@@ -431,7 +432,6 @@ if (mysqli_query($db, $sql4)) {
 mysqli_close($db);
       }
 
-ob_end_flush();
 ?>
 
 

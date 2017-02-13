@@ -78,7 +78,7 @@ mysqli_query($db, $sql);
 
 <?php
 
-for ($x = 1; $x <= 6; $x++) {
+for ($x = 1; $x <= 7; $x++) {
 echo  "<strong>";
 ?>
 <tbody>
@@ -155,7 +155,12 @@ $result = mysqli_query($db, $query);
 <br/>
 <br/>
 <br/>
-
+<a class="twitter-share-button"
+href=https://twitter.com/intent/tweet?url=https%3A%2F%2FFinal-Year-Project.com%2F&text=Final+Year+Project+e-learning.&hashtags=e-learning
+  data-size="large">
+Tweet</a>
+<br/>
+<br/>
 
 <footer>
   <div class="container-fluid text-center">
