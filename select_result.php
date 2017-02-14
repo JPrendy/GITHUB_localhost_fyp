@@ -1,13 +1,8 @@
 <?php
 
 session_start();
-if
- ($_SESSION['theme'] == 'Light') {
+
     include 'home_header.php';
-  }
-  else {
-      include 'home_header_dark.php';
-  }
 
 
 	$db = mysqli_connect("localhost", "root", "" , "logintest");
@@ -118,8 +113,9 @@ th {text-align: left;}
     <div class="col-xs-offset-4">
   <label for="sel1">Select list (select one):</label>
   <select class="form-control"  name=difficulty_level id="sel2">
+    <option value="IS NOT NULL ">..</option>
     <option value="0">0</option>
-    <option value="1">1</option>
+    <option value="-10">1</option>
   </select>
 </div>
 </div>

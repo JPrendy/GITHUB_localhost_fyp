@@ -96,11 +96,19 @@
     }
    </style><?php
  }
- else{
+ if(  $_SESSION['theme'] == 'Grey'){
  ?> <style>  body{
        background-color: #D3D3D3;
    }</style><?php
  }
+ if(  $_SESSION['theme'] == 'Dark'){
+ ?> <style>  body{
+       background-color: #898989;
+   }</style><?php
+ }
+
+
+
     ?>
 </head>
 <body>
@@ -294,17 +302,28 @@
   <?php } ?>
 
 
+  <?php
+        $url2 = "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
+
+      if (strpos($url2, 'lessons/') !==false || strpos($url2, 'exercises/') !== false)
+      {?>
+  <?php  if($_SESSION['welcome'] != 2){?>
+      <li><a href="#"  id="myFunction4">Settings</a></li>
+
+     <?php } else { ?>
+    <li class="hidden-xs"><a href="../settings.php">Settings</a></li>
+       <?php }
+     }
+    else
+   {?>
+    <?php if($_SESSION['welcome'] != 2){?>
+       <li><a href="#"  id="myFunction4">Settings</a></li>
+
+      <?php } else { ?>
+     <li class="hidden-xs"><a href="settings.php">Settings</a></li>
+        <?php } ?>
+  <?php } ?>
 
 
-
-
-        <?php     if($_SESSION['welcome'] != 2){?>
-
-  <li class="panel hidden-xs"><a href="#" id="myFunction4">Change settings</a></li>
-  <?php } else { ?>
-
-  <li class="panel hidden-xs"><a href="settings.php">Change settings</a></li>
-
-<?php } ?>
   </ul>
 </nav>

@@ -1,12 +1,8 @@
 <?php
 session_start();
-if
- ($_SESSION['theme'] == 'Light') {
+
     include 'home_header.php';
-  }
-  else {
-      include 'home_header_dark.php';
-  }
+
 ?>
 
 
@@ -112,14 +108,15 @@ ob_start();
 <br>
   <hr>
 
-
-<div class="form-group">
+<form class="form-horizontal"   action="theme.php" method="POST" >
+<div class="form-group"
     <div class="panel-heading"><h3><u>Change Theme</u></h3></div>
     <br/>
 <label class="control-label col-sm-2" for="password">Change Theme:</label>
 <div class="col-sm-3">
        <form class="form-horizontal"    action="settings.php" method="POST" >
   <input type="radio" id="theme" name="theme" value="Light" <?php if ($_SESSION['theme'] == 'Light') echo "checked='checked'"; ?> >Light
+    <input type="radio" id="theme" name="theme" value="Grey" <?php if ($_SESSION['theme'] == 'Grey') echo "checked='checked'"; ?> >Grey
   <input type="radio" id="theme" name="theme"  value="Dark"  <?php if ($_SESSION['theme'] == 'Dark') echo "checked='checked'"; ?> >Dark
 </div>
 </div>
@@ -339,71 +336,7 @@ ob_start();
 
 
 
-  <?php
 
-
-
-
-
-
-	$db = mysqli_connect("localhost", "root", "" , "logintest");
-
-
-  //NOW HERE IS WHERE WE IMPLEMENTED THE BUTTON FOR THEME
-    if (isset($_POST['theme_button'])){
-
-
-     	$theme = mysql_real_escape_string($_POST['theme']);
-
-    // $theme = $_POST['theme'];
-
-
-
-
-
-
-        $sql3 = "Select * from theme WHERE uid='{$_SESSION['userid']}'";
-        $result3 = mysqli_query($db, $sql3);
-
-        echo $sql3;
-
-        		if (!$row = mysqli_fetch_assoc($result3)){
-
-        		  echo "Your username or password is incorrect!";
-        //this COULD BE SOMETHING TO LOOK BACK
-        //      IT BRINGS THE LOCATION TO INDEX
-                //  header("Location: ../index.php?error=real test");
-
-
-        		}
-        		//if
-
-
-
-          $sql3 = "update theme set theme_col='$theme' where uid='{$_SESSION['userid']}'";
-        echo "$sql3";
-
-
-
-        if ($db->query($sql3) === TRUE) {
-              echo "<br></br>";
-              echo "Record Updated successfully";
-              $_SESSION['theme'] = $theme;
-            //  header("Refresh:0");
-
-
-           	header("Location: http://localhost/github_localhost_fyp/settings.php");
-            
-            ob_end_flush();
-
-
-    } else {
-      echo "Error deleting record: " . $db->error;
-    }
-      }
-
-
-   ?>
 
 
 
