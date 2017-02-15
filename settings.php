@@ -91,12 +91,13 @@ session_start();
   <hr>
 
 <form class="form-horizontal"   action="theme.php" method="POST" >
-<div class="form-group"
+
     <div class="panel-heading"><h3><u>Change Theme</u></h3></div>
+    <div class="form-group"
     <br/>
 <label class="control-label col-sm-2" for="password">Change Theme:</label>
 <div class="col-sm-3">
-       <form class="form-horizontal"   method="POST" >
+
   <input type="radio" id="theme" name="theme" value="Light" <?php if ($_SESSION['theme'] == 'Light') echo "checked='checked'"; ?> >Light
     <input type="radio" id="theme" name="theme" value="Grey" <?php if ($_SESSION['theme'] == 'Grey') echo "checked='checked'"; ?> >Grey
   <input type="radio" id="theme" name="theme"  value="Dark"  <?php if ($_SESSION['theme'] == 'Dark') echo "checked='checked'"; ?> >Dark
@@ -112,7 +113,6 @@ session_start();
 </div>
 
 </form>
-</form>
 
 
 
@@ -123,7 +123,25 @@ session_start();
 <br>
   <hr>
 
-<!--<form class="form-horizontal"   action="theme.php" method="POST" >
+  <form class="form"   method="POST" >
+  <div class="form-group"
+      <div class="panel-heading"><h3><u>Change Theme</u></h3></div>
+      <br/>
+  <label class="control-label col-sm-5" for="password">Change Theme:</label>
+</div>
+
+
+<div class="form-group">
+<div class="col-sm-offset col-sm-10">
+<button type="button" class="btn btn-rimary btn-s" data-toggle="modal" data-target="#myModal_delete_record">Delete last Record</button>
+</div>
+</div>
+</form>
+
+
+
+
+<!--<form class="form-horizontal"   method="POST" >
 <div class="form-group">
   <div class="panel-heading"><h3><u>Delete Last Record</u></h3></div>
   <br/>
