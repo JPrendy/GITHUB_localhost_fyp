@@ -2,13 +2,9 @@
 
 <?php
 session_start();
-if
- ($_SESSION['theme'] == 'Light') {
+
     include '../home_header.php';
-  }
-  else {
-      include '../home_header_dark.php';
-  }
+
 ?>
 
 
@@ -23,15 +19,16 @@ $lesson  = "Algebra";
 //echo "$lesson</br>";
 
 //It is important to have SELECT in uppercase or won't work
-  $sql3 = "SELECT topic_visited from lessons_visited WHERE uid='{$_SESSION['userid']}'";
+  //$sql3 = "SELECT topic_visited from lessons_visited WHERE uid='{$_SESSION['userid']}'";
 
 //make sure right user is logged in with a value from topic_visited
 //echo "$sql3<br/>";
-$result = mysqli_query($db, $sql3);
-$row = mysqli_fetch_array($result);
+//$result = mysqli_query($db, $sql3);
+//$row = mysqli_fetch_assoc($result);
 //echo $row['topic_visited'];
-$increment = $row['topic_visited'];
-$increment += 1;
+//$increment = $row['topic_visited'];
+
+//$increment += 1;
 //echo "$increment";
 
 
@@ -40,8 +37,7 @@ $increment += 1;
 
 
 
-
-$update_l = "UPDATE lessons_visited set topic_visited='$increment' where uid='{$_SESSION['userid']}'";
+//$update_l = "UPDATE lessons_visited set topic_visited='$increment' where uid='{$_SESSION['userid']}'";
 
 $sql2 = "UPDATE lessons set lesson_type='$lesson' where uid='{$_SESSION['userid']}'";
 //echo "$sql2";
@@ -54,25 +50,20 @@ else {
   //  echo "Error deleting record: " . $db->error;
 }
 
-if ($db->query($update_l) === TRUE) {
-  //  echo "<br></br>";
-  //  echo "Record Updated successfully";
-}
-else {
-    //echo "Error deleting record: " . $db->error;
-}
 
 $_SESSION['lesson'] = $lesson;
 
  ?>
 
-<br>
-<div class="col-sm-9 text-left">
+ <div class="container-fluid text-center">
+     <div class="row content">
+     <div class="col-sm-9 text-centre">
+
 
 
 <!--http://www.w3schools.com/bootstrap/bootstrap_tabs_pills.asp-->
 
-  <div class="container">
+
     <h2>Dynamic Pills</h2>
     <p>To make the tabs toggleable, add the data-toggle="pill" attribute to each link. Then add a .tab-pane class with a unique ID for every tab and wrap them inside a div element with class .tab-content.</p>
     <ul class="nav nav-pills">
@@ -93,7 +84,7 @@ $_SESSION['lesson'] = $lesson;
         <div class="col-md-8">
           <div class="embed-responsive embed-responsive-16by9">
             <iframe class="embed-responsive-item" src="http://www.youtube.com/embed/wv6REdgLUZ0?autohide=0"
-          "></iframe>
+          ></iframe>
           </div>
         </div>
       </p>
@@ -124,7 +115,8 @@ Algebra
 
 <a href="..\exercises\quiz.php"> here to test algebra </a>
 </div>
-
+</div>
+</div>
 
  </body>
  </html>

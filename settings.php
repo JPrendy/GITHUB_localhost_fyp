@@ -10,29 +10,11 @@ session_start();
 	<h1>Settings</h1>
 </div>
 
-<?php
 
-ob_start();
-
-
-//echo $_SESSION['userid'];
-//echo $_SESSION['theme'];
-
-
-?>
 
 <div class="container-fluid text-center">
     <div class="row content">
-  <!--<div class="row content">
 
-    <div class="col-sm-2 sidenav" >
-      <p><a href="#">Link</a></p>
-      <p><a href="#">Link</a></p>
-	  <div class="well">
-        <p>ADS</p>
-		</div>
-      <p><a href="#">Link</a></p>
-    </div>-->
 
 
 
@@ -114,7 +96,7 @@ ob_start();
     <br/>
 <label class="control-label col-sm-2" for="password">Change Theme:</label>
 <div class="col-sm-3">
-       <form class="form-horizontal"    action="settings.php" method="POST" >
+       <form class="form-horizontal"   method="POST" >
   <input type="radio" id="theme" name="theme" value="Light" <?php if ($_SESSION['theme'] == 'Light') echo "checked='checked'"; ?> >Light
     <input type="radio" id="theme" name="theme" value="Grey" <?php if ($_SESSION['theme'] == 'Grey') echo "checked='checked'"; ?> >Grey
   <input type="radio" id="theme" name="theme"  value="Dark"  <?php if ($_SESSION['theme'] == 'Dark') echo "checked='checked'"; ?> >Dark
@@ -128,8 +110,9 @@ ob_start();
 <button type="submit" class="btn btn-rimary btn-s" name="theme_button" id="theme_button"> SAVE THEME</button>
 </div>
 </div>
-</form>
 
+</form>
+</form>
 
 
 
@@ -140,21 +123,25 @@ ob_start();
 <br>
   <hr>
 
-
+<!--<form class="form-horizontal"   action="theme.php" method="POST" >
 <div class="form-group">
   <div class="panel-heading"><h3><u>Delete Last Record</u></h3></div>
   <br/>
   <label class="control-label col-sm-2" for="password">Delete last exercise record</label>
-  <div class="col-sm-3">
+</div>
 <form class="form-horizontal"    action="settings.php" method="POST">
+
+
+
+<div class="col-sm-offset-2 col-sm-10">
 <button type="button" class="btn btn-rimary btn-s" data-toggle="modal" data-target="#myModal_delete_record">Delete last Record</button>
 </div>
-</div>
 
+</form>
+</form>
 
 </div>
-</div>
-
+</div-->
 
 
 <!-- Modal -->
@@ -179,7 +166,7 @@ ob_start();
   </div>
 </div>
 
-</form>
+
 
 
 
