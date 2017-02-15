@@ -21,7 +21,6 @@ session_start();
 
 
 
-
     <div class="col-sm-9   text-centre">
       <h1>Lessons</h1>
 

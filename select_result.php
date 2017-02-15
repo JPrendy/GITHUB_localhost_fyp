@@ -23,7 +23,7 @@ if ($order=="") {
   $order="desc";
 }
 
-$sql = "SELECT * FROM  quiz_scores Where uid = '{$_SESSION['userid']}' AND difficulty_level = '$difficulty_level' and math_lesson = '$maths_lesson' ORDER BY id $order LIMIT $limit";
+$sql = "SELECT * FROM  quiz_scores Where uid = '{$_SESSION['userid']}' AND difficulty_level $difficulty_level and math_lesson = '$maths_lesson' /*ORDER BY id $order*/ LIMIT $limit";
 echo "$sql";
 	$result = mysqli_query($db, $sql);
 
@@ -113,9 +113,9 @@ th {text-align: left;}
     <div class="col-xs-offset-4">
   <label for="sel1">Select list (select one):</label>
   <select class="form-control"  name=difficulty_level id="sel2">
-    <option value="IS NOT NULL ">..</option>
+    <option value=" ">..</option>
     <option value="0">0</option>
-    <option value="-10">1</option>
+    <option value="= -10">1</option>
   </select>
 </div>
 </div>
