@@ -21,14 +21,66 @@ if (!$db) {
   		if (!$row = mysqli_fetch_assoc($result)){
 
   		  echo "Your username or password is incorrect!";
-            header("Location: ../index.php?error=real test");
+            header("Location: ../home.php?error=real test");
 
 
   		}
 
 
+      $sc =   "  SELECT *  From
+(select * from quiz_scores ORDER BY sc_time  DESC LIMIT 2) AS name
+ORDER BY sc_time LIMIT 1";
+
+   $sc2 = "SELECT * FROM quiz_scores order by sc_time DESC";
+    	$score_result = mysqli_query($db, $sc);
+      $score_result2 = mysqli_query($db, $sc2);
+      if (!$row2 = mysqli_fetch_array($score_result)){
+
+   		  echo "Your username or password is incorrect!";
+             header("Location: ../home.php?error=real test");
+
+
+   		}
+      if (!$row3 = mysqli_fetch_array($score_result2)){
+
+        echo "Your username or password is incorrect!";
+             header("Location: ../home.php?error=real test");
+
+
+      }
+
+
+
   $sum = $row['TEST'];
   $count = $row['MATH'];
+
+
+  $time1 =  new DateTime($row2[5]);
+  $time2 =  new DateTime($row3[5]);
+//$ok = "SELECT TIMEDIFF('$time2', '$time1')";
+  //$ok2= mysqli_query($db, $ok);
+  //if (!$row4 = mysqli_fetch_assoc($ok)){
+
+    //echo "Your username or password is incorrect!";
+      //   header("Location: ../home.php?error=real test");
+
+
+  //}
+
+//$test = $row4[0];
+
+//$interval = date_diff($time1, $time2);
+//echo $interval->format('%R%a days');
+
+
+//  echo $time1;
+  //echo "</br>";
+  //echo $time2;
+  //echo"</br>";
+  //echo $ok;
+
+  $interval =  $time2->diff($time1);
+  echo $interval->format("%H hours %i minutes %s seconds");
 
   echo "the user has scored in total $sum";
   echo "<br>";

@@ -62,7 +62,7 @@
     }
 
     .custom {
-        width: 180px !important;
+        width: 160px !important;
     }
 
     .btn-group{
