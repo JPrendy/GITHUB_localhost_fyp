@@ -128,22 +128,8 @@ if
 
 	<br>
 	<br>
-	<br>
-	<br>
-	<br>
 
 
-
-<!-- get rid of this and put it in the header
-
-
-		 <br></br>
-		 <form action="includes/logout.inc.php">
-		 <button>LOG OUT</button>
-		 </form>
-
-
-		 -->
 
 
 
