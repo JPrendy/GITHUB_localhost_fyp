@@ -213,22 +213,42 @@
        $ok = $_SESSION['lesson'];
       // echo $ok;
        $one = "lessons/$ok.php";
+       $on =  "$ok.php";
+       $one1 = "../$ok.php";
        //echo $one;
      ?>
-     <?php  if($_SESSION['lesson'] != ''){?>
+     <?php  if($_SESSION['lesson'] != ''){
+
+       $url = "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
+       if (strpos($url, 'lessons/') !==false || strpos($url, 'exercises/') !== false){?>
+
+              <li class="active"><?php echo "<a href=$on>Last topic visited: $ok</a>"; ?></li>
+    <?php   }
 
 
-          <li class="active"><?php echo "<a href=$one>Last topic visited: $ok</a>"; ?></li>
-       <p>
-         <p>
+       else{?>
+                        <li class="active"><?php echo "<a href=$one>Last topic visited: $ok</a>"; ?></li>
+    <?php }
+       ?>
+
+
+
 <?php } ?>
 
 
 
+<?php
+      $url2 = "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
 
+    if (strpos($url2, 'lessons/') !==false || strpos($url2, 'exercises/') !== false)
+{?>
 
-    <li class="active hidden-xs"><a href="lessons.php">Lessons</a></li>
+    <li class="active hidden-xs"><a href="../lessons.php">Lessons</a></li>
 
+<?php } else{?>
+   <li class="active hidden-xs"><a href="lessons.php">Lessons</a></li>
+
+<?php }?>
 
 
 

@@ -51,12 +51,12 @@ date_default_timezone_set('UTC');
 $time = date("Y-m-d H:i:s");
 //echo "$time";
 //echo "<br>";
-
+$start_time = $_SESSION['start_time'];
 
 
 	$db = mysqli_connect("localhost", "root", "" , "logintest");
 
-$sql = "insert into quiz_scores(uid, math_lesson, score, difficulty_level, sc_time) VALUES ('$uid', '$math_lesson', '$score', '$difficulty_level', '$time')";
+$sql = "insert into quiz_scores(uid, math_lesson, score, difficulty_level, sc_time_start, sc_time) VALUES ('$uid', '$math_lesson', '$score', '$difficulty_level', '$start_time' ,'$time')";
 mysqli_query($db, $sql);
 
 

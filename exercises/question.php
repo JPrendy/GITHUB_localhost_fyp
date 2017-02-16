@@ -11,6 +11,14 @@ session_start();
   $number2 = (string) $_GET['m'];  //gets the number at the top of the url we
 
 
+if ($number == 1){
+  date_default_timezone_set('UTC');
+  $start_time = date("Y-m-d H:i:s");
+ $_SESSION['start_time'] =   $start_time;
+
+
+}
+
   $before_choice = "_choices";
   $choices =  $number2 . $before_choice;
   $_SESSION['choices'] = $choices;
@@ -73,6 +81,7 @@ function goBack() {
 }
 </script>
 <body>
+
 
 
 

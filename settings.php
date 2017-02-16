@@ -53,7 +53,7 @@ session_start();
     <div class="form-group">
   <div class="col-sm-offset-2 col-sm-10">
 	    <button type="reset" class="btn btn-danger btn-s" name="register_btn"> RESET </button>
-  <button type="button" class="btn btn-rimary btn-s" data-toggle="modal" data-target="#myModal">CHANGE PASSWORD</button>
+  <button type="button" class="btn btn-primary btn-s" data-toggle="modal" data-target="#myModal">CHANGE PASSWORD</button>
 <!-- the data attribut "data-target points to #myModal"     -->
 
 
@@ -93,7 +93,7 @@ session_start();
 <form class="form-horizontal"   action="theme.php" method="POST" >
 
     <div class="panel-heading"><h3><u>Change Theme</u></h3></div>
-    <div class="form-group"
+    <div class="form-group">
     <br/>
 <label class="control-label col-sm-2" for="password">Change Theme:</label>
 <div class="col-sm-3">
@@ -108,7 +108,7 @@ session_start();
 <div class="form-group">
 <div class="col-sm-offset-2 col-sm-10">
   <button type="reset" class="btn btn-danger btn-s" name="register_btn"> RESET </button>
-<button type="submit" class="btn btn-rimary btn-s" name="theme_button" id="theme_button"> SAVE THEME</button>
+<button type="submit" class="btn btn-primary btn-s" name="theme_button" id="theme_button"> SAVE THEME</button>
 </div>
 </div>
 
@@ -124,19 +124,25 @@ session_start();
   <hr>
 
   <form class="form"   method="POST" >
-  <div class="form-group"
-      <div class="panel-heading"><h3><u>Change Theme</u></h3></div>
+
+      <div class="panel-heading"><h3><u>Delete Last Exercise Record</u></h3></div>
+        <div class="form-group">
       <br/>
-  <label class="control-label col-sm-5" for="password">Change Theme:</label>
+  <label class="control-label col-sm-2" for="password">Delete Record:</label>
 </div>
 
 
 <div class="form-group">
-<div class="col-sm-offset col-sm-10">
-<button type="button" class="btn btn-rimary btn-s" data-toggle="modal" data-target="#myModal_delete_record">Delete last Record</button>
+<div class="col-sm-offset col-sm-8">
+<button type="button" class="btn btn-primary btn-md" data-toggle="modal" data-target="#myModal_delete_record">Delete</button>
 </div>
 </div>
 </form>
+
+<br>
+<br>
+<br>
+<br>
 
 
 

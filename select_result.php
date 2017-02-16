@@ -138,7 +138,7 @@ th {text-align: left;}
     <div class="col-xs-offset-4">
         <label for="sel1">Pick your Order:</label>
   <select  class="form-control" name="order">
-        <option value=" ">..</option>
+        <option value="ASC ">..</option>
     <option value="ASC">Newest</option>
     <option value="DESC">Oldest</option>
   </select>
@@ -152,7 +152,7 @@ th {text-align: left;}
       <div class="col-xs-offset-4">
                 <label for="sel1">Select How Many Columns To Return:</label>
   <select  class="form-control" name="limit">
-            <option value=" ">..</option>
+            <option value="25">..</option>
     <option value="25">25</option>
     <option value="50">50</option>
     <option value="100">100</option>
