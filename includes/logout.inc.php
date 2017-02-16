@@ -3,7 +3,8 @@
   session_start();
 
   $db = mysqli_connect("localhost", "root", "" , "logintest");
-  $sql ="UPDATE users SET session= 2 WHERE id={$_SESSION['id']}";
+  $userid =  $_SESSION['userid'];
+  $sql ="UPDATE users SET session = 2 WHERE uid= '$userid'";
   $result = mysqli_query($db, $sql);
   session_destroy();
 

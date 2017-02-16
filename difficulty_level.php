@@ -1,6 +1,6 @@
 <?php
 
-   session_start();
+//   session_start();
 
 $db = mysqli_connect("localhost", "root","", "logintest");
 
@@ -54,8 +54,10 @@ ORDER BY sc_time LIMIT 1";
   $sum = $row['TEST'];
   $count = $row['MATH'];
 
-
+if($row2[5] != null){
   $time1 =  new DateTime($row2[5]);
+}
+
   $time2 =  new DateTime($row3[5]);
 //$ok = "SELECT TIMEDIFF('$time2', '$time1')";
   //$ok2= mysqli_query($db, $ok);
@@ -130,7 +132,7 @@ if($average >= 0.7){
 if ($average >= 0.5 && $average <= 0.7){
   echo "Nothing changes";
 }
-if($average <= 0.4){
+if($average <= 0.4 && $dynamic_level >=-1){
   $dynamic_level -=1;
     $update_sql_user = "UPDATE  users  SET difficulty_level=   $dynamic_level WHERE uid='{$_SESSION['userid']}'";
         	$result_update_users = mysqli_query($db, $update_sql_user);
