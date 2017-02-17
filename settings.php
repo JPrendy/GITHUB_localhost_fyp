@@ -137,7 +137,7 @@ session_start();
 <button type="button" class="btn btn-primary btn-md" data-toggle="modal" data-target="#myModal_delete_record">Delete</button>
 </div>
 </div>
-</form>
+
 
 <br>
 <br>
@@ -189,7 +189,7 @@ session_start();
 
   </div>
 </div>
-
+</form>
 
 
 

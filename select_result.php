@@ -23,7 +23,7 @@ if ($order=="") {
   $order="desc";
 }
 
-$sql = "SELECT * FROM  quiz_scores Where uid = '{$_SESSION['userid']}' AND difficulty_level $difficulty_level and math_lesson = '$maths_lesson' /*ORDER BY id $order*/ LIMIT $limit";
+$sql = "SELECT * FROM  quiz_scores Where uid = '{$_SESSION['userid']}' AND difficulty_level $difficulty_level and math_lesson = '$maths_lesson' ORDER BY sc_time $order LIMIT $limit";
 echo "$sql";
 	$result = mysqli_query($db, $sql);
 

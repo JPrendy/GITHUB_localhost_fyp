@@ -77,10 +77,12 @@ else{
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
         <li class="active"><a href="home.php">Home</a></li>
-            <li> <a  href="#"  class=" hidden-lg hidden-sm hidden-md">Lessons</a></li>
-            <li> <a  href="#"  class=" hidden-lg hidden-sm hidden-md">Exercises</a></li>
-                <li> <a  href="#"  class=" hidden-lg hidden-sm hidden-md">Lessons</a></li>
-                    <li> <a  href="#"  class=" hidden-lg hidden-sm hidden-md">Lessons</a></li>
+            <li> <a  href="lessons.php"  class=" hidden-lg hidden-sm hidden-md">Lessons</a></li>
+            <li> <a  href="exercises.php"  class=" hidden-lg hidden-sm hidden-md">Exercises</a></li>
+                <li> <a  href="#"  class=" hidden-lg hidden-sm hidden-md">Charts</a></li>
+                    <li> <a  href="#"  class=" hidden-lg hidden-sm hidden-md">Past Results</a></li>
+                          <li> <a  href="#"  class=" hidden-lg hidden-sm hidden-md">Change Icons</a></li>
+                        <li> <a  href="#"  class=" hidden-lg hidden-sm hidden-md">Settings</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
 

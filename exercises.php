@@ -55,7 +55,7 @@ session_start();
              <div class="panel-group">
                <div class="panel panel-default">
            <div class="panel-heading">Text Hints: On</div>
-            <div class="panel-heading">Difficulty Level: 1</div>
+            <div class="panel-heading">Difficulty Level:    <b><?php echo $_SESSION['difficulty_level']?></b></div>
                 <div class="panel-heading">10 Questions</div>
             <div class="panel-body"><a href="exercises/question.php?n=1&m=Algebra">Algebra Quiz</a></div>
            </div>
