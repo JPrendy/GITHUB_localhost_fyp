@@ -78,7 +78,7 @@ if (!$row = mysqli_fetch_assoc($result2)){
 
 }
    $first_time = $row['sc_time'];
-echo $first_time;
+//echo $first_time;
 
 ?>
 <table class="table table-condensed table-bordered table-hover">
@@ -99,9 +99,11 @@ $time2 = new DateTime($start_time);
 
 $interval =  $time1->diff($time2);
 $ok = $interval->format(" %i minutes %s seconds");
-echo $ok;
-
+echo "<br>";
 ?>
+<strong><h3> You spent <?php echo $ok; ?> doing the test </strong></h3>
+
+
 
 
 <?php
@@ -116,7 +118,11 @@ echo  "<strong>";
 <?php if($_SESSION['your'.$x] != $_SESSION['correct'.$x]){
 ?>  <tr  class="danger"><?php
 }?>
+     
      <td> <?php echo "<strong>".$_SESSION['your'.$x], "</strong> is the answer you picked"; ?>   </td>
+
+
+
      <td> <?php echo  "<strong>".$_SESSION['correct'.$x],"</strong> is the correct answer"; ?> </td>
      </tr>
 

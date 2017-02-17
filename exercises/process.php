@@ -13,16 +13,16 @@ $_SESSION['score'] = 0;
 if ($_POST){
 
 
-  $number = $_POST['number'];
-  $number2 = $_POST['number2'];
+  $number = $_POST['number']; //this gets the number of the question
+  $number2 = $_POST['number2']; //this get the maths lesson
 
 $_SESSION['math_lesson'] = $number2;
 
 
-  $selected_choice = $_POST['choice'];
+  $selected_choice = $_POST['choice']; //this gets the user posted result
 
   if (empty("$selected_choice")){ //this is checking $username
-      $selected_choice = 1;
+      $selected_choice = 0;
   }
 
 #if(  $number ==1){
@@ -78,6 +78,14 @@ $correct_choice_text = $row['text'];
 
 
 $selected_choice_text = $row2['text'];
+echo "ok ";
+
+if ($selected_choice_text == null)
+{
+  $selected_choice_text = "blank";
+
+}
+echo $selected_choice_text;
 
 $_SESSION['correct'.$number] =   $correct_choice_text;
 $_SESSION['your'.$number] =   $selected_choice_text;
