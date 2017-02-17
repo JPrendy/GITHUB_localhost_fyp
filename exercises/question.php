@@ -131,7 +131,7 @@ else{
 }
 ?>
 <div class="col-sm-offset-9 ">
- <button type="submit" class="btn btn-primary btn-s" > Next</button>
+ <button type="submit" class="btn btn-primary btn-s" name="submit">  Next</button>
  <input type="hidden" name="number" value="<?php echo $number; ?>"/>
  <input type="hidden" name="number2" value="<?php echo $number2; ?>"/>
 </div>

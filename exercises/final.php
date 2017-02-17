@@ -49,18 +49,34 @@ date_default_timezone_set('UTC');
 //echo "$time";
 //echo "Today is " .  date("Y-m-d H:i:s") . "<br>";
 $time = date("Y-m-d H:i:s");
+
 //echo "$time";
 //echo "<br>";
+//if (isset($_POST['submit'])){
 $start_time = $_SESSION['start_time'];
-
+//}
 
 	$db = mysqli_connect("localhost", "root", "" , "logintest");
 
 $sql = "insert into quiz_scores(uid, math_lesson, score, difficulty_level, sc_time_start, sc_time) VALUES ('$uid', '$math_lesson', '$score', '$difficulty_level', '$start_time' ,'$time')";
-mysqli_query($db, $sql);
+$result = mysqli_query($db, $sql);
 
 
 
+
+
+
+$sql2 = "SELECT * FROM quiz_scores where uid= '{$_SESSION['userid']}' ORDER BY sc_time DESC LIMIT 1";
+  $result2 = mysqli_query($db, $sql2);
+if (!$row = mysqli_fetch_assoc($result2)){
+
+  echo "Your username or password is incorrect!";
+      header("Location: final.php?error=real test");
+
+
+}
+   $first_time = $row['sc_time'];
+echo $first_time;
 
 ?>
 <table class="table table-condensed table-bordered table-hover">
@@ -71,6 +87,20 @@ mysqli_query($db, $sql);
 
      </tr>
    </thead>
+<?php
+//this is the time you finished
+$time1 = new DateTime($first_time );
+//this is the time you started the quiz
+$time2 = new DateTime($start_time);
+
+
+
+$interval =  $time1->diff($time2);
+$ok = $interval->format(" %i minutes %s seconds");
+echo $ok;
+
+?>
+
 
 <?php
 
