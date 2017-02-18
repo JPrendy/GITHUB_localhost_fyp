@@ -190,6 +190,7 @@ session_start();
 
   </div>
 </div>
+
 </form>
 
 
@@ -378,9 +379,14 @@ mysqli_close($db);
       }
 
 ?>
+</div>
+</div>
+</div>
 
 
-
+<footer class="container-fluid text-center">
+  <p>Footer Text</p>
+</footer>
 
 
 

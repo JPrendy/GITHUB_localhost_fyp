@@ -126,7 +126,7 @@ th {text-align: left;}
   <select class="form-control"  name=difficulty_level id="sel2">
     <option value=" ">..</option>
     <option value="0">0</option>
-    <option value="= -10">1</option>
+    <option value="1">1</option>
   </select>
 </div>
 </div>
@@ -162,28 +162,25 @@ th {text-align: left;}
 </div>
   <br><br>
 
-
+  <div class="form-group">
+<div class="col-sm-offset-2 col-sm-10">
     <button type="submit" class="btn btn-primary btn-s" name="Score_btn"> submit </button>
+  </div>
+</div>
 </form>
 
 
 
 
 
-<div class="panel-body"><a href="ColumnChart_test.php">Column </a></div>
-
-<div class="panel-body"><a href="select_result_ajax.php">Ajax results </a></div>
-
-
-<div class="panel-body"><a href="piechart_test.php">PieChart </a></div>
-
-<div class="panel-body"><a href="difficulty_level.php">difficulty_level </a></div>
-
-<div class="panel-body"><a href="barchart.php">barchart </a></div>
-
 </div>
 </div>
 </div>
+<footer class="container-fluid text-center">
+  <p>Footer Text</p>
+</footer>
+
+
 
 </body>
 </html>

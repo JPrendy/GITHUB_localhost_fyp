@@ -177,14 +177,27 @@
         <!--added a javascript function to the hyperlink-->
         <!-- the older version  <li><a href="#" onclick="myFunction()" >Charts</a></li> -->
       <?php     if($_SESSION['welcome'] != 2){?>
-        <li  class="hidden-xs"><a href="#"  id="myFunction2">Charts</a></li>
+        <li  class="hidden-xs"><a href="#"  id="myFunction2">Results</a></li>
 
        <?php } else { ?>
             <!--<li><a href="piechart_test.php">Charts</a></li>-->
-            <li  class="hidden-xs"><a href="select_result.php">Charts</a></li>
+            <li  class="hidden-xs"><a href="select_result.php">Results</a></li>
 
 
          <?php } ?>
+
+
+         <?php     if($_SESSION['welcome'] != 2){?>
+           <li  class="hidden-xs"><a href="#"  id="myFunction2">Charts</a></li>
+
+          <?php } else { ?>
+               <!--<li><a href="piechart_test.php">Charts</a></li>-->
+               <li  class="hidden-xs"><a href="charts.php">Charts</a></li>
+
+
+            <?php } ?>
+
+
 
          <?php     if($_SESSION['welcome'] != 2){?>
            <li class="panel hidden-xs"><a href="#"  id="myFunction3">Change Icon</a></li>
@@ -244,7 +257,6 @@
       <h3>Test</h3>
 
     </div>
-
     </div>
   </div>
 </div>
@@ -313,6 +325,7 @@ $('#myAlert').hide('fade');
 });
 
 </script>
+
 
 <footer class="container-fluid text-center">
   <p>Footer Text</p>

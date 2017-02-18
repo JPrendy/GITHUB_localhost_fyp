@@ -289,10 +289,35 @@
       if (strpos($url2, 'lessons/') !==false || strpos($url2, 'exercises/') !== false)
       {?>
   <?php  if($_SESSION['welcome'] != 2){?>
+      <li><a href="#"  id="myFunction2">Results</a></li>
+
+     <?php } else { ?>
+    <li class="hidden-xs"><a href="../select_result.php">Results</a></li>
+       <?php }
+     }
+    else
+   {?>
+    <?php if($_SESSION['welcome'] != 2){?>
+       <li><a href="#"  id="myFunction2">Results</a></li>
+
+      <?php } else { ?>
+     <li class="hidden-xs"><a href="select_result.php">Results</a></li>
+        <?php } ?>
+  <?php } ?>
+
+
+
+
+  <?php
+        $url2 = "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
+
+      if (strpos($url2, 'lessons/') !==false || strpos($url2, 'exercises/') !== false)
+      {?>
+  <?php  if($_SESSION['welcome'] != 2){?>
       <li><a href="#"  id="myFunction2">Charts</a></li>
 
      <?php } else { ?>
-    <li class="hidden-xs"><a href="../select_result.php">Charts</a></li>
+    <li class="hidden-xs"><a href="../charts.php">Charts</a></li>
        <?php }
      }
     else
@@ -301,9 +326,18 @@
        <li><a href="#"  id="myFunction2">Charts</a></li>
 
       <?php } else { ?>
-     <li class="hidden-xs"><a href="select_result.php">Charts</a></li>
+     <li class="hidden-xs"><a href="charts.php">Charts</a></li>
         <?php } ?>
   <?php } ?>
+
+
+
+
+
+
+
+
+
 
 
 
