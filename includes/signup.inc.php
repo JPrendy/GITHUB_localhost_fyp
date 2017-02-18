@@ -1,25 +1,3 @@
-
-<?php
-
-//include 'dbh.php';
-
-//$first = $_POST['first'];
-//$last = $_POST['last'];
-//$uid = $_POST['uid'];
-//$pwd = $_POST['pwd'];
-
-
-
-
-//$sql = "INSERT INTO users(first, last, pwd, uid) VALUES ('$first, '$last','$pwd', '$uid')";
-
-
-//$result = mysqli_query($conn, $sql);
-
-//header("Location: index.php");
-
-?>
-
 <?php
 
   session_start();

@@ -83,7 +83,7 @@ echo "ok ";
 if ($selected_choice_text == null)
 {
   $selected_choice_text = "blank";
-
+  $_SESSION['blank']++;
 }
 echo $selected_choice_text;
 

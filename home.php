@@ -43,24 +43,44 @@
       }
       .row.content {height:auto;}
     }
+
+
+
   </style>
 
-  <?php
-   session_start();
- if(  $_SESSION['theme'] == 'Light'){
-   ?><style>
 
-   body{
-       background-color: #;
+  <?php
+  session_start();
+    if(  $_SESSION['theme'] == 'Light'){
+      ?><style>
+
+      body{
+          background-color: #;
+      }
+     </style><?php
    }
-  </style><?php
-}
-else{
-?> <style>  body{
-      background-color: #D3D3D3;
-  }</style><?php
-}
-   ?>
+   if(  $_SESSION['theme'] == 'Grey'){
+   ?> <style>  body{
+         background-color: #D3D3D3;
+     }</style><?php
+   }
+   if(  $_SESSION['theme'] == 'Dark'){
+   ?> <style>  body{
+         background-color: #898989;
+     }</style><?php
+   }
+   if(  $_SESSION['theme'] == 'Glow'){
+     ?><style>
+
+     body{
+         background-color:    #f7eef7;
+     }
+    </style><?php
+  }
+
+
+
+      ?>
 </head>
 <body>
 
@@ -86,8 +106,11 @@ else{
       </ul>
       <ul class="nav navbar-nav navbar-right">
 
+
+ <li>    <img src="images/test.jpg" class="hidden-xs img-rounded" alt="Cinque Terre" width="50" height="50"> </li>
+
      <li class="dropdown">
-       <a class="dropdown-toggle" data-toggle="dropdown" href="#">  <?php  echo $_SESSION['userid'],"'s account"; ?>
+       <a class="dropdown-toggle" data-toggle="dropdown" href="#">     <?php  echo $_SESSION['userid'],"'s account"; ?>
        <span class="caret"></span></a>
        <ul class="dropdown-menu">
          <li><a href="settings.php" class="btn btn-info btn-md">
@@ -99,7 +122,7 @@ else{
      		 <button class='btn btn-success btn-md'>LOG OUT</button>
      		 </form></a></li>
        </ul>
-
+</li>
     </div>
   </div>
 </nav>
@@ -212,7 +235,7 @@ else{
       }
       else{
         //echo $_SESSION['test'];
-        echo "welcome back ".$_SESSION['userid'];
+        echo "welcome back "; ?> <b><?php echo $_SESSION['userid']; ?></b><?php
     }
 
       ?>

@@ -106,6 +106,14 @@
        background-color: #898989;
    }</style><?php
  }
+ if(  $_SESSION['theme'] == 'Glow'){
+   ?><style>
+
+   body{
+       background-color:    #f7eef7;
+   }
+  </style><?php
+}
 
 
 

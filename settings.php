@@ -99,6 +99,7 @@ session_start();
 <div class="col-sm-3">
 
   <input type="radio" id="theme" name="theme" value="Light" <?php if ($_SESSION['theme'] == 'Light') echo "checked='checked'"; ?> >Light
+    <input type="radio" id="theme" name="theme"  value="Glow"  <?php if ($_SESSION['theme'] == 'Glow') echo "checked='checked'"; ?> >Glow
     <input type="radio" id="theme" name="theme" value="Grey" <?php if ($_SESSION['theme'] == 'Grey') echo "checked='checked'"; ?> >Grey
   <input type="radio" id="theme" name="theme"  value="Dark"  <?php if ($_SESSION['theme'] == 'Dark') echo "checked='checked'"; ?> >Dark
 </div>

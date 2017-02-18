@@ -2,7 +2,7 @@
  include 'database.php';
 session_start();
 
-  
+
 
   ?>
 <!Doctype html>
@@ -39,6 +39,7 @@ $one = 1;
 $math_lesson =  $_SESSION['math_lesson'];
 //echo "the math lesson is $math_lesson";
 $score = $_SESSION['score'];
+$blank  = $_SESSION['blank'];
 
 echo "You scored $score/10 in  $math_lesson";
 
@@ -59,7 +60,7 @@ $start_time = $_SESSION['start_time'];
 
 	$db = mysqli_connect("localhost", "root", "" , "logintest");
 
-$sql = "insert into quiz_scores(uid, math_lesson, score, difficulty_level, sc_time_start, sc_time) VALUES ('$uid', '$math_lesson', '$score', '$difficulty_level', '$start_time' ,'$time')";
+$sql = "insert into quiz_scores(uid, math_lesson, score, difficulty_level, blank, sc_time_start, sc_time) VALUES ('$uid', '$math_lesson', '$score', '$difficulty_level', '$blank','$start_time' ,'$time')";
 $result = mysqli_query($db, $sql);
 
 

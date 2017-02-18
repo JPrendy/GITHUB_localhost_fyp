@@ -3,6 +3,13 @@ session_start();
 
     include 'home_header.php';
 
+    if( $_SESSION['text_hint'] == 'text_hint_N'){
+       $text_hint= "Off";
+    }
+    if( $_SESSION['text_hint'] == 'text_hint_Y'){
+       $text_hint = "On";
+    }
+
 ?>
 
 
@@ -54,7 +61,7 @@ session_start();
             <!-- <p>The panel-group class clears the bottom-margin. Try to remove the class and see what happens.</p>-->
              <div class="panel-group">
                <div class="panel panel-default">
-           <div class="panel-heading">Text Hints: On</div>
+           <div class="panel-heading">Text Hints: <b><?php echo $text_hint?></b></div>
             <div class="panel-heading">Difficulty Level:    <b><?php echo $_SESSION['difficulty_level']?></b></div>
                 <div class="panel-heading">10 Questions</div>
             <div class="panel-body"><a href="exercises/question.php?n=1&m=Algebra">Algebra Quiz</a></div>

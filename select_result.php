@@ -19,11 +19,12 @@ $order = mysql_real_escape_string($_POST['order']);
 $limit = mysql_real_escape_string($_POST['limit']);
 echo "$maths_lesson";
 
-if ($order=="") {
-  $order="desc";
+if ($maths_lesson == "0") {
+  $sql = "SELECT * FROM  quiz_scores Where uid = '{$_SESSION['userid']}' AND difficulty_level $difficulty_level and math_lesson = 'Algebra' OR math_lesson ='Trignometry' ORDER BY sc_time $order LIMIT $limit";
 }
-
+else{
 $sql = "SELECT * FROM  quiz_scores Where uid = '{$_SESSION['userid']}' AND difficulty_level $difficulty_level and math_lesson = '$maths_lesson' ORDER BY sc_time $order LIMIT $limit";
+}
 echo "$sql";
 	$result = mysqli_query($db, $sql);
 
@@ -111,7 +112,7 @@ th {text-align: left;}
     <div class="col-xs-offset-4">
   <label for="sel1">Select A Maths Topic:</label>
   <select class="form-control"  name="maths_lessons" id="sel1">
-        <option value='Algebra'.or.'Trignometry'>..</option>
+        <option value="0">..</option>
     <option value="Algebra ">Algebra</option>
     <option value="Trignometry">Trignometry</option>
   </select>

@@ -54,11 +54,11 @@ ORDER BY sc_time LIMIT 1";
   $sum = $row['TEST'];
   $count = $row['MATH'];
 
-if($row2[5] != null){
-  $time1 =  new DateTime($row2[6]);
+if($row2[6] != null){
+  $time1 =  new DateTime($row2[7]);
 }
 
-  $time2 =  new DateTime($row3[6]);
+  $time2 =  new DateTime($row3[7]);
 //$ok = "SELECT TIMEDIFF('$time2', '$time1')";
   //$ok2= mysqli_query($db, $ok);
   //if (!$row4 = mysqli_fetch_assoc($ok)){
@@ -133,7 +133,7 @@ echo $dynamic_level;
 
 
 
-  if($ok >= $interval->format(" 0 minutes 0 seconds"))
+  if($ok == $interval->format(" 0 minutes 0 seconds"))
   {
     $dynamic_level = 1;
     $update_sql_user = "UPDATE  users  SET difficulty_level=   $dynamic_level WHERE uid='{$_SESSION['userid']}'";
@@ -148,7 +148,7 @@ echo $dynamic_level;
 //IS IMPLEMENTED
 if($ok >= $interval->format(" 2 minutes 0 seconds"))
 {
-if($average >= 7.0 && $dynamic_level <= 5){
+if(($average >= 7.0) && ($dynamic_level <= 5)){
   $dynamic_level +=1;
   //  $sql = "Update  WHERE uid='{$_SESSION['userid']}'";
     $update_sql_user = "UPDATE  users  SET difficulty_level=   $dynamic_level WHERE uid='{$_SESSION['userid']}'";
@@ -160,7 +160,7 @@ if($average >= 7.0 && $dynamic_level <= 5){
 if ($average >= 4.5 && $average <= 7){
   echo "Nothing changes";
 }
-if($average <= 4.5 && $dynamic_level >=-1){
+if(($average <= 4.5) && ($dynamic_level >=-1)){
   $dynamic_level -=1;
     $update_sql_user = "UPDATE  users  SET difficulty_level=   $dynamic_level WHERE uid='{$_SESSION['userid']}'";
         	$result_update_users = mysqli_query($db, $update_sql_user);
