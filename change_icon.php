@@ -33,6 +33,8 @@ session_start();
 
     <!-- <div class="container"> -->
       <div class="row">
+        <div class="col-sm-1">
+        </div>
           <div class="col-sm-4">
         <h2>Panel Group</h2>
         <p>The panel-group class clears the bottom-margin. Try to remove the class and see what happens.</p>
@@ -40,24 +42,32 @@ session_start();
           <div class="panel panel-default">
             <div class="panel-heading">Panel Header</div>
             <!--make a test scenario where the user has to done the lesson before they are able to do this topic-->
-            <div class="panel-body"><a href="#">First Icon </a></div>
+            <div class="panel-body"><a href="icon_update.php?n=2">First Icon </a></div>
 
           </div>
           </div>
           </div>
+
+          <div class="col-sm-2">
+          </div>
+
+
            <div class="col-sm-4">
              <h2>Panel Group</h2>
              <p>The panel-group class clears the bottom-margin. Try to remove the class and see what happens.</p>
              <div class="panel-group">
                <div class="panel panel-default">
            <div class="panel-heading">Panel Header</div>
-            <div class="panel-body"><a href="lessons/algebra.php">Second Icon</a></div>
+            <div class="panel-body"><a href="icon_update.php?n=3">Second Icon</a></div>
            </div>
 
 
         </div>
       </div>
       </div>
+    </div>
+  </div>
+</div>
 
 
 
