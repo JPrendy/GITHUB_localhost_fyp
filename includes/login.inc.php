@@ -52,6 +52,10 @@
       //THIS IS TO SELECT FROM THE TABLE DYNAMIC_SETTINGS
       $sql4 = "Select * from dynamic_settings WHERE uid='$uid'";
       $result4 = mysqli_query($db, $sql4);
+      $sql5 = "Select * from icons WHERE uid='$uid'";
+      $result5 = mysqli_query($db, $sql5);
+
+
 
 		if (!$row = mysqli_fetch_assoc($result)){
 
@@ -83,6 +87,11 @@
       $row4 = mysqli_fetch_assoc($result4);
 
       $_SESSION['text_hint'] = $row4['text_hint'];
+
+      $row5 = mysqli_fetch_assoc($result5);
+
+      $_SESSION['icon'] = $row5['icon_type'];
+
 
 		//	$login = 1;
     //  $login2 += $login;

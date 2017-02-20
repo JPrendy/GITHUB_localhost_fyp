@@ -106,9 +106,12 @@
       </ul>
       <ul class="nav navbar-nav navbar-right">
 
-
+<?php if($_SESSION['icon'] == 1){?>
  <li>    <img src="images/test.jpg" class="hidden-xs img-rounded" alt="Cinque Terre" width="50" height="50"> </li>
+<?php} else {?>
+  <li>    <img src="images/test.jpg" class="hidden-xs img-rounded" alt="Cinque Terre" width="50" height="50"> </li>
 
+  <?php } ?>
      <li class="dropdown">
        <a class="dropdown-toggle" data-toggle="dropdown" href="#">     <?php  echo $_SESSION['userid'],"'s account"; ?>
        <span class="caret"></span></a>

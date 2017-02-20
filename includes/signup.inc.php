@@ -60,11 +60,14 @@
       $sql4 = "insert into theme (uid, theme_col) VALUES ('$uid', '$theme')";
       //THIS IS USED TO SET THE DEFAULT INSERT INSERT SETTING FOR THE DYNAMIC_SETTINGS TABLE
         $sql5 = "insert into dynamic_settings (uid, text_hint, timer, more_questions, more_answers) VALUES ('$uid', 'text_hint_N', 'timer_N', 'add_questions_N', 'add_answers_N')";
-			mysqli_query($db, $sql);
+        $sql6 ="insert into icons(uid, icon_type) values ('$uid', 1)";
+
+      mysqli_query($db, $sql);
       		mysqli_query($db, $sql2);
           	mysqli_query($db, $sql3);
             	mysqli_query($db, $sql4);
                   	mysqli_query($db, $sql5);
+                    mysqli_query($db, $sql6);
 		    $_SESSION['message'] = "You are now logged in";
 			$_SESSION['username'] = $username;
 
