@@ -106,10 +106,13 @@
       </ul>
       <ul class="nav navbar-nav navbar-right">
 
-<?php if($_SESSION['icon'] == 1){?>
- <li>    <img src="images/test.jpg" class="hidden-xs img-rounded" alt="Cinque Terre" width="50" height="50"> </li>
-<?php} else {?>
-  <li>    <img src="images/test.jpg" class="hidden-xs img-rounded" alt="Cinque Terre" width="50" height="50"> </li>
+<?php
+$icon = $_SESSION['icon'];
+if($icon != 3){?>
+ <li><img src="images/test.jpg" class="hidden-xs img-rounded" alt="Cinque Terre" width="50" height="50"> </li>
+<?php } if($icon == 3) { ?>
+
+  <li>    <img src="images/pikachu.png" class="hidden-xs img-rounded" alt="Cinque Terre" width="50" height="50"> </li>
 
   <?php } ?>
      <li class="dropdown">
@@ -264,7 +267,7 @@
 
 
       <div class="bs-example">
-          <div id="myCarousel" class="carousel slide" data-ride="carousel">
+          <div id="myCarousel" class="carousel slide"  style="width: 600px; margin: 0 auto" data-ride="carousel">
               <!-- Carousel indicators -->
               <ol class="carousel-indicators">
                   <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -274,13 +277,28 @@
               <!-- Wrapper for carousel items -->
               <div class="carousel-inner">
                   <div class="item active">
+
                       <img src="images/test.jpg" alt="First Slide">
+                      <div class="carousel-caption">
+      <h3>Chania</h3>
+      <p>The atmosphere in Chania has a touch of Florence and Venice.</p>
+    </div>
                   </div>
                   <div class="item">
+                    <!--<h2>...</h2>
+                    <p>10000000000000</p>-->
                       <img src="images/test.jpg" alt="Second Slide">
+                        <div class="carousel-caption">
+                      <h3>Chania</h3>
+                      <p>The atmosphere in Chania has a touch of Florence and Venice.</p>
+                    </div>
                   </div>
                   <div class="item">
                       <img src="images/test.jpg" alt="Third Slide">
+                        <div class="carousel-caption">
+                      <h3>Chania</h3>
+                      <p>The atmosphere in Chania has a touch of Florence and Venice.</p>
+                    </div>
                   </div>
               </div>
               <!-- Carousel controls -->
@@ -300,7 +318,7 @@
     </div>
   </div>
 </div>
-
+<br>
 <script>
 //function myFunction() {
   //  alert("Hello! I am an alert box!");
