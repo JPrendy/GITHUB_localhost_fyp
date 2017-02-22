@@ -267,7 +267,7 @@ if($icon != 3){?>
 
 
       <div class="bs-example">
-          <div id="myCarousel" class="carousel slide"  style="width: 600px; margin: 0 auto" data-ride="carousel">
+          <div id="myCarousel" class="carousel slide"  style="width: 400px; margin: 0 auto" data-ride="carousel">
               <!-- Carousel indicators -->
               <ol class="carousel-indicators">
                   <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
