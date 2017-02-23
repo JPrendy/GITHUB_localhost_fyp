@@ -121,6 +121,7 @@ else{
       <div class="btn-group" data-toggle="buttons" class="row">
         <label class="btn btn-primary btn-lg custom">
           <input type="radio" name="choice" id="option1" autocomplete="off" value="<?php echo $row['id'];?>"/>  <?php echo $row['text']?>
+             <?php $test  = $row['math_section']; ?>
         </label>
       </div>
    <?php endwhile; ?>
@@ -134,6 +135,7 @@ else{
  <button type="submit" class="btn btn-primary btn-s" name="submit">  Next</button>
  <input type="hidden" name="number" value="<?php echo $number; ?>"/>
  <input type="hidden" name="number2" value="<?php echo $number2; ?>"/>
+  <input type="hidden" name="test" value="<?php echo $test ?>"/>
 </div>
 </form>
 
@@ -145,7 +147,7 @@ else{
    </div>
  </div>
 
-
+   <?php echo $test?>
 
 </div>
 </div>

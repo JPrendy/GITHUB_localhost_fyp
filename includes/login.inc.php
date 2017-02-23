@@ -92,6 +92,10 @@
 
       $_SESSION['icon'] = $row5['icon_type'];
 
+$math_section_1 =0;
+$math_section_2 =0;
+    $_SESSION['math_section_1'] = $math_section_1;
+    $_SESSION['math_section_2'] = $math_section_2;
 
 		//	$login = 1;
     //  $login2 += $login;

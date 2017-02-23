@@ -15,6 +15,8 @@ if ($_POST){
 
   $number = $_POST['number']; //this gets the number of the question
   $number2 = $_POST['number2']; //this get the maths lesson
+  $math_section = $_POST['test']; //this get the maths lesson
+
 
 $_SESSION['math_lesson'] = $number2;
 
@@ -95,6 +97,13 @@ $_SESSION['your'.$number] =   $selected_choice_text;
 if($correct_choice == $selected_choice){
 //Answer is correct
 $_SESSION['score']++;
+if($math_section == 1){
+  $_SESSION['math_section_1']++;
+}
+if($math_section == 2){
+  $_SESSION['math_section_2']++;
+}
+
 }
 
 if($number == $total){

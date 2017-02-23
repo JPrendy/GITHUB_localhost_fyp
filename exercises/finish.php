@@ -90,6 +90,9 @@ if (!$row = mysqli_fetch_assoc($result2)){
      </tr>
    </thead>
 <?php
+echo   $_SESSION['math_section_1']; 
+
+
 //this is the time you finished
 $time1 = new DateTime($first_time );
 //this is the time you started the quiz
@@ -106,6 +109,7 @@ echo "<br>";
 
 
 
+
 <?php
 
 for ($x = 1; $x <= 7; $x++) {
@@ -118,7 +122,7 @@ echo  "<strong>";
 <?php if($_SESSION['your'.$x] != $_SESSION['correct'.$x]){
 ?>  <tr  class="danger"><?php
 }?>
-     
+
      <td> <?php echo "<strong>".$_SESSION['your'.$x], "</strong> is the answer you picked"; ?>   </td>
 
 
