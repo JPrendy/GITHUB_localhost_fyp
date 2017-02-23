@@ -34,9 +34,9 @@
          //else{
 
 			if (empty($uid && $password)){ //this is checking $username
-		//header("Location: ../index.php?error=empty");
-		echo "$hash";
-		//exit();
+	    header("Location: ../login_page.php?error=empty2");
+		//echo "$hash";
+		  exit();
 	    }
 
 
@@ -60,7 +60,7 @@
 		if (!$row = mysqli_fetch_assoc($result)){
 
 		  echo "Your username or password is incorrect!";
-          header("Location: ../index.php?error=real test");
+          header("Location: ../login_page.php?error=empty1");
 
 
 		}

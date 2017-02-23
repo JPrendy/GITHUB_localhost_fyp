@@ -92,11 +92,11 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">Logo</a>
+      <a class="navbar-brand active" <a href="home.php">e-learning</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="home.php">Home</a></li>
+        <!--<li class="active"><a href="home.php">Home</a></li>-->
             <li> <a  href="lessons.php"  class=" hidden-lg hidden-sm hidden-md">Lessons</a></li>
             <li> <a  href="exercises.php"  class=" hidden-lg hidden-sm hidden-md">Exercises</a></li>
                 <li> <a  href="#"  class=" hidden-lg hidden-sm hidden-md">Charts</a></li>

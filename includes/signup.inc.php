@@ -49,7 +49,7 @@
 		$uidcheck = mysqli_num_rows($result);
     $difficulty_level = 1;
 		if($uidcheck > 0){
-			header("Location: ../signup.php?error=username");
+			header("Location: ../index.php?error=username");
 			exit();
 		}else {
 			//$encrypted_password = password_hash($password, PASSWORD_DEFAULT);
@@ -73,7 +73,7 @@
 
 
 
-			header("location:../index.php");
+			header("location:../login_page.php");
 
 
 
