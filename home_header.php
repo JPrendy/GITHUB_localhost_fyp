@@ -149,15 +149,21 @@
               <?php   $url = "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
                  if (strpos($url, 'lessons/') !==false ||  strpos($url, 'exercises/') !== false){?>
           <li> <a  href="../lessons.php"  class=" hidden-lg hidden-sm hidden-md">Lessons</a></li>
+              <li> <a  href="../exercises.php"  class=" hidden-lg hidden-sm hidden-md">Exercises</a></li>
+              <li> <a  href="../select_result.php"  class=" hidden-lg hidden-sm hidden-md">Results</a></li>
+                         <li> <a  href="../charts.php"  class=" hidden-lg hidden-sm hidden-md">Charts</a></li>
+                             <li> <a  href="../change_icon.php"  class=" hidden-lg hidden-sm hidden-md">Change Icon</a></li>
+                           <li> <a  href="../settings.php"  class=" hidden-lg hidden-sm hidden-md">Settings</a></li>
         }
         <?php } else { ?>
           <li> <a  href="lessons.php"  class=" hidden-lg hidden-sm hidden-md">Lessons</a></li>
-          <?php } ?>
+
           <li> <a  href="exercises.php"  class=" hidden-lg hidden-sm hidden-md">Exercises</a></li>
          <li> <a  href="select_result.php"  class=" hidden-lg hidden-sm hidden-md">Results</a></li>
                     <li> <a  href="charts.php"  class=" hidden-lg hidden-sm hidden-md">Charts</a></li>
                         <li> <a  href="change_icon.php"  class=" hidden-lg hidden-sm hidden-md">Change Icon</a></li>
                       <li> <a  href="settings.php"  class=" hidden-lg hidden-sm hidden-md">Settings</a></li>
+                          <?php } ?>
         </ul>
         <ul class="nav navbar-nav navbar-right">
 
