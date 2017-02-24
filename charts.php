@@ -59,6 +59,17 @@ th {text-align: left;}
 
 
   <div class="form-group col-xs-8">
+    <div class="col-xs-offset-4">
+              <label for="sel1">Select How Many Columns To Return:</label>
+<select  class="form-control" name="chart">
+  <option value="columnchart_material">Column Charts</option>
+  <option value="chart_div">chart div</option>
+</select>
+</div>
+</div>
+
+
+
     <div class="form-group col-xs-8">
       <div class="col-xs-offset-4">
                 <label for="sel1">Select How Many Columns To Return:</label>
