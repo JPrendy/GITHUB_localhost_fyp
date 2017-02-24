@@ -90,7 +90,7 @@ if (!$row = mysqli_fetch_assoc($result2)){
      </tr>
    </thead>
 <?php
-echo   $_SESSION['math_section_1']; 
+echo   $_SESSION['math_section_1'];
 
 
 //this is the time you finished
@@ -123,7 +123,7 @@ echo  "<strong>";
 ?>  <tr  class="danger"><?php
 }?>
 
-     <td> <?php echo "<strong>".$_SESSION['your'.$x], "</strong> is the answer you picked"; ?>   </td>
+     <td> <?php echo "<strong>".$_SESSION['your'.$x], "</strong> is the answer you picked"; ?> </td>
 
 
 

@@ -5,55 +5,7 @@ session_start();
     include 'home_header.php';
 
 
-	$db = mysqli_connect("localhost", "root", "" , "logintest");
 
-//fetch table rows from mysql db
-//$sql = "select * from users";  //in my case it would be users
-//$result = mysqli_query($connection, $sql) or die("Error in Selecting" . mysqli_error($connection));
-
-if ( isset($_POST['Score_btn']) ) {
-
-$maths_lesson = mysql_real_escape_string($_POST['maths_lessons']);
-$difficulty_level = mysql_real_escape_string($_POST['difficulty_level']);
-$order = mysql_real_escape_string($_POST['order']);
-$limit = mysql_real_escape_string($_POST['limit']);
-echo "$maths_lesson";
-
-if ($maths_lesson == "0") {
-  $sql = "SELECT * FROM  quiz_scores Where uid = '{$_SESSION['userid']}' AND difficulty_level $difficulty_level and math_lesson = 'Algebra' OR math_lesson ='Trignometry' ORDER BY sc_time $order LIMIT $limit";
-}
-else{
-$sql = "SELECT * FROM  quiz_scores Where uid = '{$_SESSION['userid']}' AND difficulty_level $difficulty_level and math_lesson = '$maths_lesson' ORDER BY sc_time $order LIMIT $limit";
-}
-echo "$sql";
-	$result = mysqli_query($db, $sql);
-
-echo "<table>";
-
-//to do this we need fetch array not just a row because we are calling multipe rows
-while($row = mysqli_fetch_array($result)){
-//this displays all the information in the rows
-echo "<tr><td>";
-echo($row[0]);
-echo "</td><td>";
-echo($row[1]);
-echo "</td><td>";
-echo($row[2]);
-echo "</td><td>";
-echo($row[3]);
-echo "</td><td>";
-echo($row[4]);
-echo "</td><td>";
-echo($row[5]);
-
-
-
-//this will link to you another page
-
-
-}
-echo "</table>\n";
-}
 
 ?>
 
@@ -104,7 +56,7 @@ th {text-align: left;}
 
     <div class="col-sm-9 text-centre">
 
-<form  class="form-horizontal" method="POST" action="select_result.php">
+<form  class="form-horizontal" method="POST" action="show_results.php">
 
 
 
