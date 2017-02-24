@@ -53,12 +53,31 @@ th {text-align: left;}
 
 
     <div class="col-sm-9 text-centre">
+      Column Chart Data
 
-<form  class="form-horizontal" method="POST" action="select_result.php">
-
+<form  class="form-horizontal" method="POST" action="ColumnChart_test.php">
 
 
   <div class="form-group col-xs-8">
+    <div class="form-group col-xs-8">
+      <div class="col-xs-offset-4">
+                <label for="sel1">Select How Many Columns To Return:</label>
+  <select  class="form-control" name="limit">
+    <option value="25">..</option>
+    <option value="5">5</option>
+    <option value="25">25</option>
+    <option value="50">50</option>
+    <option value="100">100</option>
+  </select>
+</div>
+</div>
+
+<div class="form-group">
+<div class="col-sm-offset-2 col-sm-10">
+  <button type="submit" class="btn btn-primary btn-s" name="Score_btn"> submit </button>
+</div>
+</div>
+</form>
 
 
 <div class="panel-body"><a href="ColumnChart_test.php">Column </a></div>

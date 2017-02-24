@@ -7,9 +7,11 @@ session_start();
 
 	$connection = mysqli_connect("localhost", "root", "" , "logintest");
 
+
+$limit = mysql_real_escape_string($_POST['limit']);
 //fetch table rows from mysql db
 //$sql = "select * from users";  //in my case it would be users
-$sql = "SELECT * FROM  quiz_scores Where uid = '{$_SESSION['userid']}' ORDER BY sc_time ASC LIMIT 20  ";
+$sql = "SELECT * FROM  quiz_scores Where uid = '{$_SESSION['userid']}' ORDER BY sc_time ASC LIMIT $limit   ";
 $result = mysqli_query($connection, $sql) or die("Error in Selecting" . mysqli_error($connection));
 
 

@@ -27,6 +27,20 @@ $sql = "SELECT * FROM  quiz_scores Where uid = '{$_SESSION['userid']}' AND diffi
 $result = mysqli_query($db, $sql);
 
 ?>
+<style>
+
+
+table, td, th, tr, thead {
+    border: 1px solid black;
+    text-align: center;
+    padding: 5px;
+
+}
+
+th {text-align: left;}
+</style>
+
+<br>
   <div class="table-responsive">
 <table class="table">
   <thead>
@@ -82,13 +96,6 @@ echo "</table>\n";
 }
 ?>
   </div>
-<style>
-
-
-table, td, th, tr, thead {
-    border: 1px solid black;
-    padding: 5px;
-}
-
-th {text-align: left;}
-</style>
+  <footer class="container-fluid text-center">
+    <p>Footer Text</p>
+  </footer>
