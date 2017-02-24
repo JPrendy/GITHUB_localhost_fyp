@@ -10,6 +10,7 @@ session_start();
 
 $limit = mysql_real_escape_string($_POST['limit']);
 $chart = mysql_real_escape_string($_POST['chart']);
+echo $chart;
 //fetch table rows from mysql db
 //$sql = "select * from users";  //in my case it would be users
 $sql = "SELECT * FROM  quiz_scores Where uid = '{$_SESSION['userid']}' ORDER BY sc_time ASC LIMIT $limit   ";
@@ -85,7 +86,7 @@ $table['cols'] = array(
       // Instantiate and draw our chart, passing in some options.
       // Do not forget to check your div ID
 //      var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
-    var chart = new google.visualization.ColumnChart(document.getElementById('columnchart_material'));
+    var chart = new google.visualization.ColumnChart(document.getElementById("<?php echo $chart; ?>"));
 
       chart.draw(data, options);
     }
@@ -95,7 +96,7 @@ $table['cols'] = array(
   <body>
     <!--this is the div that will hold the pie chart-->
 
-<div id="columnchart_material"></div>
+<div id="<?php echo $chart; ?>"></div>
 
   </body>
 </html>
