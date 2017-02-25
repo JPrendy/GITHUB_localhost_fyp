@@ -62,13 +62,21 @@ th {text-align: left;}
     <div class="col-xs-offset-4">
               <label for="sel1">Select How Many Columns To Return:</label>
 <select  class="form-control" name="chart">
-  <option value="columnchart_material">Column Charts</option>
-  <option value="chart_div">chart div</option>
+  <option value="ColumnChart">Column Charts</option>
+  <option value="PieChart">PieChart</option>
 </select>
 </div>
 </div>
 
-
+<div class="form-group col-xs-8">
+  <div class="col-xs-offset-4">
+            <label for="sel1">Select How Many Columns To Return:</label>
+<select  class="form-control" name="order">
+<option value="ASC">ascending</option>
+<option value="DESC">descending</option>
+</select>
+</div>
+</div>
 
     <div class="form-group col-xs-8">
       <div class="col-xs-offset-4">

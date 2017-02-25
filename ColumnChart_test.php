@@ -10,10 +10,11 @@ session_start();
 
 $limit = mysql_real_escape_string($_POST['limit']);
 $chart = mysql_real_escape_string($_POST['chart']);
-echo $chart;
+$order = mysql_real_escape_string($_POST['order']);
+//echo $chart;
 //fetch table rows from mysql db
 //$sql = "select * from users";  //in my case it would be users
-$sql = "SELECT * FROM  quiz_scores Where uid = '{$_SESSION['userid']}' ORDER BY sc_time ASC LIMIT $limit   ";
+$sql = "SELECT * FROM  quiz_scores Where uid = '{$_SESSION['userid']}' ORDER BY sc_time $order LIMIT $limit   ";
 $result = mysqli_query($connection, $sql) or die("Error in Selecting" . mysqli_error($connection));
 
 
@@ -45,6 +46,7 @@ $table['cols'] = array(
     {
     $temp = array();
     // the following line will be used to slice the Pie chart
+    //can also make this SC_TIME
     $temp[] = array('v' => (string) $r['math_lesson']);
 //   $temp[] = array('x' => (string) $r['uid']);
     // Values of each slice
@@ -86,7 +88,7 @@ $table['cols'] = array(
       // Instantiate and draw our chart, passing in some options.
       // Do not forget to check your div ID
 //      var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
-    var chart = new google.visualization.ColumnChart(document.getElementById("<?php echo $chart; ?>"));
+    var chart = new google.visualization.<?php echo $chart; ?>(document.getElementById("columnchart_material"));
 
       chart.draw(data, options);
     }
@@ -96,7 +98,7 @@ $table['cols'] = array(
   <body>
     <!--this is the div that will hold the pie chart-->
 
-<div id="<?php echo $chart; ?>"></div>
+<div id="columnchart_material"></div>
 
   </body>
 </html>
