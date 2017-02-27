@@ -9,6 +9,7 @@ session_start();
 
 
 $limit = mysql_real_escape_string($_POST['limit']);
+$type = mysql_real_escape_string($_POST['type']);
 $chart = mysql_real_escape_string($_POST['chart']);
 $order = mysql_real_escape_string($_POST['order']);
 //echo $chart;
@@ -16,6 +17,15 @@ $order = mysql_real_escape_string($_POST['order']);
 //$sql = "select * from users";  //in my case it would be users
 $sql = "SELECT * FROM  quiz_scores Where uid = '{$_SESSION['userid']}' ORDER BY sc_time $order LIMIT $limit   ";
 $result = mysqli_query($connection, $sql) or die("Error in Selecting" . mysqli_error($connection));
+
+if (!$row = mysqli_fetch_assoc($result)){
+
+  echo "Your username or password is incorrect!";
+      header("Location: ../login_page.php?error=empty1");
+
+
+}
+	$math_id = $row['math_id'];
 
 
 
@@ -31,11 +41,12 @@ $table['cols'] = array(
 
 
 
-
   array ('label' => 'Startup', 'type' => 'string'),
 
 //  array('label' => 'Ok', 'type' => 'string'),
   array('label' => 'Quiz Scores', 'type' => 'number'),
+
+  //  array('label' => 'Math ID', 'type' => 'number'),
 
   array('label' => 'Difficulty Level', 'type' => 'number')
 );
@@ -47,10 +58,12 @@ $table['cols'] = array(
     $temp = array();
     // the following line will be used to slice the Pie chart
     //can also make this SC_TIME
-    $temp[] = array('v' => (string) $r['math_lesson']);
+    $temp[] = array('v' => (string) $r[$type]);
+
 //   $temp[] = array('x' => (string) $r['uid']);
     // Values of each slice
     $temp[] = array('v' => (int) $r['score']);
+    //    $temp[] = array('v' => (int) $r['math_id']);
     $temp[] = array('v' => (string) $r['difficulty_level']);
     $rows[] = array('c' => $temp);
     }
@@ -70,6 +83,15 @@ $table['cols'] = array(
     <script type="text/javascript">
 
     // Load the Visualization API and the piechart package.
+
+
+
+
+
+
+
+
+
     google.load('visualization', '1', {'packages':['corechart']});
 
     // Set a callback to run when the Google Visualization API is loaded.
@@ -80,10 +102,9 @@ $table['cols'] = array(
       // Create our data table out of JSON data loaded from server.
       var data = new google.visualization.DataTable(<?=$jsonTable?>);
       var options = {
-           title: 'An example of a pie chart for testing. ',
+           title: 'Quiz Results displayed in a <?php echo $chart; ?>.',
           is3D: 'true',
-          width: 1200,
-          height: 600
+
         };
       // Instantiate and draw our chart, passing in some options.
       // Do not forget to check your div ID
@@ -97,8 +118,31 @@ $table['cols'] = array(
 
   <body>
     <!--this is the div that will hold the pie chart-->
+    <div class="container-fluid text-center">
+    <div class="col-sm-9 text-centre">
+      <h1>Charts</h1>
 
-<div id="columnchart_material"></div>
+
+
+
+
+    <!-- <div class="container"> -->
+      <div class="row">
+<div id="columnchart_material" style="width: 930px; height: 600px;"></div>
+
+
+
+</div>
+</div>
+</div>
+
+<br>
+
+<footer class="container-fluid text-center">
+  <p>Footer Text</p>
+</footer>
+
+
 
   </body>
 </html>

@@ -53,7 +53,7 @@ th {text-align: left;}
 
 
     <div class="col-sm-9 text-centre">
-      Column Chart Data
+
 
 <form  class="form-horizontal" method="POST" action="ColumnChart_test.php">
 
@@ -63,7 +63,20 @@ th {text-align: left;}
               <label for="sel1">Select How Many Columns To Return:</label>
 <select  class="form-control" name="chart">
   <option value="ColumnChart">Column Charts</option>
+    <option value="BarChart">BarCharts</option>
   <option value="PieChart">PieChart</option>
+  <option value="LineChart">LineCharts</option>
+<option value="ScatterChart">ScatterChart</option>
+</select>
+</div>
+</div>
+
+<div class="form-group col-xs-8">
+  <div class="col-xs-offset-4">
+            <label for="sel1">Choose to show be lesson or by time:</label>
+<select  class="form-control" name="type">
+<option value="sc_time">date</option>
+  <option value="math_lesson">math lesson</option>
 </select>
 </div>
 </div>
@@ -99,6 +112,9 @@ th {text-align: left;}
 </form>
 
 
+<div class="panel-body"><a href="difficulty_level.php">difficulty_level </a></div>
+
+<!--
 <div class="panel-body"><a href="ColumnChart_test.php">Column </a></div>
 
 <div class="panel-body"><a href="select_result_ajax.php">Ajax results </a></div>
@@ -106,14 +122,18 @@ th {text-align: left;}
 
 <div class="panel-body"><a href="piechart_test.php">PieChart </a></div>
 
-<div class="panel-body"><a href="difficulty_level.php">difficulty_level </a></div>
 
-<div class="panel-body"><a href="barchart.php">barchart </a></div>
+
+<div class="panel-body"><a href="barchart.php">barchart </a></div>-->
 
 
 </div>
 </div>
 </div>
+
+<footer class="container-fluid text-center">
+  <p>Footer Text</p>
+</footer>
 
 </body>
 </html>
