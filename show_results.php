@@ -42,7 +42,7 @@ th {text-align: left;}
 
 <br>
   <div class="table-responsive">
-<table class="table">
+<table class="table table-condensed table-bordered table-hover">
   <thead>
     <tr>
       <th>Math Lesson</th>

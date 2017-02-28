@@ -158,7 +158,7 @@
                          <li> <a  href="../charts.php"  class=" hidden-lg hidden-sm hidden-md">Charts</a></li>
                              <li> <a  href="../change_icon.php"  class=" hidden-lg hidden-sm hidden-md">Change Icon</a></li>
                            <li> <a  href="../settings.php"  class=" hidden-lg hidden-sm hidden-md">Settings</a></li>
-        }
+
         <?php } else { ?>
           <li> <a  href="lessons.php"  class=" hidden-lg hidden-sm hidden-md">Lessons</a></li>
 
@@ -170,6 +170,49 @@
                           <?php } ?>
         </ul>
         <ul class="nav navbar-nav navbar-right">
+
+          <?php   $url = "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
+             if (strpos($url, 'lessons/') !==false ||  strpos($url, 'exercises/') !== false){?>
+              <?php $icon = $_SESSION['icon'];
+               if($icon == 1){?>
+                <li><img src="../images/test.jpg" class="hidden-xs img-rounded" alt="Cinque Terre" width="50" height="50"> </li>
+               <?php } if($icon == 2) { ?>
+
+                 <li>    <img src="../images/pikachu.png" class="hidden-xs img-rounded" alt="Cinque Terre" width="50" height="50"> </li>
+
+                 <?php } if($icon == 3) { ?>
+
+                   <li>    <img src="../images/pikachu.png" class="hidden-xs img-rounded" alt="Cinque Terre" width="50" height="50"> </li>
+
+                   <?php } if($icon == 4) { ?>
+
+                     <li>    <img src="../images/pikachu.png" class="hidden-xs img-rounded" alt="Cinque Terre" width="50" height="50"> </li>
+
+                     <?php } ?>
+
+    <?php } else { ?>
+
+      <?php $icon = $_SESSION['icon'];
+       if($icon == 1){?>
+        <li><img src="images/test.jpg" class="hidden-xs img-rounded" alt="Cinque Terre" width="50" height="50"> </li>
+       <?php } if($icon == 2) { ?>
+
+         <li>    <img src="images/pikachu.png" class="hidden-xs img-rounded" alt="Cinque Terre" width="50" height="50"> </li>
+
+         <?php } if($icon == 3) { ?>
+
+           <li>    <img src="images/pikachu.png" class="hidden-xs img-rounded" alt="Cinque Terre" width="50" height="50"> </li>
+
+           <?php } if($icon == 4) { ?>
+
+             <li>    <img src="images/pikachu.png" class="hidden-xs img-rounded" alt="Cinque Terre" width="50" height="50"> </li>
+
+             <?php } ?>
+
+                      <?php } ?>
+
+
+
 
        <li class="dropdown">
          <a class="dropdown-toggle" data-toggle="dropdown" href="#">  <?php    echo $_SESSION['userid'],"'s account"; ?>
