@@ -259,7 +259,7 @@ if($icon != 3){?>
     }
 
       ?>
-      <p>Welcom to my e-learning application. The concept behind my application is to help how you acquire and learn new knowledge. I hope that by using this Web Application you will notice will improvement on your knowledge on the topics I touch on im my application  </p>
+      <p>Welcome to my e-learning application. The concept behind my application is to help how you acquire and learn new knowledge. I hope that by using this Web Application you will notice will improvement on your knowledge on the topics I touch on im my application  </p>
       <hr>
       <h3>Test</h3>
 

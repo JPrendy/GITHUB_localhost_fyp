@@ -18,20 +18,27 @@ $lesson  = "Algebra";
 
 //echo "$lesson</br>";
 
-//It is important to have SELECT in uppercase or won't work
-  //$sql3 = "SELECT topic_visited from lessons_visited WHERE uid='{$_SESSION['userid']}'";
 
-//make sure right user is logged in with a value from topic_visited
-//echo "$sql3<br/>";
-//$result = mysqli_query($db, $sql3);
-//$row = mysqli_fetch_assoc($result);
-//echo $row['topic_visited'];
-//$increment = $row['topic_visited'];
+$sql3 = "SELECT * from math_section WHERE uid='{$_SESSION['userid']}' and math_lesson='algebra' ORDER BY sc_time desc";
 
-//$increment += 1;
-//echo "$increment";
+$result3 = mysqli_query($db, $sql3);
+
+if (!$row = mysqli_fetch_assoc($result3)){
+
+echo "Your username or password is incorrect!";
+    header("Location: ../login_page.php?error=empty1");
 
 
+}
+
+$math_section_1 = $row['math_section_1'];
+echo $math_section_1;
+$math_section_2 = $row['math_section_2'];
+echo $math_section_2;
+$math_section_3 = $row['math_section_3'];
+echo $math_section_3;
+$math_section_4 = $row['math_section_4'];
+echo $math_section_4;
 
 
 
@@ -94,6 +101,19 @@ $_SESSION['lesson'] = $lesson;
         Part 4:
 
         Multiply binomials by polynomals
+
+
+        <p>Welcome to my e-learning application. The concept behind my application is to help how you acquire and learn new knowledge. I hope that by using this Web Application you will notice will improvement on your knowledge on the topics I touch on im my application  </p>
+        <hr>
+        <h3>Section 3.  Quadratic Factors</h3>
+        <?php
+        if($math_section_1 == 4){?>
+        <div class="alert alert-danger alert-dismissable">
+        <a href="#" id='ok' class="close" data-dismiss="alert" aria-label="close">×</a>
+        <strong>Warning!</strong> In your last test you scored zero in Quadratic Factors, we recommend you look over this section.
+        </div>
+      <?php } ?>
+
       </div>
       <div id="menu1" class="tab-pane fade">
         <h3>Algebra Lesson</h3>
