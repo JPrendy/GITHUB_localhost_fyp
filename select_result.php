@@ -64,7 +64,7 @@ th {text-align: left;}
     <div class="col-xs-offset-4">
   <label for="sel1">Select A Maths Topic:</label>
   <select class="form-control"  name="maths_lessons" id="sel1">
-        <option value="0">..</option>
+        <option value="0">...</option>
     <option value="Algebra ">Algebra</option>
     <option value="Trignometry">Trignometry</option>
   </select>
@@ -76,7 +76,7 @@ th {text-align: left;}
     <div class="col-xs-offset-4">
   <label for="sel1">Select a Difficulty:</label>
   <select class="form-control"  name=difficulty_level id="sel2">
-    <option value=" ">..</option>
+    <option value=" ">...</option>
     <option value="0">0</option>
     <option value="1">1</option>
   </select>
@@ -89,9 +89,9 @@ th {text-align: left;}
 
   <div class="form-group col-xs-8">
     <div class="col-xs-offset-4">
-        <label for="sel1">Pick your Order:</label>
+        <label for="sel1">Select your Order:</label>
   <select  class="form-control" name="order">
-        <option value="ASC ">..</option>
+        <option value="ASC ">...</option>
     <option value="ASC">Newest</option>
     <option value="DESC">Oldest</option>
   </select>
@@ -105,7 +105,7 @@ th {text-align: left;}
       <div class="col-xs-offset-4">
                 <label for="sel1">Select How Many Columns To Return:</label>
   <select  class="form-control" name="limit">
-            <option value="25">..</option>
+            <option value="25">...</option>
     <option value="25">25</option>
     <option value="50">50</option>
     <option value="100">100</option>

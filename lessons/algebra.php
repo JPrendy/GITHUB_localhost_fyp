@@ -25,12 +25,15 @@ $result3 = mysqli_query($db, $sql3);
 
 if (!$row = mysqli_fetch_assoc($result3)){
 
-echo "Your username or password is incorrect!";
-    header("Location: ../login_page.php?error=empty1");
-
+echo "You currently haven't done a quiz!";
+//    header("Location: ../login_page.php?error=empty1");
+$math_section_1 =1;
+$math_section_2 =1;
+$math_section_3 =1;
+$math_section_4 =1;
 
 }
-
+else{
 $math_section_1 = $row['math_section_1'];
 echo $math_section_1;
 $math_section_2 = $row['math_section_2'];
@@ -39,7 +42,7 @@ $math_section_3 = $row['math_section_3'];
 echo $math_section_3;
 $math_section_4 = $row['math_section_4'];
 echo $math_section_4;
-
+}
 
 
 
@@ -156,7 +159,7 @@ Here we will go through the content of our topic
 Algebra
 
 
-<a href="..\exercises\quiz.php"> here to test algebra </a>
+<a href="../exercises/question.php?n=1&m=Algebra"> here to test algebra </a>
 <br>
 <br>
 <br>

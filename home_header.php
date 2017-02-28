@@ -228,12 +228,12 @@
          <?php
          $url = "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
          if (strpos($url, 'lessons/') !==false || strpos($url, 'exercises/') !== false){
-         echo  '<li><a href="../settings.php" class="btn btn-info btn-md">
+         echo  '<li><a href="../settings.php">
            <span class="glyphicon glyphicon-cog"></span> Settings
          </a></li>';
          }
          else{
-         echo  '<li><a href="settings.php" class="btn btn-info btn-md">
+         echo  '<li><a href="settings.php">
            <span class="glyphicon glyphicon-cog"></span> Settings
          </a></li>';
        }
@@ -291,6 +291,7 @@
      <?php  if($_SESSION['lesson'] != ''){
 
        $url = "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
+
        if (strpos($url, 'lessons/') !==false || strpos($url, 'exercises/') !== false){?>
 
               <li class="active"><?php echo "<a href=$on>Last topic visited: $ok</a>"; ?></li>

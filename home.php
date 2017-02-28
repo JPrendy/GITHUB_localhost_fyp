@@ -130,7 +130,7 @@ if($icon == 1){?>
        <a class="dropdown-toggle" data-toggle="dropdown" href="#">     <?php  echo $_SESSION['userid'],"'s account"; ?>
        <span class="caret"></span></a>
        <ul class="dropdown-menu">
-         <li><a href="settings.php" class="btn btn-info btn-md">
+         <li><a href="settings.php"
           <span class="glyphicon glyphicon-cog"></span> Settings
         </a></li>
 
@@ -260,14 +260,16 @@ if($icon == 1){?>
       //session_start();
       if($_SESSION['welcome'] != 2){
 
-        echo "Welcome first user";
+        echo "Welcome to my e-learning application user ";  ?> <b><?php echo $_SESSION['userid']; ?></b>
 
-      }
+      <?php } 
       else{
         //echo $_SESSION['test'];
-        echo "welcome back "; ?> <b><?php echo $_SESSION['userid']; ?></b><?php
-    }
-
+        echo "welcome back "; ?> <b><?php echo $_SESSION['userid']; ?></b>
+  <?php  } ?>
+<?php
+     echo "<br>";
+      echo "Your current difficulty level is ";?><b><?php echo $_SESSION['difficulty_level']; ?></b><?php
       ?>
       <p>Welcome to my e-learning application. The concept behind my application is to help how you acquire and learn new knowledge. I hope that by using this Web Application you will notice will improvement on your knowledge on the topics I touch on im my application  </p>
       <hr>

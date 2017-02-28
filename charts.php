@@ -60,8 +60,9 @@ th {text-align: left;}
 
   <div class="form-group col-xs-8">
     <div class="col-xs-offset-4">
-              <label for="sel1">Select How Many Columns To Return:</label>
+              <label for="sel1">Select the type of chart you want to display your data:</label>
 <select  class="form-control" name="chart">
+    <option value="ColumnChart">...</option>
   <option value="ColumnChart">Column Charts</option>
     <option value="BarChart">BarCharts</option>
   <option value="PieChart">PieChart</option>
@@ -73,18 +74,21 @@ th {text-align: left;}
 
 <div class="form-group col-xs-8">
   <div class="col-xs-offset-4">
-            <label for="sel1">Choose to show be lesson or by time:</label>
+            <label for="sel1">Select what you want to show the x-axis:</label>
 <select  class="form-control" name="type">
-<option value="sc_time">date</option>
+  <option value="math_lesson">...</option>
   <option value="math_lesson">math lesson</option>
+<option value="sc_time">date</option>
+
 </select>
 </div>
 </div>
 
 <div class="form-group col-xs-8">
   <div class="col-xs-offset-4">
-            <label for="sel1">Select How Many Columns To Return:</label>
+<label for="sel1">Select your Order:</label>
 <select  class="form-control" name="order">
+<option value="ASC">...</option>
 <option value="ASC">ascending</option>
 <option value="DESC">descending</option>
 </select>
@@ -93,9 +97,9 @@ th {text-align: left;}
 
     <div class="form-group col-xs-8">
       <div class="col-xs-offset-4">
-                <label for="sel1">Select How Many Columns To Return:</label>
+<label for="sel1">Select How Many Columns To Return:</label>
   <select  class="form-control" name="limit">
-    <option value="25">..</option>
+    <option value="25">...</option>
     <option value="5">5</option>
     <option value="25">25</option>
     <option value="50">50</option>
