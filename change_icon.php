@@ -5,6 +5,45 @@ session_start();
 
   ?>
 
+
+  <?php
+
+
+  $db = mysqli_connect("localhost", "root","", "logintest");
+
+
+  if (!$db) {
+  	die("Connection failed: ". mysqli_connect_error());
+
+  }
+
+
+
+
+    $sql = "SELECT  SUM(score) as TEST, COUNT(math_lesson) as MATH FROM quiz_scores WHERE uid='{$_SESSION['userid']}'";
+  	$result = mysqli_query($db, $sql);
+
+
+      		if (!$row = mysqli_fetch_assoc($result)){
+
+      		  echo "Your username or password is incorrect!";
+                header("Location: ../home.php?error=real test");
+
+
+      		}
+
+      $sum = $row['TEST'];
+      $count = $row['MATH'];
+      $count_test =  10 - $count;
+    //  echo "$sum";
+    //  echo "$count";
+    //  echo "$count_test";
+
+     $average = $sum/$count;
+      $english_format_number = number_format($average, 2, '.', '');
+      //echo   $english_format_number;
+?>
+
 <div class="container-fluid text-center">
     <div class="row content">
   <!--<div class="row content">
@@ -29,21 +68,24 @@ session_start();
 
 
 
-
+      <div id="myAlert" class="alert alert-danger collapse alert-dismissable">
+      <a href="#" id="linkClose" class="close"  aria-label="close">×</a> <!--important to remove the data-dismiss alert-->
+      <strong>Warning!</strong> You have not met the conditions to use this icon.
+      </div>
 
     <!-- <div class="container"> -->
       <div class="row">
         <div class="col-sm-1">
         </div>
           <div class="col-sm-4">
-        <h2>Panel Group</h2>
-        <p>The panel-group class clears the bottom-margin. Try to remove the class and see what happens.</p>
+        <h2>First Icon</h2>
         <div class="panel-group">
           <div class="panel panel-default">
-            <div class="panel-heading">Panel Header</div>
-                  <div class="panel-heading"><?php if($_SESSION['icon'] ==1 ){ echo "[selected]";  }?></div>
+               <div class="panel-heading"><img src="images/test.jpg" class="img-responsive" alt="Cinque Terre" width="304" height="236"></div>
+            <div class="panel-heading">You can use this icon by <b>default</b>.</div>
+                  <div class="panel-heading"><b><?php if($_SESSION['icon'] ==1 ){ echo "[selected]";  }?></b></div>
             <!--make a test scenario where the user has to done the lesson before they are able to do this topic-->
-            <div class="panel-body"><a href="icon_update.php?n=1">First Icon </a></div>
+            <div class="panel-body"><a href="icon_update.php?n=1">Use This Icon </a></div>
 
           </div>
           </div>
@@ -54,13 +96,18 @@ session_start();
 
 
            <div class="col-sm-4">
-             <h2>Panel Group</h2>
-             <p>The panel-group class clears the bottom-margin. Try to remove the class and see what happens.</p>
+             <h2>Second Icon</h2>
              <div class="panel-group">
                <div class="panel panel-default">
-           <div class="panel-heading">Panel Header</div>
-                   <div class="panel-heading"><?php if($_SESSION['icon'] ==2 ){ echo "[selected]";  }?></div>
-            <div class="panel-body"><a href="icon_update.php?n=2">Second Icon</a></div>
+           <div class="panel-heading"><img src="images/test.jpg" class="img-responsive" alt="Cinque Terre" width="304" height="236"></div>
+            <div class="panel-heading">Do <b>Ten</b> quizes in total to unlock this icon.</div>
+              <div class="panel-heading">You have to do <b><?php if($count_test <= 0){  echo  "0";   }else echo $count_test?></b> more quizes.</div>
+                   <div class="panel-heading"><b><?php if($_SESSION['icon'] ==2 ){ echo "[selected]";  }?></b></div>
+                   <?php if($count >=10){?>
+            <div class="panel-body"><a href="icon_update.php?n=2">Use This Icon</a></div>
+        <?php } else { ?>
+             <div class="panel-body"><a href="#"  id="myFunction">Use This Icon</a></div>
+        <?php } ?>
            </div>
 
 
@@ -73,14 +120,18 @@ session_start();
       <div class="col-sm-1">
       </div>
         <div class="col-sm-4">
-      <h2>Panel Group</h2>
-      <p>The panel-group class clears the bottom-margin. Try to remove the class and see what happens.</p>
+      <h2>Third Icon</h2>
       <div class="panel-group">
         <div class="panel panel-default">
-          <div class="panel-heading">Panel Header</div>
-                <div class="panel-heading"><?php if($_SESSION['icon'] ==3 ){ echo "[selected]";  }?></div>
-          <!--make a test scenario where the user has to done the lesson before they are able to do this topic-->
-          <div class="panel-body"><a href="icon_update.php?n=3">First Icon </a></div>
+             <div class="panel-heading"><img src="images/test.jpg" class="img-responsive" alt="Cinque Terre" width="304" height="236"></div>
+              <div class="panel-heading">Have an average of <b>7</b> based on your quiz scores.</div>
+                 <div class="panel-heading">Your current average is <b><?php echo $english_format_number;?></b>.</div>
+                <div class="panel-heading"><b><?php if($_SESSION['icon'] ==3 ){ echo "[selected]";  }?></b></div>
+                <?php if($average >=7){?>
+        <div class="panel-body"><a href="icon_update.php?n=3">Use This Icon </a></div>
+<?php } else { ?>
+    <div class="panel-body"><a href="#"  id="myFunction2">Use This Icon</a></div>
+<?php } ?>
 
         </div>
         </div>
@@ -91,14 +142,20 @@ session_start();
 
 
          <div class="col-sm-4">
-           <h2>Panel Group</h2>
-           <p>The panel-group class clears the bottom-margin. Try to remove the class and see what happens.</p>
+           <h2>Fourth Icon</h2>
            <div class="panel-group">
              <div class="panel panel-default">
-         <div class="panel-heading">Panel Header</div>
-                 <div class="panel-heading"><?php if($_SESSION['icon'] ==4 ){ echo "[selected]";  }?></div>
-          <div class="panel-body"><a href="icon_update.php?n=4">Second Icon</a></div>
-         </div>
+            <div class="panel-heading"><img src="images/test.jpg" class="img-responsive" alt="Cinque Terre" width="304" height="236"></div>
+                       <div class="panel-heading">Achieve in total a score of <b>100</b> based on your quiz scores.</div>
+                   <div class="panel-heading">Your current score is <b><?php echo $sum;?></b>.</div>
+                 <div class="panel-heading"><b><?php if($_SESSION['icon'] ==4 ){ echo "[selected]";  }?></b></div>
+         <?php if($sum >=100){?>
+           <div class="panel-body"><a href="icon_update.php?n=4">Use This Icon</a></div>
+      <?php } else { ?>
+           <div class="panel-body"><a href="#"  id="myFunction3">Use This Icon</a></div>
+      <?php } ?>
+</div>
+
 
 
       </div>
@@ -108,13 +165,61 @@ session_start();
   </div>
 </div>
 
+<script>
+//function myFunction() {
+  //  alert("Hello! I am an alert box!");
 
+//set an id so when this pressed changed a value id then implement a switch for that
+//}
+
+$(document).ready(function(){
+  $('#myFunction').click(function(){
+     $('#myAlert').show('fade');
+  });
+
+
+$('#linkClose').click(function (){
+  $('#myAlert').hide('fade');
+});
+});
+
+
+$(document).ready(function(){
+  $('#myFunction2').click(function(){
+     $('#myAlert').show('fade');
+  });
+
+
+$('#linkClose').click(function (){
+  $('#myAlert').hide('fade');
+});
+});
+
+$(document).ready(function(){
+  $('#myFunction3').click(function(){
+     $('#myAlert').show('fade');
+  });
+
+
+$('#linkClose').click(function (){
+  $('#myAlert').hide('fade');
+});
+});
+
+
+
+
+
+</script>
 
 
 
 <footer class="container-fluid text-center">
   <p>Footer Text</p>
 </footer>
+
+
+
 
 </body>
 </html>

@@ -71,8 +71,8 @@ $_SESSION['lesson'] = $lesson;
 <!--http://www.w3schools.com/bootstrap/bootstrap_tabs_pills.asp-->
 
 
-    <h2>Dynamic Pills</h2>
-    <p>To make the tabs toggleable, add the data-toggle="pill" attribute to each link. Then add a .tab-pane class with a unique ID for every tab and wrap them inside a div element with class .tab-content.</p>
+    <h2>Algebra Lesson</h2>
+
     <ul class="nav nav-pills">
       <li class="active" ><a data-toggle="pill" href="#home">Text</a></li>
       <li ><a data-toggle="pill" href="#menu1">Video</a></li>
@@ -82,37 +82,53 @@ $_SESSION['lesson'] = $lesson;
 
     <div class="tab-content">
       <div id="home" class="tab-pane fade in active">
-        <h3>Algebra Lesson </h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-
-        Part 1:
-
-        introduction to algebra
-
-        Part 2:
-
-        Common Factors
 
 
-        Part 3:
-
-        Quadratic factors
-
-        Part 4:
-
-        Multiply binomials by polynomals
-
-
-        <p>Welcome to my e-learning application. The concept behind my application is to help how you acquire and learn new knowledge. I hope that by using this Web Application you will notice will improvement on your knowledge on the topics I touch on im my application  </p>
-        <hr>
-        <h3>Section 3.  Quadratic Factors</h3>
+        <h3>Section 1. Introduction to Algebra</h3>
         <?php
-        if($math_section_1 == 4){?>
+        if($math_section_1 == 0){?>
         <div class="alert alert-danger alert-dismissable">
         <a href="#" id='ok' class="close" data-dismiss="alert" aria-label="close">×</a>
         <strong>Warning!</strong> In your last test you scored zero in Quadratic Factors, we recommend you look over this section.
         </div>
       <?php } ?>
+          <p> quuuuuuuuuuuuuuu </p>
+
+        <hr>
+        <h3>Section 2. Common Factors</h3>
+        <?php
+        if($math_section_2 == 0){?>
+        <div class="alert alert-danger alert-dismissable">
+        <a href="#" id='ok' class="close" data-dismiss="alert" aria-label="close">×</a>
+        <strong>Warning!</strong> In your last test you scored zero in Quadratic Factors, we recommend you look over this section.
+        </div>
+      <?php } ?>
+          <p> quuuuuuuuuuuuuuu </p>
+
+
+        <hr>
+        <h3>Section 3. Quadratic Factors</h3>
+        <?php
+        if($math_section_3 == 0){?>
+        <div class="alert alert-danger alert-dismissable">
+        <a href="#" id='ok' class="close" data-dismiss="alert" aria-label="close">×</a>
+        <strong>Warning!</strong> In your last test you scored zero in Quadratic Factors, we recommend you look over this section.
+        </div>
+      <?php } ?>
+        <p> quuuuuuuuuuuuuuu </p>
+
+        <hr>
+        <h3>Section 4. Multiply Binomials by Polynomals</h3>
+        <?php
+        if($math_section_4 == 0){?>
+        <div class="alert alert-danger alert-dismissable">
+        <a href="#" id='ok' class="close" data-dismiss="alert" aria-label="close">×</a>
+        <strong>Warning!</strong> In your last test you scored zero in Quadratic Factors, we recommend you look over this section.
+        </div>
+      <?php } ?>
+        <p> quuuuuuuuuuuuuuu </p>
+
+
 
       </div>
       <div id="menu1" class="tab-pane fade">
@@ -133,16 +149,6 @@ $_SESSION['lesson'] = $lesson;
 
 
 
-
-
-
-
-
-
-
-
-
-
 <br>
 <br>
 
@@ -151,9 +157,15 @@ Algebra
 
 
 <a href="..\exercises\quiz.php"> here to test algebra </a>
-</div>
-</div>
-</div>
+<br>
+<br>
+<br>
+
+
+<footer class="container-fluid text-center">
+  <p>Footer Text</p>
+</footer>
+
 
  </body>
  </html>

@@ -73,6 +73,9 @@
       text-align:center;
     }
 
+    h2{
+      text-align:center;
+    }
     .question{
       text-align: center;
              font-size: 115%;
@@ -84,11 +87,6 @@
     }
 
 
-    #columnchart_material {
-        height: 100%;
-        width: 500%;
-        background-color: powderblue;
-    }
 
 
 
