@@ -84,6 +84,12 @@
     }
 
 
+    #columnchart_material {
+        height: 100%;
+        width: 500%;
+        background-color: powderblue;
+    }
+
 
 
 

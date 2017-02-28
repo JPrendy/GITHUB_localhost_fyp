@@ -90,7 +90,14 @@ if (!$row = mysqli_fetch_assoc($result2)){
      </tr>
    </thead>
 <?php
+echo "<br>";
 echo   $_SESSION['math_section_1'];
+echo "<br>";
+echo   $_SESSION['math_section_2'];
+echo "<br>";
+echo   $_SESSION['math_section_3'];
+echo "<br>";
+echo   $_SESSION['math_section_4'];
 
 
 //this is the time you finished
@@ -112,7 +119,7 @@ echo "<br>";
 
 <?php
 
-for ($x = 1; $x <= 7; $x++) {
+for ($x = 1; $x <= 10; $x++) {
 echo  "<strong>";
 ?>
 <tbody>

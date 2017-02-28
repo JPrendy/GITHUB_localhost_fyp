@@ -94,9 +94,12 @@
 
 $math_section_1 =0;
 $math_section_2 =0;
+$math_section_3 =0;
+$math_section_4 =0;
     $_SESSION['math_section_1'] = $math_section_1;
     $_SESSION['math_section_2'] = $math_section_2;
-
+    $_SESSION['math_section_3'] = $math_section_3;
+    $_SESSION['math_section_4'] = $math_section_4;
 		//	$login = 1;
     //  $login2 += $login;
 

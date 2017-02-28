@@ -103,6 +103,12 @@ if($math_section == 1){
 if($math_section == 2){
   $_SESSION['math_section_2']++;
 }
+if($math_section == 3){
+  $_SESSION['math_section_3']++;
+}
+if($math_section == 4){
+  $_SESSION['math_section_4']++;
+}
 
 }
 

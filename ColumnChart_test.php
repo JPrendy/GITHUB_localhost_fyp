@@ -128,7 +128,7 @@ $table['cols'] = array(
 
     <!-- <div class="container"> -->
       <div class="row">
-<div id="columnchart_material" style="width: 930px; height: 600px;"></div>
+<div id="columnchart_material" style="width: 930px; height: 600px"></div>
 
 
 

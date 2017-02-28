@@ -77,6 +77,23 @@ $_SESSION['lesson'] = $lesson;
       <div id="home" class="tab-pane fade in active">
         <h3>Algebra Lesson </h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+        Part 1:
+
+        introduction to algebra
+
+        Part 2:
+
+        Common Factors
+
+
+        Part 3:
+
+        Quadratic factors
+
+        Part 4:
+
+        Multiply binomials by polynomals
       </div>
       <div id="menu1" class="tab-pane fade">
         <h3>Algebra Lesson</h3>

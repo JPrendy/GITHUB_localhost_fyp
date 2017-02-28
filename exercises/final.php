@@ -55,6 +55,17 @@ $time = date("Y-m-d H:i:s");
 //echo "$time";
 //echo "<br>";
 //if (isset($_POST['submit'])){
+echo "<br>";
+$math_section_1 =  $_SESSION['math_section_1'];
+echo "<br>";
+$math_section_2 =   $_SESSION['math_section_2'];
+echo "<br>";
+$math_section_3 =    $_SESSION['math_section_3'];
+echo "<br>";
+$math_section_4 =   $_SESSION['math_section_4'];
+
+
+
 $start_time = $_SESSION['start_time'];
 //}
 
@@ -62,6 +73,12 @@ $start_time = $_SESSION['start_time'];
 
 $sql = "insert into quiz_scores(uid, math_lesson, score, difficulty_level, blank, sc_time_start, sc_time) VALUES ('$uid', '$math_lesson', '$score', '$difficulty_level', '$blank','$start_time' ,'$time')";
 $result = mysqli_query($db, $sql);
+
+
+$sql2 = "insert into math_section(uid, math_lesson,  sc_time, math_section_1, math_section_2, math_section_3, math_section_4 ) VALUES ('$uid', '$math_lesson', '$time', '$math_section_1', '$math_section_2', '$math_section_3', '$math_section_4')";
+$result2 = mysqli_query($db, $sql2);
+
+
 
 
 if($one = 1){

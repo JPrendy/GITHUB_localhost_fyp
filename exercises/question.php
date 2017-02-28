@@ -126,13 +126,14 @@ else{
       </div>
    <?php endwhile; ?>
   </ul>
+  <div class="col-sm-offset-9">
   <?php
   if( $number != 1){
-?><input type="button" value="Back" onclick="goBack()"><?php
+?> <button type="submit" class="btn btn-danger btn-s "   id="back" value="Back" onclick="goBack()">  Back </button><?php
 }
 ?>
-<div class="col-sm-offset-9 ">
- <button type="submit" class="btn btn-primary btn-s" name="submit">  Next</button>
+
+ <button type="submit" class="btn btn-primary btn-s" id="next" name="submit">  Next</button>
  <input type="hidden" name="number" value="<?php echo $number; ?>"/>
  <input type="hidden" name="number2" value="<?php echo $number2; ?>"/>
   <input type="hidden" name="test" value="<?php echo $test ?>"/>
