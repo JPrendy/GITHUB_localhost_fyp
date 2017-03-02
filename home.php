@@ -290,6 +290,12 @@ if($icon == 1){?>
 
 <?php  include 'check_user.php';?>
 
+<?php  include 'show_friend.php';?>
+
+
+
+
+
 
 
       <div class="bs-example">

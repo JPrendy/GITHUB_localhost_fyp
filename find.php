@@ -56,11 +56,13 @@ while($row = mysqli_fetch_array($result)){
 echo('<form method="post" action="add_person.php"><input type="hidden" ');
 echo('name="friend" value="'.$row[3].'">'."\n");
 echo('<input type="hidden" name="remove_friend" value="1">');
+echo('<input type="hidden" name="permission" value="N">');
 echo('<input type="submit" value="Reserve" name="submit">');
 echo("\n</form>\n");
 echo('<form method="post" action="add_person.php"><input type="hidden" ');
 echo('name="remove_friend" value="'.$row[3].'">'."\n");
 echo('<input type="hidden" name="friend" value="1">');
+echo('<input type="hidden" name="permission" value="N">');
 echo('<input type="submit" value="Remove" name="submit">');
 echo("\n</form>\n");
 
