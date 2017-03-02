@@ -292,7 +292,7 @@ if($icon == 1){?>
 
 <?php  include 'show_friend.php';?>
 
-<?php  include 'check_user.php';?>
+
 
 
 

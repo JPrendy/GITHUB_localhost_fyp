@@ -197,6 +197,20 @@ session_start();
 
 <br>
   <hr>
+  <?php  $url = "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
+  if (strpos($url, 'error=empty') !== false){
+    //$ok= "Fill out all the fields!";
+  ?>
+
+
+  <div class="alert alert-danger alert-dismissable">
+  <a href="#" id='ok' class="close" data-dismiss="alert" aria-label="close">×</a>
+  <strong>Warning!</strong> Please enter a user id in the search bar.
+  </div>
+  <?php
+
+}
+?>
 <form class="form-horizontal" action="find.php" method="POST" >
   <div class="panel-heading"><h3><u>Add a friend</u></h3></div>
 
@@ -212,7 +226,9 @@ session_start();
  <div class="col-sm-offset col-sm-12">
 <button type="submit" class="btn btn-primary btn-s" name="register_btn"> SUBMIT </button>
 </div>
-<form>
+</form>
+
+
 
 
 </br>
@@ -221,7 +237,7 @@ session_start();
 </br>
 
 
-
+<?php  include 'check_user.php'; ?>
 
 	 <?php
 

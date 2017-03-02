@@ -16,7 +16,7 @@
 
 
 	if (empty($uid)){ //this is checking $username
-		header("Location:charts.php?error=empty");
+		header("Location:settings.php?error=empty");
 		exit();
 	}
 }
@@ -59,11 +59,39 @@
 
   <div class="alert alert-danger alert-dismissable">
   <a href="#" id='ok' class="close" data-dismiss="alert" aria-label="close">×</a>
-  <strong>Please,</strong> Fill out all the fields.
+  <strong>Notice!</strong> You have removed your invitation.
   </div>
   <?php
 
-}?>
+}
+if (strpos($url, 'error=first_inserted') !== false){
+  //$ok= "Fill out all the fields!";
+?>
+
+
+<div class="alert alert-success alert-dismissable">
+<a href="#" id='ok' class="close" data-dismiss="alert" aria-label="close">×</a>
+<strong>You have sent your invitation.</strong>
+</div>
+<?php
+
+}
+if (strpos($url, 'error=already_inserted') !== false){
+  //$ok= "Fill out all the fields!";
+?>
+
+
+<div class="alert alert-warning alert-dismissable">
+<a href="#" id='ok' class="close" data-dismiss="alert" aria-label="close">×</a>
+<strong>Warning!</strong> You have already sent your invitation.
+</div>
+<?php
+
+}
+
+
+
+?>
 
 
 
@@ -76,6 +104,7 @@
         <th>Uid</th>
 
           <th>Status</th>
+          <th> Remove Invitation</th>
 
       </tr>
     </thead><?php
@@ -100,7 +129,10 @@
     echo('<input type="hidden" name="remove_friend" value="1">');
     echo('<input type="hidden" name="permission" value="N">');
     echo('<button type="submit" class="btn btn-primary btn-s"  name="submit"> Invite </button>');
-
+    ?>
+</td>
+<td>
+  <?php
     echo("\n</form>\n");
     echo('<form method="post" action="add_person.php"><input type="hidden" ');
     echo('name="remove_friend" value="'.$row[3].'">'."\n");
@@ -109,7 +141,9 @@
     echo('<button type="submit" class="btn btn-danger btn-s"  name="submit">Remove </button>');
 
     echo("\n</form>\n");
-
+?>
+</td>
+<?php
 
 
     ?>

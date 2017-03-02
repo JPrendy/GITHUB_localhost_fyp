@@ -60,16 +60,22 @@ WHERE other_user='$remove_friend' AND uid='$userid'";
 
 }
 }
+
+}
+
+if (isset($_POST['add_invite'])){
+$permission = mysql_real_escape_string($_POST['permission']);
+		$friend = mysql_real_escape_string($_POST['friend']);
 if($permission == "Y")
 {
     $sql = "update add_friend set permission='Y' where uid ='$friend' and other_user = '$userid'";
     $result = mysqli_query($db, $sql);
-
+  //  header("Location:settings.php?error=updated");
+}
 }
 
 
 
-}
 
 	if (isset($_POST['remove'])){
    		$remove = mysql_real_escape_string($_POST['remove1']);
@@ -89,7 +95,8 @@ if (isset($_POST['remove_check'])){
 WHERE uid='$remove' AND other_user='$userid'";
 //	$sql = "SELECT * from users where uid Like '%$uid%' LIMIT 20";
 $result = mysqli_query($db, $sql);
-header("Location: home.php");
+echo $sql;
+//header("Location: home.php");
 
 }
 
