@@ -42,4 +42,15 @@ if($permission == "Y")
 
 
 }
+
+	if (isset($_POST['remove'])){
+   		$remove = mysql_real_escape_string($_POST['remove1']);
+      echo $remove;
+      $sql = "DELETE FROM add_friend
+WHERE other_user='$remove' AND uid='$userid'";
+//	$sql = "SELECT * from users where uid Like '%$uid%' LIMIT 20";
+$result = mysqli_query($db, $sql);
+ header("Location: home.php");
+
+}
 ?>

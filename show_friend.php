@@ -22,7 +22,7 @@ $numResults = mysqli_num_rows($result2);
   <tr>
     <th>Your friend</th>
       <th>Their difficulty level</th>
-      <th>Remove</th>
+      <th>Status</th>
 
   </tr>
 </thead><?php
@@ -39,14 +39,14 @@ while($row = mysqli_fetch_array($result2)){
 <?php echo ($row[3]);
 			$show_friend = "SELECT * from users WHERE uid = '$row[3]'";
 	    $result = mysqli_query($db, $show_friend);
-      if (!$row = mysqli_fetch_assoc($result)){
+      if (!$row2 = mysqli_fetch_assoc($result)){
 
         echo "Your username or password is incorrect!";
             header("Location: ../login_page.php?error=empty1");
 
 
       }
-                 $friend_dif = $row['difficulty_level'];
+                 $friend_dif = $row2['difficulty_level'];
 
 ?>
 
@@ -63,6 +63,18 @@ while($row = mysqli_fetch_array($result2)){
 ?>
 
 
+</td>
+
+<td>
+  <?php
+  echo('<form method="post" action="add_person.php"><input type="hidden" ');
+echo('<input type="hidden" name="remove1" value="'.$row[3].'">'."\n");
+echo('<input type="hidden" name="permission" value="Y">');
+  echo('<input type="submit" value="remove" name="remove">');
+  echo("\n</form>\n");
+
+
+?>
 </td>
 <?php
 }

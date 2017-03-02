@@ -10,11 +10,12 @@
     $sql3= "SELECT * from add_friend where other_user='{$_SESSION['userid']}'  LIMIT 5";
 //	$sql = "SELECT * from users where uid Like '%$uid%' LIMIT 20";
 $result3 = mysqli_query($db, $sql3);
+$numResults = mysqli_num_rows($result3);
 
 
 
 ?>
-
+<?php if (($numResults) > 0) { ?>
 <div class="table-responsive">
 <table class="table table-condensed table-bordered table-hover">
 <thead>
@@ -60,8 +61,9 @@ echo("\n</form>\n");
 
 </td>
 <?php
-
+}
 } ?>
 
 </tbody>
 </table>
+</div>
