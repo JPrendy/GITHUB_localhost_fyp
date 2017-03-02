@@ -2,7 +2,7 @@
  include 'database.php';
 session_start();
 
-    include '..\home_header.php';
+    include '..\home_header_question.php';
 
   ?>
 <!Doctype html>

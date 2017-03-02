@@ -307,10 +307,10 @@ if($icon == 1){?>
       </div>
       <?php
 
-    }?>
+    } ?>
 
 
-      <?php  include 'show_friend.php';?>
+      <?php  include 'show_friend.php'; ?>
 
 
           <div class="form-group col-sm-12">

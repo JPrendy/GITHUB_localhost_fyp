@@ -5,7 +5,7 @@
 	//connect to databases
 	$db = mysqli_connect("localhost", "root", "" , "logintest");
 
-	$per_page=10;
+	$per_page=1;
 	if (isset($_GET["page"])) {
 
 	$page = $_GET["page"];
@@ -36,7 +36,7 @@ $numResults = mysqli_num_rows($result2);
 
 <div class=" col-sm-2"></div>
     <div class="form-group col-sm-8">
-
+<h4> Your Friends Results </h4>
 <table class="table table-condensed table-bordered">
 <thead>
   <tr>
@@ -117,7 +117,7 @@ echo('<input type="hidden" name="permission" value="Y">');
 
 //Now select all from table
 
-$sql = "SELECT * from add_friend where uid='{$_SESSION['userid']}'";
+$sql = "SELECT * from add_friend where uid='{$_SESSION['userid']}' and permission = 'Y'";
 $result = mysqli_query($db, $sql);
 
 // Count the total records
@@ -139,4 +139,4 @@ echo "<a href='home.php?page=$total_pages'>".'Last Page'."</a></center> ";
 
 ?>
 </div>
-<?php } ?> 
+<?php } ?>

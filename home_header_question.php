@@ -299,20 +299,11 @@
 
        $url = "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
 
-       if (strpos($url, 'lessons/') !==false || strpos($url, 'exercises/') !== false){?>
-
-              <li class="active"><?php echo "<a href=$on>Last topic visited: $ok</a>"; ?></li>
-    <?php   }
-
-
-       else{?>
-                        <li class="active"><?php echo "<a href=$one>Last topic visited: $ok</a>"; ?></li>
-    <?php }
-       ?>
 
 
 
-<?php } ?>
+
+ } ?>
 
 
 
