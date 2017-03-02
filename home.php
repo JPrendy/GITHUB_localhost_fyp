@@ -288,7 +288,7 @@ if($icon == 1){?>
       <h3>Test</h3>
       <p>Furthmore, there are sections in the e-learning application that allows you to monitor your past results making it easy to see where you could improve. </p>
 
-
+<?php  include 'check_user.php';?>
 
 
 
@@ -344,6 +344,7 @@ if($icon == 1){?>
     </div>
   </div>
 </div>
+
 <br>
 <script>
 //function myFunction() {

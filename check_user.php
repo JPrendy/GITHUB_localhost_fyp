@@ -1,43 +1,32 @@
 <?php
 
-  session_start();
 
 
 	//connect to databases
 	$db = mysqli_connect("localhost", "root", "" , "logintest");
 
-	if (isset($_POST['register_btn'])){
-		$uid = mysql_real_escape_string($_POST['uid']);
 
-	if (empty($uid)){ //this is checking $username
-		header("Location:charts.php?error=empty");
-		exit();
-	}
-  else{
-        include 'home_header.php';
-		$sql = "SELECT * from users where uid Like '%$uid%' LIMIT 20";
-		$result = mysqli_query($db, $sql);
 
-    $sql2= "SELECT * from add_friend where uid='{$_SESSION['userid']}'";
+    $sql2= "SELECT * from add_friend where other_user='{$_SESSION['userid']}' LIMIT 5";
 //	$sql = "SELECT * from users where uid Like '%$uid%' LIMIT 20";
 $result2 = mysqli_query($db, $sql2);
-}
 
-}
+
+
 ?>
+<?php if($result2 != ""){ ?>
 <div class="table-responsive">
 <table class="table table-condensed table-bordered table-hover">
 <thead>
   <tr>
-    <th>uid</th>
-      <th>Name</th>
-      <th>Left Blank</th>
+    <th>user who added you</th>
+      <th>Status</th>
 
   </tr>
 </thead><?php
 
 //to do this we need fetch array not just a row because we are calling multipe rows
-while($row = mysqli_fetch_array($result)){
+while($row = mysqli_fetch_array($result2)){
 
 //this displays all the information in the rows
 
@@ -48,9 +37,7 @@ while($row = mysqli_fetch_array($result)){
 <?php echo ($row[3]);?>
 
 </td>
-<td>
-<?php echo ($row[1]);?>
-</td>
+
 <td>
   <?php
 echo('<form method="post" action="add_person.php"><input type="hidden" ');
@@ -76,3 +63,4 @@ echo("\n</form>\n");
 
 </tbody>
 </table>
+<?php } ?>
