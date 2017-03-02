@@ -85,7 +85,7 @@ if($permission == "Y")
 WHERE other_user='$remove' AND uid='$userid'";
 //	$sql = "SELECT * from users where uid Like '%$uid%' LIMIT 20";
 $result = mysqli_query($db, $sql);
- header("Location: home.php");
+ header("Location: home.php?error=removeuser");
 
 }
 

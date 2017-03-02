@@ -278,7 +278,7 @@
 	  <div class="row content">
 
 <nav class="col-sm-3">
-  <ul class="nav nav-pills nav-stacked"  data-spy="affix" data-offset-top="300" >
+  <ul class="nav nav-pills nav-stacked"  data-offset-top="300" >
 
     <?php
        $ok = $_SESSION['lesson'];

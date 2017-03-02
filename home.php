@@ -47,6 +47,10 @@
       text-align:center;
     }
 
+    h5{
+      text-align:center;
+    }
+
     /* On small screens, set height to 'auto' for sidenav and grid */
     @media screen and (max-width: 767px) {
       .sidenav {
@@ -290,6 +294,22 @@ if($icon == 1){?>
          tab and the feedback provided after each exercise to see where you could improve.  </p>
 
       <hr>
+
+      <?php  $url = "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
+      if (strpos($url, 'error=removeuser') !== false){
+        //$ok= "Fill out all the fields!";
+      ?>
+
+
+      <div class="alert alert-danger alert-dismissable">
+      <a href="#" id='ok' class="close" data-dismiss="alert" aria-label="close">×</a>
+      <strong>Notice!</strong> The user has been removed.
+      </div>
+      <?php
+
+    }?>
+
+
       <?php  include 'show_friend.php';?>
 
 
