@@ -26,6 +26,9 @@ if ($number == 1){
  //echo $number;
   //echo $number2;
   $current_test_hint = $_SESSION['text_hint'];
+    $current_answers = $_SESSION['more_answers'];
+
+    echo $current_answers;
   //echo   $current_test_hint;
 
  //currently set it as n=1
@@ -54,9 +57,15 @@ $question = $result->fetch_assoc();
 ///////////////////////////////////////
 //Get the choices
 //might have to do separate files and tables for each subjects
+if($current_answers == 'add_answers_Y'){
 $query = "SELECT * from $choices
 WHERE question_number =$number order by RAND()";
+}
+else{
+  $query = "SELECT * from $choices
+  WHERE question_number =$number and extra_q_choice = 0 order by RAND()";
 
+}
 
 /////////////////////////////ORDER BY RAND() BRINGS THE ROWS RANDOMLY
 

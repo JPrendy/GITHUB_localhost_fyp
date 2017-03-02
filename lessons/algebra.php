@@ -92,7 +92,7 @@ $_SESSION['lesson'] = $lesson;
         if($math_section_1 == 0){?>
         <div class="alert alert-danger alert-dismissable">
         <a href="#" id='ok' class="close" data-dismiss="alert" aria-label="close">×</a>
-        <strong>Warning!</strong> In your last test you scored zero in Quadratic Factors, we recommend you look over this section.
+        <strong>Warning!</strong> In your last test you scored zero in the Introduction to Algebra questions, we recommend you look over this section.
         </div>
       <?php } ?>
           <p> quuuuuuuuuuuuuuu </p>
@@ -103,7 +103,7 @@ $_SESSION['lesson'] = $lesson;
         if($math_section_2 == 0){?>
         <div class="alert alert-danger alert-dismissable">
         <a href="#" id='ok' class="close" data-dismiss="alert" aria-label="close">×</a>
-        <strong>Warning!</strong> In your last test you scored zero in Quadratic Factors, we recommend you look over this section.
+        <strong>Warning!</strong> In your last test you scored zero in the Common Factors questions, we recommend you look over this section.
         </div>
       <?php } ?>
           <p> quuuuuuuuuuuuuuu </p>
@@ -115,7 +115,7 @@ $_SESSION['lesson'] = $lesson;
         if($math_section_3 == 0){?>
         <div class="alert alert-danger alert-dismissable">
         <a href="#" id='ok' class="close" data-dismiss="alert" aria-label="close">×</a>
-        <strong>Warning!</strong> In your last test you scored zero in Quadratic Factors, we recommend you look over this section.
+        <strong>Warning!</strong> In your last test you scored zero in the Quadratic Factors questions, we recommend you look over this section.
         </div>
       <?php } ?>
         <p> quuuuuuuuuuuuuuu </p>
@@ -126,7 +126,7 @@ $_SESSION['lesson'] = $lesson;
         if($math_section_4 == 0){?>
         <div class="alert alert-danger alert-dismissable">
         <a href="#" id='ok' class="close" data-dismiss="alert" aria-label="close">×</a>
-        <strong>Warning!</strong> In your last test you scored zero in Quadratic Factors, we recommend you look over this section.
+        <strong>Warning!</strong> In your last test you scored zero in Multiply Binomals by Polynomals, we recommend you look over this section.
         </div>
       <?php } ?>
         <p> quuuuuuuuuuuuuuu </p>

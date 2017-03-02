@@ -86,7 +86,9 @@
 
       $row4 = mysqli_fetch_assoc($result4);
 
+
       $_SESSION['text_hint'] = $row4['text_hint'];
+        $_SESSION['more_answers'] = $row4['more_answers'];
 
       $row5 = mysqli_fetch_assoc($result5);
 

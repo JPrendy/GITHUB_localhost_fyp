@@ -227,7 +227,7 @@ $row_session = mysqli_fetch_assoc($result_session);
 $_SESSION['text_hint'] =  $row_session['text_hint'];
 $_SESSION['timer'] =  $row_session['timer'];
 $_SESSION['question'] =  $row_session['more_questions'];
-$_SESSION['answers'] =  $row_session['more_answers'];
+$_SESSION['more_answers'] =  $row_session['more_answers'];
   header("Location: ../exercises/final.php")
 //}
 ?>

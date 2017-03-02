@@ -25,7 +25,7 @@ if (!$row = mysqli_fetch_assoc($result)){
 
 
 }
-	$math_id = $row['math_id'];
+	//$math_id = $row['math_id'];
 
 
 
@@ -45,7 +45,7 @@ $table['cols'] = array(
 
 //  array('label' => 'Ok', 'type' => 'string'),
   array('label' => 'Quiz Scores', 'type' => 'number'),
-
+  array('label' => 'No. of questions you did not answer', 'type' => 'number'),
   //  array('label' => 'Math ID', 'type' => 'number'),
 
   array('label' => 'Difficulty Level', 'type' => 'number')
@@ -63,6 +63,7 @@ $table['cols'] = array(
 //   $temp[] = array('x' => (string) $r['uid']);
     // Values of each slice
     $temp[] = array('v' => (int) $r['score']);
+    $temp[] = array('v' => (int) $r['blank']);
     //    $temp[] = array('v' => (int) $r['math_id']);
     $temp[] = array('v' => (string) $r['difficulty_level']);
     $rows[] = array('c' => $temp);

@@ -51,8 +51,8 @@
    display: none;
    border: 2px solid red;
    border-radius: 10px;
-   margin-left:180px;
-   margin-right:180px;
+   /*margin-left:180px;
+   margin-right:180px;*/
     }
 
 
@@ -140,10 +140,10 @@
           <?php
         $url = "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
         if (strpos($url, 'lessons/') !==false || strpos($url, 'exercises/') !== false){
-        echo  '<a class="navbar-brand active" <a href="../home.php">e-learning</a>';
+        echo  '<a class="navbar-brand active" <a href="../home.php">  <span class="glyphicon glyphicon-home  "></span>   e-learning</a>';
         }
         else{
-        echo '<a class="navbar-brand active" <a href="home.php">e-learning</a>';
+        echo '<a class="navbar-brand active" <a href="home.php">  <span class="glyphicon glyphicon-home  "></span>   e-learning</a>';
       }
         ?>
       </div>

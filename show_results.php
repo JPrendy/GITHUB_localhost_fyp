@@ -47,6 +47,7 @@ th {text-align: left;}
     <tr>
       <th>Math Lesson</th>
         <th>Score</th>
+        <th>Left Blank</th>
         <th>Difficulty</th>
             <th>Date</th>
     </tr>
@@ -72,6 +73,9 @@ while($row = mysqli_fetch_array($result)){
 </td>
 <td>
 <?php echo ($row[3]);?>
+</td>
+<td>
+<?php echo ($row[5]);?>
 </td>
 <td>
 <?php echo ($row[4]);?>

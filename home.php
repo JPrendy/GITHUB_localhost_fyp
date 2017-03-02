@@ -35,6 +35,14 @@
       padding: 15px;
     }
 
+    h1{
+      text-align:center;
+    }
+
+    h2{
+      text-align:center;
+    }
+
     /* On small screens, set height to 'auto' for sidenav and grid */
     @media screen and (max-width: 767px) {
       .sidenav {
@@ -262,18 +270,23 @@ if($icon == 1){?>
 
         echo "Welcome to my e-learning application user ";  ?> <b><?php echo $_SESSION['userid']; ?></b>
 
-      <?php } 
+      <?php }
       else{
         //echo $_SESSION['test'];
-        echo "welcome back "; ?> <b><?php echo $_SESSION['userid']; ?></b>
+        echo "Welcome back "; ?> <b><?php echo $_SESSION['userid']; ?></b>
   <?php  } ?>
 <?php
      echo "<br>";
       echo "Your current difficulty level is ";?><b><?php echo $_SESSION['difficulty_level']; ?></b><?php
+      echo "<br>";
+      echo "<br>";
       ?>
-      <p>Welcome to my e-learning application. The concept behind my application is to help how you acquire and learn new knowledge. I hope that by using this Web Application you will notice will improvement on your knowledge on the topics I touch on im my application  </p>
+
+      <p>Welcome to my e-learning application. The concept behind my application is to help how you acquire and learn new knowledge. I hope that by using this Web Application you will notice an improvement on your knowledge on the math topics I cover in my application. Please look at the <b>lessons</b>
+         tab and the feedback provided after each exercise to see where you could improve.  </p>
       <hr>
       <h3>Test</h3>
+      <p>Furthmore, there are sections in the e-learning application that allows you to monitor your past results making it easy to see where you could improve. </p>
 
 
 
