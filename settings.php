@@ -195,7 +195,30 @@ session_start();
 
 
 
+<br>
+  <hr>
+<form class="form-horizontal" action="find.php" method="POST" >
+  <div class="panel-heading"><h3><u>Add a friend</u></h3></div>
 
+
+      <div class="form-group">
+    <label class="control-label  col-sm-2" for="email">Enter a user id:</label>
+    <div class="col-sm-3">
+      <input type="text" class="form-control" name="uid" id="uid" placeholder="Enter a user id">
+    </div>
+  </div>
+
+
+ <div class="col-sm-offset col-sm-12">
+<button type="submit" class="btn btn-primary btn-s" name="register_btn"> SUBMIT </button>
+</div>
+<form>
+
+
+</br>
+</br>
+</br>
+</br>
 
 
 

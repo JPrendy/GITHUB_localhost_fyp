@@ -41,17 +41,17 @@ while($row = mysqli_fetch_array($result3)){
 
 <td>
   <?php
+	if($row[4] != "Y") {
 echo('<form method="post" action="add_person.php"><input type="hidden" ');
 echo('name="friend" value="'.$row[1].'">'."\n");
 echo('<input type="hidden" name="remove_friend" value="1">');
 echo('<input type="hidden" name="permission" value="Y">');
 echo('<input type="submit" value="Reserve" name="submit">');
 echo("\n</form>\n");
+}
 echo('<form method="post" action="add_person.php"><input type="hidden" ');
-echo('name="remove_friend" value="'.$row[1].'">'."\n");
-echo('<input type="hidden" name="friend" value="1">');
-echo('<input type="hidden" name="permission" value="N">');
-echo('<input type="submit" value="Remove" name="submit">');
+echo('name="remove1" value="'.$row[1].'">'."\n");
+echo('<input type="submit" value="remove_check" name="remove">');
 echo("\n</form>\n");
 
 
@@ -62,8 +62,9 @@ echo("\n</form>\n");
 </td>
 <?php
 }
-} ?>
+ ?>
 
 </tbody>
 </table>
 </div>
+<?php } ?>

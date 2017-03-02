@@ -23,7 +23,7 @@
 
     include 'home_header.php';
 
-    $per_page=1;
+    $per_page=10;
     if (isset($_GET["page"])) {
 
     $page = $_GET["page"];
@@ -40,17 +40,42 @@
     $start_from = ($page-1) * $per_page;
 
     //Selecting the data from table but with limit
-    $query = "SELECT * FROM users where uid Like '%{$_SESSION['good']}%' LIMIT $start_from, $per_page";
+    $query = "SELECT * FROM users where uid Like '%{$_SESSION['good']}%' and uid !='{$_SESSION['userid']}' LIMIT $start_from, $per_page";
     $result = mysqli_query ($db, $query);
 
     ?>
+
+
+    <div class="container-fluid text-center">
+        <div class="row content">
+  <div class="col-sm-1"></div>
+        <div class="col-sm-6 text-centres">
+
+  <?php  $url = "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
+  if (strpos($url, 'error=deleted') !== false){
+    //$ok= "Fill out all the fields!";
+  ?>
+
+
+  <div class="alert alert-danger alert-dismissable">
+  <a href="#" id='ok' class="close" data-dismiss="alert" aria-label="close">×</a>
+  <strong>Please,</strong> Fill out all the fields.
+  </div>
+  <?php
+
+}?>
+
+
+
+
+
     <div class="table-responsive">
-    <table class="table table-condensed table-bordered table-hover">
+    <table class="table table-condensed table-bordered">
     <thead>
       <tr>
-        <th>uid</th>
-          <th>Name</th>
-          <th>Left Blank</th>
+        <th>Uid</th>
+
+          <th>Status</th>
 
       </tr>
     </thead><?php
@@ -67,22 +92,22 @@
     <?php echo ($row[3]);?>
 
     </td>
-    <td>
-    <?php echo ($row[1]);?>
-    </td>
+
     <td>
       <?php
     echo('<form method="post" action="add_person.php"><input type="hidden" ');
     echo('name="friend" value="'.$row[3].'">'."\n");
     echo('<input type="hidden" name="remove_friend" value="1">');
     echo('<input type="hidden" name="permission" value="N">');
-    echo('<input type="submit" value="Reserve" name="submit">');
+    echo('<button type="submit" class="btn btn-primary btn-s"  name="submit"> Invite </button>');
+
     echo("\n</form>\n");
     echo('<form method="post" action="add_person.php"><input type="hidden" ');
     echo('name="remove_friend" value="'.$row[3].'">'."\n");
     echo('<input type="hidden" name="friend" value="1">');
     echo('<input type="hidden" name="permission" value="N">');
-    echo('<input type="submit" value="Remove" name="submit">');
+    echo('<button type="submit" class="btn btn-danger btn-s"  name="submit">Remove </button>');
+
     echo("\n</form>\n");
 
 
@@ -97,7 +122,7 @@
 
     </tbody>
     </table>
-
+</div>
 
 
 
@@ -105,7 +130,7 @@
 
     //Now select all from table
 
-    $sql = "SELECT * from users where uid Like '%{$_SESSION['good']}%'";
+    $sql = "SELECT * from users where uid Like '%{$_SESSION['good']}%' and uid !='{$_SESSION['userid']}'";
     $result = mysqli_query($db, $sql);
 
     // Count the total records
@@ -146,56 +171,7 @@ $result2 = mysqli_query($db, $sql2);
 
 
 ?>
-<div class="table-responsive">
-<table class="table table-condensed table-bordered table-hover">
-<thead>
-  <tr>
-    <th>uid</th>
-      <th>Name</th>
-      <th>Left Blank</th>
 
-  </tr>
-</thead><?php
-
-//to do this we need fetch array not just a row because we are calling multipe rows
-while($row = mysqli_fetch_array($result)){
-
-//this displays all the information in the rows
-
-
-?>
-<tbody>
- <td>
-<?php echo ($row[3]);?>
-
-</td>
-<td>
-<?php echo ($row[1]);?>
-</td>
-<td>
-  <?php
-echo('<form method="post" action="add_person.php"><input type="hidden" ');
-echo('name="friend" value="'.$row[3].'">'."\n");
-echo('<input type="hidden" name="remove_friend" value="1">');
-echo('<input type="hidden" name="permission" value="N">');
-echo('<input type="submit" value="Reserve" name="submit">');
-echo("\n</form>\n");
-echo('<form method="post" action="add_person.php"><input type="hidden" ');
-echo('name="remove_friend" value="'.$row[3].'">'."\n");
-echo('<input type="hidden" name="friend" value="1">');
-echo('<input type="hidden" name="permission" value="N">');
-echo('<input type="submit" value="Remove" name="submit">');
-echo("\n</form>\n");
-
-
-
-?>
-
-
-</td>
-<?php
-}
- ?>
-
-</tbody>
-</table>
+</div>
+</div>
+</div>

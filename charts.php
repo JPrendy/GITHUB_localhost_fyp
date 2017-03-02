@@ -124,23 +124,7 @@ th {text-align: left;}
 <!--
 ------------------------->
 
-<form class="form-horizontal" action="find.php" method="POST" >
 
-
-      <div class="form-group">
-    <label class="control-label  col-sm-offset-2  col-sm-2" for="email">Username:</label>
-    <div class="col-sm-3">
-      <input type="text" class="form-control" name="uid" id="uid" placeholder="Username">
-    </div>
-  </div>
-  <br>
-
- <div class="col-sm-offset-2 col-sm-6">
-<button type="reset" class="btn btn-danger btn-s" name="register_btn"> RESET </button>
-<button type="submit" class="btn btn-primary btn-s" name="register_btn"> SIGN UP </button>
-</div>
-
-<form>
 
 <!--
 <div class="panel-body"><a href="ColumnChart_test.php">Column </a></div>

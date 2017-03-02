@@ -78,8 +78,9 @@ echo('<input type="hidden" name="permission" value="Y">');
 </td>
 <?php
 }
-} ?>
+ ?>
 
 </tbody>
 </table>
 </div>
+<?php } ?>
