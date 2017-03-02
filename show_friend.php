@@ -16,12 +16,18 @@ $numResults = mysqli_num_rows($result2);
 
 ?>
 <?php if (($numResults) > 0) { ?>
-<div class="table-responsive">
-<table class="table table-condensed table-bordered table-hover">
+
+
+
+<div class=" col-sm-2"></div>
+    <div class="form-group col-sm-8">
+
+<table class="table table-condensed table-bordered">
 <thead>
   <tr>
-    <th>Your friend</th>
+  <th><h5>Your friends id's</h5></th>
       <th>Their difficulty level</th>
+			<th>Their average score</th>
       <th>Status</th>
 
   </tr>
@@ -36,7 +42,9 @@ while($row = mysqli_fetch_array($result2)){
 ?>
 <tbody>
  <td>
-<?php echo ($row[3]);
+<?php
+
+?> <strong><h4><?php echo ($row[3]); ?> </h4></strong> <?php
 			$show_friend = "SELECT * from users WHERE uid = '$row[3]'";
 	    $result = mysqli_query($db, $show_friend);
       if (!$row2 = mysqli_fetch_assoc($result)){
@@ -47,6 +55,8 @@ while($row = mysqli_fetch_array($result2)){
 
       }
                  $friend_dif = $row2['difficulty_level'];
+								 $average_score = $row2['average_score'];
+
 
 ?>
 
@@ -56,12 +66,14 @@ while($row = mysqli_fetch_array($result2)){
 <td>
   <?php
 
+?> <strong><h4><?php echo $friend_dif; ?> </h4></strong>
+</td>
 
- echo $friend_dif;
 
+<td>
+  <?php
 
-?>
-
+?> <strong><h4><?php echo $average_score; ?> </h4></strong>
 
 </td>
 
@@ -70,7 +82,8 @@ while($row = mysqli_fetch_array($result2)){
   echo('<form method="post" action="add_person.php"><input type="hidden" ');
 echo('<input type="hidden" name="remove1" value="'.$row[3].'">'."\n");
 echo('<input type="hidden" name="permission" value="Y">');
-  echo('<input type="submit" value="remove" name="remove">');
+?><strong><h4>	<?php  echo('<button type="submit" class="btn btn-danger btn-s"  name="remove"> Remove </button>'); ?> </h4></strong><?php
+
   echo("\n</form>\n");
 
 
@@ -83,4 +96,5 @@ echo('<input type="hidden" name="permission" value="Y">');
 </tbody>
 </table>
 </div>
+
 <?php } ?>

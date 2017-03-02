@@ -43,6 +43,10 @@
       text-align:center;
     }
 
+    h4{
+      text-align:center;
+    }
+
     /* On small screens, set height to 'auto' for sidenav and grid */
     @media screen and (max-width: 767px) {
       .sidenav {
@@ -100,7 +104,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand active" <a href="home.php">e-learning</a>
+      <a class="navbar-brand active" <a href="home.php"><span class="glyphicon glyphicon-home  "></span>  e-learning</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
@@ -284,14 +288,16 @@ if($icon == 1){?>
 
       <p>Welcome to my e-learning application. The concept behind my application is to help how you acquire and learn new knowledge. I hope that by using this Web Application you will notice an improvement on your knowledge on the math topics I cover in my application. Please look at the <b>lessons</b>
          tab and the feedback provided after each exercise to see where you could improve.  </p>
+
       <hr>
+      <?php  include 'show_friend.php';?>
+
+
+          <div class="form-group col-sm-12">
       <h3>Test</h3>
       <p>Furthmore, there are sections in the e-learning application that allows you to monitor your past results making it easy to see where you could improve. </p>
 
-
-
-<?php  include 'show_friend.php';?>
-
+</div>
 
 
 
@@ -299,6 +305,9 @@ if($icon == 1){?>
 
 
 
+
+
+  <div class="form-group col-sm-12">
       <div class="bs-example">
           <div id="myCarousel" class="carousel slide"  style="width: 400px; margin: 0 auto" data-ride="carousel">
               <!-- Carousel indicators -->
@@ -343,14 +352,14 @@ if($icon == 1){?>
               </a>
           </div>
       </div>
-
+</div>
 
 
 
     </div>
     </div>
   </div>
-</div>
+
 
 <br>
 <script>

@@ -12,7 +12,7 @@
     unset($_SESSION["good"]);
     $_SESSION['good'] = 	$uid;
 
-    echo   $_SESSION['good'];
+    //echo   $_SESSION['good'];
 
 
 	if (empty($uid)){ //this is checking $username

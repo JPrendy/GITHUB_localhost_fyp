@@ -238,7 +238,8 @@ session_start();
 
 
 <?php  include 'check_user.php'; ?>
-
+</br>
+</br>
 	 <?php
 
 

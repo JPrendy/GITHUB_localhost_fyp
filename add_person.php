@@ -71,6 +71,7 @@ if($permission == "Y")
     $sql = "update add_friend set permission='Y' where uid ='$friend' and other_user = '$userid'";
     $result = mysqli_query($db, $sql);
   //  header("Location:settings.php?error=updated");
+    header("Location:settings.php?error=updated");
 }
 }
 
@@ -96,6 +97,7 @@ WHERE uid='$remove' AND other_user='$userid'";
 //	$sql = "SELECT * from users where uid Like '%$uid%' LIMIT 20";
 $result = mysqli_query($db, $sql);
 echo $sql;
+header("Location: settings.php?error=deleted");
 //header("Location: home.php");
 
 }

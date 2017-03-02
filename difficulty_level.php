@@ -107,6 +107,8 @@ echo "<br>";
   echo "<br>";
     echo "<br>";
   echo "The user's average score is $average" ;
+    $average = "UPDATE  users  SET average_score =   $average WHERE uid='{$_SESSION['userid']}'";
+          $success = mysqli_query($db, $average);
   //this retrieves the users average score with this knowledge, the difficulty_levels will either go down or up
   //depending on this average.
 
@@ -148,11 +150,13 @@ echo $dynamic_level;
 //IS IMPLEMENTED
 if($ok >= $interval->format(" 2 minutes 0 seconds"))
 {
-if(($average >= 7.0) && ($dynamic_level <= 5)){
+if(($average >= 7.0) && ($dynamic_level <= 3)){
   $dynamic_level +=1;
   //  $sql = "Update  WHERE uid='{$_SESSION['userid']}'";
     $update_sql_user = "UPDATE  users  SET difficulty_level=   $dynamic_level WHERE uid='{$_SESSION['userid']}'";
+        $update_average_user = "UPDATE  users  SET greatnest = 'Y' WHERE uid='{$_SESSION['userid']}'";
   //  $update_sql_user2 = "UPDATE  quiz_scores  SET difficulty_level=   $dynamic_level WHERE uid='{$_SESSION['userid']}'";
+      $update_average_users = mysqli_query($db, $update_average_user);
     	$result_update_users = mysqli_query($db, $update_sql_user);
     //  $result_update_users2 = mysqli_query($db, $update_sql_user2);
     echo $dynamic_level;

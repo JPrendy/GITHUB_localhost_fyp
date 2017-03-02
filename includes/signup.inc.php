@@ -54,7 +54,7 @@
 		}else {
 			//$encrypted_password = password_hash($password, PASSWORD_DEFAULT);
 			//$password = md5($password); //hash password before storing for security purposes
-			$sql = "insert into users(first, last, uid, pwd, difficulty_level) VALUES ('$username', '$email', '$uid', '$password', '$difficulty_level')";
+			$sql = "insert into users(first, last, uid, pwd, difficulty_level, average_score, greatnest) VALUES ('$username', '$email', '$uid', '$password', '$difficulty_level', 0, 'N')";
       $sql2 = "insert into lessons(uid) VALUES ('$uid')";
       $sql3 = "insert into lessons_visited(uid, topic_visited) VALUES ('$uid', 0)";
       $sql4 = "insert into theme (uid, theme_col) VALUES ('$uid', '$theme')";
