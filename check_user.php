@@ -71,9 +71,9 @@ $numResults = mysqli_num_rows($result3);
 <table class="table table-condensed table-bordered">
 <thead>
   <tr>
-    <th>user who added you</th>
-      <th>Status</th>
-			    <th>Remove User</th>
+    <th><h5><strong>user who added you</strong></h5></th>
+      <th><h5><strong>Status</strong></h5></th>
+			    <th><h5><strong>Remove User</strong></h5></th>
 
   </tr>
 </thead><?php

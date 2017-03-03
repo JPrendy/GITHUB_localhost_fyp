@@ -101,10 +101,11 @@ if (strpos($url, 'error=already_inserted') !== false){
     <table class="table table-condensed table-bordered">
     <thead>
       <tr>
-        <th>Uid</th>
 
-          <th>Status</th>
-          <th> Remove Invitation</th>
+          <th><h5><strong>Uid</strong></h5></th>
+
+            <th><h5><strong>Status</strong></h5></th>
+            <th><h5><strong> Remove Invitation</strong></h5></th>
 
       </tr>
     </thead><?php

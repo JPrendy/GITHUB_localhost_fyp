@@ -72,7 +72,7 @@
 			$_SESSION['id'] = $row['id'];
       	$_SESSION['userid'] = $row['uid'];
         $_SESSION['welcome'] = $row['session'];
-
+ $_SESSION['average_score'] = $row['average_score'];
       $row2 = mysqli_fetch_assoc($result2);
 
        $_SESSION['lesson'] = $row2['lesson_type'];

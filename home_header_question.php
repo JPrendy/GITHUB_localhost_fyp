@@ -99,7 +99,12 @@
 
 
   </style>
-<?php  if(  $_SESSION['theme'] == 'Light'){
+<?php
+if($_SESSION['userid'] ==null){
+    header("Location: ../index.php");
+}
+
+if(  $_SESSION['theme'] == 'Light'){
     ?><style>
 
     body{

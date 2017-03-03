@@ -208,8 +208,8 @@ Tweet</a>
 <br/>
 
 <footer>
-  <div class="container-fluid text-center">
-   Copyrght & copy whatever
+  <div class="container-fluid text-center" id="foot01">
+
  </div>
   </footer>
 </div>

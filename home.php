@@ -94,7 +94,9 @@
     </style><?php
   }
 
-
+if($_SESSION['userid'] ==null){
+    header("Location: index.php");
+}
 
       ?>
 </head>
@@ -180,7 +182,7 @@ if($icon == 1){?>
 
 
     <nav class="col-sm-3">
-      <ul class="nav nav-pills nav-stacked" data-spy="affix" data-offset-top="300" >
+      <ul class="nav nav-pills nav-stacked"  data-offset-top="300" >
 
         <?php
            $ok = $_SESSION['lesson'];
@@ -287,6 +289,7 @@ if($icon == 1){?>
      echo "<br>";
       echo "Your current difficulty level is ";?><b><?php echo $_SESSION['difficulty_level']; ?></b><?php
       echo "<br>";
+            echo "Your current average_score is ";?><b><?php echo $_SESSION['average_score']; ?></b><?php
       echo "<br>";
       ?>
 
@@ -448,8 +451,8 @@ $('#myAlert').hide('fade');
 </script>
 
 
-<footer class="container-fluid text-center">
-  <p>Footer Text</p>
+<footer class="container-fluid text-center " id="foot01">
+
 </footer>
 
 </body>

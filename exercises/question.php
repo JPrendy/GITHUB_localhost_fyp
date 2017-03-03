@@ -165,8 +165,8 @@ else{
 <!--</div>-->
 
 
-<footer class="container-fluid text-center">
-  <p>Footer Text</p>
+<footer class="container-fluid text-center" id="foot01">
+
 </footer>
 
 
