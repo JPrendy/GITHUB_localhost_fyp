@@ -357,10 +357,10 @@ if($icon == 1){?>
                   <div class="item">
                     <!--<h2>...</h2>
                     <p>10000000000000</p>-->
-                      <img src="images/test.jpg" alt="Second Slide">
+                      <img src="images/charts.png" alt="Second Slide">
                         <div class="carousel-caption">
-                      <h3>Chania</h3>
-                      <p>The atmosphere in Chania has a touch of Florence and Venice.</p>
+                      <h3>Charts</h3>
+                      <p>See your results displayed as charts in the Charts Section.</p>
                     </div>
                   </div>
                   <div class="item">
