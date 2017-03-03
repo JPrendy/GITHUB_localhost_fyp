@@ -22,7 +22,7 @@ $_SESSION["math_section_1"] =0;
 $_SESSION["math_section_2"] =0;
 $_SESSION["math_section_3"] =0;
 $_SESSION["math_section_4"] =0;
-  header("Location: ../exercises.php")
+  header("Location: ../exercises.php");
 }
 
 ?>

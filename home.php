@@ -51,6 +51,8 @@
       text-align:center;
     }
 
+
+
     /* On small screens, set height to 'auto' for sidenav and grid */
     @media screen and (max-width: 767px) {
       .sidenav {
@@ -261,7 +263,7 @@ if($icon == 1){?>
       if($_SESSION['welcome'] != 2){?>
       <div class="alert alert-danger alert-dismissable">
    <a href="#" id='ok' class="close" data-dismiss="alert" aria-label="close">×</a>
-   <strong>Welcome!</strong> This is the first time you are using the e-learning application, please click on the lessons heading.
+   <strong>Welcome!</strong> This is the first time you are using my e-learning application, please click on the lessons heading to continue.
  </div>
  <?php } ?>
 
@@ -270,7 +272,7 @@ if($icon == 1){?>
 
 <div id="myAlert" class="alert alert-warning collapse alert-dismissable">
 <a href="#" id="linkClose" class="close"  aria-label="close">×</a> <!--important to remove the data-dismiss alert-->
-<strong>Warning!</strong> You are only allowed to go to the lessons headings.
+<strong>Warning!</strong> You are only allowed to go to the lessons heading during the tutorial period.
 </div>
 
       <?php
@@ -291,6 +293,7 @@ if($icon == 1){?>
       echo "<br>";
             echo "Your current average_score is ";?><b><?php echo $_SESSION['average_score']; ?></b><?php
       echo "<br>";
+          echo "<br>";
       ?>
 
       <p>Welcome to my e-learning application. The concept behind my application is to help how you acquire and learn new knowledge. I hope that by using this Web Application you will notice an improvement on your knowledge on the math topics I cover in my application. Please look at the <b>lessons</b>
@@ -332,7 +335,7 @@ if($icon == 1){?>
 
   <div class="form-group col-sm-12">
       <div class="bs-example">
-          <div id="myCarousel" class="carousel slide"  style="width: 400px; margin: 0 auto" data-ride="carousel">
+          <div id="myCarousel" class="carousel slide"  style="width: 400px;  margin: 0 auto" data-ride="carousel">
               <!-- Carousel indicators -->
               <ol class="carousel-indicators">
                   <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -343,11 +346,13 @@ if($icon == 1){?>
               <div class="carousel-inner">
                   <div class="item active">
 
-                      <img src="images/test.jpg" alt="First Slide">
+                      <img src="images/add_a_friend_6.png" alt="First Slide">
                       <div class="carousel-caption">
-      <h3>Chania</h3>
-      <p>The atmosphere in Chania has a touch of Florence and Venice.</p>
+                        <h4 > Add a Friend </h4>
+                        <p id=carousel>You can add a friend by adding them in the settings section.</p>
     </div>
+
+
                   </div>
                   <div class="item">
                     <!--<h2>...</h2>

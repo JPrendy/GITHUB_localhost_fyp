@@ -40,8 +40,18 @@ session_start();
     <div class="col-sm-9 text-centre">
       <h1>Exercises</h1>
 
+<?php      $url = "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
+    if (strpos($url, 'error=session') !== false){
+      //$ok= "Fill out all the fields!";
+    ?>
+    <div class="alert alert-success alert-dismissable">
+    <a href="#" id='ok' class="close" data-dismiss="alert" aria-label="close">×</a>
+    <strong>Update</strong> You can now access the rest of the web application. Feel free to navigate around.
+    </div>
+    <?php
 
-
+    }
+?>
 
 
     <!-- <div class="container"> -->

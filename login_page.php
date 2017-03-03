@@ -30,7 +30,7 @@ if (strpos($url, 'error=empty1') !== false){
   ?>
   <div class="alert alert-danger alert-dismissable">
   <a href="#" id='ok' class="close" data-dismiss="alert" aria-label="close">×</a>
-  <strong>Warning!</strong> The username you picked does not exist.
+  <strong>Warning!</strong> The username or password you picked does not exist.
   </div>
   <?php
 }

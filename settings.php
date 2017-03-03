@@ -1,7 +1,12 @@
 <?php
 session_start();
 
+if($_SESSION['welcome'] !=2){
+    header("Location: home.php");
+}
     include 'home_header.php';
+
+
 
 ?>
 
