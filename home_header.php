@@ -192,15 +192,15 @@ if(  $_SESSION['theme'] == 'Light'){
                 <li><img src="../images/test.jpg" class="hidden-xs img-rounded" alt="Cinque Terre" width="50" height="50"> </li>
                <?php } if($icon == 2) { ?>
 
-                 <li>    <img src="../images/pikachu.png" class="hidden-xs img-rounded" alt="Cinque Terre" width="50" height="50"> </li>
+                 <li>    <img src="../images/background2.jpg" class="hidden-xs img-rounded" alt="Cinque Terre" width="50" height="50"> </li>
 
                  <?php } if($icon == 3) { ?>
 
-                   <li>    <img src="../images/pikachu.png" class="hidden-xs img-rounded" alt="Cinque Terre" width="50" height="50"> </li>
+                   <li>    <img src="../images/background3.jpg" class="hidden-xs img-rounded" alt="Cinque Terre" width="50" height="50"> </li>
 
                    <?php } if($icon == 4) { ?>
 
-                     <li>    <img src="../images/pikachu.png" class="hidden-xs img-rounded" alt="Cinque Terre" width="50" height="50"> </li>
+                     <li>    <img src="../images/background2.jpg" class="hidden-xs img-rounded" alt="Cinque Terre" width="50" height="50"> </li>
 
                      <?php } ?>
 
@@ -211,11 +211,11 @@ if(  $_SESSION['theme'] == 'Light'){
         <li><img src="images/test.jpg" class="hidden-xs img-rounded" alt="Cinque Terre" width="50" height="50"> </li>
        <?php } if($icon == 2) { ?>
 
-         <li>    <img src="images/pikachu.png" class="hidden-xs img-rounded" alt="Cinque Terre" width="50" height="50"> </li>
+         <li>    <img src="images/background2.jpg" class="hidden-xs img-rounded" alt="Cinque Terre" width="50" height="50"> </li>
 
          <?php } if($icon == 3) { ?>
 
-           <li>    <img src="images/pikachu.png" class="hidden-xs img-rounded" alt="Cinque Terre" width="50" height="50"> </li>
+           <li>    <img src="images/background3.jpg" class="hidden-xs img-rounded" alt="Cinque Terre" width="50" height="50"> </li>
 
            <?php } if($icon == 4) { ?>
 

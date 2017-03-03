@@ -156,6 +156,15 @@ if(($average >= 7.0) && ($dynamic_level <= 3)){
   //  $sql = "Update  WHERE uid='{$_SESSION['userid']}'";
     $update_sql_user = "UPDATE  users  SET difficulty_level=   $dynamic_level WHERE uid='{$_SESSION['userid']}'";
         $update_average_user = "UPDATE  users  SET greatnest = 'Y' WHERE uid='{$_SESSION['userid']}'";
+
+        if (!$row = mysqli_fetch_assoc($update_average_user)){
+
+              header("Location:home.php?error=empty1");
+
+
+        }
+        
+
   //  $update_sql_user2 = "UPDATE  quiz_scores  SET difficulty_level=   $dynamic_level WHERE uid='{$_SESSION['userid']}'";
       $update_average_users = mysqli_query($db, $update_average_user);
     	$result_update_users = mysqli_query($db, $update_sql_user);

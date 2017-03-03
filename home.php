@@ -26,7 +26,9 @@
     }
 
     li.panel {
-      padding-top: 3px;
+      padding-top: 0px;
+    /*  background-color: #428bca; */
+
     }
     /* Set black background color, white text and some padding */
     footer {
@@ -133,11 +135,11 @@ if($icon == 1){?>
  <li><img src="images/test.jpg" class="hidden-xs img-rounded" alt="Cinque Terre" width="50" height="50"> </li>
 <?php } if($icon == 2) { ?>
 
-  <li>    <img src="images/pikachu.png" class="hidden-xs img-rounded" alt="Cinque Terre" width="50" height="50"> </li>
+  <li>    <img src="images/background2.jpg" class="hidden-xs img-rounded" alt="Cinque Terre" width="50" height="50"> </li>
 
   <?php } if($icon == 3) { ?>
 
-    <li>    <img src="images/pikachu.png" class="hidden-xs img-rounded" alt="Cinque Terre" width="50" height="50"> </li>
+    <li>    <img src="images/background3.jpg" class="hidden-xs img-rounded" alt="Cinque Terre" width="50" height="50"> </li>
 
     <?php } if($icon == 4) { ?>
 
@@ -203,33 +205,33 @@ if($icon == 1){?>
 
 
 
-        <li class="active hidden-xs"><a href="lessons.php">Lessons</a></li>
+        <li class=" panel hidden-xs active"><a href="lessons.php">Lessons</a></li>
         <?php     if($_SESSION['welcome'] != 2){?>
-          <li><a href="#"  id="myFunction">Exercises</a></li>
+          <li class="panel hidden-xs active"><a href="#"  id="myFunction">Exercises</a></li>
 
          <?php } else { ?>
-        <li class="hidden-xs"><a href="exercises.php">Exercises</a></li>
+        <li class="panel hidden-xs active"><a href="exercises.php">Exercises</a></li>
 
            <?php } ?>
         <!--added a javascript function to the hyperlink-->
         <!-- the older version  <li><a href="#" onclick="myFunction()" >Charts</a></li> -->
       <?php     if($_SESSION['welcome'] != 2){?>
-        <li  class="hidden-xs"><a href="#"  id="myFunction2">Results</a></li>
+        <li  class="panel hidden-xs  active"><a href="#"  id="myFunction2">Results</a></li>
 
        <?php } else { ?>
             <!--<li><a href="piechart_test.php">Charts</a></li>-->
-            <li  class="hidden-xs"><a href="select_result.php">Results</a></li>
+            <li  class="panel hidden-xs  active"><a href="select_result.php">Results</a></li>
 
 
          <?php } ?>
 
 
          <?php     if($_SESSION['welcome'] != 2){?>
-           <li  class="hidden-xs"><a href="#"  id="myFunction2">Charts</a></li>
+           <li  class="panel hidden-xs  active"><a href="#"  id="myFunction2">Charts</a></li>
 
           <?php } else { ?>
                <!--<li><a href="piechart_test.php">Charts</a></li>-->
-               <li  class="hidden-xs"><a href="charts.php">Charts</a></li>
+               <li  class="panel hidden-xs  active"><a href="charts.php">Charts</a></li>
 
 
             <?php } ?>
@@ -237,18 +239,18 @@ if($icon == 1){?>
 
 
          <?php     if($_SESSION['welcome'] != 2){?>
-           <li class="panel hidden-xs"><a href="#"  id="myFunction3">Change Icon</a></li>
+           <li class="panel hidden-xs  active"><a href="#"  id="myFunction3">Change Icon</a></li>
 
           <?php } else { ?>
-            		<li class="panel hidden-xs"><a href="change_icon.php">Change Icon</a></li>
+            		<li class="panel hidden-xs  active"><a href="change_icon.php">Change Icon</a></li>
 
             <?php } ?>
             <?php     if($_SESSION['welcome'] != 2){?>
 
-			<li class="panel hidden-xs"><a href="#" id="myFunction4">Change settings</a></li>
+			<li class="panel hidden-xs  active"><a href="#" id="myFunction4">Change settings</a></li>
       <?php } else { ?>
 
-      <li class="panel hidden-xs"><a href="settings.php">Change settings</a></li>
+      <li class="panel hidden-xs  active"><a href="settings.php">Change settings</a></li>
 
     <?php } ?>
       </ul>

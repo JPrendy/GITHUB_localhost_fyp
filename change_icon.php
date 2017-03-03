@@ -33,6 +33,7 @@ if($_SESSION['welcome'] !=2){
 
 
       		}
+        
 
       $sum = $row['TEST'];
       $count = $row['MATH'];
@@ -101,7 +102,7 @@ if($_SESSION['welcome'] !=2){
              <h2>Second Icon</h2>
              <div class="panel-group">
                <div class="panel panel-default">
-           <div class="panel-heading"><img src="images/test.jpg" class="img-responsive" alt="Cinque Terre" width="304" height="236"></div>
+           <div class="panel-heading"><img src="images/background2.jpg" class="img-responsive" alt="Cinque Terre" width="304" height="236"></div>
             <div class="panel-heading">Do <b>Ten</b> quizes in total to unlock this icon.</div>
               <div class="panel-heading">You have to do <b><?php if($count_test <= 0){  echo  "0";   }else echo $count_test?></b> more quizes.</div>
                    <div class="panel-heading"><b><?php if($_SESSION['icon'] ==2 ){ echo "[selected]";  }?></b></div>
@@ -125,11 +126,11 @@ if($_SESSION['welcome'] !=2){
       <h2>Third Icon</h2>
       <div class="panel-group">
         <div class="panel panel-default">
-             <div class="panel-heading"><img src="images/test.jpg" class="img-responsive" alt="Cinque Terre" width="304" height="236"></div>
+             <div class="panel-heading"><img src="images/background3.jpg" class="img-responsive" alt="Cinque Terre" width="304" height="236"></div>
               <div class="panel-heading">Have an average of <b>7</b> based on your quiz scores.</div>
                  <div class="panel-heading">Your current average is <b><?php echo $english_format_number;?></b>.</div>
                 <div class="panel-heading"><b><?php if($_SESSION['icon'] ==3 ){ echo "[selected]";  }?></b></div>
-                <?php if($average >=7){?>
+                <?php if(  $_SESSION['greatnest'] = "Y"){?>
         <div class="panel-body"><a href="icon_update.php?n=3">Use This Icon </a></div>
 <?php } else { ?>
     <div class="panel-body"><a href="#"  id="myFunction2">Use This Icon</a></div>
