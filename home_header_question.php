@@ -43,8 +43,9 @@
 
     /* Set black background color, white text and some padding */
     footer {
-      background-color: #555;
+      background-color: black;
       color: white;
+      margin-top: 10px;
       padding: 15px;
     }
 

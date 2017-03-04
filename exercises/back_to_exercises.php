@@ -2,6 +2,8 @@
 
 //  session_start();
 
+
+
  include '..\difficulty_level.php';
 unset($_SESSION["score"]);
 unset($_SESSION["blank"]);
@@ -22,7 +24,20 @@ $_SESSION["math_section_1"] =0;
 $_SESSION["math_section_2"] =0;
 $_SESSION["math_section_3"] =0;
 $_SESSION["math_section_4"] =0;
+
+
+  $url = "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
+if (strpos($url, 'update=dynamic') !== false){
+  //$ok= "Fill out all the fields!";
+  header("Location: ../lessons/algebra.php");
+
+}
+if (strpos($url, 'update=back') !== false){
+  //$ok= "Fill out all the fields!";
   header("Location: ../exercises.php");
+
+}
+
 }
 
 ?>

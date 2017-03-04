@@ -97,8 +97,8 @@ $_SESSION['lesson'] = $lesson;
         <strong>Warning!</strong> In your last test you scored zero in the Introduction to Algebra questions, we recommend you look over this section.
         </div>
       <?php } ?>
-          <p> quuuuuuuuuuuuuuu </p>
-
+          <h3 id= left> quuuuuuuuuuuuuuu </h3>
+dddddddddddddddddddd
         <hr>
         <h3>Section 2. Common Factors</h3>
         <?php
@@ -165,11 +165,11 @@ Algebra
 <br>
 <br>
 
-
+<script src="year.js"></script>
 <footer class="container-fluid text-center" id="foot01">
 
 </footer>
-<script src="year.js"></script>
+
 
 
  </body>

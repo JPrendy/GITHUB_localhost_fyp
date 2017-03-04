@@ -1,8 +1,12 @@
 <?php
  include 'database.php';
 session_start();
+if($_SESSION['blank'] ==null){
+    header("Location: ../home.php");
+}
 
     include '..\home_header_question.php';
+
 
   ?>
 <!Doctype html>
@@ -15,45 +19,32 @@ session_start();
 </head>
 <body>
 
-<header>
-</header>
+
 
 
 <div class="container-fluid text-center">
   <div class="row content">
 
-
-
-
   <div class="col-sm-9 text-centre">
+<?php $math_lesson =  $_SESSION['math_lesson'];?>
 
-
-<h2> Congrats! You have completed the test </h2>
-<p> Final Score:  <?php echo $_SESSION['score']; ?></p>
+<h3> Congratulations! You have completed the <?php echo  $math_lesson; ?> test. </h3>
+<h3> Your Final Score is: <b> <?php echo $_SESSION['score']; ?>/10</b></h3>
 
 <?php
 $uid =  $_SESSION['userid'];
 //echo "user id is $uid";
-
-$math_lesson =  $_SESSION['math_lesson'];
 //echo "the math lesson is $math_lesson";
 $score = $_SESSION['score'];
 
-echo "You scored $score/10 in  $math_lesson";
+//echo "You scored $score/10 in  $math_lesson";
 
 $difficulty_level = $_SESSION['difficulty_level'];
 //echo  "the difficulty_level is $difficulty_level";
-date_default_timezone_set('UTC');
-//echo "The time is " . date("h:i:sa");
-//$time = date("h:i:sa");
-//echo "$time";
-//echo "Today is " .  date("Y-m-d H:i:s") . "<br>";
-$time = date("Y-m-d H:i:s");
 
 //echo "$time";
 //echo "<br>";
 //if (isset($_POST['submit'])){
-$start_time = $_SESSION['start_time'];
 //}
 
 	$db = mysqli_connect("localhost", "root", "" , "logintest");
@@ -78,28 +69,20 @@ if (!$row = mysqli_fetch_assoc($result2)){
 
 }
    $first_time = $row['sc_time'];
+    $start_time = $row['sc_time_start'];
 //echo $first_time;
 
 ?>
-<table class="table table-condensed table-bordered table-hover">
-   <thead>
-     <tr>
 
-         <th><h5><strong>Your Answers</strong></h5></th>
-          <th><h5><strong>Correct Answers</strong></h5></th>
-
-     </tr>
-   </thead>
 <?php
-echo "<br>";
+/*echo "<br>";
 echo   $_SESSION['math_section_1'];
 echo "<br>";
 echo   $_SESSION['math_section_2'];
 echo "<br>";
 echo   $_SESSION['math_section_3'];
 echo "<br>";
-echo   $_SESSION['math_section_4'];
-
+echo   $_SESSION['math_section_4'];*/
 
 //this is the time you finished
 $time1 = new DateTime($first_time );
@@ -110,11 +93,74 @@ $time2 = new DateTime($start_time);
 
 $interval =  $time1->diff($time2);
 $ok = $interval->format(" %i minutes %s seconds");
-echo "<br>";
 ?>
-<strong><h3> You spent <?php echo $ok; ?> doing the test </strong></h3>
+<h4> You spent in total <strong><?php echo $ok; ?></strong> doing the quiz.</h4>
+
+<?php
+if( $_SESSION['score'] <=4){
+?>  <div class="alert alert-success alert-dismissable">
+  <a href="#" id='ok' class="close" data-dismiss="alert" aria-label="close">×</a>
+  <strong>Notice!</strong> Based on your score <a href="back_to_exercises.php?update=dynamic">Go back to the Algebra lesson </a>.
+  </div>
+  <?php
+}
+
+?>
 
 
+
+
+
+<?php
+$query = "SELECT * from dynamic_settings
+WHERE uid ='{$_SESSION['userid']}' ";
+$result = mysqli_query($db, $query);
+?>
+
+<br>
+
+
+  <?php    while($row = mysqli_fetch_array($result)) {?>
+    <div class="panel panel-default">
+        <!-- Default panel contents -->
+        <div class="panel-heading"><h4>Personalise your user settings</h4></div>
+  <form action="feedback.php" method="post">
+   <div class="checkbox"><input type="checkbox" name="check_list[]" value="<?php echo $row[1]?>" <?php if ($row[1] == 'text_hint_Y') echo "checked='checked'";?> > Enable Text Hints</div>
+ <div class="checkbox">  <input type="checkbox" name="check_list[]" value="<?php echo $row[3]?>" <?php if ($row[3] == 'add_questions_Y') echo "checked='checked'";?>> More Questions</div>
+ <div class="checkbox">  <input type="checkbox" name="check_list[]" value="<?php echo $row[4]?>" <?php if ($row[4] == 'add_answers_Y') echo "checked='checked'";?>> More Possible Answer choices</div>
+<!--  <input type="submit"  name="feedback_button">-->
+  <button type="submit" class="btn btn-primary btn-s" name="feedback_button"> SUBMIT </button>
+  </form>
+</div>
+
+     <?php }
+
+
+     $url = "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
+   if (strpos($url, 'notice=update') !== false){
+     //$ok= "Fill out all the fields!";
+   ?>
+   <div class="alert alert-success alert-dismissable">
+   <a href="#" id='ok' class="close" data-dismiss="alert" aria-label="close">×</a>
+   <strong>Update!</strong> You have changed your user settings.
+   </div>
+   <?php
+
+   }
+?>
+
+
+
+
+     <table class="table table-condensed table-bordered table-hover">
+        <thead>
+          <tr>
+
+              <th><h5><strong>Your Answers</strong></h5></th>
+               <th><h5><strong>Correct Answers</strong></h5></th>
+
+          </tr>
+        </thead>
 <?php
 
 for ($x = 1; $x <= 10; $x++) {
@@ -153,43 +199,13 @@ echo "<br>";
 </table>
 
 
-  <div class="panel-body"><a href="back_to_exercises.php">back to exercises </a></div>
+  <div class="panel-body"><a href="back_to_exercises.php?update=back">back to exercises </a></div>
 
-<?php
-///$query = "SELECT * from dynamic_settings
-///WHERE uid ='{$_SESSION['userid']}' order by RAND()";
-//ob_start();
-$query = "SELECT * from dynamic_settings
-WHERE uid ='{$_SESSION['userid']}' ";
-$result = mysqli_query($db, $query);
-?>
 
-<h2>  Feedback  </h2>
 
-  <?php    while($row = mysqli_fetch_array($result)) {?>
-  <form action="feedback.php" method="post">
-  <input type="checkbox" name="check_list[]" value="<?php echo $row[1]?>" <?php if ($row[1] == 'text_hint_Y') echo "checked='checked'";?> > Text Hints
-  <input type="checkbox" name="check_list[]" value="<?php echo $row[2]?>" <?php if ($row[2] == 'timer_Y') echo "checked='checked'";?>> Timer
-  <input type="checkbox" name="check_list[]" value="<?php echo $row[3]?>" <?php if ($row[3] == 'add_questions_Y') echo "checked='checked'";?>> More Questions
-  <input type="checkbox" name="check_list[]" value="<?php echo $row[4]?>" <?php if ($row[4] == 'add_answers_Y') echo "checked='checked'";?>> More Possible Answer choices
-  <input type="submit"  name="feedback_button" />
-  </form>
-     <?php }  ?>
 
-  <?php
-//  if(!empty($_POST['check_list'])) {
-  //    foreach($_POST['check_list'] as $check) {
-    //          echo $check; //echoes the value set in the HTML form for each checked checkbox.
-                           //so, if I were to check 1, 3, and 5 it would echo value 1, value 3, value 5.
-                           //in your case, it would echo whatever $row['Report ID'] is equivalent to.
-    //  }
-  //}
-//	if (isset($_POST['feedback_button'])){
 
-    //include 'feedback.php';
 
-    //ob_end_flush();
-  ?>
 
 
 </div>

@@ -75,6 +75,9 @@
        text-decoration: none;
    }
 
+#left{
+  text-align: left;
+}
 
  #first{
    color: #000000;

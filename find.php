@@ -216,5 +216,5 @@ else{ ?>
   <br>
 <h3>There is no user that meets your criteria.</h3>
   <br>
-  <div class="panel-body"><a href="settings.php"><h3>Go back to Settings</h3></a></div>
+  <div class="panel-body"><button class='btn btn-default btn-md'><a href="settings.php"><h3>Go back to Settings</h3></a></button></div>
 <?php } ?>

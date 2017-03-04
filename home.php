@@ -318,11 +318,13 @@ if($icon == 1){?>
         //echo $_SESSION['test'];
         echo "Welcome back "; ?> <b><?php echo $_SESSION['userid']; ?></b>
   <?php  } ?>
+
 <?php
      echo "<br>";
       echo "Your current difficulty level is ";?><b><?php echo $_SESSION['difficulty_level']; ?></b><?php
       echo "<br>";
-            echo "Your current average score is ";?><b><?php echo $_SESSION['average_score']; ?></b><?php
+        $english_format_number = number_format($_SESSION['average_score'], 2, '.', '');
+            echo "Your current average score is ";?><b><?php echo $english_format_number; ?></b><?php
       echo "<br>";
           echo "<br>";
       ?>
