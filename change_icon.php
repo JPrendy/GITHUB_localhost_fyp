@@ -217,10 +217,10 @@ $('#linkClose').click(function (){
 
 
 
-<footer class="container-fluid text-center">
-  <p>Footer Text</p>
-</footer>
+<footer class="container-fluid text-center" id="foot01">
 
+</footer>
+<script src="year.js"></script>
 
 
 

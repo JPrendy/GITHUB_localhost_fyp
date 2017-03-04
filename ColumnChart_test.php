@@ -105,7 +105,7 @@ $table['cols'] = array(
       var options = {
            title: 'Quiz Results displayed in a <?php echo $chart; ?>.',
           is3D: 'true',
-    
+
 
         };
       // Instantiate and draw our chart, passing in some options.
@@ -140,9 +140,10 @@ $table['cols'] = array(
 
 <br>
 
-<footer class="container-fluid text-center">
-  <p>Footer Text</p>
+<footer class="container-fluid text-center" id="foot01">
+
 </footer>
+<script src="year.js"></script>
 
 
 

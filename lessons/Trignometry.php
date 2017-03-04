@@ -44,5 +44,12 @@ Trignometry
  <a href="..\exercises\quiz.php"> here to test trignometry </a>
  </div>
 
+
+
+ <footer class="container-fluid text-center" id="foot01">
+
+ </footer>
+ <script src="year.js"></script>
+
  </body>
  </html>

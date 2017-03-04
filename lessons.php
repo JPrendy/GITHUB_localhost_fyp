@@ -70,9 +70,10 @@ session_start();
 
 
 
-<footer class="container-fluid text-center">
-  <p>Footer Text</p>
+<footer class="container-fluid text-center" id="foot01">
+
 </footer>
+<script src="year.js"></script>
 
 </body>
 </html>
