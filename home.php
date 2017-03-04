@@ -25,7 +25,7 @@
     }
 
     a:link {
-      color: white;
+      color: black;
        text-decoration: none;
    }
 

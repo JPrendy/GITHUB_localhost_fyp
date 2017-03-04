@@ -78,7 +78,8 @@ th {text-align: left;}
     <div class="col-xs-offset-4">
   <label for="sel1">Select a Difficulty:</label>
   <select class="form-control"  name=difficulty_level id="sel2">
-    <option value=" ">...</option>
+    <option value="">...</option>
+      <option value="-1">-1</option>
     <option value="0">0</option>
     <option value="1">1</option>
   </select>
@@ -103,16 +104,7 @@ th {text-align: left;}
   <br><br>
 
 
-    <div class="form-group col-xs-8">
-      <div class="col-xs-offset-4">
-                <label for="sel1">Select How Many Columns To Return:</label>
-  <select  class="form-control" name="limit">
-            <option value="25">...</option>
-    <option value="25">25</option>
-    <option value="50">50</option>
-    <option value="100">100</option>
-  </select>
-</div>
+
 </div>
   <br><br>
 
@@ -126,7 +118,7 @@ th {text-align: left;}
 
 
 
-
+</div>
 </div>
 </div>
 </div>

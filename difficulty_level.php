@@ -163,7 +163,7 @@ if(($average >= 7.0) && ($dynamic_level <= 3)){
 
 
         }
-        
+
 
   //  $update_sql_user2 = "UPDATE  quiz_scores  SET difficulty_level=   $dynamic_level WHERE uid='{$_SESSION['userid']}'";
       $update_average_users = mysqli_query($db, $update_average_user);
@@ -174,7 +174,7 @@ if(($average >= 7.0) && ($dynamic_level <= 3)){
 if ($average >= 4.5 && $average <= 7){
   echo "Nothing changes";
 }
-if(($average <= 4.5) && ($dynamic_level >=-1)){
+if(($average <= 4.5) && ($dynamic_level >=0)){
   $dynamic_level -=1;
     $update_sql_user = "UPDATE  users  SET difficulty_level=   $dynamic_level WHERE uid='{$_SESSION['userid']}'";
         	$result_update_users = mysqli_query($db, $update_sql_user);
