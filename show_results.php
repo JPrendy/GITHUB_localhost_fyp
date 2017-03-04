@@ -59,6 +59,8 @@ $sql = "SELECT * FROM  quiz_scores Where uid = '{$_SESSION['userid']}' AND diffi
 
 //echo "$sql";
 $result = mysqli_query($db, $sql);
+$numResults = mysqli_num_rows($result);
+
 
 ?>
 <style>
@@ -74,7 +76,7 @@ table, td, th, tr, thead {
 th {text-align: left;}
 </style>
 
-
+<?php if (($numResults) > 0) { ?>
 <h2> Results </h2>
 
   <div class="table-responsive">
@@ -182,7 +184,13 @@ echo "<button class='btn btn-default btn-md'> <a href='show_results.php?page=$to
 
 
 
-
+<?php }
+else{ ?>
+  <br>
+<h3>There is no user that meets your criteria.</h3>
+  <br>
+  <div class="panel-body"><button class='btn btn-default btn-md'><a href="select_result.php"><h3>Go back to the Results page</h3></a></button></div>
+<?php } ?>
 
 </div>
   </div>

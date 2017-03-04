@@ -100,7 +100,14 @@ $ok = $interval->format(" %i minutes %s seconds");
 if( $_SESSION['score'] <=4){
 ?>  <div class="alert alert-success alert-dismissable">
   <a href="#" id='ok' class="close" data-dismiss="alert" aria-label="close">×</a>
-  <strong>Notice!</strong> Based on your score <a href="back_to_exercises.php?update=dynamic">Go back to the Algebra lesson </a>.
+  <strong>Notice!</strong> Based on your score we recommend you go back to <a href="back_to_exercises.php?update=dynamic"> Algebra lesson </a>.
+  </div>
+  <?php
+}
+if( $_SESSION['score'] >=7){
+?>  <div class="alert alert-success alert-dismissable">
+  <a href="#" id='ok' class="close" data-dismiss="alert" aria-label="close">×</a>
+  <strong>Notice!</strong> Based on your score we recommend you change some of the user settings
   </div>
   <?php
 }
