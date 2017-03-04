@@ -172,7 +172,7 @@ if($icon == 1){?>
 
     <?php } if($icon == 4) { ?>
 
-      <li>    <img src="images/pikachu.png" class="hidden-xs img-rounded" alt="Cinque Terre" width="50" height="50"> </li>
+      <li>    <img src="images/background4.jpg" class="hidden-xs img-rounded" alt="Cinque Terre" width="50" height="50"> </li>
 
       <?php } ?>
 
@@ -276,10 +276,10 @@ if($icon == 1){?>
             <?php } ?>
             <?php     if($_SESSION['welcome'] != 2){?>
 
-			<li class="panel hidden-xs  active"><a href="#" id="myFunction4">Change settings</a></li>
+			<li class="panel hidden-xs  active"><a href="#" id="myFunction4">Settings</a></li>
       <?php } else { ?>
 
-      <li class="panel hidden-xs  active"><a href="settings.php">Change settings</a></li>
+      <li class="panel hidden-xs  active"><a href="settings.php">Settings</a></li>
 
     <?php } ?>
       </ul>

@@ -122,6 +122,10 @@ th {text-align: left;}
 </div>
 </div>
 </div>
+
+<br>
+<br>
+
 <footer class="container-fluid text-center" id="foot01">
 
 </footer>

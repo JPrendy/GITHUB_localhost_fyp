@@ -148,7 +148,7 @@ if($_SESSION['welcome'] !=2){
            <h2>Fourth Icon</h2>
            <div class="panel-group">
              <div class="panel panel-default">
-            <div class="panel-heading"><img src="images/test.jpg" class="img-responsive" alt="Cinque Terre" width="304" height="236"></div>
+            <div class="panel-heading"><img src="images/background4.jpg" class="img-responsive" alt="Cinque Terre" width="304" height="236"></div>
                        <div class="panel-heading">Achieve in total a score of <b>100</b> based on your quiz scores.</div>
                    <div class="panel-heading">Your current score is <b><?php echo $sum;?></b>.</div>
                  <div class="panel-heading"><b><?php if($_SESSION['icon'] ==4 ){ echo "[selected]";  }?></b></div>

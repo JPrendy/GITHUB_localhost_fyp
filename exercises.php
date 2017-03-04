@@ -63,9 +63,12 @@ session_start();
     <!--    <p>The panel-group class clears the bottom-margin. Try to remove the class and see what happens.</p>-->
         <div class="panel-group">
           <div class="panel panel-default">
-            <div class="panel-heading">Panel Header</div>
+            <div class="panel-heading">Text Hints: <b><?php echo $text_hint?></b></div>
+            <div class="panel-heading">More Answer Choices: <b><?php echo $answer?></b></div>
+             <div class="panel-heading">Difficulty Level:    <b><?php echo $_SESSION['difficulty_level']?></b></div>
+                 <div class="panel-heading">10 Questions</div>
             <!--make a test scenario where the user has to done the lesson before they are able to do this topic-->
-            <div class="panel-body"><button class='btn btn-default btn-md'><a href="exercises/question.php?n=1&m=Trignometry">Trignometry Quiz </a></button></div>
+            <div class="panel-body"><button class='btn btn-warning btn-md'><a href="#">COMING SOON </a></button></div>
 
           </div>
           </div>
@@ -95,7 +98,8 @@ session_start();
             </div>
 </div>
 </div>
-
+<br>
+<br>
 
 
 
