@@ -129,6 +129,7 @@ $total_pages = ceil($total_records / $per_page);
 //Going to first page
 echo "<center><a href='home.php?page=1'>".'First Page'."</a> ";
 
+
 for ($i=1; $i<=$total_pages; $i++) {
 
 echo "<a href='home.php?page=".$i."'>".$i."</a> ";

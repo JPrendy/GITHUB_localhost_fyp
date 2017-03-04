@@ -65,6 +65,8 @@ $_SESSION['lesson'] = $lesson;
 
  ?>
 
+
+
  <div class="container-fluid text-center">
      <div class="row content">
      <div class="col-sm-9 text-centre">
@@ -158,8 +160,8 @@ $_SESSION['lesson'] = $lesson;
 Here we will go through the content of our topic
 Algebra
 
-
-<a href="../exercises/question.php?n=1&m=Algebra"> here to test algebra </a>
+  <button type="submit" class="btn btn-danger btn-s" name="Score_btn"> <a href="../exercises/question.php?n=1&m=Algebra"> here to test algebra </a></button>
+  <?php echo "<button class='btn btn-success btn-md'> <a href='login_page.php'> here to test algebra </a></button>";?>
 <br>
 <br>
 <br>

@@ -415,7 +415,7 @@ $sql4 = "DELETE FROM quiz_scores WHERE uid='{$_SESSION['userid']}' ORDER BY sc_t
 
 
 if (mysqli_query($db, $sql4)) {
-    echo "Record deleted successfully";
+  //    echo "Record deleted successfully";
 } else {
     echo "Error deleting record: " . mysqli_error($d);
 }

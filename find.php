@@ -42,10 +42,10 @@
     //Selecting the data from table but with limit
     $query = "SELECT * FROM users where uid Like '%{$_SESSION['good']}%' and uid !='{$_SESSION['userid']}' LIMIT $start_from, $per_page";
     $result = mysqli_query ($db, $query);
-
+$numResults = mysqli_num_rows($result);
     ?>
 
-
+<?php if (($numResults) > 0) { ?>
     <div class="container-fluid text-center">
         <div class="row content">
   <div class="col-sm-1"></div>
@@ -95,14 +95,14 @@ if (strpos($url, 'error=already_inserted') !== false){
 
 
 
-
+<h2> User ID's Results </h2>
 
     <div class="table-responsive">
     <table class="table table-condensed table-bordered">
     <thead>
       <tr>
 
-          <th><h5><strong>Uid</strong></h5></th>
+          <th><h5><strong>User ID's</strong></h5></th>
 
             <th><h5><strong>Status</strong></h5></th>
             <th><h5><strong> Remove Invitation</strong></h5></th>
@@ -210,3 +210,10 @@ $result2 = mysqli_query($db, $sql2);
 </div>
 </div>
 </div>
+<?php }
+else{ ?>
+  <br>
+<h3>There is no user that meets your criteria.</h3>
+  <br>
+  <div class="panel-body"><a href="settings.php"><h3>Go back to Settings</h3></a></div>
+<?php } ?>

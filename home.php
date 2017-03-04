@@ -8,12 +8,26 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
   <style>
     /* Remove the navbar's default margin-bottom and rounded borders */
     .navbar {
       margin-bottom: 0;
       border-radius: 0;
     }
+
+    button{
+        color: white;
+    }
+
+    li{
+      color:white;
+    }
+
+    a:link {
+      color: white;
+       text-decoration: none;
+   }
 
     /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
     .row.content {height: 450px}
@@ -25,8 +39,11 @@
       height: 100%;
     }
 
+    body{
+    font-family: 'Roboto Slab', serif;
+}
     li.panel {
-      padding-top: 0px;
+      margin-bottom: 5px;
     /*  background-color: #428bca; */
 
     }
@@ -55,6 +72,7 @@
 
 
 
+
     /* On small screens, set height to 'auto' for sidenav and grid */
     @media screen and (max-width: 767px) {
       .sidenav {
@@ -63,6 +81,7 @@
       }
       .row.content {height:auto;}
     }
+
 
 
 
@@ -257,7 +276,7 @@ if($icon == 1){?>
     </nav>
 
     <div class="col-sm-9 text-left">
-      <h1>Welcome</h1>
+      <h1>e-learning</h1>
 
       <?php
 

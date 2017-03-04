@@ -3,10 +3,10 @@ session_start();
 if($_SESSION['welcome'] !=2){
     header("Location: home.php");
 }
+
     include 'home_header.php';
 
   ?>
-
 
   <?php
 
@@ -33,7 +33,7 @@ if($_SESSION['welcome'] !=2){
 
 
       		}
-        
+
 
       $sum = $row['TEST'];
       $count = $row['MATH'];
@@ -130,7 +130,7 @@ if($_SESSION['welcome'] !=2){
               <div class="panel-heading">Have an average of <b>7</b> based on your quiz scores.</div>
                  <div class="panel-heading">Your current average is <b><?php echo $english_format_number;?></b>.</div>
                 <div class="panel-heading"><b><?php if($_SESSION['icon'] ==3 ){ echo "[selected]";  }?></b></div>
-                <?php if(  $_SESSION['greatnest'] = "Y"){?>
+                <?php if( $_SESSION['greatnest'] == "Y"){ ?>
         <div class="panel-body"><a href="icon_update.php?n=3">Use This Icon </a></div>
 <?php } else { ?>
     <div class="panel-body"><a href="#"  id="myFunction2">Use This Icon</a></div>

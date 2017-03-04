@@ -7,6 +7,8 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+
   <style>
     /* Remove the navbar's default margin-bottom and rounded borders */
     .navbar {
@@ -14,6 +16,14 @@
       border-radius: 0;
     }
 
+    li.panel {
+      margin-bottom: 5px;
+    /*  background-color: #428bca; */
+
+    }
+    body{
+    font-family: 'Roboto Slab', serif;
+}
 
 
     /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
@@ -49,6 +59,20 @@
     h5{
       text-align:center;
     }
+
+
+    button{
+        color: white;
+    }
+
+    li{
+      color:white;
+    }
+
+    a:link {
+      color: white;
+       text-decoration: none;
+   }
 
 
  #first{
@@ -92,7 +116,6 @@
     .panel-group{
       text-align: center;
     }
-
 
 
 
@@ -314,6 +337,8 @@ if(  $_SESSION['theme'] == 'Light'){
 
        else{?>
                         <li class="active"><?php echo "<a href=$one>Last topic visited: $ok</a>"; ?></li>
+                        <p>
+                          <p>
     <?php }
        ?>
 
@@ -329,10 +354,10 @@ if(  $_SESSION['theme'] == 'Light'){
     if (strpos($url2, 'lessons/') !==false || strpos($url2, 'exercises/') !== false)
 {?>
 
-    <li class="active hidden-xs"><a href="../lessons.php">Lessons</a></li>
+    <li class="panel hidden-xs  active"><a href="../lessons.php">Lessons</a></li>
 
 <?php } else{?>
-   <li class="active hidden-xs"><a href="lessons.php">Lessons</a></li>
+   <li class="panel hidden-xs  active"><a href="lessons.php">Lessons</a></li>
 
 <?php }?>
 
@@ -344,19 +369,19 @@ if(  $_SESSION['theme'] == 'Light'){
       if (strpos($url2, 'lessons/') !==false || strpos($url2, 'exercises/') !== false)
       {?>
   <?php  if($_SESSION['welcome'] != 2){?>
-      <li><a href="#"  id="myFunction">Exercises</a></li>
+      <li class="panel hidden-xs  active"><a href="#"  id="myFunction">Exercises</a></li>
 
      <?php } else { ?>
-    <li class="hidden-xs"><a href="../exercises.php">Exercises</a></li>
+    <li class="panel hidden-xs  active"><a href="../exercises.php">Exercises</a></li>
        <?php }
      }
     else
    {?>
     <?php if($_SESSION['welcome'] != 2){?>
-       <li><a href="#"  id="myFunction">Exercises</a></li>
+       <li class="panel hidden-xs  active"><a href="#"  id="myFunction">Exercises</a></li>
 
       <?php } else { ?>
-     <li class="hidden-xs"><a href="exercises.php">Exercises</a></li>
+     <li class="panel hidden-xs  active"><a href="exercises.php">Exercises</a></li>
         <?php } ?>
   <?php } ?>
 
@@ -367,19 +392,19 @@ if(  $_SESSION['theme'] == 'Light'){
       if (strpos($url2, 'lessons/') !==false || strpos($url2, 'exercises/') !== false)
       {?>
   <?php  if($_SESSION['welcome'] != 2){?>
-      <li><a href="#"  id="myFunction2">Results</a></li>
+      <li class="panel hidden-xs  active"><a href="#"  id="myFunction2">Results</a></li>
 
      <?php } else { ?>
-    <li class="hidden-xs"><a href="../select_result.php">Results</a></li>
+    <li class="panel hidden-xs  active"><a href="../select_result.php">Results</a></li>
        <?php }
      }
     else
    {?>
     <?php if($_SESSION['welcome'] != 2){?>
-       <li><a href="#"  id="myFunction2">Results</a></li>
+       <li class="panel hidden-xs  active"><a href="#"  id="myFunction2">Results</a></li>
 
       <?php } else { ?>
-     <li class="hidden-xs"><a href="select_result.php">Results</a></li>
+     <li class="panel hidden-xs  active"><a href="select_result.php">Results</a></li>
         <?php } ?>
   <?php } ?>
 
@@ -392,19 +417,19 @@ if(  $_SESSION['theme'] == 'Light'){
       if (strpos($url2, 'lessons/') !==false || strpos($url2, 'exercises/') !== false)
       {?>
   <?php  if($_SESSION['welcome'] != 2){?>
-      <li><a href="#"  id="myFunction2">Charts</a></li>
+      <li class="panel hidden-xs  active"><a href="#"  id="myFunction2">Charts</a></li>
 
      <?php } else { ?>
-    <li class="hidden-xs"><a href="../charts.php">Charts</a></li>
+    <li class="panel hidden-xs  active"><a href="../charts.php">Charts</a></li>
        <?php }
      }
     else
    {?>
     <?php if($_SESSION['welcome'] != 2){?>
-       <li><a href="#"  id="myFunction2">Charts</a></li>
+       <li class="panel hidden-xs  active"><a href="#"  id="myFunction2">Charts</a></li>
 
       <?php } else { ?>
-     <li class="hidden-xs"><a href="charts.php">Charts</a></li>
+     <li class="panel hidden-xs  active"><a href="charts.php">Charts</a></li>
         <?php } ?>
   <?php }
   ?>
@@ -426,19 +451,19 @@ if(  $_SESSION['theme'] == 'Light'){
       if (strpos($url2, 'lessons/') !==false || strpos($url2, 'exercises/') !== false)
       {?>
   <?php  if($_SESSION['welcome'] != 2){?>
-      <li><a href="#"  id="myFunction3">Change Icons</a></li>
+      <li class="panel hidden-xs  active"><a href="#"  id="myFunction3">Change Icon</a></li>
 
      <?php } else { ?>
-    <li class="hidden-xs"><a href="../change_icon.php">Change Icons</a></li>
+    <li class="panel hidden-xs  active"><a href="../change_icon.php">Change Icon</a></li>
        <?php }
      }
     else
    {?>
     <?php if($_SESSION['welcome'] != 2){?>
-       <li><a href="#"  id="myFunction3">Change Icons</a></li>
+       <li class="panel hidden-xs  active"><a href="#"  id="myFunction3">Change Icon</a></li>
 
       <?php } else { ?>
-     <li class="hidden-xs"><a href="change_icon.php">Change Icons</a></li>
+     <li class="panel hidden-xs  active"><a href="change_icon.php">Change Icon</a></li>
         <?php } ?>
   <?php } ?>
 
@@ -449,19 +474,19 @@ if(  $_SESSION['theme'] == 'Light'){
       if (strpos($url2, 'lessons/') !==false || strpos($url2, 'exercises/') !== false)
       {?>
   <?php  if($_SESSION['welcome'] != 2){?>
-      <li><a href="#"  id="myFunction4">Settings</a></li>
+      <li class="panel hidden-xs  active"><a href="#"  id="myFunction4">Settings</a></li>
 
      <?php } else { ?>
-    <li class="hidden-xs"><a href="../settings.php">Settings</a></li>
+    <li class="panel hidden-xs  active"><a href="../settings.php">Settings</a></li>
        <?php }
      }
     else
    {?>
     <?php if($_SESSION['welcome'] != 2){?>
-       <li><a href="#"  id="myFunction4">Settings</a></li>
+       <li class="panel hidden-xs  active"><a href="#"  id="myFunction4">Settings</a></li>
 
       <?php } else { ?>
-     <li class="hidden-xs"><a href="settings.php">Settings</a></li>
+     <li class="panel hidden-xs  active"><a href="settings.php">Settings</a></li>
         <?php } ?>
   <?php } ?>
 

@@ -40,16 +40,18 @@ table, td, th, tr, thead {
 th {text-align: left;}
 </style>
 
-<br>
+
+<h2> Results </h2>
+
   <div class="table-responsive">
 <table class="table table-condensed table-bordered table-hover">
   <thead>
     <tr>
-      <th>Math Lesson</th>
-        <th>Score</th>
-        <th>Left Blank</th>
-        <th>Difficulty</th>
-            <th>Date</th>
+      <th><h5><strong>Math Lesson</strong></h5></th>
+        <th><h5><strong>Score</strong></h5></th>
+        <th><h5><strong>Left Blank</strong></h5></th>
+        <th><h5><strong>Difficulty</strong></h5></th>
+            <th><h5><strong>Date</strong></h5></th>
     </tr>
   </thead><?php
 
@@ -100,6 +102,8 @@ echo "</table>\n";
 }
 ?>
   </div>
+</div>
+</div>
   <footer class="container-fluid text-center">
     <p>Footer Text</p>
   </footer>
