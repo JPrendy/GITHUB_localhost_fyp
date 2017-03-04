@@ -72,7 +72,7 @@ $sql2 = "SELECT * FROM quiz_scores where uid= '{$_SESSION['userid']}' ORDER BY s
   $result2 = mysqli_query($db, $sql2);
 if (!$row = mysqli_fetch_assoc($result2)){
 
-  echo "Your username or password is incorrect!";
+
       header("Location: final.php?error=real test");
 
 
@@ -84,8 +84,9 @@ if (!$row = mysqli_fetch_assoc($result2)){
 <table class="table table-condensed table-bordered table-hover">
    <thead>
      <tr>
-       <th>Your Answers</th>
-       <th>Correct Answers</th>
+
+         <th><h5><strong>Your Answers</strong></h5></th>
+          <th><h5><strong>Correct Answers</strong></h5></th>
 
      </tr>
    </thead>
@@ -112,9 +113,6 @@ $ok = $interval->format(" %i minutes %s seconds");
 echo "<br>";
 ?>
 <strong><h3> You spent <?php echo $ok; ?> doing the test </strong></h3>
-
-
-
 
 
 <?php

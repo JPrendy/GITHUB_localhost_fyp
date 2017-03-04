@@ -38,8 +38,9 @@
 
     /* Set black background color, white text and some padding */
     footer {
-      background-color: #555;
+      background-color: black;
       color: white;
+      margin-top: 10px;
       padding: 15px;
     }
 
@@ -86,7 +87,14 @@
    margin-right:180px;*/
     }
 
+    #length{
+      padding: 3px;
+    }
 
+      a {
+        color: black;
+         text-decoration: none;
+     }
 
     span:hover + #first {
         display: block;
@@ -332,6 +340,8 @@ if(  $_SESSION['theme'] == 'Light'){
        if (strpos($url, 'lessons/') !==false || strpos($url, 'exercises/') !== false){?>
 
               <li class="active"><?php echo "<a href=$on>Last topic visited: $ok</a>"; ?></li>
+              <p>
+                <p>
     <?php   }
 
 

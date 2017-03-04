@@ -18,12 +18,13 @@
   }
 
   footer {
-    background-color: #555;
+    background-color: black;
     color: white;
+    margin-top: 10px;
     padding: 15px;
   }
 
-  
+
 
   button{
       color: white;

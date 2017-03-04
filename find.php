@@ -69,6 +69,7 @@ if (strpos($url, 'error=first_inserted') !== false){
 ?>
 
 
+
 <div class="alert alert-success alert-dismissable">
 <a href="#" id='ok' class="close" data-dismiss="alert" aria-label="close">×</a>
 <strong>You have sent your invitation.</strong>
@@ -175,14 +176,14 @@ if (strpos($url, 'error=already_inserted') !== false){
     $total_pages = ceil($total_records / $per_page);
 
     //Going to first page
-    echo "<center><a href='find.php?page=1'>".'First Page'."</a> ";
+    echo "<center><button class='btn btn-default btn-md'> <a href='find.php?page=1'>".'First Page'."</a></button> ";
 
     for ($i=1; $i<=$total_pages; $i++) {
 
-    echo "<a href='find.php?page=".$i."'>".$i."</a> ";
+    echo "<a id=length href='find.php?page=".$i."'>".$i."</a> ";
     };
     // Going to last page
-    echo "<a href='find.php?page=$total_pages'>".'Last Page'."</a></center> ";
+    echo "<button class='btn btn-default btn-md'> <a href='find.php?page=$total_pages'>".'Last Page'."</a></center></button ";
 
 
 

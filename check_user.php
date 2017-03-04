@@ -131,14 +131,14 @@ $total_records = mysqli_num_rows($result);
 $total_pages = ceil($total_records / $per_page);
 
 //Going to first page
-echo "<center><a href='settings.php?page=1'>".'First Page'."</a> ";
+echo "<center><button class='btn btn-default btn-md'><a href='settings.php?page=1'>".'First Page'."</a></button> ";
 
 for ($i=1; $i<=$total_pages; $i++) {
 
 echo "<a href='settings.php?page=".$i."'>".$i."</a> ";
 };
 // Going to last page
-echo "<a href='settings.php?page=$total_pages'>".'Last Page'."</a></center> ";
+echo "<button class='btn btn-default btn-md'><a href='settings.php?page=$total_pages'>".'Last Page'."</a></button></center> ";
 
 
 

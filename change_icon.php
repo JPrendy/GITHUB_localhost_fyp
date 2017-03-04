@@ -88,7 +88,7 @@ if($_SESSION['welcome'] !=2){
             <div class="panel-heading">You can use this icon by <b>default</b>.</div>
                   <div class="panel-heading"><b><?php if($_SESSION['icon'] ==1 ){ echo "[selected]";  }?></b></div>
             <!--make a test scenario where the user has to done the lesson before they are able to do this topic-->
-            <div class="panel-body"><a href="icon_update.php?n=1">Use This Icon </a></div>
+            <div class="panel-body"><button class='btn btn-default btn-md'><a href="icon_update.php?n=1">Use This Icon </a></button></div>
 
           </div>
           </div>
@@ -107,9 +107,9 @@ if($_SESSION['welcome'] !=2){
               <div class="panel-heading">You have to do <b><?php if($count_test <= 0){  echo  "0";   }else echo $count_test?></b> more quizes.</div>
                    <div class="panel-heading"><b><?php if($_SESSION['icon'] ==2 ){ echo "[selected]";  }?></b></div>
                    <?php if($count >=10){?>
-            <div class="panel-body"><a href="icon_update.php?n=2">Use This Icon</a></div>
+            <div class="panel-body"><button class='btn btn-default btn-md'><a href="icon_update.php?n=2">Use This Icon</a></button></div>
         <?php } else { ?>
-             <div class="panel-body"><a href="#"  id="myFunction">Use This Icon</a></div>
+             <div class="panel-body"><button class='btn btn-default btn-md'><a href="#"  id="myFunction">Use This Icon</a></button></div>
         <?php } ?>
            </div>
 
@@ -133,7 +133,7 @@ if($_SESSION['welcome'] !=2){
                 <?php if( $_SESSION['greatnest'] == "Y"){ ?>
         <div class="panel-body"><a href="icon_update.php?n=3">Use This Icon </a></div>
 <?php } else { ?>
-    <div class="panel-body"><a href="#"  id="myFunction2">Use This Icon</a></div>
+    <div class="panel-body"><button class='btn btn-default btn-md'><a href="#"  id="myFunction2">Use This Icon</a></button></div>
 <?php } ?>
 
         </div>
@@ -153,9 +153,9 @@ if($_SESSION['welcome'] !=2){
                    <div class="panel-heading">Your current score is <b><?php echo $sum;?></b>.</div>
                  <div class="panel-heading"><b><?php if($_SESSION['icon'] ==4 ){ echo "[selected]";  }?></b></div>
          <?php if($sum >=100){?>
-           <div class="panel-body"><a href="icon_update.php?n=4">Use This Icon</a></div>
+           <div class="panel-body"><button class='btn btn-default btn-md'><a href="icon_update.php?n=4">Use This Icon</a></button></div>
       <?php } else { ?>
-           <div class="panel-body"><a href="#"  id="myFunction3">Use This Icon</a></div>
+           <div class="panel-body"><button class='btn btn-default btn-md'><a href="#"  id="myFunction3">Use This Icon</a></button></div>
       <?php } ?>
 </div>
 

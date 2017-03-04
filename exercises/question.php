@@ -109,7 +109,7 @@ function goBack() {
 
 
 
- <div class="current">Question <?php echo  $question['question_number']; ?> / <?php echo $total ?></div>
+ <div class="current"><b>Question <?php echo  $question['question_number']; ?> / <?php echo "$total." ?></b></div>
 
 <p class="question">
 <?php    if ($current_test_hint == 'text_hint_Y'){

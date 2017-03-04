@@ -160,8 +160,7 @@ $_SESSION['lesson'] = $lesson;
 Here we will go through the content of our topic
 Algebra
 
-  <button type="submit" class="btn btn-danger btn-s" name="Score_btn"> <a href="../exercises/question.php?n=1&m=Algebra"> here to test algebra </a></button>
-  <?php echo "<button class='btn btn-success btn-md'> <a href='login_page.php'> here to test algebra </a></button>";?>
+  <?php echo "<button class='btn btn-success btn-md'> <a href='../exercises/question.php?n=1&m=Algebra'> here to test algebra </a></button>";?>
 <br>
 <br>
 <br>

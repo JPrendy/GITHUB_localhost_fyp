@@ -43,7 +43,7 @@ session_start();
         <div class="panel-group">
           <div class="panel panel-default">
             <div class="panel-heading">Panel Header</div>
-            <div class="panel-body"><a href="lessons/Trignometry.php">Trignometry </a></div>
+            <div class="panel-body"><button class='btn btn-default btn-md'><a href="lessons/Trignometry.php">Trignometry </a></button></div>
 
           </div>
           </div>
@@ -56,7 +56,7 @@ session_start();
              <div class="panel-group">
                <div class="panel panel-default">
            <div class="panel-heading">Panel Header</div>
-            <div class="panel-body"><a href="lessons/algebra.php">Algebra</a></div>
+            <div class="panel-body"><button class='btn btn-default btn-md'><a href="lessons/algebra.php">Algebra</a></button></div>
            </div>
 
 

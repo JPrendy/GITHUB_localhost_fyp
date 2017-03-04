@@ -29,6 +29,15 @@
        text-decoration: none;
    }
 
+ #length{
+   padding: 3px;
+ }
+
+   a {
+     color: black;
+      text-decoration: none;
+  }
+
     /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
     .row.content {height: 450px}
 
@@ -49,9 +58,10 @@
     }
     /* Set black background color, white text and some padding */
     footer {
-      background-color: #555;
+      background-color: black;
       color: white;
       padding: 15px;
+          margin-top: 10px;
     }
 
     h1{
@@ -312,7 +322,7 @@ if($icon == 1){?>
      echo "<br>";
       echo "Your current difficulty level is ";?><b><?php echo $_SESSION['difficulty_level']; ?></b><?php
       echo "<br>";
-            echo "Your current average_score is ";?><b><?php echo $_SESSION['average_score']; ?></b><?php
+            echo "Your current average score is ";?><b><?php echo $_SESSION['average_score']; ?></b><?php
       echo "<br>";
           echo "<br>";
       ?>
@@ -480,6 +490,7 @@ $('#myAlert').hide('fade');
 <footer class="container-fluid text-center " id="foot01">
 
 </footer>
+	<script src="year.js"></script>
 
 </body>
 </html>
