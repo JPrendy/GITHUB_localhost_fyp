@@ -14,14 +14,16 @@ if ( isset($_POST['Score_btn']) ) {
 $maths_lesson = mysql_real_escape_string($_POST['maths_lessons']);
 $difficulty_level = mysql_real_escape_string($_POST['difficulty_level']);
 $order = mysql_real_escape_string($_POST['order']);
+$limit = mysql_real_escape_string($_POST['limit']);
 
 $_SESSION['math_lesson2'] = 	$maths_lesson;
 $_SESSION['difficulty_level2'] = 	$difficulty_level;
 $_SESSION['order'] = 	$order;
+$_SESSION['limit_r'] = 	$limit;
 //echo "$maths_lesson";
 }
 
-$per_page=10;
+$per_page=$_SESSION['limit_r'];
 if (isset($_GET["page"])) {
 
 $page = $_GET["page"];

@@ -103,6 +103,17 @@ th {text-align: left;}
 
   <br><br>
 
+  <div class="form-group col-xs-8">
+    <div class="col-xs-offset-4">
+<label for="sel1">Select How Many Columns To Return:</label>
+<select  class="form-control" name="limit">
+  <option value="10">...</option>
+  <option value="5">5</option>
+  <option value="10">10</option>
+
+</select>
+</div>
+</div>
 
 
 </div>
