@@ -118,6 +118,10 @@
     h2{
       text-align:center;
     }
+
+    h4{
+      text-align:center;
+    }
     .question{
       text-align: center;
              font-size: 115%;

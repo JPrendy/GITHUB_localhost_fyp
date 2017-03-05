@@ -8,6 +8,6 @@
   $result = mysqli_query($db, $sql);
   session_destroy();
 
-  header("Location: ../index.php");
+  header("Location: ../login_page.php");
 
 ?>

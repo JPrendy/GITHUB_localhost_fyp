@@ -128,6 +128,7 @@ if($_SESSION['welcome'] !=2){
         <div class="panel panel-default">
              <div class="panel-heading"><img src="images/background3.jpg" class="img-responsive" alt="Cinque Terre" width="304" height="236"></div>
               <div class="panel-heading">Have an average of <b>7</b> based on your quiz scores.</div>
+                        <div class="panel-heading">Unlocked: <b><?php if( $_SESSION['greatnest'] == "Y"){ echo "Yes";  }else{ echo "No";}?></b> </div>
                  <div class="panel-heading">Your current average is <b><?php echo $english_format_number;?></b>.</div>
                 <div class="panel-heading"><b><?php if($_SESSION['icon'] ==3 ){ echo "[selected]";  }?></b></div>
                 <?php if( $_SESSION['greatnest'] == "Y"){ ?>

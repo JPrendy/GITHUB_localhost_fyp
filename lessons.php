@@ -42,8 +42,12 @@ session_start();
         <!--<p>The panel-group class clears the bottom-margin. Try to remove the class and see what happens.</p>-->
         <div class="panel-group">
           <div class="panel panel-default">
-            <div class="panel-heading">Panel Header</div>
-            <div class="panel-body"><button class='btn btn-default btn-md'><a href="lessons/Trignometry.php">Trignometry </a></button></div>
+            <div class="panel-heading">Topic: <b>#</b></div>
+            <div class="panel-heading">Topic: <b>#</b></div>
+            <div class="panel-heading">Topic: <b>#</b></div>
+            <div class="panel-heading">Topic: <b>#</b></div>
+
+            <div class="panel-body"><button class='btn btn-warning btn-md'><a href="#">COMING SOON </a></button></div>
 
           </div>
           </div>
@@ -55,7 +59,11 @@ session_start();
              <!--<p>The panel-group class clears the bottom-margin. Try to remove the class and see what happens.</p>-->
              <div class="panel-group">
                <div class="panel panel-default">
-           <div class="panel-heading">Panel Header</div>
+                 <div class="panel-heading">Topic: <b> Introduction to Algebra</b></div>
+                 <div class="panel-heading">Topic: <b>Common Factors</b></div>
+                 <div class="panel-heading">Topic: <b>Quadratic Factors</b></div>
+                 <div class="panel-heading">Topic: <b> Multiply Binomials by Polynomals</b></div>
+
             <div class="panel-body"><button class='btn btn-default btn-md'><a href="lessons/algebra.php">Algebra</a></button></div>
            </div>
 
@@ -68,6 +76,8 @@ session_start();
 </div>
 
 
+<br>
+<br>
 
 
 <footer class="container-fluid text-center" id="foot01">

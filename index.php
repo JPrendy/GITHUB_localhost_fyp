@@ -1,11 +1,13 @@
-<?php
-    include 'header.php';
-?>
+
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+      <?php
+          include 'header.php';
+      ?>
 <div class="header">
-	<h1>E-Learning Application</h1>
+	<center><h1>E-Learning Application</h1></center>
 </div>
 
 

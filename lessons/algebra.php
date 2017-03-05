@@ -149,20 +149,22 @@ dddddddddddddddddddd
       </div>
 
 
+      <br>
+      <br>
+          <hr>
+      <h4>Press the button below in order to test your knowledge in Algebra</h4>
+        <?php echo "<button class='btn btn-default btn-md'> <a href='../exercises/question.php?n=1&m=Algebra'>Algebra Quiz </a></button>";?>
+
+</div>
+</div>
     </div>
   </div>
 
 
 
-<br>
-<br>
 
-Here we will go through the content of our topic
-Algebra
 
-  <?php echo "<button class='btn btn-success btn-md'> <a href='../exercises/question.php?n=1&m=Algebra'> here to test algebra </a></button>";?>
-<br>
-<br>
+
 <br>
 
 <script src="year.js"></script>

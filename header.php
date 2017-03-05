@@ -24,7 +24,9 @@
     padding: 15px;
   }
 
-
+  body{
+  font-family: 'Roboto Slab', serif;
+}
 
   button{
       color: white;

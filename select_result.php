@@ -118,7 +118,6 @@ th {text-align: left;}
 
 </div>
   <br><br>
-
   <div class="form-group">
 <div class="col-sm-offset-2 col-sm-10">
     <button type="submit" class="btn btn-primary btn-s" name="Score_btn"> submit </button>

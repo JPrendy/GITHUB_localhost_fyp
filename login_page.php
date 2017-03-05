@@ -1,9 +1,9 @@
 <?php
     include 'header.php';
 ?>
-
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
 <div class="header">
-	<h1>E-Learning Application</h1>
+	<center><h1>E-Learning Application</h1></center>
 </div>
 
 
