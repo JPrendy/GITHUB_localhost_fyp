@@ -2,12 +2,12 @@
 
 session_start();
 
-    include 'home_header.php';
 
 
-	$connection = mysqli_connect("localhost", "root", "" , "logintest");
 
+	$db = mysqli_connect("localhost", "root", "" , "logintest");
 
+if ( isset($_POST['Score_btn']) ) {
 $limit = mysql_real_escape_string($_POST['limit']);
 $type = mysql_real_escape_string($_POST['type']);
 $chart = mysql_real_escape_string($_POST['chart']);
@@ -15,16 +15,42 @@ $order = mysql_real_escape_string($_POST['order']);
 //echo $chart;
 //fetch table rows from mysql db
 //$sql = "select * from users";  //in my case it would be users
-$sql = "SELECT * FROM  quiz_scores Where uid = '{$_SESSION['userid']}' ORDER BY sc_time $order LIMIT $limit   ";
-$result = mysqli_query($connection, $sql) or die("Error in Selecting" . mysqli_error($connection));
-
-if (!$row = mysqli_fetch_assoc($result)){
-
-  echo "Your username or password is incorrect!";
-      header("Location: ../login_page.php?error=empty1");
-
+$_SESSION['limit_ch'] = 	$limit;
+$_SESSION['type_ch'] = 	$type;
+$_SESSION['chart_ch'] = 	$chart;
+$_SESSION['order_ch'] = 	$order;
 
 }
+
+  include 'home_header.php';
+
+$per_page=$_SESSION['limit_ch'];
+if (isset($_GET["page"])) {
+
+$page = $_GET["page"];
+
+}
+
+else {
+
+$page=1;
+
+}
+
+// Page will start from 0 and Multiple by Per Page
+$start_from = ($page-1) * $per_page;
+
+//Selecting the data from table but with limit
+
+
+
+
+$sql = "SELECT * FROM  quiz_scores Where uid = '{$_SESSION['userid']}' ORDER BY sc_time {$_SESSION['order_ch']} LIMIT $start_from, $per_page ";
+$result = mysqli_query($db, $sql);
+
+
+
+
 	//$math_id = $row['math_id'];
 
 
@@ -58,7 +84,13 @@ $table['cols'] = array(
     $temp = array();
     // the following line will be used to slice the Pie chart
     //can also make this SC_TIME
-    $temp[] = array('v' => (string) $r[$type]);
+
+
+
+
+
+
+    $temp[] = array('v' => (string) $r[$_SESSION['type_ch']]);
 
 //   $temp[] = array('x' => (string) $r['uid']);
     // Values of each slice
@@ -103,7 +135,7 @@ $table['cols'] = array(
       // Create our data table out of JSON data loaded from server.
       var data = new google.visualization.DataTable(<?=$jsonTable?>);
       var options = {
-           title: 'Quiz Results displayed in a <?php echo $chart; ?>.',
+           title: 'Quiz Results displayed in a <?php echo $_SESSION['chart_ch']; ?>.',
           is3D: 'true',
 
 
@@ -111,7 +143,7 @@ $table['cols'] = array(
       // Instantiate and draw our chart, passing in some options.
       // Do not forget to check your div ID
 //      var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
-    var chart = new google.visualization.<?php echo $chart; ?>(document.getElementById("columnchart_material"));
+    var chart = new google.visualization.<?php echo $_SESSION['chart_ch']; ?>(document.getElementById("columnchart_material"));
 
       chart.draw(data, options);
     }
@@ -130,10 +162,31 @@ $table['cols'] = array(
 
     <!-- <div class="container"> -->
       <div class="row">
-<div id="columnchart_material" style="width: 930px; height: 600px"></div>
+<div id="columnchart_material"></div>
+
+<?php
+$sql = "SELECT * FROM  quiz_scores Where uid = '{$_SESSION['userid']}' ORDER BY sc_time {$_SESSION['order_ch']} ";
+    $result = mysqli_query($db, $sql);
+
+    // Count the total records
+    $total_records = mysqli_num_rows($result);
+
+    //Using ceil function to divide the total records on per page
+    $total_pages = ceil($total_records / $per_page);
+
+    //Going to first page
+    echo "<center><button class='btn btn-default btn-md'> <a href='ColumnChart_test.php?page=1'>".'First Page'."</a></button> ";
+
+    for ($i=1; $i<=$total_pages; $i++) {
+
+    echo "<a id=length href='ColumnChart_test.php?page=".$i."'>".$i."</a> ";
+    };
+    // Going to last page
+    echo "<button class='btn btn-default btn-md'> <a href='ColumnChart_test.php?page=$total_pages'>".'Last Page'."</a></center></button ";
 
 
-
+?>
+</div>
 </div>
 </div>
 </div>

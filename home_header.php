@@ -129,6 +129,30 @@
     }
 
 
+  #columnchart_material
+  {
+    width: 930px;
+    height: 600px;
+  }
+
+/*
+    @media screen and (max-width: 520px) {
+      #columnchart_material {
+
+           height: 200px;
+        width: 380px;
+      }
+
+    }
+  /*this helps for smaller screen sizes*/
+/*
+    @media screen and (max-width: 400px) {
+      #columnchart_material {
+        height: 200px;
+        width: 280px;
+      }
+}
+*/
 
 
 

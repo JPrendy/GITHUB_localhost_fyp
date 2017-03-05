@@ -93,6 +93,27 @@
     }
 
 
+    #myCarousel {
+
+      width: 500px;
+    }
+
+    /*this helps for smaller screen sizes*/
+    @media screen and (max-width: 520px) {
+      #myCarousel {
+
+        width: 380px;
+      }
+
+    }
+  /*this helps for smaller screen sizes*/
+    @media screen and (max-width: 400px) {
+      #myCarousel {
+
+        width: 280px;
+      }
+
+    }
 
 
   </style>
@@ -330,7 +351,7 @@ if($icon == 1){?>
       ?>
 
       <p>Welcome to my e-learning application. The concept behind my application is to help how you acquire and learn new knowledge. I hope that by using this Web Application you will notice an improvement on your knowledge on the math topics I cover in my application. Please look at the <b>lessons</b>
-         tab and the feedback provided after each exercise to see where you could improve.  </p>
+         tab and the <b>feedback</b> provided after each exercise to see where you could improve.  </p>
 
       <hr>
 
@@ -368,7 +389,7 @@ if($icon == 1){?>
 
   <div class="form-group col-sm-12">
       <div class="bs-example">
-          <div id="myCarousel" class="carousel slide"  style="width: 400px;  margin: 0 auto" data-ride="carousel">
+          <div id="myCarousel" class="carousel slide"  style="  margin: 0 auto" data-ride="carousel">
               <!-- Carousel indicators -->
               <ol class="carousel-indicators">
                   <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
