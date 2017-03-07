@@ -16,7 +16,6 @@ if($_SESSION['welcome'] !=2){
 </div>
 
 
-
 <div class="container-fluid text-center">
     <div class="row content">
 
@@ -26,6 +25,21 @@ if($_SESSION['welcome'] !=2){
 
 
     <div class="col-sm-9 text-centre">
+
+      <?php      $url = "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
+          if (strpos($url, 'error=session') !== false){
+            //$ok= "Fill out all the fields!";
+          ?>
+          <div class="alert alert-success alert-dismissable">
+          <a href="#" id='ok' class="close" data-dismiss="alert" aria-label="close">×</a>
+          <strong>Update</strong> You can now access the rest of the web application. Feel free to navigate around.
+          </div>
+          <?php
+
+          }
+      ?>
+
+
 
      <form class="form-horizontal" method="POST"  >
            <div class="panel-heading"><h3><u>Change Password</u></h3></div>

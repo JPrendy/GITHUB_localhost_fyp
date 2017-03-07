@@ -2,7 +2,7 @@
  include 'database.php';
 session_start();
 if($_SESSION['blank'] ==null){
-    header("Location: ../home.php");
+  header("Location: ../home.php");
 }
 
     include '..\home_header_final.php';
