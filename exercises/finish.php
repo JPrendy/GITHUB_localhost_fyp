@@ -157,8 +157,8 @@ $result = mysqli_query($db, $query);
 ?>
 
 
-
-
+<br/>
+<h2> Your Results </h2>
      <table class="table table-condensed table-bordered table-hover">
         <thead>
           <tr>
@@ -171,7 +171,7 @@ $result = mysqli_query($db, $query);
 <?php
 
 for ($x = 1; $x <= 10; $x++) {
-echo  "<strong>";
+//echo  "<strong>";
 ?>
 <tbody>
     <?php if($_SESSION['your'.$x] == $_SESSION['correct'.$x]){
@@ -180,6 +180,10 @@ echo  "<strong>";
 <?php if($_SESSION['your'.$x] != $_SESSION['correct'.$x]){
 ?>  <tr  class="danger"><?php
 }?>
+<?php if($_SESSION['your'.$x] == "blank"){
+?>  <tr  class="warning"><?php
+}?>
+
 
      <td> <?php echo "<strong>".$_SESSION['your'.$x], "</strong> is the answer you picked"; ?> </td>
 
@@ -205,9 +209,7 @@ echo "<br>";
 </tbody>
 </table>
 
-
-  <div class="panel-body"><a href="back_to_exercises.php?update=back">back to exercises </a></div>
-
+  <div class="panel-body"><button class='btn btn-default btn-lg'><a href="back_to_exercises.php?update=back">Return to Exercises </a></button></div>
 
 
 
@@ -215,16 +217,23 @@ echo "<br>";
 
 
 
-</div>
-</div>
-</div>
+
 <br/>
-<br/>
-<br/>
+
+
+  <div class="panel-body"><button class='btn btn-primary btn-lg'>
 <a class="twitter-share-button"
-href=https://twitter.com/intent/tweet?url=https%3A%2F%2FFinal-Year-Project.com%2F&text=Final+Year+Project+e-learning.&hashtags=e-learning
+href=https://twitter.com/intent/tweet?url=%3A%2F%2F%2F&text=Final+Year+Project+e-learning+application.I+just+did+a+quiz+that+dynamically+changed+based+on+my+results+and+allows+me+to+customise+how+the+quiz+appears.&hashtags=e-learning
   data-size="large">
-Tweet</a>
+Tweet your experience</a>
+</button>
+</div>
+
+
+</div>
+</div>
+</div>
+
 <br/>
 <br/>
 

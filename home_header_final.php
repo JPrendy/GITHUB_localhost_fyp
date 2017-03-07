@@ -66,7 +66,29 @@
       text-align:center;
     }
 
+    a:link {
+      color: black;
+       text-decoration: none;
+   }
 
+   a {
+     color: black;
+      text-decoration: none;
+  }
+
+  a:hover {
+    color: black;
+     text-decoration: none;
+ }
+
+  span:hover + #first {
+      display: block;
+  }
+
+table{
+  margin-top: -175px;
+
+}
     button{
         color: white;
     }
