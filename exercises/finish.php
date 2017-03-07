@@ -5,7 +5,7 @@ if($_SESSION['blank'] ==null){
     header("Location: ../home.php");
 }
 
-    include '..\home_header_question.php';
+    include '..\home_header_final.php';
 
 
   ?>
@@ -235,7 +235,7 @@ Tweet</a>
   </footer>
 
 
-  <script src="year.js"></script>
+  <script src="../year.js"></script>
 </div>
 
 </body>

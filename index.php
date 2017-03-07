@@ -2,7 +2,27 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script   src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
       <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+      <script>
+      // create angular app
+    var validationApp = angular.module('validationApp', []);
+
+    // create angular controller
+    validationApp.controller('mainController', function($scope) {
+
+        // function to submit the form after all validation has occurred
+        $scope.submitForm = function() {
+
+            // check to make sure the form is completely valid
+            if ($scope.userForm.$valid) {
+
+            }
+
+        };
+
+    });
+    </script>
       <?php
           include 'header.php';
       ?>
@@ -15,7 +35,8 @@
 
 
 
-<div class="container-fluid text-center">
+<div ng-app="validationApp" ng-controller="mainController">
+  <div class="container-fluid text-center">
     <div class="row content">
 
     <div class="col-sm-4 col-sm-offset-4 text-centre">
@@ -60,10 +81,20 @@
         </div>
      <?php
       }
+      if
+      (strpos($url, 'error=passwordlength') !== false){
+      //	echo "Your passwords must be the same";?>
+        <div class="alert alert-danger alert-dismissable">
+        <a href="#" id='ok' class="close" data-dismiss="alert" aria-label="close">×</a>
+        <strong>Warning!</strong> The username you inserted does not meet the signup criteria.
+        </div>
+     <?php
+      }
+
       ?>
 </div>
   <div class="col-sm-12 text-centre">
-       <form class="form-horizontal" action="includes/signup.inc.php" method="POST" >
+       <form class="form-horizontal" action="includes/signup.inc.php" method="POST"  name="userForm" ng-submit="submitForm()"  >
 
 		  <div class="form-group">
       <label class="control-label  col-sm-offset-2  col-sm-2" for="text">Name:</label>
@@ -74,11 +105,17 @@
     </div>
 	<br>
 
-	      <div class="form-group">
+
+
+	      <div class="form-group"  ng-class="{ 'has-error' : userForm.username.$invalid && !userForm.uid.$pristine }">
       <label class="control-label  col-sm-offset-2  col-sm-2" for="email">Username:</label>
       <div class="col-sm-3">
-        <input type="text" class="form-control" name="uid" id="uid" placeholder="Username">
+        <input type="text" class="form-control" name="uid" id="uid" placeholder="Username" ng-model="user.uid" ng-minlength="4" ng-maxlength="9">
       </div>
+        <div class="col-sm-2">
+      <span ng-show="userForm.uid.$error.minlength">Username is too short.</span>
+      <span ng-show="userForm.uid.$error.maxlength">Username is too long.</span>
+    </div>
     </div>
     <br>
 
@@ -136,7 +173,7 @@
 </div>
 </div>
 </div>
-
+</div>
 	<br>
 	<br>
 

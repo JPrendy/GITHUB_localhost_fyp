@@ -37,6 +37,11 @@ if (strpos($url, 'update=back') !== false){
   header("Location: ../exercises.php");
 
 }
+if (strpos($url, 'error=home') !== false){
+  //$ok= "Fill out all the fields!";
+  header("Location: ../home.php");
+
+}
 
 }
 
