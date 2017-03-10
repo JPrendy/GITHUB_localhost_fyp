@@ -36,6 +36,14 @@
     header("Location: ../index.php?error=passwordlength");
     exit();
   }
+  if ((strlen($password) <= 3) or (strlen($password) >= 13) )  {
+    header("Location: ../index.php?error=passwordfail");
+    exit();
+  }
+  if ((strlen($password2) <= 3) or (strlen($password2) >= 13) )  {
+    header("Location: ../index.php?error=passwordfail");
+    exit();
+  }
 	 if (empty($password)){
 
 		header("Location: ../index.php?error=empty");

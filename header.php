@@ -6,7 +6,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Register, login and logout user php mysql</title>
+	<title>Final Year Project</title>
+  <link rel="icon" href="images/e.png">
 
 	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
@@ -64,7 +65,7 @@ a:hover, a:active {
   <nav class="navbar navbar-inverse">
     <div class="container-fluid">
 
-        <a class="navbar-brand active" <a href="index.php">e-learning</a>
+        <a class="navbar-brand active" <a href="index.php"><span class="glyphicon glyphicon-home  "></span> e-learning</a>
 
       <!-- <button class="btn btn-success btn-s"> <a href="login_page.php"> LOGIN </a></button>-->
 

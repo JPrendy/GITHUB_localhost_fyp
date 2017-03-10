@@ -33,6 +33,12 @@ if (strpos($url, 'error=settings') !== false){
 header("Location: ../settings.php?error=session");
 
 }
+if (strpos($url, 'update=dynamic') !== false){
+//$ok= "Fill out all the fields!";
+header("Location: ../lessons/Algebra.php?error=session");
+
+}
+
 else{
   header("Location: ../exercises.php?error=session");
 }
@@ -91,6 +97,12 @@ if (strpos($url, 'error=ci') !== false){
 header("Location: ../change_icon.php");
 
 }
+if (strpos($url, 'update=dynamic') !== false){
+//$ok= "Fill out all the fields!";
+header("Location: ../lessons/Algebra.php");
+
+}
+
 
 
 

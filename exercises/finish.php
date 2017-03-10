@@ -28,7 +28,7 @@ if($_SESSION['blank'] ==null){
   <div class="col-sm-9 text-centre">
 <?php $math_lesson =  $_SESSION['math_lesson'];?>
 
-<h3> Congratulations! You have completed the <?php echo  $math_lesson; ?> test. </h3>
+<h3> Congratulations! You have completed the <b><?php echo  $math_lesson; ?></b> test. </h3>
 <h3> Your Final Score is: <b> <?php echo $_SESSION['score']; ?>/10</b></h3>
 
 <?php

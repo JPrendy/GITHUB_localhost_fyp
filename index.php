@@ -90,6 +90,15 @@
         </div>
      <?php
       }
+      if
+      (strpos($url, 'error=passwordfail') !== false){
+      //	echo "Your passwords must be the same";?>
+        <div class="alert alert-danger alert-dismissable">
+        <a href="#" id='ok' class="close" data-dismiss="alert" aria-label="close">×</a>
+        <strong>Warning!</strong> The password you inserted does not meet the signup criteria.
+        </div>
+     <?php
+      }
 
       ?>
 </div>
@@ -131,33 +140,41 @@
 	<br>
 
 
-	 <div class="form-group">
+	 <div class="form-group" ng-class="{ 'has-error' : userForm.username.$invalid && !userForm.pwd.$pristine }">
       <label class="control-label  col-sm-offset-2  col-sm-2" for="email">Password:</label>
       <div class="col-sm-3">
-        <input type="password" class="form-control" name="pwd" id="pwd" placeholder="Password">
-		</div>
+        <input type="password" class="form-control" name="pwd" id="pwd" placeholder="Password"  ng-model="user.pwd" ng-minlength="4" ng-maxlength="12">
 
-		<!-- <button class="control-label"  type="button" id="eye"> -->
+  	</div>
+
 
          <div class="col-sm-1">
        		 <label type="button" id="eye">
            <img src="https://cdn0.iconfinder.com/data/icons/feather/96/eye-16.png" alt="eye2" />
        </label>
        </div>
-
+       <div class="col-sm-2">
+     <span ng-show="userForm.pwd.$error.minlength">Password is too short.</span>
+     <span ng-show="userForm.pwd.$error.maxlength">Password is too long.</span>
+     </div>
     </div>
 	<br>
 
-	 <div class="form-group">
+	 <div class="form-group" ng-class="{ 'has-error' : userForm.username.$invalid && !userForm.pwd2.$pristine }">
       <label class="control-label col-sm-offset-2 col-sm-2" for="email">Reconfirm Password:</label>
       <div class="col-sm-3">
-        <input type="password" class="form-control" name="pwd2" id="pwd2" placeholder="Reconfirm Password">
+        <input type="password" class="form-control" name="pwd2" id="pwd2" placeholder="Reconfirm Password"  ng-model="user.pwd2" ng-minlength="4" ng-maxlength="9">
       </div>
 
   <div class="col-sm-1">
 		 <label type="button" id="eye2">
     <img src="https://cdn0.iconfinder.com/data/icons/feather/96/eye-16.png" alt="eye2" />
 </label>
+</div>
+<div class="col-sm-2">
+<span ng-show="userForm.pwd2.$error.minlength">Password is too short.</span>
+<span ng-show="userForm.pwd2.$error.maxlength">Password is too long.</span>
+</div>
 </div>
 		<!-- <button type="submit" class="btn btn-primary btn-xs" name="register_btn"> SIGN UP </button>-->
 

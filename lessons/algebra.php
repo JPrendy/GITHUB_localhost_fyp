@@ -78,6 +78,19 @@ $_SESSION['lesson'] = $lesson;
 
     <h2>Algebra Lesson</h2>
 
+    <?php      $url = "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
+        if (strpos($url, 'error=session') !== false){
+          //$ok= "Fill out all the fields!";
+        ?>
+        <div class="alert alert-success alert-dismissable">
+        <a href="#" id='ok' class="close" data-dismiss="alert" aria-label="close">×</a>
+        <strong>Update</strong> You can now access the rest of the web application. Feel free to navigate around.
+        </div>
+        <?php
+
+        }
+    ?>
+
     <ul class="nav nav-pills">
       <li class="active" ><a data-toggle="pill" href="#home">Text</a></li>
       <li ><a data-toggle="pill" href="#menu1">Video</a></li>

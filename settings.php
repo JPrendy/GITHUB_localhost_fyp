@@ -134,9 +134,31 @@ if($_SESSION['welcome'] !=2){
 
 </form>
 
+	<?php $db = mysqli_connect("localhost", "root", "" , "logintest");
+
+$query = "SELECT * from dynamic_settings
+WHERE uid ='{$_SESSION['userid']}' ";
+$result = mysqli_query($db, $query);
+?>
+
+<?php    while($row = mysqli_fetch_array($result)) {?>
+  <hr>
 
 
+    <div class="panel-heading"><h3><u>Change User Settings</u></h3></div>
+  <div class="panel panel-default">
+      <!-- Default panel contents -->
+      <div class="panel-heading"><h4>Personalise your user settings</h4></div>
+<form action="exercises/feedback.php?notice=setting" method="post">
+ <div class="checkbox"><input type="checkbox" name="check_list[]" value="<?php echo $row[1]?>" <?php if ($row[1] == 'text_hint_Y') echo "checked='checked'";?> > Enable Text Hints</div>
+<div class="checkbox">  <input type="checkbox" name="check_list[]" value="<?php echo $row[3]?>" <?php if ($row[3] == 'add_questions_Y') echo "checked='checked'";?>> More Questions</div>
+<div class="checkbox">  <input type="checkbox" name="check_list[]" value="<?php echo $row[4]?>" <?php if ($row[4] == 'add_answers_Y') echo "checked='checked'";?>> More Possible Answer choices</div>
+<!--  <input type="submit"  name="feedback_button">-->
+<button type="submit" class="btn btn-primary btn-s" name="feedback_button"> SUBMIT </button>
+</form>
+</div>
 
+   <?php } ?>
 
 
 <br>

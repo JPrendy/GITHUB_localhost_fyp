@@ -228,6 +228,19 @@ $_SESSION['text_hint'] =  $row_session['text_hint'];
 $_SESSION['timer'] =  $row_session['timer'];
 $_SESSION['question'] =  $row_session['more_questions'];
 $_SESSION['more_answers'] =  $row_session['more_answers'];
-  header("Location: ../exercises/finish.php?notice=update")
+
+
+     $url = "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
+    if (strpos($url, 'notice=setting') !== false){
+      //$ok= "Fill out all the fields!";
+
+       header("Location:../settings.php?notice=update");
+
+    }
+else{
+
+
+  header("Location: ../exercises/finish.php?notice=update");
+}
 //}
 ?>
