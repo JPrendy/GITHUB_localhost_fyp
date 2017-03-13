@@ -121,8 +121,22 @@ dddddddddddddddddddd
         <strong>Warning!</strong> In your last test you scored zero in the Common Factors questions, we recommend you look over this section.
         </div>
       <?php } ?>
-          <p> quuuuuuuuuuuuuuu </p>
+      <h4 id= left> Common Factors involve finding what to multiply together to get an expression. So, it is like "separating" an expressing into a multiplication of simple expressions.  </h4>
+      <h4 id= left>If we take the example: Factor <b>4x + 16</b>. </h4>
+<br/>
+    <h4 id= left>  You will see that both 4x and 16 have a common factor of <b> 4</b>.</h4>
+      <h4><li id= left>   4x is 4 * x </li></h4>
+        <h4><li id= left> 16 is 4 * 4 </li></h4>
+<br/>
+        <h4 id= left>  With this knowledge, you can factor the whole expression into: </h4>
 
+    <h4><b>    4x + 16 = 4(x + 4) </b></h4>
+<br/>
+  <h4 id= left>  So, 4x + 16 has been solved by using the common factor of the expression, which was <b>4</b> to give us the expression of
+  <b>4(x + 4)</b> </h4>
+  <br/>
+
+  For a more complex expression we may need to look for the <b>highest common factor</b>
 
         <hr>
         <h3>Section 3. Quadratic Factors</h3>

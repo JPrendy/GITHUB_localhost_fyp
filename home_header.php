@@ -68,7 +68,7 @@
     }
 
     li{
-      color:white;
+      color:black;
     }
 
     a:link {
