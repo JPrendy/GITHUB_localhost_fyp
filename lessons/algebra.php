@@ -102,7 +102,8 @@ $_SESSION['lesson'] = $lesson;
       <div id="home" class="tab-pane fade in active">
 
 
-        <h3><b><u>Section 1. Introduction to Algebra</b></u></h3>
+        <h3><b><u>Section 1. Introduction to Algebra  </b></u></h3>  <button id="math12" class='btn btn-primary btn-md'>Show/Hide material</button>
+
         <?php
         if($math_section_1 == 0){?>
         <div class="alert alert-danger alert-dismissable">
@@ -110,6 +111,7 @@ $_SESSION['lesson'] = $lesson;
         <strong>Warning!</strong> In your last test you scored zero in the Introduction to Algebra questions, we recommend you look over this section.
         </div>
       <?php } ?>
+      <div id="math1">
       <h4 id= left> Let's say we are trying to find the missing number to the below expression </h4>
   <h4 id= left>   10  -  [ ] =  7</h4>
 </br>
@@ -140,12 +142,12 @@ $_SESSION['lesson'] = $lesson;
 <br/>
 <h4 id= left>Based on the above results we can see the value <b> 2 </b> gives us the greatest value for our expression.
 <br/>
-
+</div>
 
 
 
         <hr>
-        <h3><b><u>Section 2. Common Factors</b></u></h3>
+        <h3><b><u>Section 2. Common Factors</b></u></h3>  <button id="math22" class='btn btn-primary btn-md'>Show/Hide material</button>
         <?php
         if($math_section_2 == 0){?>
         <div class="alert alert-danger alert-dismissable">
@@ -153,6 +155,7 @@ $_SESSION['lesson'] = $lesson;
         <strong>Warning!</strong> In your last test you scored zero in the Common Factors questions, we recommend you look over this section.
         </div>
       <?php } ?>
+            <div id="math2">
       <h4 id= left> Common Factors involve finding what to multiply together to get an expression. So, it is like "separating" an expressing into a multiplication of simple expressions.  </h4>
       <h4 id= left>If we take the example: Factor <b>4x + 16</b>. </h4>
 <br/>
@@ -179,9 +182,9 @@ $_SESSION['lesson'] = $lesson;
 
 <h4><b>3x<sup>2</sup>y + 9xz = 3x(xy + 3z) </b></h4>
 <br/>
-
+</div>
         <hr>
-        <h3><b><u>Section 3. Quadratic Factors</b></u></h3>
+        <h3><b><u>Section 3. Quadratic Factors</b></u></h3>  <button id="math32" class='btn btn-primary btn-md'>Show/Hide material</button>
         <?php
         if($math_section_3 == 0){?>
         <div class="alert alert-danger alert-dismissable">
@@ -189,10 +192,29 @@ $_SESSION['lesson'] = $lesson;
         <strong>Warning!</strong> In your last test you scored zero in the Quadratic Factors questions, we recommend you look over this section.
         </div>
       <?php } ?>
-        <p> quuuuuuuuuuuuuuu </p>
+        <div id="math3">
+      <h4 id= left>  A 'quadratic' is a polynomial that is expressed in the form of "ax<sup>2</sup> + bx + c", where <b>'a'</b>, <b>'b'</b> and <b>'c'</b> are just numbers.   </h4>
+    <h4 id= left> For Quadratic factors, you will find two numbers that will not only multiply to equal the constant term <b>'c'</b>, but it must also add up to equal <b>'b'</b>.
+      coefficient on the x-term. For instance </h4>
+<br/>
+    <h4 id= left>  Factor the expression: x<sup>2</sup> + 10x + 9</h4>
+
+          <h4 id= left>For this expression, I need to find the factors of <b>9</b> that adds up to <b>10</b>. Since <b>10</b> can be written
+          as the product of 3 and 3, however 3 + 3 = 6 not 10. So, we need to find other factors for <b>9</b>.
+          9 is the product of also 9 and 1. 9 and 1 gives us 10. </h4>
+            <h4 id= left>    This means I can use these numbers. I need to express
+        these numbers in the form of "(x + m)(x + n)" where the numbers 9 and 1 are subsituted for <b>'m'</b> and <b>'n'</b>
+        </h4>
+
+        <br/>
+          <h4 id= left> when expressed in this form we will have the below answer</h4>
+
+          <h4><b> (x + 1)(x + 9) </b></h4>
+</div>
+
 
         <hr>
-        <h3><b><u>Section 4. Multiply Binomials by Polynomals</b></u></h3>
+        <h3><b><u>Section 4. Multiply Binomials by Polynomals</b></u></h3><button id="math42" class='btn btn-primary btn-md'>Show/Hide material</button>
         <?php
         if($math_section_4 == 0){?>
         <div class="alert alert-danger alert-dismissable">
@@ -200,9 +222,29 @@ $_SESSION['lesson'] = $lesson;
         <strong>Warning!</strong> In your last test you scored zero in Multiply Binomals by Polynomals, we recommend you look over this section.
         </div>
       <?php } ?>
-        <p> quuuuuuuuuuuuuuu </p>
+        <div id="math4">
+              <h4 id= left> In order to multiply binomial by polynomials we can look at the proble (x + 4) and (x - 3)  </h4>
+        <h4 id= left>  Multiplying <b>x + 4</b> by <b> x - 3</b> is another classic Algebra problem. </h4>
+  <h4 id= left>In order to work out this problem we'll use the "F.O.I.L." method. F.O.I.L. stands for <b>F</b>irst,  <b>O</b>uter, <b>I</b>nner,
+     <b>L</b>ast. </h4>
 
-
+     <br/>
+      <h4 id= left> First, we'll multiply the two <b>F</b>irst terms, the <b>x</b> and <b>x</b> together.
+        <h4 id= left> x * x = x<sup>2</sup>   </h4>
+      </br>
+      <h4 id= left> Next, we'll multiply the <b>O</b>uter terms, the <b>x</b> and <b>-3</b> together.
+        <h4 id= left> x * -3 = -3x   </h4>
+            </br>
+            <h4 id= left>We'll look at multiplying the two <b>I</b>nner terms, the <b>4</b> and <b>x</b> together.
+              <h4 id= left> 4 * x = 4x   </h4>
+                  </br>
+            <h4 id= left> Then, we'll multiply the two <b>L</b>ast terms, the <b>4</b> and <b>-3</b> together.
+              <h4 id= left> 4 * -3 = -12   </h4>
+                  </br>
+              <h4 id= left>When we add all these values together we get our answer. x<sup>2</sup> -3x + 4x -12.
+                </br>
+                <h4><b> x<sup>2</sup> + x - 12 </b>
+</div>
 
       </div>
       <div id="menu1" class="tab-pane fade">
@@ -218,7 +260,7 @@ $_SESSION['lesson'] = $lesson;
       </div>
 
 
-      <br>
+
       <br>
           <hr>
       <h4>Press the button below in order to test your knowledge in Algebra</h4>
@@ -235,7 +277,32 @@ $_SESSION['lesson'] = $lesson;
 
 
 <br>
+<script>
+$(document).ready(function(){
+    $("#math12").click(function(){
+        $("#math1").toggle();
+    });
+});
 
+$(document).ready(function(){
+    $("#math22").click(function(){
+        $("#math2").toggle();
+    });
+});
+
+$(document).ready(function(){
+    $("#math32").click(function(){
+        $("#math3").toggle();
+    });
+});
+
+
+$(document).ready(function(){
+    $("#math42").click(function(){
+        $("#math4").toggle();
+    });
+});
+</script>
 
 <footer class="container-fluid text-center" id="foot01">
 

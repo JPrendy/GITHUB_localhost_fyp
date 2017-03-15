@@ -430,10 +430,10 @@ if($icon == 1){?>
                     </div>
                   </div>
                   <div class="item">
-                      <img src="images/test.jpg" alt="Third Slide">
+                      <img src="images/user_settings.png" alt="Third Slide">
                         <div class="carousel-caption">
-                      <h3>Chania</h3>
-                      <p>The atmosphere in Chania has a touch of Florence and Venice.</p>
+                      <h3>User Settings</h3>
+                      <p>You can change the user settings at the end of every quiz or in the settings tab. Personalise the quiz to your preferences</p>
                     </div>
                   </div>
               </div>
