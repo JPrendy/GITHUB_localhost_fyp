@@ -158,7 +158,18 @@ $result = mysqli_query($db, $query);
 </form>
 </div>
 
-   <?php } ?>
+   <?php }
+   $url = "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
+ if (strpos($url, 'notice=update') !== false){
+   //$ok= "Fill out all the fields!";
+ ?>
+ <div class="alert alert-success alert-dismissable">
+ <a href="#" id='ok' class="close" data-dismiss="alert" aria-label="close">×</a>
+ <strong>Update!</strong> You have changed your user settings.
+ </div>
+ <?php
+
+ } ?>
 
 
 <br>

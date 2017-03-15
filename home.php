@@ -100,7 +100,7 @@
     }
 
     /*this helps for smaller screen sizes*/
-    @media screen and (max-width: 520px) {
+    @media screen and (max-width: 530px) {
       #myCarousel {
 
         width: 380px;
@@ -108,7 +108,7 @@
 
     }
   /*this helps for smaller screen sizes*/
-    @media screen and (max-width: 400px) {
+    @media screen and (max-width: 410px) {
       #myCarousel {
 
         width: 280px;

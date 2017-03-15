@@ -102,7 +102,7 @@ $_SESSION['lesson'] = $lesson;
       <div id="home" class="tab-pane fade in active">
 
 
-        <h3>Section 1. Introduction to Algebra</h3>
+        <h3><b><u>Section 1. Introduction to Algebra</b></u></h3>
         <?php
         if($math_section_1 == 0){?>
         <div class="alert alert-danger alert-dismissable">
@@ -110,10 +110,42 @@ $_SESSION['lesson'] = $lesson;
         <strong>Warning!</strong> In your last test you scored zero in the Introduction to Algebra questions, we recommend you look over this section.
         </div>
       <?php } ?>
-          <h3 id= left> quuuuuuuuuuuuuuu </h3>
-dddddddddddddddddddd
+      <h4 id= left> Let's say we are trying to find the missing number to the below expression </h4>
+  <h4 id= left>   10  -  [ ] =  7</h4>
+</br>
+   <h4 id= left>So, the anwers would be <b>3</b>. Since, 10 - 3 = 7.</h4>
+</br>
+   <h4 id= left> In Algebra, we don't use blank boxes we use <b>letters</b>(usually an x or y, but you can use any letter). So if took the last example
+     and rewrote it with the letter: <b> x </b></h4>
+  <h4 id= left>   10  -  <b>x</b> =  7</h4>
+</br>
+  <h4 id= left> With the addition of the letter <b> x</b> it asks to find what the letter <b>x</b> stands for. When we bring over <b>10</b> to the right side we get 10 - 7. This gives us -3.
+      <h4 id= left>So, we are left with -x = -3. When we get rid of the - on both sides we are left with our answer.</h4>
+      </br>
+  <h4 ><b> x = 3 </b></h4>
+<br/>
+  <h4 id= left> Another example we could look at  is finding the greatest value with the letter <b>x.</b> For example, if we had a question that asked
+    <b>Find the value of x for which the expression 2 + 3x + 4x has the greatest value.</b>
+
+  <h4 id= left>    If we are given choices such as </h4>
+  <h4><li id= left>   x = 2 </li></h4>
+    <h4><li id= left> x = 1 </li></h4>
+        <h4><li id= left> x = 0 </li></h4>
+
+<br/>
+  <h4 id= left>Using these values we can find which value will yield the greatest value</h4>
+  <h4><li id= left>   2 + 3(2) + 4(2) =  16</li></h4>
+    <h4><li id= left> 2 + 3(1) + 4(1) =  9 </li></h4>
+        <h4><li id= left> 2 + 3(0) + 4(0) = 2  </li></h4>
+<br/>
+<h4 id= left>Based on the above results we can see the value <b> 2 </b> gives us the greatest value for our expression.
+<br/>
+
+
+
+
         <hr>
-        <h3>Section 2. Common Factors</h3>
+        <h3><b><u>Section 2. Common Factors</b></u></h3>
         <?php
         if($math_section_2 == 0){?>
         <div class="alert alert-danger alert-dismissable">
@@ -136,10 +168,20 @@ dddddddddddddddddddd
   <b>4(x + 4)</b> </h4>
   <br/>
 
-  For a more complex expression we may need to look for the <b>highest common factor</b>
+  <h4 id= left>  For a more complex expression we may need to look for the <b>highest common factor</b>, including any variables.</h4>
+  <h4 id= left>If we take the example: Factor <b>3x<sup>2</sup>y + 9xz</b>. </h4>
+<br/>
+<h4 id= left>  You will see that both 3x<sup>2</sup>y + 9xy have a common factor of <b> 3</b>. However we can also get the common factor for the variable <b>x</b>. Together we will get the common factor of <b>3x</b> for this expression. </h4>
+  <h4><li id= left>   3x<sup>2</sup>y is 3x * xy </li></h4>
+    <h4><li id= left> 9xy is 3x * 3z </li></h4>
+<br/>
+<h4 id= left>  With this knowledge, you can factor the whole expression into: </h4>
+
+<h4><b>3x<sup>2</sup>y + 9xz = 3x(xy + 3z) </b></h4>
+<br/>
 
         <hr>
-        <h3>Section 3. Quadratic Factors</h3>
+        <h3><b><u>Section 3. Quadratic Factors</b></u></h3>
         <?php
         if($math_section_3 == 0){?>
         <div class="alert alert-danger alert-dismissable">
@@ -150,7 +192,7 @@ dddddddddddddddddddd
         <p> quuuuuuuuuuuuuuu </p>
 
         <hr>
-        <h3>Section 4. Multiply Binomials by Polynomals</h3>
+        <h3><b><u>Section 4. Multiply Binomials by Polynomals</b></u></h3>
         <?php
         if($math_section_4 == 0){?>
         <div class="alert alert-danger alert-dismissable">

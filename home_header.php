@@ -134,11 +134,37 @@
     }
 
 
+	@media screen and (max-width: 1440px) {
   #columnchart_material
   {
     width: 930px;
-    height: 600px;
+    height: 440px;
   }
+}
+
+	@media screen and (max-width: 767px) {
+		#columnchart_material
+		{
+			width: 600px;
+			height: 440px;
+		}
+
+	}
+
+
+
+	@media screen and (max-width: 400px) {
+		#columnchart_material
+		{
+			width: 300px;
+			height: 440px;
+		}
+
+	}
+
+
+
+
 
 /*
     @media screen and (max-width: 520px) {

@@ -195,6 +195,8 @@ $sql = "SELECT * FROM  quiz_scores Where uid = '{$_SESSION['userid']}' ORDER BY 
 
 <br>
 
+
+
 <footer class="container-fluid text-center" id="foot01">
 
 </footer>
