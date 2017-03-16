@@ -14,7 +14,27 @@ if($_SESSION['welcome'] !=2){
 <div class="header">
 	<h1>Settings</h1>
 </div>
-
+<html>
+<head>
+<script>
+function showHint(str) {
+    if (str.length == 0) {
+        document.getElementById("txtHint").innerHTML = "";
+        return;
+    } else {
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("txtHint").innerHTML = this.responseText;
+            }
+        };
+        xmlhttp.open("GET", "gethint.php?q=" + str, true);
+        xmlhttp.send();
+    }
+}
+</script>
+</head>
+<body>
 
 <div class="container-fluid text-center">
     <div class="row content">
@@ -200,25 +220,7 @@ $result = mysqli_query($db, $query);
 
 
 
-<!--<form class="form-horizontal"   method="POST" >
-<div class="form-group">
-  <div class="panel-heading"><h3><u>Delete Last Record</u></h3></div>
-  <br/>
-  <label class="control-label col-sm-2" for="password">Delete last exercise record</label>
-</div>
-<form class="form-horizontal"    action="settings.php" method="POST">
 
-
-
-<div class="col-sm-offset-2 col-sm-10">
-<button type="button" class="btn btn-rimary btn-s" data-toggle="modal" data-target="#myModal_delete_record">Delete last Record</button>
-</div>
-
-</form>
-</form>
-
-</div>
-</div-->
 
 
 <!-- Modal -->
@@ -270,9 +272,13 @@ $result = mysqli_query($db, $query);
       <div class="form-group">
     <label class="control-label  col-sm-2" for="email">Enter a user id:</label>
     <div class="col-sm-3">
-      <input type="text" class="form-control" name="uid" id="uid" placeholder="Enter a user id">
+      <input type="text" class="form-control" name="uid" id="uid" onkeyup="showHint(this.value)" placeholder="Enter a user id">
     </div>
+    <h4>Suggestions: <span id="txtHint"></span></h4>
+
   </div>
+
+
 
 
  <div class="col-sm-offset col-sm-12">
