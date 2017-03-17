@@ -115,7 +115,13 @@ if($math_section == 4){
 if($number == $total){
    header("Location: final.php");
   exit();
-}else{
+}
+//WORKING TO FIX THAT ERROR
+if($number3 > 10){
+   header("Location: final.php");
+  exit();
+}
+else{
   header("Location: question.php?n=".$number3);
 }
 

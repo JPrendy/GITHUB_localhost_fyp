@@ -45,7 +45,7 @@ $total= $results->num_rows;
 
 
 $query = "SELECT * from $number2
-WHERE question_number =$number";
+WHERE question_number =$number and dif = '1' ";
 
 
 //Get the resutlt from the query
@@ -109,7 +109,7 @@ function goBack() {
 
 
 
- <div class="current"><b>Question <?php echo  $question['question_number']; ?> / <?php echo "$total." ?></b></div>
+ <div class="current"><b>Question <?php echo  $question['question_number']; ?> / 10</b></div>
 
 <p class="question">
 <?php    if ($current_test_hint == 'text_hint_Y'){

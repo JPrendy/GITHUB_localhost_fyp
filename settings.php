@@ -207,7 +207,7 @@ $result = mysqli_query($db, $query);
 
 <div class="form-group">
 <div class="col-sm-offset col-sm-8">
-<button type="button" class="btn btn-primary btn-md" data-toggle="modal" data-target="#myModal_delete_record">Delete</button>
+<button type="button" class="btn btn-primary btn-md" data-toggle="modal" data-target="#myModal_delete_record">DELETE</button>
 </div>
 </div>
 
@@ -274,7 +274,7 @@ $result = mysqli_query($db, $query);
     <div class="col-sm-3">
       <input type="text" class="form-control" name="uid" id="uid" onkeyup="showHint(this.value)" placeholder="Enter a user id">
     </div>
-    <h4>Suggestions: <span id="txtHint"></span></h4>
+    <h4><b>Users available:</b> <span id="txtHint"></span></h4>
 
   </div>
 
