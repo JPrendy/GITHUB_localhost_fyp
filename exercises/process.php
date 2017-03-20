@@ -60,8 +60,12 @@ $total= $results->num_rows;
 $choices =  $_SESSION['choices'];
 //FOR EXAMPLE CHOICES COULD HOLD EITHER 'ALGEBRA_CHOICES' OR 'TRIGNOMETRY CHOICES' IT DEPENDS ON WHAT EXERCISE YOU PICKED
 
-$query = "SELECT * FROM   $choices where question_number = $number and is_correct=1";
-$query2 = "SELECT * FROM  $choices where question_number = $number and id=$selected_choice";
+$dif = $_SESSION['difficulty_level'];
+
+
+
+$query = "SELECT * FROM   $choices where question_number = $number and is_correct=1 and difficulty_level=$dif";
+$query2 = "SELECT * FROM  $choices where question_number = $number and id=$selected_choice  and difficulty_level=$dif";
 
 //GET Result
 

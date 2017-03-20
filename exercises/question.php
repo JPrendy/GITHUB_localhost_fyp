@@ -19,6 +19,8 @@ if ($number == 1){
 
 }
 
+$dif = $_SESSION['difficulty_level'];
+
   $before_choice = "_choices";
   $choices =  $number2 . $before_choice;
   $_SESSION['choices'] = $choices;
@@ -45,7 +47,7 @@ $total= $results->num_rows;
 
 
 $query = "SELECT * from $number2
-WHERE question_number =$number and dif = '1' ";
+WHERE question_number =$number and dif = $dif ";
 
 
 //Get the resutlt from the query
@@ -59,11 +61,11 @@ $question = $result->fetch_assoc();
 //might have to do separate files and tables for each subjects
 if($current_answers == 'add_answers_Y'){
 $query = "SELECT * from $choices
-WHERE question_number =$number order by RAND()";
+WHERE question_number =$number and difficulty_level = $dif order by RAND()";
 }
 else{
   $query = "SELECT * from $choices
-  WHERE question_number =$number and extra_q_choice = 0 order by RAND()";
+  WHERE question_number =$number and difficulty_level = $dif  and extra_q_choice = 0 order by RAND()";
 
 }
 
@@ -111,6 +113,7 @@ function goBack() {
 
  <div class="current"><b>Question <?php echo  $question['question_number']; ?> / 10</b></div>
 
+  <div class="current"><b>Difficulty: <?php echo  $dif; ?>  </b></div>
 <p class="question">
 <?php    if ($current_test_hint == 'text_hint_Y'){
  echo $question['text_hint'];

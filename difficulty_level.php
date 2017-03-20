@@ -151,7 +151,7 @@ echo $dynamic_level;
 //IS IMPLEMENTED
 if($ok >= $interval->format(" 2 minutes 0 seconds"))
 {
-if(($average >= 7.0) && ($dynamic_level <= 3)){
+if(($average > '7.0') && ($dynamic_level <= 2)){
   $dynamic_level +=1;
   //  $sql = "Update  WHERE uid='{$_SESSION['userid']}'";
     $update_sql_user = "UPDATE  users  SET difficulty_level=   $dynamic_level WHERE uid='{$_SESSION['userid']}'";
@@ -171,10 +171,10 @@ if(($average >= 7.0) && ($dynamic_level <= 3)){
     //  $result_update_users2 = mysqli_query($db, $update_sql_user2);
     echo $dynamic_level;
 }
-if ($average >= 4.5 && $average <= 7){
+if ($average > '4.5' && $average < '7'){
   echo "Nothing changes";
 }
-if(($average <= 4.5) && ($dynamic_level >=0)){
+if(($average < '4.5') && ($dynamic_level >=0)){
   $dynamic_level -=1;
     $update_sql_user = "UPDATE  users  SET difficulty_level=   $dynamic_level WHERE uid='{$_SESSION['userid']}'";
         	$result_update_users = mysqli_query($db, $update_sql_user);
