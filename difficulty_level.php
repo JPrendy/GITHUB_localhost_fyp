@@ -157,12 +157,28 @@ if(($average > '7.0') && ($dynamic_level <= 2)){
     $update_sql_user = "UPDATE  users  SET difficulty_level=   $dynamic_level WHERE uid='{$_SESSION['userid']}'";
         $update_average_user = "UPDATE  users  SET greatnest = 'Y' WHERE uid='{$_SESSION['userid']}'";
 
+
         if (!$row = mysqli_fetch_assoc($update_average_user)){
 
               header("Location:home.php?error=empty1");
 
 
         }
+
+$query = "SELECT * from users where uid='{$_SESSION['userid']}'";
+echo $query;
+$results = mysqli_query($db, $query);
+
+if (!$row = mysqli_fetch_assoc($results)){
+
+  echo "Your username or password is incorrect!";
+      header("Location: ../home.php?error=empty1");
+
+
+}
+$_SESSION['greatnest'] = $row['greatnest'];
+echo  $_SESSION['greatnest'];
+
 
 
   //  $update_sql_user2 = "UPDATE  quiz_scores  SET difficulty_level=   $dynamic_level WHERE uid='{$_SESSION['userid']}'";
