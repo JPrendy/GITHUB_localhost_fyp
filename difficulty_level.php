@@ -82,14 +82,21 @@ if($row2[6] != null){
   //echo $ok;
 
   $interval =  $time2->diff($time1);
-  echo
+
+
   $ok = $interval->format(" %i minutes %s seconds");
+$test =  $interval->format(" 2 minutes 0 seconds");
 
+echo $test;
 
-  if($ok >= $interval->format(" 2 minutes 0 seconds"))
+  if($ok > 2.0)
   {
+      echo "<br>";
     echo "yes";
   }
+
+  echo "<br>";
+echo "the time between the last two quizzes were ".$ok;
 
 echo "<br>";
 
@@ -132,13 +139,14 @@ echo "<br>";
 
 echo "<br>";
 echo "<br>";
-echo $dynamic_level;
+echo "this is before the difficulty_level was changed ".$dynamic_level;
 
 
 
-  if($ok == $interval->format(" 0 minutes 0 seconds"))
+ if($ok == null)
   {
     $dynamic_level = 1;
+    echo "default";
     $update_sql_user = "UPDATE  users  SET difficulty_level=   $dynamic_level WHERE uid='{$_SESSION['userid']}'";
   //  $update_sql_user2 = "UPDATE  quiz_scores  SET difficulty_level=   $dynamic_level WHERE uid='{$_SESSION['userid']}'";
       $result_update_users = mysqli_query($db, $update_sql_user);
@@ -149,9 +157,10 @@ echo $dynamic_level;
 
 //THIS CHECKS TO SEE IF THE TIME YOU DID THE LAST TWO TESTS WERE GREATER THAN TWO MINUTES BEFORE THE dynamic_level
 //IS IMPLEMENTED
-if($ok >= $interval->format(" 2 minutes 0 seconds"))
+//if($ok >= $interval->format("2 minutes 0 seconds"))
+if($ok >= 2)
 {
-if(($average > '7.0') && ($dynamic_level <= 2)){
+if(($average > 7.0) && ($dynamic_level <= 3 )){
   $dynamic_level +=1;
   //  $sql = "Update  WHERE uid='{$_SESSION['userid']}'";
     $update_sql_user = "UPDATE  users  SET difficulty_level=   $dynamic_level WHERE uid='{$_SESSION['userid']}'";
@@ -187,10 +196,8 @@ echo  $_SESSION['greatnest'];
     //  $result_update_users2 = mysqli_query($db, $update_sql_user2);
     echo $dynamic_level;
 }
-if ($average > '4.5' && $average < '7'){
-  echo "Nothing changes";
-}
-if(($average < '4.5') && ($dynamic_level >=0)){
+
+if(($average < 4.5) && ($dynamic_level >=0)){
   $dynamic_level -=1;
     $update_sql_user = "UPDATE  users  SET difficulty_level=   $dynamic_level WHERE uid='{$_SESSION['userid']}'";
         	$result_update_users = mysqli_query($db, $update_sql_user);
