@@ -120,6 +120,12 @@ echo("\n</form>\n");
 </table>
 </div>
 <?php
+	
+$sql = "UPDATE add_friend set shown=1 where other_user='{$_SESSION['userid']}' ";
+$result = mysqli_query($db, $sql);
+
+
+
 
 $sql = "SELECT * from add_friend where other_user='{$_SESSION['userid']}' ";
 $result = mysqli_query($db, $sql);

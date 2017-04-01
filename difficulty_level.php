@@ -143,7 +143,7 @@ echo "this is before the difficulty_level was changed ".$dynamic_level;
 
 
 
- if($ok == null)
+ if($ok < 0.0)
   {
     $dynamic_level = 1;
     echo "default";

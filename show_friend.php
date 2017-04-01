@@ -80,7 +80,7 @@ while($row = mysqli_fetch_array($result2)){
 
 <td>
   <?php
-
+        $english_format_number = number_format($average_score, 2, '.', '');
 ?> <strong><h4><?php echo $friend_dif; ?> </h4></strong>
 </td>
 
@@ -88,7 +88,7 @@ while($row = mysqli_fetch_array($result2)){
 <td>
   <?php
 
-?> <strong><h4><?php echo $average_score; ?> </h4></strong>
+?> <strong><h4><?php echo  $english_format_number; ?> </h4></strong>
 
 </td>
 

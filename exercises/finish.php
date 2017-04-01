@@ -133,7 +133,6 @@ $result = mysqli_query($db, $query);
         <div class="panel-heading"><h4>Personalise your user settings</h4></div>
   <form action="feedback.php" method="post">
    <div class="checkbox"><input type="checkbox" name="check_list[]" value="<?php echo $row[1]?>" <?php if ($row[1] == 'text_hint_Y') echo "checked='checked'";?> > Enable Text Hints</div>
- <div class="checkbox">  <input type="checkbox" name="check_list[]" value="<?php echo $row[3]?>" <?php if ($row[3] == 'add_questions_Y') echo "checked='checked'";?>> More Questions</div>
  <div class="checkbox">  <input type="checkbox" name="check_list[]" value="<?php echo $row[4]?>" <?php if ($row[4] == 'add_answers_Y') echo "checked='checked'";?>> More Possible Answer choices</div>
 <!--  <input type="submit"  name="feedback_button">-->
   <button type="submit" class="btn btn-primary btn-s" name="feedback_button"> SUBMIT </button>

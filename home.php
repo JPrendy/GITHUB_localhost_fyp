@@ -381,12 +381,32 @@ if($icon == 1){?>
 
     } ?>
 
+	<?php
 
-      <?php  include 'show_friend.php'; ?>
+		$db = mysqli_connect("localhost", "root", "" , "logintest");
+		$sql = "SELECT * from add_friend where other_user='{$_SESSION['userid']}' and shown=0 ";
+		$result = mysqli_query($db, $sql);
+
+		if (!$row = mysqli_fetch_assoc($result)){
+
+		}
+		$seen = $row['shown'];
+
+		if(($seen == 0)&& ($seen != null)){
+			?><div class="alert alert-info alert-dismissable">
+			<a href="#" id='ok' class="close" data-dismiss="alert" aria-label="close">×</a>
+			<strong>Update! </strong> Someone has sent you an invite, please go to the <strong>Settings tab</strong> to see who added you.
+			</div>
+		<?php
+		}
+
+
+
+			  include 'show_friend.php'; ?>
 
 
           <div class="form-group col-sm-12">
-      <h3>Test</h3>
+      <h3></h3>
       <p>Furthmore, there are sections in the e-learning application that allows you to monitor your past results making it easy to see where you could improve. </p>
 
 </div>
@@ -433,7 +453,7 @@ if($icon == 1){?>
                       <img src="images/user_settings.png" alt="Third Slide">
                         <div class="carousel-caption">
                       <h3>User Settings</h3>
-                      <p>You can change the user settings at the end of every quiz or in the settings tab. Personalise the quiz to your preferences</p>
+                      <p>You can change the user settings at the end of every quiz or in the settings tab. Personalise the quiz to your preference</p>
                     </div>
                   </div>
               </div>

@@ -66,10 +66,9 @@ th {text-align: left;}
 <select  class="form-control" name="chart">
     <option value="ColumnChart">...</option>
   <option value="ColumnChart">Column Charts</option>
-    <option value="BarChart">BarCharts</option>
-  <option value="PieChart">PieChart</option>
-  <option value="LineChart">LineCharts</option>
-<option value="ScatterChart">ScatterChart</option>
+    <option value="BarChart">Bar Charts</option>
+  <option value="LineChart">Line Charts</option>
+<option value="ScatterChart">Scatter Chart</option>
 </select>
 </div>
 </div>

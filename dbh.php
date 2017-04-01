@@ -1,13 +1,11 @@
 <?php
 
-   session_start();
-
-$conn = mysqli_connect("localhost", "root","", "logintest");
+$db = mysqli_connect("localhost", "root","", "logintest");
 
 
-if (!$conn) {
+if (!$db) {
 	die("Connection failed: ". mysqli_connect_error());
-	
+
 }
 
 ?>

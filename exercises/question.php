@@ -29,8 +29,11 @@ $dif = $_SESSION['difficulty_level'];
   //echo $number2;
   $current_test_hint = $_SESSION['text_hint'];
     $current_answers = $_SESSION['more_answers'];
-
-    echo $current_answers;
+//////////////////
+  //  echo $current_answers;
+  ///////////////
+  //////////////
+  ////////////////////
   //echo   $current_test_hint;
 
  //currently set it as n=1
@@ -160,7 +163,7 @@ else{
    </div>
  </div>
 
-   <?php echo $test?>
+   <!--<ph_p echo $test?>-->
 
 </div>
 </div>

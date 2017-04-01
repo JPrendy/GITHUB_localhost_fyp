@@ -38,7 +38,6 @@ if (strpos($url, 'update=dynamic') !== false){
 header("Location: ../lessons/Algebra.php?error=session");
 
 }
-
 else{
   header("Location: ../exercises.php?error=session");
 }

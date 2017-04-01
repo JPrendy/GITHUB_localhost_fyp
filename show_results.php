@@ -43,7 +43,7 @@ $start_from = ($page-1) * $per_page;
 
 if ($_SESSION['math_lesson2']  == "0") {
   if($_SESSION['difficulty_level2']  == ""){
-$sql = "SELECT * FROM  quiz_scores Where uid = '{$_SESSION['userid']}' AND difficulty_level {$_SESSION['difficulty_level2']} and math_lesson = 'Algebra' OR math_lesson ='Trignometry' ORDER BY sc_time {$_SESSION['order']} LIMIT $start_from, $per_page ";
+$sql = "SELECT * FROM  quiz_scores Where uid = '{$_SESSION['userid']}' and math_lesson = 'Algebra' OR math_lesson ='Trignometry' ORDER BY sc_time {$_SESSION['order']} LIMIT $start_from, $per_page ";
 }
 else{
   $sql = "SELECT * FROM  quiz_scores Where uid = '{$_SESSION['userid']}' AND difficulty_level = '{$_SESSION['difficulty_level2']}' and math_lesson = 'Algebra' OR math_lesson ='Trignometry' ORDER BY sc_time {$_SESSION['order']} LIMIT $start_from, $per_page ";
@@ -51,7 +51,7 @@ else{
 }
 else{
     if($_SESSION['difficulty_level2']  == ""){
-$sql = "SELECT * FROM  quiz_scores Where uid = '{$_SESSION['userid']}' AND difficulty_level  {$_SESSION['difficulty_level2']} and math_lesson = '{$_SESSION['math_lesson2']}' ORDER BY sc_time {$_SESSION['order']} LIMIT $start_from, $per_page ";
+$sql = "SELECT * FROM  quiz_scores Where uid = '{$_SESSION['userid']}' and math_lesson = '{$_SESSION['math_lesson2']}' ORDER BY sc_time {$_SESSION['order']} LIMIT $start_from, $per_page ";
 }
 else{
 $sql = "SELECT * FROM  quiz_scores Where uid = '{$_SESSION['userid']}' AND difficulty_level = '{$_SESSION['difficulty_level2']}' and math_lesson = '{$_SESSION['math_lesson2']}' ORDER BY sc_time {$_SESSION['order']} LIMIT $start_from, $per_page";
@@ -144,7 +144,7 @@ echo "</table>\n";
 
 if ($_SESSION['math_lesson2']  == "0") {
   if($_SESSION['difficulty_level2']  == ""){
-$sql = "SELECT * FROM  quiz_scores Where uid = '{$_SESSION['userid']}' AND difficulty_level {$_SESSION['difficulty_level2']} and math_lesson = 'Algebra' OR math_lesson ='Trignometry' ORDER BY sc_time {$_SESSION['order']} ";
+$sql = "SELECT * FROM  quiz_scores Where uid = '{$_SESSION['userid']}' and math_lesson = 'Algebra' OR math_lesson ='Trignometry' ORDER BY sc_time {$_SESSION['order']} ";
 //echo $sql;
 }
 else{
@@ -154,7 +154,7 @@ else{
 }
 else{
     if($_SESSION['difficulty_level2']  == ""){
-$sql = "SELECT * FROM  quiz_scores Where uid = '{$_SESSION['userid']}' AND difficulty_level  {$_SESSION['difficulty_level2']} and math_lesson = '{$_SESSION['math_lesson2']}' ORDER BY sc_time {$_SESSION['order']} ";
+$sql = "SELECT * FROM  quiz_scores Where uid = '{$_SESSION['userid']}' and math_lesson = '{$_SESSION['math_lesson2']}' ORDER BY sc_time {$_SESSION['order']} ";
 }
 else{
 $sql = "SELECT * FROM  quiz_scores Where uid = '{$_SESSION['userid']}' AND difficulty_level = '{$_SESSION['difficulty_level2']}' and math_lesson = '{$_SESSION['math_lesson2']}' ORDER BY sc_time {$_SESSION['order']} ";
