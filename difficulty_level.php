@@ -13,7 +13,7 @@ if (!$db) {
 
 
 
-  $sql = "SELECT SUM(score) as TEST, COUNT(math_lesson) as MATH FROM quiz_scores WHERE uid='{$_SESSION['userid']}'";
+  $sql = "SELECT SUM(score) as TEST, SUM(blank) as ALL_BLANK, COUNT(math_lesson) as MATH FROM quiz_scores WHERE uid='{$_SESSION['userid']}'";
 	$result = mysqli_query($db, $sql);
 
 
@@ -52,7 +52,11 @@ ORDER BY sc_time LIMIT 1";
 
 
   $sum = $row['TEST'];
+  $blank = $row['ALL_BLANK'];
   $count = $row['MATH'];
+
+
+  echo "the total blank equals ........ $blank";
 
 if($row2[6] != null){
   $time1 =  new DateTime($row2[7]);
@@ -89,7 +93,7 @@ $test =  $interval->format(" 2 minutes 0 seconds");
 
 echo $test;
 
-  if($ok > 2.0)
+  if($ok > 1.0)
   {
       echo "<br>";
     echo "yes";
@@ -110,12 +114,18 @@ echo "<br>";
   echo "in over $count tests";
 
   $average = $sum/$count;
+  $average_blank = $blank/$count;
+
+
+echo "<br>";
+  echo "the blank is $average_blank";
+
 
   echo "<br>";
     echo "<br>";
   echo "The user's average score is $average" ;
   $_SESSION['average_score'] =   $average;
-    $average = "UPDATE  users  SET average_score =   $average WHERE uid='{$_SESSION['userid']}'";
+    $average = "UPDATE  users  SET average_score =   $average, average_blank =   $average_blank WHERE uid='{$_SESSION['userid']}'";
           $success = mysqli_query($db, $average);
   //this retrieves the users average score with this knowledge, the difficulty_levels will either go down or up
   //depending on this average.
@@ -158,7 +168,7 @@ echo "this is before the difficulty_level was changed ".$dynamic_level;
 //THIS CHECKS TO SEE IF THE TIME YOU DID THE LAST TWO TESTS WERE GREATER THAN TWO MINUTES BEFORE THE dynamic_level
 //IS IMPLEMENTED
 //if($ok >= $interval->format("2 minutes 0 seconds"))
-if($ok >= 2)
+if($ok >= 1.0)
 {
 if(($average > 7.0) && ($dynamic_level <= 3 )){
   $dynamic_level +=1;

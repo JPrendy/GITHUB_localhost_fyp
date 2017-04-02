@@ -18,6 +18,10 @@
       border-radius: 0;
     }
 
+		.red {
+		    color: red;
+		}
+
     li.panel {
       margin-bottom: 5px;
     /*  background-color: #428bca; */

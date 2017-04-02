@@ -412,8 +412,25 @@ if($icon == 1){?>
 </div>
 
 
+<?php
 
 
+
+$sql = "SELECT * from users order by average_score DESC limit 10 ";
+$result = mysqli_query($db, $sql);
+
+$av = 0;
+$bl = 0;
+
+   while($row = mysqli_fetch_array($result)) {
+$av += $row['average_score'];
+$bl += $row['average_blank'];
+}
+echo "The top highest average score is ".$av;
+echo "<br/>";
+echo "The number of blanks score is ".$bl;
+
+?>
 
 
 

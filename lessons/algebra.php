@@ -35,13 +35,13 @@ $math_section_4 =1;
 }
 else{
 $math_section_1 = $row['math_section_1'];
-echo $math_section_1;
+//echo $math_section_1;
 $math_section_2 = $row['math_section_2'];
-echo $math_section_2;
+//echo $math_section_2;
 $math_section_3 = $row['math_section_3'];
-echo $math_section_3;
+//echo $math_section_3;
 $math_section_4 = $row['math_section_4'];
-echo $math_section_4;
+//echo $math_section_4;
 }
 
 
@@ -92,16 +92,29 @@ $_SESSION['lesson'] = $lesson;
     ?>
 
     <ul class="nav nav-pills">
-      <li class="active" ><a data-toggle="pill" href="#home">Text</a></li>
-      <li ><a data-toggle="pill" href="#menu1">Video</a></li>
+      <li class="active" ><a data-toggle="pill" href="#home">Display in Text</a></li>
+      <li ><a data-toggle="pill" href="#menu1">Display in Video</a></li>
 
 
     </ul>
 
     <div class="tab-content">
       <div id="home" class="tab-pane fade in active">
+<br/>
+        <ul id="panel" class=" text-left">
+
+          <li><a href="#section1">1. Introduction to Algebra </a><?php   if($math_section_1 == 0){   ?>    <span class="glyphicon glyphicon-exclamation-sign red"></span> <?php } ?></li>
+          <li><a href="#section2">2. Common Factors</a><?php   if($math_section_2 == 0){   ?>    <span class="glyphicon glyphicon-exclamation-sign red"></span> <?php } ?></li>
+          <li><a href="#section3">3. Quadratic Factors</a><?php   if($math_section_3 == 0){   ?>    <span class="glyphicon glyphicon-exclamation-sign red"></span> <?php } ?></li>
+          <li><a href="#section4">4. Multiply Binomials by Polynomals</a><?php   if($math_section_4 == 0){   ?>    <span class="glyphicon glyphicon-exclamation-sign red"></span> <?php } ?></li>
 
 
+
+        </ul>
+
+
+         <a id="section1"></a>
+<hr>
         <h3><b><u>Section 1. Introduction to Algebra  </b></u></h3>  <button id="math12" class='btn btn-primary btn-md'>Show/Hide material</button>
 
         <?php
@@ -138,7 +151,7 @@ $_SESSION['lesson'] = $lesson;
 </div>
 
 
-
+ <a id="section2"></a>
         <hr>
         <h3><b><u>Section 2. Common Factors</b></u></h3>  <button id="math22" class='btn btn-primary btn-md'>Show/Hide material</button>
         <?php
@@ -151,6 +164,7 @@ $_SESSION['lesson'] = $lesson;
             <div id="math2">
 <?php echo $lesson_two; ?>
 </div>
+ <a id="section3"></a>
         <hr>
         <h3><b><u>Section 3. Quadratic Factors</b></u></h3>  <button id="math32" class='btn btn-primary btn-md'>Show/Hide material</button>
         <?php
@@ -164,7 +178,7 @@ $_SESSION['lesson'] = $lesson;
   <?php echo $lesson_three; ?>
 </div>
 
-
+ <a id="section4"></a>
         <hr>
         <h3><b><u>Section 4. Multiply Binomials by Polynomals</b></u></h3><button id="math52" class='btn btn-primary btn-md'>Show/Hide material</button>
         <?php
@@ -180,9 +194,89 @@ $_SESSION['lesson'] = $lesson;
 
       </div>
       <div id="menu1" class="tab-pane fade">
-        <h3>Algebra Lesson</h3>
-        <p>
-        <div class="col-md-8">
+        <br/>
+        <ul id="panel" class=" text-left">
+
+          <li><a href="#sectionv1">1. Introduction to Algebra </a><?php   if($math_section_1 == 0){   ?>    <span class="glyphicon glyphicon-exclamation-sign red"></span> <?php } ?></li>
+          <li><a href="#sectionv2">2. Common Factors</a><?php   if($math_section_2 == 0){   ?>    <span class="glyphicon glyphicon-exclamation-sign red"></span> <?php } ?></li>
+          <li><a href="#sectionv3">3. Quadratic Factors</a><?php   if($math_section_3 == 0){   ?>    <span class="glyphicon glyphicon-exclamation-sign red"></span> <?php } ?></li>
+          <li><a href="#sectionv4">4. Multiply Binomials by Polynomals</a><?php   if($math_section_4 == 0){   ?>    <span class="glyphicon glyphicon-exclamation-sign red"></span> <?php } ?></li>
+
+
+
+        </ul>
+
+         <a id="sectionv1"></a>
+        <hr>
+
+          <h3><b><u>Section 1. Introduction to Algebra  </b></u></h3>
+
+          <?php
+          if($math_section_1 == 0){?>
+          <div class="alert alert-danger alert-dismissable">
+          <a href="#" id='ok' class="close" data-dismiss="alert" aria-label="close">×</a>
+          <strong>Warning!</strong> In your last test you scored zero in the Introduction to Algebra questions, we recommend you look over this section.
+          </div>
+        <?php }?>
+
+          <div >
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe class="embed-responsive-item" src="http://www.youtube.com/embed/wv6REdgLUZ0?autohide=0"
+            ></iframe>
+            </div>
+          </div>
+
+
+
+           <a id="sectionv2"></a>
+          <hr>
+          <h3><b><u>Section 2. Common Factors</b></u></h3>
+          <?php
+          if($math_section_2 == 0){?>
+          <div class="alert alert-danger alert-dismissable">
+          <a href="#" id='ok' class="close" data-dismiss="alert" aria-label="close">×</a>
+          <strong>Warning!</strong> In your last test you scored zero in the Common Factors questions, we recommend you look over this section.
+          </div>
+        <?php } ?>
+          <div >
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe class="embed-responsive-item" src="http://www.youtube.com/embed/wv6REdgLUZ0?autohide=0"
+            ></iframe>
+            </div>
+          </div>
+
+           <a id="sectionv3"></a>
+          <hr>
+          <h3><b><u>Section 3. Quadratic Factors</b></u></h3>
+          <?php
+          if($math_section_3 == 0){?>
+          <div class="alert alert-danger alert-dismissable">
+          <a href="#" id='ok' class="close" data-dismiss="alert" aria-label="close">×</a>
+          <strong>Warning!</strong> In your last test you scored zero in the Quadratic Factors questions, we recommend you look over this section.
+          </div>
+        <?php } ?>
+        <div >
+          <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" src="http://www.youtube.com/embed/wv6REdgLUZ0?autohide=0"
+          ></iframe>
+          </div>
+        </div>
+
+
+  <div >
+
+     <a id="sectionv4"></a>
+      <hr>
+<h3><b><u>Section 4. Multiply Binomials by Polynomals</b></u></h3>
+<?php
+if($math_section_4 == 0){?>
+<div class="alert alert-danger alert-dismissable">
+<a href="#" id='ok' class="close" data-dismiss="alert" aria-label="close">×</a>
+<strong>Warning!</strong> In your last test you scored zero in Multiply Binomals by Polynomals, we recommend you look over this section.
+</div>
+<?php } ?>
+
+
           <div class="embed-responsive embed-responsive-16by9">
             <iframe class="embed-responsive-item" src="http://www.youtube.com/embed/wv6REdgLUZ0?autohide=0"
           ></iframe>

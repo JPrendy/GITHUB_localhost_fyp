@@ -102,7 +102,8 @@ while($row = mysqli_fetch_array($result)){
 <tbody>
 <?php if($row[3] >=6) { ?>
 <tr class="success">
-<?php } else
+<?php }
+else
 {?>
 
 <tr class="danger">
