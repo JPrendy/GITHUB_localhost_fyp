@@ -147,7 +147,7 @@ else{
 ?> <button type="submit" class="btn btn-danger btn-s "   id="back" value="Back" onclick="goBack()">  Back </button><?php
 }
 ?>
-
+<br>
  <button type="submit" class="btn btn-primary btn-s" id="next" name="submit">  Next</button>
  <input type="hidden" name="number" value="<?php echo $number; ?>"/>
  <input type="hidden" name="number2" value="<?php echo $number2; ?>"/>
@@ -170,7 +170,7 @@ else{
 </div>
 <!--</div>-->
 
-
+<br>
 <footer class="container-fluid text-center" id="foot01">
 
 </footer>
