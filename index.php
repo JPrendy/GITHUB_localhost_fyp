@@ -163,7 +163,7 @@
 	 <div class="form-group" ng-class="{ 'has-error' : userForm.username.$invalid && !userForm.pwd2.$pristine }">
       <label class="control-label col-sm-offset-2 col-sm-2" for="email">Reconfirm Password:</label>
       <div class="col-sm-3">
-        <input type="password" class="form-control" name="pwd2" id="pwd2" placeholder="Reconfirm Password"  ng-model="user.pwd2" ng-minlength="4" ng-maxlength="9">
+        <input type="password" class="form-control" name="pwd2" id="pwd2" placeholder="Reconfirm Password"  ng-model="user.pwd2" ng-minlength="4" ng-maxlength="12">
       </div>
 
   <div class="col-sm-1">

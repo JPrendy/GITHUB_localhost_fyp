@@ -69,14 +69,34 @@ $math_section_4 =   $_SESSION['math_section_4'];
 $start_time = $_SESSION['start_time'];
 //}
 
+$time1 = new DateTime($start_time );
+//this is the time you started the quiz
+$time2 = new DateTime($time);
+
+
+
+$interval =  $time1->diff($time2);
+//this displays the time as seconds
+$ok = $interval->format(" %i ");
+$ok2 = $interval->format(" %s ");
+$ok3   = ($ok * 60) + $ok2;
+
+
+
 	$db = mysqli_connect("localhost", "root", "" , "logintest");
 
-$sql = "insert into quiz_scores(uid, math_lesson, score, difficulty_level, blank, sc_time_start, sc_time) VALUES ('$uid', '$math_lesson', '$score', '$difficulty_level', '$blank','$start_time' ,'$time')";
+$sql = "insert into quiz_scores(uid, math_lesson, score, difficulty_level, blank, sc_time_start, sc_time, time_completed) VALUES ('$uid', '$math_lesson', '$score', '$difficulty_level', '$blank','$start_time' ,'$time', '$ok3')";
 $result = mysqli_query($db, $sql);
 
 
 $sql2 = "insert into math_section(uid, math_lesson,  sc_time, math_section_1, math_section_2, math_section_3, math_section_4 ) VALUES ('$uid', '$math_lesson', '$time', '$math_section_1', '$math_section_2', '$math_section_3', '$math_section_4')";
 $result2 = mysqli_query($db, $sql2);
+
+
+
+
+
+
 
 
 

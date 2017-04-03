@@ -107,7 +107,7 @@ if( $_SESSION['score'] <=4){
 if( $_SESSION['score'] >=7){
 ?>  <div class="alert alert-success alert-dismissable">
   <a href="#" id='ok' class="close" data-dismiss="alert" aria-label="close">×</a>
-  <strong>Notice!</strong> Based on your score we recommend you change some of the user settings
+  <strong>Notice!</strong> Based on your score we recommend you change some of the <strong>user settings</strong>.
   </div>
   <?php
 }

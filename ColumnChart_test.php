@@ -70,8 +70,8 @@ $table['cols'] = array(
   array ('label' => 'Startup', 'type' => 'string'),
 
 //  array('label' => 'Ok', 'type' => 'string'),
-  array('label' => 'Quiz Scores', 'type' => 'number'),
-  array('label' => 'No. of questions you did not answer', 'type' => 'number'),
+  array('label' => 'Quiz Score', 'type' => 'number'),
+  array('label' => 'No. of Questions left blanked', 'type' => 'number'),
   //  array('label' => 'Math ID', 'type' => 'number'),
 
   array('label' => 'Difficulty Level', 'type' => 'number')

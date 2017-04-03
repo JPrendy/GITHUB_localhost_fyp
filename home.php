@@ -405,35 +405,77 @@ if($icon == 1){?>
 			  include 'show_friend.php'; ?>
 
 
-          <div class="form-group col-sm-12">
-      <h3></h3>
-      <p>Furthmore, there are sections in the e-learning application that allows you to monitor your past results making it easy to see where you could improve. </p>
-
-</div>
-
 
 <?php
 
 
 
-$sql = "SELECT * from users order by average_score DESC limit 10 ";
+$sql = "SELECT * from users order by average_score DESC limit 5 ";
 $result = mysqli_query($db, $sql);
 
 $av = 0;
 $bl = 0;
+$dif = 0;
+$time = 0;
 
    while($row = mysqli_fetch_array($result)) {
 $av += $row['average_score'];
 $bl += $row['average_blank'];
+$dif += $row['difficulty_level'];
+$time += $row['average_time'];
 }
-echo "The top highest average score is ".$av;
-echo "<br/>";
-echo "The number of blanks score is ".$bl;
 
+
+
+
+$sql2 = "SELECT * from users order by average_score ASC limit 5 ";
+$result2 = mysqli_query($db, $sql2);
+
+$avw = 0;
+$blw = 0;
+$difw = 0;
+$timew = 0;
+
+   while($row2 = mysqli_fetch_array($result2)) {
+$avw += $row2['average_score'];
+$blw += $row2['average_blank'];
+$difw += $row2['difficulty_level'];
+$timew += $row2['average_time'];
+}
 ?>
+<table class="table table-hover text-center">
+	<thead>
+		<tr>
+			<th class="text-center">Highest rated users</th>
+			<th class="text-center">Lowest rated users</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Average score is <strong><?php echo $av/5; ?></strong></td>
+			<td>Average score is <strong><?php echo $avw/5; ?></strong></td>
+		</tr>
+			<tr>
+				<td>Average questions not answered is <strong><?php echo $bl/5; ?></strong></td>
+				<td>Average questions not answered is <strong><?php echo $blw/5; ?></strong></td>
+			</tr>
+			<tr>
+				<td>Average time in a quiz is <strong><?php echo $time/5; ?> seconds</strong></td>
+				<td>Average time in a quiz is <strong><?php echo $timew/5; ?> seconds</strong></td>
+			</tr>
+			<tr>
+				<td>Average difficulty is <strong><?php echo $dif/5; ?></strong></td>
+				<td>Average difficulty is <strong><?php echo $difw/5; ?></strong></td>
+			</tr>
+		</tbody>
+</table>
+<hr>
 
+<div class="form-group col-sm-12">
+<h3></h3>
+<p>Furthmore, there are sections in the e-learning application that allows you to monitor your past results making it easy to see where you could improve. </p>
 
-
+</div>
 
 
   <div class="form-group col-sm-12">

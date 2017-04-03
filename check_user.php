@@ -71,7 +71,7 @@ $numResults = mysqli_num_rows($result3);
 <table class="table table-condensed table-bordered">
 <thead>
   <tr>
-    <th><h5><strong>user who added you</strong></h5></th>
+    <th><h5><strong>User who added you</strong></h5></th>
       <th><h5><strong>Status</strong></h5></th>
 			    <th><h5><strong>Remove User</strong></h5></th>
 
@@ -120,7 +120,7 @@ echo("\n</form>\n");
 </table>
 </div>
 <?php
-	
+
 $sql = "UPDATE add_friend set shown=1 where other_user='{$_SESSION['userid']}' ";
 $result = mysqli_query($db, $sql);
 

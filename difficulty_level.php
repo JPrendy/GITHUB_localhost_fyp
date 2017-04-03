@@ -13,7 +13,7 @@ if (!$db) {
 
 
 
-  $sql = "SELECT SUM(score) as TEST, SUM(blank) as ALL_BLANK, COUNT(math_lesson) as MATH FROM quiz_scores WHERE uid='{$_SESSION['userid']}'";
+  $sql = "SELECT SUM(score) as TEST, SUM(blank) as ALL_BLANK,  SUM(time_completed) as TIMECOMPLETED, COUNT(math_lesson) as MATH FROM quiz_scores WHERE uid='{$_SESSION['userid']}'";
 	$result = mysqli_query($db, $sql);
 
 
@@ -54,7 +54,7 @@ ORDER BY sc_time LIMIT 1";
   $sum = $row['TEST'];
   $blank = $row['ALL_BLANK'];
   $count = $row['MATH'];
-
+  $timeco = $row['TIMECOMPLETED'];
 
   echo "the total blank equals ........ $blank";
 
@@ -115,7 +115,7 @@ echo "<br>";
 
   $average = $sum/$count;
   $average_blank = $blank/$count;
-
+  $average_time =   $timeco/$count;
 
 echo "<br>";
   echo "the blank is $average_blank";
@@ -125,11 +125,12 @@ echo "<br>";
     echo "<br>";
   echo "The user's average score is $average" ;
   $_SESSION['average_score'] =   $average;
-    $average = "UPDATE  users  SET average_score =   $average, average_blank =   $average_blank WHERE uid='{$_SESSION['userid']}'";
-          $success = mysqli_query($db, $average);
+    $update = "UPDATE  users  SET average_score =   $average, average_blank =   $average_blank, average_time = $average_time WHERE uid='{$_SESSION['userid']}'";
+          $success = mysqli_query($db, $update);
   //this retrieves the users average score with this knowledge, the difficulty_levels will either go down or up
   //depending on this average.
-
+//$float_average = floatval($average);
+  //echo "The user's gloat average score is $float_average" ;
 //will need to get the current dynamic_level in order to uodate it
 
   $sql_user = "SELECT * FROM users WHERE uid='{$_SESSION['userid']}'";
@@ -170,19 +171,14 @@ echo "this is before the difficulty_level was changed ".$dynamic_level;
 //if($ok >= $interval->format("2 minutes 0 seconds"))
 if($ok >= 1.0)
 {
-if(($average > 7.0) && ($dynamic_level <= 3 )){
+if(($average >= 7.0) && ($dynamic_level <= 2 )){
   $dynamic_level +=1;
   //  $sql = "Update  WHERE uid='{$_SESSION['userid']}'";
     $update_sql_user = "UPDATE  users  SET difficulty_level=   $dynamic_level WHERE uid='{$_SESSION['userid']}'";
         $update_average_user = "UPDATE  users  SET greatnest = 'Y' WHERE uid='{$_SESSION['userid']}'";
 
 
-        if (!$row = mysqli_fetch_assoc($update_average_user)){
 
-              header("Location:home.php?error=empty1");
-
-
-        }
 
 $query = "SELECT * from users where uid='{$_SESSION['userid']}'";
 echo $query;
@@ -191,7 +187,7 @@ $results = mysqli_query($db, $query);
 if (!$row = mysqli_fetch_assoc($results)){
 
   echo "Your username or password is incorrect!";
-      header("Location: ../home.php?error=empty1");
+      header("Location: ../home.php?error=empty2");
 
 
 }
@@ -207,10 +203,10 @@ echo  $_SESSION['greatnest'];
     echo $dynamic_level;
 }
 
-if(($average < 4.5) && ($dynamic_level >=0)){
+if(($average <= 5.0) && ($dynamic_level >=0)){
   $dynamic_level -=1;
-    $update_sql_user = "UPDATE  users  SET difficulty_level=   $dynamic_level WHERE uid='{$_SESSION['userid']}'";
-        	$result_update_users = mysqli_query($db, $update_sql_user);
+    $update_sql_userdown = "UPDATE  users  SET difficulty_level=   $dynamic_level WHERE uid='{$_SESSION['userid']}'";
+        	$result_update_users2 = mysqli_query($db, $update_sql_userdown);
     //$sql = "SELECT SUM(score) as TEST, COUNT(math_lesson) as MATH FROM quiz_scores WHERE uid='{$_SESSION['userid']}'";
     echo $dynamic_level;
 }

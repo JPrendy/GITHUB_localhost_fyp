@@ -25,7 +25,7 @@ $result3 = mysqli_query($db, $sql3);
 
 if (!$row = mysqli_fetch_assoc($result3)){
 
-echo "You currently haven't done a quiz!";
+//echo "You currently haven't done a quiz!";
 //    header("Location: ../login_page.php?error=empty1");
 $math_section_1 =1;
 $math_section_2 =1;
