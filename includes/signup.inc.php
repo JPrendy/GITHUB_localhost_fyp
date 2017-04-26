@@ -23,15 +23,11 @@
 
 		header("Location: ../index.php?error=empty");
 		exit();
-
 	}if (empty($uid)){
 
 		header("Location: ../index.php?error=empty");
 		exit();
-
 	}
-
-
   if ((strlen($uid) <= 3) or (strlen($uid) >= 10))  {
     header("Location: ../index.php?error=passwordlength");
     exit();

@@ -125,7 +125,7 @@ echo "<br>";
     echo "<br>";
   echo "The user's average score is $average" ;
   $_SESSION['average_score'] =   $average;
-    $update = "UPDATE  users  SET average_score =   $average, average_blank =   $average_blank, average_time = $average_time WHERE uid='{$_SESSION['userid']}'";
+    $update = "UPDATE  users  SET average_score =   $average, average_blank =   $average_blank, average_time = $aver WHERE uid='{$_SESSION['userid']}'";
           $success = mysqli_query($db, $update);
   //this retrieves the users average score with this knowledge, the difficulty_levels will either go down or up
   //depending on this average.

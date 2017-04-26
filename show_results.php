@@ -89,6 +89,7 @@ th {text-align: left;}
         <th><h5><strong>Score</strong></h5></th>
         <th><h5><strong>Left Blank</strong></h5></th>
         <th><h5><strong>Difficulty</strong></h5></th>
+            <th><h5><strong>Duration (seconds)</strong></h5></th>
             <th><h5><strong>Date</strong></h5></th>
     </tr>
   </thead><?php
@@ -121,6 +122,9 @@ else
 </td>
 <td>
 <?php echo ($row[4]);?>
+</td>
+<td>
+<?php echo ($row[8]);?>
 </td>
 <td>
 <?php echo ($row[6]);?>

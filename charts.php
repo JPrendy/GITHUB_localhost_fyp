@@ -117,10 +117,9 @@ th {text-align: left;}
 </form>
 
 
-<div class="panel-body"><a href="difficulty_level.php">difficulty_level </a></div>
 
 
-<br>
+
 
 <!--
 ------------------------->

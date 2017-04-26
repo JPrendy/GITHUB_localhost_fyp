@@ -221,7 +221,7 @@ $_SESSION['lesson'] = $lesson;
 
           <div >
             <div class="embed-responsive embed-responsive-16by9">
-              <iframe class="embed-responsive-item" src="http://www.youtube.com/embed/wv6REdgLUZ0?autohide=0"
+              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/8dLYcWRrA9Y?autohide=0"
             ></iframe>
             </div>
           </div>
@@ -240,7 +240,7 @@ $_SESSION['lesson'] = $lesson;
         <?php } ?>
           <div >
             <div class="embed-responsive embed-responsive-16by9">
-              <iframe class="embed-responsive-item" src="http://www.youtube.com/embed/wv6REdgLUZ0?autohide=0"
+              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/BRcTEqQAbvo?autohide=0"
             ></iframe>
             </div>
           </div>
@@ -257,7 +257,7 @@ $_SESSION['lesson'] = $lesson;
         <?php } ?>
         <div >
           <div class="embed-responsive embed-responsive-16by9">
-            <iframe class="embed-responsive-item" src="http://www.youtube.com/embed/wv6REdgLUZ0?autohide=0"
+            <iframe class="embed-responsive-item" src="http://www.youtube.com/embed/doZ8XLG4DNQ?autohide=0"
           ></iframe>
           </div>
         </div>
@@ -278,7 +278,7 @@ if($math_section_4 == 0){?>
 
 
           <div class="embed-responsive embed-responsive-16by9">
-            <iframe class="embed-responsive-item" src="http://www.youtube.com/embed/wv6REdgLUZ0?autohide=0"
+            <iframe class="embed-responsive-item" src="http://www.youtube.com/embed/CelfT1nAjWM?autohide=0"
           ></iframe>
           </div>
         </div>
