@@ -5,7 +5,9 @@
   session_start();
 
 	//connect to databases
-	$db = mysqli_connect("localhost", "root", "" , "logintest");
+include 'dbh.php';
+
+	#$db = mysqli_connect("localhost", "root", "" , "logintest");
 
 	if (isset($_POST['login_button'])){
 

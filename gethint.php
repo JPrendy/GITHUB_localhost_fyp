@@ -4,7 +4,9 @@
 session_start();
 
 //connect to databases
-$db = mysqli_connect("localhost", "root", "" , "logintest");
+include 'dbh.php';
+
+#$db = mysqli_connect("localhost", "root", "" , "logintest");
 $sql = "SELECT * from users Limit 100";
 $result = mysqli_query($db, $sql);
 

@@ -278,7 +278,7 @@ if($icon == 1){?>
 
 
          <?php     if($_SESSION['welcome'] != 2){?>
-           <li  class="panel hidden-xs  active"><a href="#"  id="myFunction2">Charts</a></li>
+           <li  class="panel hidden-xs  active"><a href="#"  id="myFunction5">Charts</a></li>
 
           <?php } else { ?>
                <!--<li><a href="piechart_test.php">Charts</a></li>-->
@@ -382,8 +382,9 @@ if($icon == 1){?>
     } ?>
 
 	<?php
+	include 'dbh.php';
 
-		$db = mysqli_connect("localhost", "root", "" , "logintest");
+		#$db = mysqli_connect("localhost", "root", "" , "logintest");
 		$sql = "SELECT * from add_friend where other_user='{$_SESSION['userid']}' and shown=0 ";
 		$result = mysqli_query($db, $sql);
 
@@ -583,14 +584,24 @@ $('#myAlert').hide('fade');
 
 
 
-
-
-
 $(document).ready(function(){
 
   $('#myFunction4').click(function(){
      $('#myAlert').show('fade');
    });
+
+
+$('#linkClose').click(function (){
+});
+$('#myAlert').hide('fade');
+});
+
+
+
+$(document).ready(function(){
+  $('#myFunction5').click(function(){
+     $('#myAlert').show('fade');
+  });
 
 
 $('#linkClose').click(function (){

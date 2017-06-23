@@ -14,7 +14,9 @@ echo "<br>";
 echo $number;
 $_SESSION['icon'] = $number;
 
-$db = mysqli_connect("localhost", "root", "" , "logintest");
+include 'dbh.php';
+
+#$db = mysqli_connect("localhost", "root", "" , "logintest");
 
 
   $sql = "update icons set icon_type='$number' where uid='{$_SESSION['userid']}'";

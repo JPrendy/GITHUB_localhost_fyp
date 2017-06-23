@@ -5,7 +5,9 @@
 
 
 	//connect to databases
-	$db = mysqli_connect("localhost", "root", "" , "logintest");
+  include 'dbh.php';
+
+#	$db = mysqli_connect("localhost", "root", "" , "logintest");
 
 	if (isset($_POST['register_btn'])){
 		$uid = mysql_real_escape_string($_POST['uid']);

@@ -43,7 +43,7 @@ $dif = $_SESSION['difficulty_level'];
 //$query = "SELECT * from questions
 //WHERE question_number =$number";
 $query= "SELECT * FROM $number2";
-$results = $mysqli->query($query) or die($mysqli->error.__LINE__);
+$results = $db->query($query) or die($mysqli->error.__LINE__);
 
 $total= $results->num_rows;
 
@@ -54,7 +54,7 @@ WHERE question_number =$number and dif = $dif ";
 
 
 //Get the resutlt from the query
-$result = $mysqli->query($query) or die($mysqli->error.__LINE__);
+$result = $db->query($query) or die($mysqli->error.__LINE__);
 
 $question = $result->fetch_assoc();
 
@@ -75,7 +75,7 @@ else{
 /////////////////////////////ORDER BY RAND() BRINGS THE ROWS RANDOMLY
 
 //Get the resutlt from the query
-$choices = $mysqli->query($query) or die($mysqli->error.__LINE__);
+$choices = $db->query($query) or die($mysqli->error.__LINE__);
 
 
 

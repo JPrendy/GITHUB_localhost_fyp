@@ -7,7 +7,9 @@ if($_SESSION['welcome'] !=2){
     include 'home_header.php';
 
 
-	$db = mysqli_connect("localhost", "root", "" , "logintest");
+    include 'dbh.php';
+
+#	$db = mysqli_connect("localhost", "root", "" , "logintest");
 ?>
 
 <!DOCTYPE html>

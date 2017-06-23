@@ -49,7 +49,7 @@ $number2_2 = $test . $number2;
 //get total questions;
 
 $query= "SELECT * FROM $number2";
-$results = $mysqli->query($query) or die($mysqli->error.__LINE__);
+$results = $db->query($query) or die($mysqli->error.__LINE__);
 
 $total= $results->num_rows;
 
@@ -69,8 +69,8 @@ $query2 = "SELECT * FROM  $choices where question_number = $number and id=$selec
 
 //GET Result
 
-$result = $mysqli->query($query) or die($mysqli-> error.__LINE__);
-$result2 = $mysqli->query($query2) or die($mysqli-> error.__LINE__);
+$result = $db->query($query) or die($mysqli-> error.__LINE__);
+$result2 = $db->query($query2) or die($mysqli-> error.__LINE__);
 //GET row
 $row = $result->fetch_assoc();
 $row2 = $result2->fetch_assoc();

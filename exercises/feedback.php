@@ -1,6 +1,7 @@
 <?php
 session_start();
-$db = mysqli_connect("localhost", "root", "" , "logintest");
+ include 'database.php';
+##$db = mysqli_connect("localhost", "root", "" , "logintest");
 //if (empty($_POST["feedback_button"])) {
   //  echo "Yes, mail is set";
 //}else{

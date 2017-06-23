@@ -3,7 +3,9 @@
   session_start();
 
 	//connect to databases
-	$db = mysqli_connect("localhost", "root", "" , "logintest");
+  include 'dbh.php';
+
+#$db = mysqli_connect("localhost", "root", "" , "logintest");
 
 	if (isset($_POST['register_btn'])){
 		$username = mysql_real_escape_string($_POST['first']);

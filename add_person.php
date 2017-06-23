@@ -1,10 +1,10 @@
 <?php
 
   session_start();
-
+ include 'dbh.php';
 
 	//connect to databases
-	$db = mysqli_connect("localhost", "root", "" , "logintest");
+	#$db = mysqli_connect("localhost", "root", "" , "logintest");
   $userid = $_SESSION['userid'];
 
 	if (isset($_POST['submit'])){

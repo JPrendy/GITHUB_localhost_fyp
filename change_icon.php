@@ -1,5 +1,6 @@
 <?php
 session_start();
+ include 'dbh.php';
 if($_SESSION['welcome'] !=2){
     header("Location: home.php");
 }
@@ -11,13 +12,13 @@ if($_SESSION['welcome'] !=2){
   <?php
 
 
-  $db = mysqli_connect("localhost", "root","", "logintest");
+#  $db = mysqli_connect("localhost", "root","", "logintest");
 
 
-  if (!$db) {
-  	die("Connection failed: ". mysqli_connect_error());
+#  if (!$db) {
+#  	die("Connection failed: ". mysqli_connect_error());
 
-  }
+#  }
 
 
 

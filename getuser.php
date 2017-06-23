@@ -27,13 +27,14 @@ $q = strval($_GET['q']);  //this is important as normally is it carried over as 
 //$l = strval($_GET['l']);  //this is important as normally is it carried over as an int
 
 //echo "$l";
+include 'dbh.php';
 
-$con = mysqli_connect('localhost','root','','logintest');
-if (!$con) {
-    die('Could not connect: ' . mysqli_error($con));
-}
+#$con = mysqli_connect('localhost','root','','logintest');
+#if (!$con) {
+#    die('Could not connect: ' . mysqli_error($con));
+#}
 
-mysqli_select_db($con,"quiz_scores");
+mysqli_select_db($db,"quiz_scores");
 $sql="SELECT * FROM quiz_scores WHERE uid = '{$_SESSION['userid']}' and math_lesson = '".$q."'";
 $result = mysqli_query($con,$sql);
 

@@ -5,9 +5,10 @@
 
 
  include '..\difficulty_level.php';
+ include 'database.php';
 unset($_SESSION["score"]);
 unset($_SESSION["blank"]);
-$db = mysqli_connect("localhost", "root", "" , "logintest");
+##$db = mysqli_connect("localhost", "root", "" , "logintest");
 $userid =  $_SESSION['userid'];
 if($_SESSION["welcome"] !=2){
 $sql ="UPDATE users SET session = 2 WHERE uid= '$userid'";

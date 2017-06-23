@@ -1,14 +1,15 @@
 <?php
 
    session_start();
+   include 'dbh.php';
 
-$db = mysqli_connect("localhost", "root","", "logintest");
+#$db = mysqli_connect("localhost", "root","", "logintest");
 
 
-if (!$db) {
-	die("Connection failed: ". mysqli_connect_error());
+#if (!$db) {
+	#die("Connection failed: ". mysqli_connect_error());
 
-}
+#}
 
 
 

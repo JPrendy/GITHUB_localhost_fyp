@@ -29,9 +29,10 @@ if (strpos($url, 'error=deleted') !== false){
 
 
 
+include 'dbh.php';
 
 	//connect to databases
-	$db = mysqli_connect("localhost", "root", "" , "logintest");
+#	$db = mysqli_connect("localhost", "root", "" , "logintest");
 
 
 	$per_page=3;
