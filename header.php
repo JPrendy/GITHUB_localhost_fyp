@@ -25,6 +25,26 @@
     padding: 15px;
   }
 
+  @media screen and (min-width: 1400px) {
+    footer {
+      background-color: black;
+      color: white;
+      margin-top: 200px;
+      padding: 15px;
+
+    }
+  }
+
+  @media screen and (min-width: 1400px) {
+    footer {
+      background-color: black;
+      color: white;
+      margin-top: 200px;
+      padding: 15px;
+
+    }
+  }
+
   body{
   font-family: 'Roboto Slab', serif;
 }

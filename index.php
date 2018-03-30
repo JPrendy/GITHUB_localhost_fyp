@@ -26,12 +26,10 @@
       <?php
           include 'header.php';
       ?>
-
-      <center><font color=red><h3>Notice: this website is under testing don't put private information in the sign up page such as usernames and passwords</h3></font></center>
-
 <div class="header">
 	<center><h1>E-Learning Application</h1></center>
 </div>
+
 
 
 

@@ -77,7 +77,7 @@ session_start();
                  <div class="panel-heading">Topic: <b>Quadratic Factors</b></div>
                  <div class="panel-heading">Topic: <b> Multiply Binomials by Polynomals</b></div>
 
-            <div class="panel-body"><button class='btn btn-default btn-md'><a href="lessons/algebra.php">Algebra</a></button></div>
+            <div class="panel-body"><button class='btn btn-default btn-md'><a href="lessons/Algebra.php">Algebra</a></button></div>
            </div>
 
 
